@@ -1,33 +1,26 @@
-import styled from 'styled-components';
-
-
-
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
-display: flex;
+  display: flex;
 
-flex-direction: column;
-align-items: center;
-
-
-
-video{
-    height:100%;
-    width:100%;
-    object-fit:cover;
-   
-}
-
-`
-
-
+  video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+  }
+`;
 
 export const Container = styled.div`
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* padding: 30px 70px; */
+  padding: 30px 70px 0px 0px;
+`;
 
-position:absolute;
-top:0;
-left:0;
-width: 100%;
-padding: 20px 70px;
-`
-
+export const ContentWrapper = styled.div`
+  display: flex;
+`;
