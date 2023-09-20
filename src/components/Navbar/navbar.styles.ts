@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   flex-direction: row;
   justify-content: start;
   padding: 25px 0;
-  width: 150px;
+  width: 12%;
   height: 500px;
 `;
 
@@ -19,6 +19,7 @@ export const TextContainer = styled.div`
   align-items: flex-start;
   justify-content: space-around;
   padding-left: 15px;
+  width: 80px;
 `;
 
 export const ArrowField = styled.div<ArrowFieldProps>`

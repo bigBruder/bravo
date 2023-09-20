@@ -29,11 +29,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => {
         </Styled.ButtonContainer>
       </Styled.PageContent>
 
-      {/* <Styled.LogoContainer> */}
-      {/* <Styled.Logo src={LogoIcon} alt="Logo" /> */}
       <Styled.SmallLogo src={SmallLogoIcon} alt="Small Logo" />
-      {/* </Styled.LogoContainer> */}
-      {/* </Styled.LogoWrapper> */}
     </Styled.ContentWrapper>
   );
 };

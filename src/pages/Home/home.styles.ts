@@ -39,7 +39,7 @@ export const ContentWrapper = styled.div`
 `;
 export const PageContent = styled.div`
   display: flex;
-  width: 560px;
+  width: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
@@ -117,6 +117,6 @@ export const SmallLogo = styled.img`
   height: 100%; */
   margin-left: 150px;
   /* padding-right: 200px; */
-  width: 300px;
+  width: 20%;
   /* height: 337px; */
 `;

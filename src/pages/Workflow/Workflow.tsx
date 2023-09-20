@@ -1,24 +1,23 @@
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import ServiceContent from "./ServicesContent";
-import * as Styled from "./Services.styles";
+import videoBg from "./../../assets/video/home_background.mp4";
+import * as Styled from "./Workflow.styles";
 
-export interface ServicesPageProps {}
+export interface WorkflowPageProps {}
 
-const Services: React.FunctionComponent<ServicesPageProps> = () => {
+const Workflow: React.FunctionComponent<WorkflowPageProps> = () => {
   return (
     <Styled.Wrapper>
+      <video src={videoBg} autoPlay loop muted />
       <Styled.Container>
         <Header />
         <Styled.MainContent>
           <Navbar />
-
-          <ServiceContent />
         </Styled.MainContent>
         <Footer />
       </Styled.Container>
     </Styled.Wrapper>
   );
 };
-export default Services;
+export default Workflow;
