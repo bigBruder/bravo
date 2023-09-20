@@ -46,7 +46,7 @@ const Footer = () => {
 
         <img src={RightArch} />
       </div>
-      {/* 
+      {/*       
       <Styled.SearchVector>
         <img src={SearchIcon} />
       </Styled.SearchVector> */}

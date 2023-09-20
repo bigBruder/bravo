@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
 
   /* margin: 0 auto; */
 `;
+
 // export const LeftSideHeader = styled.div`
 //   display: flex;
 //   align-items: center;
@@ -35,11 +36,12 @@ export const Wrapper = styled.div`
 //   stroke-width: 1px;
 //   stroke: rgba(255, 255, 255, 0.25);
 // `;
-// export const ArchVector = styled.div`
-//   width: 7.35px;
-//   height: 5.39px;
-//   fill: rgba(255, 255, 255, 0.25);
-// `;
+export const Arch = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2px;
+`;
 
 export const SearchVector = styled.div`
   width: 25px;

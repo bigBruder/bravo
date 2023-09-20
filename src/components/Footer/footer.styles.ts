@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   gap: 20px;
-  padding: 45px 0 45px 70px;
+  padding: 45px 0 45px 85px;
 `;
 
 export const CenterIcon = styled.div`

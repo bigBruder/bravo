@@ -14,14 +14,7 @@ const Header = () => {
         <img src={Search} />
       </Styled.SearchVector>
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          width: "100%",
-          gap: "2px",
-        }}
-      >
+      <Styled.Arch>
         <img src={LeftArch} />
 
         <img src={VerticalVector} />
@@ -29,18 +22,11 @@ const Header = () => {
         <img src={VerticalVector} />
 
         <img src={HorizontalVector} style={{ width: "100%" }} />
-      </div>
+      </Styled.Arch>
 
       <img src={IconSet} />
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          width: "100%",
-          gap: "2px",
-        }}
-      >
+      <Styled.Arch>
         <img src={HorizontalVector} style={{ width: "100%" }} />
 
         <img src={VerticalVector} />
@@ -48,7 +34,7 @@ const Header = () => {
         <img src={VerticalVector} />
 
         <img src={RightArch} />
-      </div>
+      </Styled.Arch>
 
       <Styled.SearchVector>
         <img src={SearchIcon} />
