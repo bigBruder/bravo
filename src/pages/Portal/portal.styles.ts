@@ -44,7 +44,7 @@ export const PortalContent = styled.div`
   /* align-items: center; */
   height: 40%;
   margin-left: 10%;
-  margin-bottom: 2%;
+  margin-bottom: 1.5%;
 
   /* align-items:center; */
 `;
