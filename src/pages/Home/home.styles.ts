@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
+  background-color: #111;
 
   video {
     position: absolute;
@@ -19,8 +20,11 @@ export const Container = styled.div`
   align-items: center;
   z-index: 1;
   width: 100%;
+  height: 100vh;
   /* padding: 30px 70px; */
   padding: 30px 70px 0px 0px;
+  background-color: black;
+  opacity: 75%;
 `;
 
 export const MainContent = styled.div`

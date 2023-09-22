@@ -4,6 +4,8 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 20px;
   padding: 17px 0 47px 70px;
+  /* width: 100%;
+  height: 60px; */
 
   /* max-width: 100vw; */
 

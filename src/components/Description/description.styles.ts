@@ -1,13 +1,18 @@
 import styled from "styled-components";
-
-export const Wrapper = styled.div`
+interface DescriptionProps {
+  parentBackgroundColor?: string;
+}
+export const Wrapper = styled.div<DescriptionProps>`
   display: flex;
   padding: 30px 60px;
   justify-content: space-between;
   align-items: center;
   flex: 1 0 0;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: ${(props) =>
+    props?.parentBackgroundColor === "white"
+      ? "rgba(205, 168, 112, 0.10)"
+      : "rgba(255, 255, 255, 0.1)"};
   backdrop-filter: blur(12.5px);
   margin-top: 100px;
   gap: 150px;
@@ -20,7 +25,8 @@ export const Wrapper = styled.div`
     gap: 100px;
   }
 
-  color: #fff;
+  color: ${(props) =>
+    props.parentBackgroundColor === "white" ? "#164D59" : "#fff"};
   font-family: Quicksand;
   font-size: 16px;
   font-style: normal;

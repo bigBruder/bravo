@@ -14,6 +14,7 @@ export const Container = styled.div`
   align-items: center;
 
   width: 100%;
+  height: 100vh;
   /* padding: 30px 70px; */
   padding: 30px 70px 0px 0px;
 `;

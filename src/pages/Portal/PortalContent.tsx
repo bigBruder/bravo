@@ -10,6 +10,7 @@ import Description from "./../../components/Description/Description";
 interface IPortalContent {}
 
 const PortalContent: React.FunctionComponent<IPortalContent> = () => {
+  const parentBackgroundColor = "black";
   const descriptionText =
     "Our unique approach and attention to detail set us apart from our competitors, ensuring a truly memorable experience for our clients.";
   return (
@@ -54,7 +55,10 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
           {/* </Styled.NewOrder> */}
         </Styled.NavigationContainer>
       </Styled.PortalContent>
-      <Description descriptionText={descriptionText} />
+      <Description
+        descriptionText={descriptionText}
+        parentBackgroundColor={parentBackgroundColor}
+      />
     </Styled.PortalWrapper>
   );
 };
