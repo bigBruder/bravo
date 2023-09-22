@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 20px;
   padding: 45px 0 45px 85px;
+  /* margin-top: 30px; */
 `;
 
 export const CenterIcon = styled.div`

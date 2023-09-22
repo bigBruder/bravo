@@ -18,19 +18,20 @@ export const Wrapper = styled.div<DescriptionProps>`
   gap: 150px;
 
   width: 80%;
-  @media (max-width: 1600px) {
-    width: 70%;
-    height: 70px;
-    margin-top: 10px;
-    gap: 100px;
-  }
-
-  color: ${(props) =>
-    props.parentBackgroundColor === "white" ? "#164D59" : "#fff"};
   font-family: Quicksand;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
+  @media (max-width: 1600px) {
+    width: 80%;
+    height: 70px;
+    margin-top: 10px;
+    gap: 100px;
+    font-size: 14px;
+  }
+
+  color: ${(props) =>
+    props.parentBackgroundColor === "white" ? "#164D59" : "#fff"};
 
   @media (max-width: 1300px) {
     font-size: 14px;

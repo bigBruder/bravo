@@ -11,9 +11,8 @@ import sixBottomImage from "./../../assets/images/6.6.png";
 interface ITrophiesContent {}
 
 const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
-  const parentBackgroundColor = "white";
-  const descriptionText =
-    "We offer Rush or date specific service to get your order done at the time you need it.";
+  const parentBackgroundColor = "black";
+
   return (
     <Styled.ContentWrapper>
       <Styled.DescriptionHeader>Our Trophies</Styled.DescriptionHeader>
@@ -95,7 +94,11 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
         </Styled.ContentDepartment>
       </Styled.ContentPage>
       <Description
-        descriptionText={descriptionText}
+        descriptionText={
+          `We offer Rush or date specific service to get` +
+          `\n` +
+          `your order done at the time you need it.`
+        }
         parentBackgroundColor={parentBackgroundColor}
       />
     </Styled.ContentWrapper>
