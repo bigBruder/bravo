@@ -1,0 +1,37 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+
+  &_role {
+    margin-top: 5px;
+    color: #F44F70;
+  }
+
+  &_description {
+    margin-top: 10px;
+    text-align: center;
+    max-width: 270px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .card_image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card_image {
+    width: 150px;
+    height: 150px;
+  }
+}
