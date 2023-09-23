@@ -28,33 +28,32 @@ const FaqContent: React.FunctionComponent<IWorkflowContent> = () => {
           </Styled.ContentDescription>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
-          <Styled.ContentHeader>Account</Styled.ContentHeader>
+          <Styled.ContentHeader>Payment</Styled.ContentHeader>
           <Styled.ContentDescription>
             <img src={Plus} />
-            Forgot my password, what should I do?
+            When will I be charged?
           </Styled.ContentDescription>
           <Styled.ContentDescription>
             <img src={Plus} />
-            How do I register?
+            Is it safe to purchase items on vivaia.com?
           </Styled.ContentDescription>
           <Styled.ContentDescription>
             <img src={Plus} />
-            What are the benefits of having a Bravo Creation account?
+            What payment methods can I use with my order?
           </Styled.ContentDescription>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
-          <Styled.ContentHeader>Account</Styled.ContentHeader>
+          <Styled.ContentHeader>Orders</Styled.ContentHeader>
           <Styled.ContentDescription>
-            <img src={Plus} />
-            Forgot my password, what should I do?
+            <img src={Plus} />I forgot my password, what should I do?
           </Styled.ContentDescription>
           <Styled.ContentDescription>
             <img src={Plus} />
-            How do I register?
+            Can I cancel or change my order?
           </Styled.ContentDescription>
           <Styled.ContentDescription>
             <img src={Plus} />
-            What are the benefits of having a Bravo Creation account?
+            How do I track my order?
           </Styled.ContentDescription>
         </Styled.ContentDepartment>
         <Styled.RegistrationField>

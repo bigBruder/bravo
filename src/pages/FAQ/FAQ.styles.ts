@@ -40,6 +40,7 @@ export const ContentWrapper = styled.div`
   justify-content: start;
   align-items: center;
   margin-right: 5vw;
+  padding: 0 6vw;
   /* flex-grow: 0.8; */
 `;
 export const DescriptionHeader = styled.text`
@@ -76,7 +77,7 @@ export const DescriptionText = styled.text`
 `;
 export const ContentPage = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: space-between;
   padding: 2% 5% 2% 5%;
   flex-flow: wrap;
@@ -149,7 +150,7 @@ export const RegistrationText = styled.div`
   }
 `;
 
-export const RegistrationButton = styled.div`
+export const RegistrationButton = styled.button`
   display: flex;
   padding: 20px 36px;
   align-items: center;
