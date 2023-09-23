@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import videoBg from "./../../assets/video/home_background.mp4";
 import * as Styled from "./FAQ.styles";
+import FAQContent from "./FAQContent";
 
 export interface FAQPageProps {}
 
@@ -14,6 +15,7 @@ const FAQ: React.FunctionComponent<FAQPageProps> = () => {
         <Header />
         <Styled.MainContent>
           <Navbar />
+          <FAQContent />
         </Styled.MainContent>
         <Footer />
       </Styled.Container>

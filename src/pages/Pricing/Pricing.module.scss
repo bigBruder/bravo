@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@media (min-width: 1300px) {
   .container {
     &_header {
       gap: 0px;
@@ -101,7 +101,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .container {
     &_header {
       gap: 0px;
