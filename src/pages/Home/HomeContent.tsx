@@ -1,8 +1,8 @@
 import * as Styled from "./home.styles";
 // import LogoIcon from "./../../assets/icons/logo-icon.svg";
-import SmallLogoIcon from "./../../assets/icons/logo-icon2.svg";
 import GiftIcon from "./../../assets/icons/gift.svg";
 import OctagonIcon from "./../../assets/icons/video-octagon.svg";
+import LogoIcon from "../../assets/images/bc_logo.png";
 interface IHomeContent {}
 
 const HomeContent: React.FunctionComponent<IHomeContent> = () => {
@@ -29,7 +29,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => {
         </Styled.ButtonContainer>
       </Styled.PageContent>
 
-      <Styled.SmallLogo src={SmallLogoIcon} alt="Small Logo" />
+      <Styled.SmallLogo src={LogoIcon} alt="LogoIcon" />
     </Styled.ContentWrapper>
   );
 };

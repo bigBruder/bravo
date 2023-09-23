@@ -20,7 +20,7 @@ import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 interface IProps {}
 
 const PricingContent: React.FunctionComponent<IProps> = () => {
-  const swiperRef = useRef();
+  const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
   useEffect(() => {

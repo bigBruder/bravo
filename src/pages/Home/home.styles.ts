@@ -39,32 +39,30 @@ export const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-left: 150px;
+  padding-left: 0;
 `;
 export const PageContent = styled.div`
   display: flex;
-  width: 50%;
+  width: 40%;
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
-  /* padding-left: 200px; */
-
-  /* padding-right: 170px; */
+  margin-left: 5vw;
 `;
 
 export const TextHeader = styled.div`
   color: #cda870;
   font-family: Gwen-Trial;
-  font-size: 50px;
+  font-size: 3vw;
   font-style: normal;
   font-weight: 650;
-  line-height: 66px;
+  line-height: 4vw;
 `;
 
 export const TextContent = styled.p`
   color: #9799ac;
   font-family: Quicksand;
-  font-size: 18px;
+  font-size: 1.2vw;
   font-style: normal;
   padding-top: 20px;
   font-weight: 400;
@@ -72,14 +70,14 @@ export const TextContent = styled.p`
 `;
 export const ButtonContainer = styled.p`
   display: flex;
-  padding-top: 60px;
+  padding-top: 6%;
   align-items: center;
   justify-content: start;
   gap: 12px;
 `;
 export const SignUpButton = styled.button`
   display: flex;
-  padding: 20px 36px;
+  padding: 2vh 2vw;
   align-items: center;
   gap: 12px;
   border: none;
@@ -87,14 +85,14 @@ export const SignUpButton = styled.button`
   background: #cda870;
   color: #272727;
   font-family: Quicksand;
-  font-size: 18px;
+  font-size: 1.2vw;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
 `;
 export const DemoButton = styled.button`
   display: flex;
-  padding: 20px 36px;
+  padding: 2vh 2vw;
   align-items: center;
   gap: 12px;
   border-radius: 15px;
@@ -102,25 +100,21 @@ export const DemoButton = styled.button`
   background: rgba(255, 255, 255, 0.1);
   color: #cda870;
   font-family: Quicksand;
-  font-size: 18px;
+  font-size: 1.2vw;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
 `;
 
-// export const Logo = styled.img`
-//   width: 100%;
-//   height: 100%;
-
-//   padding-right: 168px;
-//   height: 500px;
-// `;
-
 export const SmallLogo = styled.img`
   /* width: 100%;
   height: 100%; */
-  margin-left: 150px;
+  /* margin-left: 150px; */
   /* padding-right: 200px; */
-  width: 20%;
+  width: 30%;
+  margin-right: 5vw;
   /* height: 337px; */
+  img {
+    width: 50vw;
+  }
 `;
