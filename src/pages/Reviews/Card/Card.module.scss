@@ -1,0 +1,47 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+  }
+  &_name {
+    color: #164d59;
+    font-family: Gwen-Trial;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 650;
+  }
+
+  &_role {
+    margin-top: 5px;
+    color: #f44f70;
+  }
+
+  &_description {
+    color: #9799ac;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 1300px) {
+  .card_image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card_image {
+    width: 150px;
+    height: 150px;
+  }
+}

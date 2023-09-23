@@ -1,7 +1,7 @@
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-
+import ReviewsContent from "./ReviewsContent.tsx";
 import * as Styled from "./Reviews.styles";
 
 export interface ReviewsPageProps {}
@@ -13,6 +13,7 @@ const Reviews: React.FunctionComponent<ReviewsPageProps> = () => {
         <Header />
         <Styled.MainContent>
           <Navbar />
+          <ReviewsContent />
         </Styled.MainContent>
         <Footer />
       </Styled.Container>

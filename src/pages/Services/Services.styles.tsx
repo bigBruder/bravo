@@ -23,6 +23,7 @@ export const MainContent = styled.div`
   align-items: start;
   gap: 15px;
   flex: 1 0 0;
+  background-color: rgba(255, 255, 255, 0.6);
 `;
 
 export const ContentWrapper = styled.div`
