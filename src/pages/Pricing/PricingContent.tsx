@@ -1,0 +1,138 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { EffectCoverflow, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import { useEffect, useMemo, useRef, useState } from "react";
+import styles from "./Pricing.module.scss";
+
+import ArrowLeft from "./../../assets/icons/ArrowLeft.svg";
+import ArrowRight from "./../../assets/icons/ArrowRight.svg";
+
+import PricingCard1 from "../../assets/images/PricingCard/Frame 813355.png";
+
+import Quotes from "../../assets/icons/Quotes.svg";
+import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
+
+interface IProps {}
+
+const PricingContent: React.FunctionComponent<IProps> = () => {
+  const swiperRef = useRef();
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  useEffect(() => {
+    const updateDimension = () => {
+      setScreenSize(getCurrentDimension());
+    };
+    window.addEventListener("resize", updateDimension);
+
+    return () => {
+      window.removeEventListener("resize", updateDimension);
+    };
+  }, [screenSize]);
+
+  const getItemsPerPage = useMemo(() => {
+    if (screenSize.width > 1300) {
+      return 5;
+    } else if (screenSize.width > 1099) {
+      return 4;
+    } else if (screenSize.width > 768) {
+      return 3;
+    } else {
+      return 2;
+    }
+  }, [screenSize.width]);
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.container_header}>
+        <p className={styles.container_title}>Pricing</p>
+        <p className={styles.container_text}>
+          Transparency & Streamline Process
+        </p>
+      </div>
+
+      <div className={styles.container_wrapper}>
+        <div
+          className={styles.slider_arrow}
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <img src={ArrowLeft} />
+        </div>
+
+        <div className={styles.container_center}>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={getItemsPerPage}
+            coverflowEffect={{
+              rotate: 35,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            pagination={false}
+            modules={[EffectCoverflow, Pagination]}
+            className={styles.mySwiper}
+            onBeforeInit={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+          >
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+            <SwiperSlide className={styles.card}>
+              <img src={PricingCard1} />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+
+        <div
+          className={styles.slider_arrow}
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <img src={ArrowRight} />
+        </div>
+      </div>
+
+      <div className={styles.footer}>
+        <img src={Quotes} />
+        <p className={styles.footer_text}>
+          We aim to show you all our prices to build a good relationship from
+          the start.
+          <br /> Transparency and craftsmanship - guaranteeing the perfect
+          product
+        </p>
+        <img src={Quotes} />
+      </div>
+    </div>
+  );
+};
+
+export default PricingContent;
