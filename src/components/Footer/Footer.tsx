@@ -1,8 +1,9 @@
 import * as Styled from "./footer.styles";
-import HorizontalVector from "../../assets/icons/horizontal-vector.svg";
-import VerticalVector from "../../assets/icons/vertical-vector.svg";
-import LeftArch from "../../assets/icons/left-arch.svg";
-import RightArch from "../../assets/icons/right-arch.svg";
+// import HorizontalVector from "../../assets/icons/horizontal-vector.svg";
+// import VerticalVector from "../../assets/icons/vertical-vector.svg";
+// import LeftArch from "../../assets/icons/left-arch.svg";
+// import RightArch from "../../assets/icons/right-arch.svg";
+import Icon from "../../assets/icons/Footer/Icon.png";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
         <img src={Search} />
       </Styled.SearchVector> */}
 
-      <div
+      {/* <div
         style={{
           display: "flex",
           alignItems: "center",
@@ -45,11 +46,12 @@ const Footer = () => {
         <img src={VerticalVector} />
 
         <img src={RightArch} />
-      </div>
+      </div> */}
       {/*       
       <Styled.SearchVector>
         <img src={SearchIcon} />
       </Styled.SearchVector> */}
+      <img src={Icon} style={{ width: "100%" }} />
     </Styled.Wrapper>
   );
 };

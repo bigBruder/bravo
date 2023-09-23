@@ -1,16 +1,16 @@
 import * as Styled from "./header.styles";
-import HorizontalVector from "../../assets/icons/horizontal-vector.svg";
-import VerticalVector from "../../assets/icons/vertical-vector.svg";
-import LeftArch from "../../assets/icons/left-arch.svg";
-import RightArch from "../../assets/icons/right-arch.svg";
-import Search from "../../assets/icons/search.svg";
-import SearchIcon from "../../assets/icons/search2.svg";
-import IconSet from "../../assets/icons/line-icon-set.svg";
+// import HorizontalVector from "../../assets/icons/horizontal-vector.svg";
+// import VerticalVector from "../../assets/icons/vertical-vector.svg";
+// import LeftArch from "../../assets/icons/left-arch.svg";
+// import RightArch from "../../assets/icons/right-arch.svg";
+// import Search from "../../assets/icons/search.svg";
+// import SearchIcon from "../../assets/icons/search2.svg";
+// import IconSet from "../../assets/icons/line-icon-set.svg";
 
 const Header = () => {
   return (
     <Styled.Wrapper>
-      <Styled.SearchVector>
+      {/* <Styled.SearchVector>
         <img src={Search} />
       </Styled.SearchVector>
 
@@ -38,7 +38,7 @@ const Header = () => {
 
       <Styled.SearchVector>
         <img src={SearchIcon} />
-      </Styled.SearchVector>
+      </Styled.SearchVector> */}
     </Styled.Wrapper>
   );
 };
