@@ -1,6 +1,6 @@
 import styled from "styled-components";
 interface DescriptionProps {
-  parentBackgroundColor?: string;
+  parentbackgroundColor?: string;
 }
 export const Wrapper = styled.div<DescriptionProps>`
   display: flex;
@@ -10,7 +10,7 @@ export const Wrapper = styled.div<DescriptionProps>`
   flex: 1 0 0;
   border-radius: 15px;
   background: ${(props) =>
-    props?.parentBackgroundColor === "white"
+    props?.parentbackgroundColor === "white"
       ? "rgba(205, 168, 112, 0.10)"
       : "rgba(255, 255, 255, 0.1)"};
   backdrop-filter: blur(12.5px);
@@ -31,7 +31,7 @@ export const Wrapper = styled.div<DescriptionProps>`
   }
 
   color: ${(props) =>
-    props.parentBackgroundColor === "white" ? "#164D59" : "#fff"};
+    props.parentbackgroundColor === "white" ? "#164D59" : "#fff"};
 
   @media (max-width: 1300px) {
     font-size: 14px;

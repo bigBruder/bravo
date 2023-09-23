@@ -11,7 +11,7 @@ const Description: React.FunctionComponent<DescriptionProps> = ({
   parentBackgroundColor,
 }) => {
   return (
-    <Styled.Wrapper parentBackgroundColor={parentBackgroundColor}>
+    <Styled.Wrapper parentbackgroundColor={parentBackgroundColor}>
       <Styled.IconContainer>
         <img src={Icon} />
         <img src={Icon} />

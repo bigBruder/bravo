@@ -1,9 +1,13 @@
 import styled from "styled-components";
-// import BackgroundImage from "./../../assets/images/Services.png";
+import BackgroundImage from "./../../assets/images/Services.png";
 
 export const Wrapper = styled.div`
   display: flex;
-  background-color: black;
+  background-image: url("${BackgroundImage}");
+
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+
   //change to background image
 `;
 
@@ -14,6 +18,11 @@ export const Container = styled.div`
   height: 100vh;
   /* padding: 30px 70px; */
   padding: 30px 70px 0px 0px;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
 `;
 
 export const MainContent = styled.div`
