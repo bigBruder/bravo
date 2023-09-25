@@ -28,18 +28,21 @@ export const Container = styled.div`
 `;
 
 export const MainContent = styled.div`
-  display: flex;
+  /* display: flex;
   align-items: center;
   gap: 15px;
   flex: 1 0 0;
-  align-self: stretch;
+  align-self: stretch; */
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-left: 0;
+  padding: 150px 70px 30px 150px;
+  margin-left: 100px;
+
+  /* padding-left: 0; */
 `;
 export const PageContent = styled.div`
   display: flex;

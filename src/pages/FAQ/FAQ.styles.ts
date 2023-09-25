@@ -40,7 +40,9 @@ export const ContentWrapper = styled.div`
   justify-content: start;
   align-items: center;
   margin-right: 5vw;
-  padding: 0 6vw;
+  /* padding: 0 6vw; */
+  padding: 150px 70px 30px 150px;
+  margin-left: 100px;
   /* flex-grow: 0.8; */
 `;
 export const DescriptionHeader = styled.text`

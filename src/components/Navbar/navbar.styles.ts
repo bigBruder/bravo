@@ -5,11 +5,14 @@ interface ArrowFieldProps {
 
 export const Wrapper = styled.div`
   display: flex;
+  position: fixed;
+  top: 120px;
   flex-direction: row;
   justify-content: start;
   padding: 25px 0;
-  width: 12%;
+  width: 148px;
   height: 500px;
+  z-index: 2;
 `;
 
 export const TextContainer = styled.div`

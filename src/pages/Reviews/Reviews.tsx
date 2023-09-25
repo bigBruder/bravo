@@ -1,6 +1,3 @@
-import Header from "../../components/Header/Header";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
 import ReviewsContent from "./ReviewsContent.tsx";
 import * as Styled from "./Reviews.styles";
 
@@ -10,12 +7,12 @@ const Reviews: React.FunctionComponent<ReviewsPageProps> = () => {
   return (
     <Styled.Wrapper>
       <Styled.Container>
-        <Header />
+        {/* <Header /> */}
         <Styled.MainContent>
-          <Navbar />
+          {/* <Navbar /> */}
           <ReviewsContent />
         </Styled.MainContent>
-        <Footer />
+        {/* <Footer /> */}
       </Styled.Container>
     </Styled.Wrapper>
   );

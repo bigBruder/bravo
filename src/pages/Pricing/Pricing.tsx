@@ -1,6 +1,3 @@
-import Header from "../../components/Header/Header";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
 import PricingContent from "./PricingContent";
 import * as Styled from "./Pricing.styles";
 
@@ -10,12 +7,12 @@ const Pricing: React.FunctionComponent<PricingPageProps> = () => {
   return (
     <Styled.Wrapper>
       <Styled.Container>
-        <Header />
+        {/* <Header /> */}
         <Styled.MainContent>
-          <Navbar />
+          {/* <Navbar /> */}
           <PricingContent />
         </Styled.MainContent>
-        <Footer />
+        {/* <Footer /> */}
       </Styled.Container>
     </Styled.Wrapper>
   );

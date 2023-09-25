@@ -2,9 +2,15 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
+  position: absolute;
+  bottom: 0;
   gap: 20px;
-  padding: 4vh 0 0 85px;
+  padding: 0vh 0 0vh 0;
+
   /* margin-top: 30px; */
+  img {
+    width: 100%;
+  }
 `;
 
 export const CenterIcon = styled.div`

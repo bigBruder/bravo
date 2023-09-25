@@ -1,7 +1,8 @@
 .container {
   width: 90%;
   height: 100%;
-
+  padding: 50px 70px 30px 150px;
+  margin-left: 50px;
   &_header {
     display: flex;
     flex-direction: column;
@@ -43,6 +44,14 @@
     background-color: rgba(255, 255, 255, 0.6);
     width: 80%;
     margin: 0 auto;
+  }
+  @media (max-width: 1600px) {
+    &_header {
+      margin-bottom: 40px;
+    }
+    &_title {
+      line-height: 26px;
+    }
   }
 }
 

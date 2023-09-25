@@ -51,7 +51,7 @@ const Footer = () => {
       <Styled.SearchVector>
         <img src={SearchIcon} />
       </Styled.SearchVector> */}
-      <img src={Icon} style={{ width: "100%" }} />
+      <img src={Icon} />
     </Styled.Wrapper>
   );
 };

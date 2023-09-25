@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  position: absolute;
+  top: 0;
   display: flex;
   gap: 20px;
   /* padding: 17px 0 47px 70px; */

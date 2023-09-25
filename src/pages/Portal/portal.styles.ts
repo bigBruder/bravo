@@ -39,6 +39,8 @@ export const PortalWrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  padding: 150px 70px 30px 150px;
+  /* margin-left: 100px; */
 `;
 export const PortalContent = styled.div`
   display: flex;
@@ -140,6 +142,7 @@ export const QRCode = styled.div`
   border-radius: 10px;
   background: #fff;
   box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.25);
+
   img {
     width: 100%;
   }
