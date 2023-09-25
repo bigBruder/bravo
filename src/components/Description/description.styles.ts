@@ -4,7 +4,7 @@ interface DescriptionProps {
 }
 export const Wrapper = styled.div<DescriptionProps>`
   display: flex;
-  padding: 30px 60px;
+  padding: 1.5% 2%;
   justify-content: space-between;
   align-items: center;
   flex: 1 0 0;
@@ -14,30 +14,20 @@ export const Wrapper = styled.div<DescriptionProps>`
       ? "rgba(205, 168, 112, 0.10)"
       : "rgba(255, 255, 255, 0.1)"};
   backdrop-filter: blur(12.5px);
-  margin-top: 100px;
-  gap: 150px;
-
-  width: 80%;
-  font-family: Quicksand;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  @media (max-width: 1600px) {
-    width: 80%;
-    height: 70px;
-    margin-top: 10px;
-    gap: 100px;
-    font-size: 14px;
-  }
-
+  /* margin-top: 100px; */
   color: ${(props) =>
     props.parentbackgroundColor === "white" ? "#164D59" : "#fff"};
-
-  @media (max-width: 1300px) {
-    font-size: 14px;
-  }
-  @media (max-width: 1000px) {
-    font-size: 12px;
+  width: 80%;
+  p {
+    font-family: Quicksand;
+    font-size: 0.95vw;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 1vh;
+    max-width: 75%;
+    /* @media (max-width: 1600px) {
+      gap: 100px;
+    } */
   }
 `;
 

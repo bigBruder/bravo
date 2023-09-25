@@ -6,8 +6,6 @@ interface IWorkflowContent {}
 
 const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
   const parentBackgroundColor = "black";
-  const descriptionText =
-    "First, jewelers create sketches and select suitable materials, then jewelry making begins, which includes operations such as casting, machining and polishing, gemstone inlay and final finishing.";
   return (
     <Styled.ContentWrapper>
       <Styled.DescriptionHeader>
@@ -64,7 +62,11 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
       <img src={ArrowIcons} style={{ width: "75%", marginBottom: "4%" }} />
 
       <Description
-        descriptionText={descriptionText}
+        descriptionText={
+          "First, jewelers create sketches and select suitable materials, then jewelry making begins, which" +
+          "\n" +
+          "includes operations such as casting, machining and polishing, gemstone inlay and final finishing."
+        }
         parentBackgroundColor={parentBackgroundColor}
       />
     </Styled.ContentWrapper>
