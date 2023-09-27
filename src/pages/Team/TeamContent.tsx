@@ -53,7 +53,7 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
   }, [screenSize.width]);
 
   return (
-    <div className={styles.container}>
+    <div id={"section-team"} className={styles.container}>
       <div className={styles.container_header}>
         <img src={Title} className={styles.container_title} />
         <p className={styles.container_text}>

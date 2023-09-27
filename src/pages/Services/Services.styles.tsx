@@ -31,7 +31,9 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding-left: 150px;
+
+  padding: 50px 70px 30px 200px;
+  margin-left: 100px;
 `;
 
 export const Description = styled.div`

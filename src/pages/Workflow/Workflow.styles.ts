@@ -39,6 +39,8 @@ export const ContentWrapper = styled.div`
   justify-content: start;
   align-items: center;
   flex-grow: 0.8;
+  padding: 150px 70px 30px 150px;
+  /* margin-left: 100px; */
 `;
 export const DescriptionHeader = styled.text`
   color: #cda870;

@@ -1,6 +1,3 @@
-import Header from "../../components/Header/Header";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
 import ServiceContent from "./ServicesContent";
 import * as Styled from "./Services.styles";
 
@@ -10,13 +7,13 @@ const Services: React.FunctionComponent<ServicesPageProps> = () => {
   return (
     <Styled.Wrapper>
       <Styled.Container>
-        <Header />
+        {/* <Header /> */}
         <Styled.MainContent>
-          <Navbar />
+          {/* <Navbar /> */}
 
           <ServiceContent />
         </Styled.MainContent>
-        <Footer />
+        {/* <Footer /> */}
       </Styled.Container>
     </Styled.Wrapper>
   );

@@ -1,6 +1,3 @@
-import Header from "../../components/Header/Header";
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
 import ContactContent from "./ContactContent";
 import * as Styled from "./ContactPage.styles";
 import Photo1 from "../../assets/icons/Contact/image 28.png";
@@ -12,9 +9,7 @@ const ContactPage: React.FunctionComponent<ContactPagePageProps> = () => {
   return (
     <Styled.Wrapper>
       <Styled.Container>
-        <Header />
         <Styled.MainContent>
-          <Navbar />
           <Styled.AdressContainer>
             <img src={Pointer} />
             <Styled.Adress>
@@ -30,7 +25,6 @@ const ContactPage: React.FunctionComponent<ContactPagePageProps> = () => {
           </Styled.AdressContainer>
           <ContactContent />
         </Styled.MainContent>
-        <Footer />
       </Styled.Container>
     </Styled.Wrapper>
   );

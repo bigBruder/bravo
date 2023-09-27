@@ -1,6 +1,8 @@
 .container {
   width: 90%;
   height: 100%;
+  padding: 50px 70px 30px 150px;
+  margin-left: 100px;
 
   &_header {
     display: flex;
@@ -15,7 +17,8 @@
   &_text {
     color: #9799ac;
     text-align: center;
-    font-size: 18px;
+    font-family: Quicksand;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
@@ -34,10 +37,23 @@
     padding-bottom: 60px;
     background-color: rgba(255, 255, 255, 0.6);
     width: 80%;
+    // height: 40vh;
     margin: 0 auto;
   }
 }
+@media (max-width: 1600px) {
+  .container_header {
+    margin-bottom: 40px;
+  }
 
+  .container_text {
+    font-size: 16px;
+  }
+
+  .container_center {
+    padding-bottom: 40px;
+  }
+}
 .footer {
   display: flex;
   width: 80%;
@@ -54,6 +70,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
+    // margin-bottom: 6vh;
   }
 }
 
