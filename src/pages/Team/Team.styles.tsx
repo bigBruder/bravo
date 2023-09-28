@@ -1,23 +1,29 @@
 import styled from "styled-components";
-import BackgroundImage from "./../../assets/icons/image 8.svg";
 import BackgroundImage2 from "../../assets/images/TeamsBackground.svg";
 
 export const Wrapper = styled.div`
   display: flex;
 
-  background-image: url("${BackgroundImage}");
+  background-image: none;
 
-  background-size: 550px;
-  background-repeat: no-repeat;
-  background-position: bottom 0px right 0px;
+  @media (min-width: 768px) {
+    background-image: url("${BackgroundImage2}");
+    background-size: 550px;
+    background-repeat: no-repeat;
+    background-position: bottom 0px right 0px;
+  }
 `;
 
 export const InnerWrapper = styled.div`
   display: flex;
 
-  background-image: url("${BackgroundImage2}");
-  background-size: 550px;
-  background-repeat: no-repeat;
+  background-image: none;
+
+  @media (min-width: 768px) {
+    background-image: url("${BackgroundImage2}");
+    background-size: 550px;
+    background-repeat: no-repeat;
+  }
 `;
 
 export const Container = styled.div`
@@ -25,7 +31,11 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   /* padding: 30px 70px; */
-  padding: 30px 70px 0px 0px;
+  padding: 10px 0 0 0;
+
+  @media (min-width: 768px) {
+    padding: 30px 70px 0 0;
+  }
 `;
 export const MainContent = styled.div`
   display: flex;

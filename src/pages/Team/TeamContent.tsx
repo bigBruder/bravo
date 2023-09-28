@@ -72,7 +72,7 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
 
         <div className={styles.container_center}>
           <Swiper
-            spaceBetween={90}
+            spaceBetween={50}
             style={
               {
                 // margin: 0,
@@ -157,12 +157,12 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
       </div>
 
       <div className={styles.footer}>
-        <img src={Quotes} />
+        <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
           Even if we are not near you, we will provide you with the best
           experience and easy communication at your fingertips.
         </p>
-        <img src={Quotes} />
+        {screenSize.width > 767 ? <img src={Quotes} style={{ height: 29, width: 38 }} /> : null}
       </div>
     </div>
   );
