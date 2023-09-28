@@ -99,7 +99,8 @@
 
 @media (min-width: 768px) {
   .container {
-    padding: 50px 70px 30px 150px;
+    display: block;
+    padding: 50px 0 30px 150px;
   }
 
   .container_title {
@@ -109,6 +110,7 @@
 
   .footer {
     flex-direction: row;
+    margin-top: 40px;
 
     &_text {
       font-size: 16px;
