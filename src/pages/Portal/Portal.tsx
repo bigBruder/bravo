@@ -9,9 +9,9 @@ const Portal: React.FunctionComponent<PortalPageProps> = () => {
     <Styled.Wrapper>
       <video src={videoBg} autoPlay loop muted />
       <Styled.Container>
-        <Styled.MainContent>
-          <PortalContent />
-        </Styled.MainContent>
+        {/* <Styled.MainContent> */}
+        <PortalContent />
+        {/* </Styled.MainContent> */}
       </Styled.Container>
     </Styled.Wrapper>
   );
