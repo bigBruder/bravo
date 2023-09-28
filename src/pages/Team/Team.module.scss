@@ -1,8 +1,16 @@
 .container {
   width: 90%;
-  height: 100%;
-  padding: 50px 70px 30px 150px;
-  margin-left: 100px;
+  height: 100vh;
+  padding: 20px 10px 20px 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_title {
+    height: 40px;
+    width: 200px;
+  }
 
   &_header {
     display: flex;
@@ -34,13 +42,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 60px;
     background-color: rgba(255, 255, 255, 0.6);
     width: 80%;
     // height: 40vh;
     margin: 0 auto;
   }
 }
+
+.slider {
+  &_arrow {
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(205, 168, 112, 0.1);
+
+    display: none;
+  }
+}
+
+.footer {
+  display: flex;
+  width: 80%;
+  background-color: rgba(205, 168, 112, 0.1);
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 20px;
+  border-radius: 15px;
+  flex-direction: column;
+
+  &_text {
+    color: #164d59;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+
 @media (max-width: 1600px) {
   .container_header {
     margin-bottom: 40px;
@@ -51,37 +93,40 @@
   }
 
   .container_center {
-    padding-bottom: 40px;
-  }
-}
-.footer {
-  display: flex;
-  width: 80%;
-  background-color: rgba(205, 168, 112, 0.1);
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 30px 60px;
-  border-radius: 15px;
-
-  &_text {
-    color: #164d59;
-    text-align: center;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    // margin-bottom: 6vh;
+    //padding-bottom: 40px;
   }
 }
 
-.slider {
-  &_arrow {
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 70px 30px 150px;
+  }
+
+  .container_title {
+    width: 300px;
+    height: 40px;
+  }
+
+  .footer {
+    flex-direction: row;
+
+    &_text {
+      font-size: 16px;
+    }
+  }
+
+  .slider_arrow {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(205, 168, 112, 0.1);
+  }
+}
+
+@media (min-width: 1300px) {
+  .container_title {
+    width: 400px;
+    height: 40px;
+  }
+
+  .footer {
+    padding: 30px 60px;
   }
 }
