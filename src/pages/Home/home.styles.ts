@@ -23,8 +23,7 @@ export const Container = styled.div`
   height: 100vh;
   /* padding: 30px 70px; */
   padding: 30px 70px 0px 0px;
-  background-color: black;
-  opacity: 75%;
+  background-color: rgba(0, 0, 0, 0.7);
 `;
 
 export const MainContent = styled.div`

@@ -1,10 +1,12 @@
 import * as Styled from "./portal.styles";
 import UserOctagon from "./../../assets/icons/user-octagon.svg";
-import SafariContent from "./../../assets/images/Safari • Dark Mode ON 2.svg";
-import QRCode from "./../../assets/images/image 5.svg";
-import NewOrder from "./../../assets/images/NEW ORDERdfgdfg 1.svg";
+import SafariContent from "./../../assets/images/Safari • Dark Mode ON 2.png";
+import QRCode from "./../../assets/images/image 5.png";
+import NewOrder from "./../../assets/images/NEW ORDERdfgdfg 1.png";
 import PlayMarket from "./../../assets/icons/play-market.svg";
 import AppStore from "./../../assets/icons/app-store.svg";
+import Mask from "../../assets/images/Portal/Mask group.png";
+
 import Description from "./../../components/Description/Description";
 
 interface IPortalContent {}
@@ -19,7 +21,7 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
         <Styled.RegisterContainer>
           <Styled.RegisterHeader>
             Portal <Styled.WhiteText>as</Styled.WhiteText> Easy{" "}
-            <Styled.WhiteText>1,2,3</Styled.WhiteText>
+            <Styled.WhiteText>as 1,2,3</Styled.WhiteText>
           </Styled.RegisterHeader>
 
           <Styled.RegisterText>
@@ -29,31 +31,32 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
             <img src={UserOctagon} />
             Register Right Now
           </Styled.RegisterButton>
+          <Styled.AppPlayMobile>
+            <img src={PlayMarket} />
+            <img src={AppStore} />
+          </Styled.AppPlayMobile>
         </Styled.RegisterContainer>
 
         <Styled.NavigationContainer>
-          <img src={SafariContent} style={{ width: "90%" }} />
-          <Styled.QRCode>
-            <img src={QRCode} />
+          <Styled.SafariImage className="safari" src={SafariContent} />
+          {/* <Styled.Items> */}
+
+          {/* </Styled.Items> */}
+          <Styled.NewOrderImage className="newOrder" src={NewOrder} />
+          <Styled.QRCode src={QRCode}>
+            {/* <img src={QRCode} /> */}
           </Styled.QRCode>
-
-          <img
-            src={NewOrder}
-            style={{
-              width: "20%",
-              position: "absolute",
-              top: "42%",
-              right: "3%",
-            }}
-          />
-
           <Styled.AppPlay>
             <img src={PlayMarket} />
             <img src={AppStore} />
           </Styled.AppPlay>
 
-          {/* </Styled.NewOrder> */}
+          <Styled.MaskedGroup src={Mask} />
         </Styled.NavigationContainer>
+        <Styled.MobileButton>
+          <img src={UserOctagon} />
+          Start Your Journey
+        </Styled.MobileButton>
       </Styled.PortalContent>
       <Description
         descriptionText={descriptionText}

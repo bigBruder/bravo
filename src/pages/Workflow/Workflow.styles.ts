@@ -20,8 +20,7 @@ export const Container = styled.div`
   z-index: 1;
   width: 100%;
   height: 100vh;
-  background-color: black;
-  opacity: 70%;
+  background-color: rgba(0, 0, 0, 0.7);
   /* padding: 30px 70px; */
   padding: 30px 70px 0px 0px;
 `;

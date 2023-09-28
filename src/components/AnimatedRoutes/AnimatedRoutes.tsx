@@ -11,6 +11,7 @@ import ContactPage from "../../pages/Contact Us/ContactPage";
 import Navbar from "../Navbar/Navbar";
 import useScrollBarPositions from "../../hooks/useScrollTop";
 import { useEffect, useState } from "react";
+import * as Styled from "./AnimatedRoutes.styles";
 interface AnimatedRoutesProps {}
 
 const itemArray = [
@@ -81,15 +82,13 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
     //   </Routes>
     // </AnimatePresence>
 
-    <div
-      ref={ref}
-      style={{
+    <Styled.Wrapper ref={ref}>
+      {/* style={{
         scrollSnapType: "y proximity",
         overflowY: "scroll",
         overflowX: "hidden",
         height: "100vh",
-      }}
-    >
+      }} */}
       <Navbar
         navArray={navArray}
         activeItem={activeItem}
@@ -97,21 +96,21 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
       />
       {itemArray.map((item, index) => {
         return (
-          <div
+          <Styled.ChildrenComponent
             //@ts-ignore
             parentPosition={top}
             id={navArray[index].id}
-            style={{
-              position: "relative",
-              scrollSnapAlign: "start",
-              height: "100vh",
-            }}
+            // style={{
+            //   position: "relative",
+            //   scrollSnapAlign: "start",
+            //   height: "100vh",
+            // }}
           >
             {item}
-          </div>
+          </Styled.ChildrenComponent>
         );
       })}
-    </div>
+    </Styled.Wrapper>
   );
 };
 export default AnimatedRoutes;
