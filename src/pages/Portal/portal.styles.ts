@@ -62,7 +62,7 @@ export const PortalWrapper = styled.div`
 `;
 export const PortalContent = styled.div`
   display: flex;
-
+  flex-wrap: wrap;
   justify-content: space-between;
 
   height: 80vh;

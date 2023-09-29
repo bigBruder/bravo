@@ -1,5 +1,15 @@
 import styled from "styled-components";
 import BackgroundImage from "./../../assets/icons/image 8.svg";
+
+/**
+ * Breakpoints list
+ * 1. 1440px
+ * 2. 1100px
+ * 3. 768px
+ * 4. 425px
+ * 5. 375px
+ */
+
 export const Wrapper = styled.div`
   display: flex;
 
@@ -17,6 +27,9 @@ export const Container = styled.div`
   height: 100vh;
   /* padding: 30px 70px; */
   padding: 30px 70px 0px 0px;
+  @media screen and (max-width: 1100px) {
+    padding: 0;
+  }
 `;
 export const MainContent = styled.div`
   display: flex;
@@ -24,6 +37,11 @@ export const MainContent = styled.div`
   gap: 15px;
   flex: 1 0 0;
   background-color: rgba(255, 255, 255, 0.6);
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -34,6 +52,15 @@ export const ContentWrapper = styled.div`
 
   padding: 50px 70px 30px 200px;
   margin-left: 100px;
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+    padding: 75px 0;
+    text-align: center;
+    margin-left: 0;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
+  }
 `;
 
 export const Description = styled.div`
