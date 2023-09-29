@@ -19,6 +19,7 @@ export const Wrapper = styled.div<DescriptionProps>`
   color: ${(props) =>
     props.parentbackgroundColor === "white" ? "#164D59" : "#fff"};
   width: 80%;
+  /* height: 120px; change it*/
   p {
     font-family: Quicksand;
     font-size: 0.95vw;
@@ -51,6 +52,48 @@ export const Wrapper = styled.div<DescriptionProps>`
       max-width: 100%;
     }
   }
+  @media (max-width: 768px) {
+    display: flex;
+    padding: 30px 15px;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 0px;
+
+    width: 80%;
+    p {
+      color: #fff;
+      text-align: center;
+      font-family: Quicksand;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      margin-top: 0;
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 1300px) {
+    display: flex;
+    padding: 30px 15px;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 0px;
+
+    width: 80%;
+    p {
+      color: #fff;
+      text-align: center;
+      font-family: Quicksand;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      margin-top: 0;
+      max-width: 100%;
+    }
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -58,7 +101,7 @@ export const IconContainer = styled.div`
   align-items: flex-start;
   gap: 10px;
   width: 10%;
-  @media (max-width: 480px) {
+  @media (max-width: 1300px) {
     display: none;
   }
 `;

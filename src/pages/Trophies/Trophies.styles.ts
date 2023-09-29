@@ -13,22 +13,21 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   flex-direction: column;
   align-items: center;
+
   width: 100%;
   height: 100vh;
-  /* padding: 30px 70px; */
   padding: 30px 70px 0px 0px;
   background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0.75) 100%
   );
-`;
-
-export const MainContent = styled.div`
-  display: flex;
-  align-items: space-between;
-  gap: 15px;
-  flex: 1 0 0;
+  @media (max-width: 864px) {
+    height: 100%;
+  }
+  @media (max-width: 480px) {
+    padding: 60px 0px 40px 0px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -36,7 +35,16 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 150px 70px 30px 150px;
+  padding: 180px 70px 30px 150px;
+  @media (max-width: 1600px) {
+    padding: 100px 70px 30px 150px;
+  }
+  @media (max-width: 1600px) {
+    padding: 50px 70px 30px 150px;
+  }
+  @media (max-width: 480px) {
+    padding: 20px;
+  }
   /* margin-left: 100px; */
   /* flex-grow: 0.8; */
 `;
@@ -48,7 +56,7 @@ export const ContentWrapper = styled.div`
 //   width: 10%;
 // `;
 export const DescriptionHeader = styled.text`
-  color: #164d59;
+  color: #fff;
   text-align: center;
   font-family: Gwen-Trial;
   font-size: 42px;
@@ -56,7 +64,10 @@ export const DescriptionHeader = styled.text`
   font-weight: 650;
 
   @media (max-width: 1600px) {
-    font-size: 33px;
+    font-size: 23px;
+  }
+  @media (max-width: 480px) {
+    height: 100%;
   }
 `;
 export const DescriptionText = styled.text`
@@ -72,11 +83,17 @@ export const DescriptionText = styled.text`
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  width: 30%;
-  padding-top: 1%;
+  width: 425px;
+
   @media (max-width: 1600px) {
     font-size: 35px;
     font-size: 16px;
+    width: 375px;
+  }
+  @media (max-width: 480px) {
+    font-size: 35px;
+    font-size: 16px;
+    max-width: 242px;
   }
 `;
 
@@ -84,7 +101,15 @@ export const ContentPage = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: start;
-  padding: 4% 15%;
+
+  padding: 100px 10%;
+  @media (max-width: 1300px) {
+    flex-wrap: wrap;
+    padding: 50px 10%;
+  }
+  @media (max-width: 480px) {
+    padding: 10px 10% 50px 10%;
+  }
 `;
 
 export const ContentDepartment = styled.div`
@@ -93,6 +118,13 @@ export const ContentDepartment = styled.div`
 
   justify-content: space-around;
   align-items: center;
+  width: 290px;
+  @media (max-width: 1600px) {
+    width: 230px;
+  }
+  @media (max-width: 480px) {
+    padding-top: 40px;
+  }
 `;
 export const Number = styled.div`
   display: flex;
@@ -155,7 +187,7 @@ export const Text = styled.div`
   color: #9799ac;
   text-align: center;
   font-family: Quicksand;
-  font-size: 15px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 300;
   padding-top: 2%;
