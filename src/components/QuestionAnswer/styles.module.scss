@@ -1,0 +1,47 @@
+.details {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: Quicksand;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 31px;
+  cursor: pointer;
+
+  &:before {
+
+    position: absolute;
+    content: '';
+    height: 21px;
+    width: 21px;
+    display: block;
+    left: -31px;
+    top: 4.5px;
+
+    background-image: url("../../assets/icons/FAQ/plus.svg");
+    background-size: cover;
+  }
+}
+
+.details[open] > .details::before { transform: rotate(90deg); }
+
+details > summary {
+  list-style: none;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.summary::marker {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .details {
+  }
+
+  .summary {
+  }
+}
