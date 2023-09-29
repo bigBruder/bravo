@@ -45,16 +45,8 @@ export const ContentWrapper = styled.div`
   @media (max-width: 480px) {
     padding: 20px;
   }
-  /* margin-left: 100px; */
-  /* flex-grow: 0.8; */
 `;
-// export const Description = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: start;
-//   align-items: start;
-//   width: 10%;
-// `;
+
 export const DescriptionHeader = styled.text`
   color: #fff;
   text-align: center;
