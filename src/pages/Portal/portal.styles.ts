@@ -21,28 +21,30 @@ export const Container = styled.div`
   z-index: 1;
   width: 100%;
   height: 100vh;
-  padding: 30px 70px;
-  background-color: rgba(0, 0, 0, 0.7);
+  /* padding: 30px 70px; */
+  padding: 30px 70px 0px 0px;
+  background-color: black;
+  opacity: 75%;
 
-  /* @media (max-width: 480px) {
-    padding: 60px 15px 40px 15px;
-    align-items: center;
-    height: 100%;
-  } change it*/
-  @media (max-width: 480px) {
-    padding: 60px 15px 40px 15px;
-    align-items: center;
-    height: 100%;
+  @media screen and (max-width: 1100px) {
+    padding: 30px 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 30px 15px;
   }
 `;
 
-// export const MainContent = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 15px;
-//   flex: 1 0 0;
-//   align-self: stretch;
-// `;
+export const MainContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1 0 0;
+  align-self: stretch;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
+`;
 
 export const PortalWrapper = styled.div`
   display: flex;
@@ -53,34 +55,42 @@ export const PortalWrapper = styled.div`
   /* padding: 70px 30px 150px; */
 
   /* margin-left: 100px; */
-  @media (max-width: 480px) {
-    width: 90%;
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column-reverse;
+    padding: 150px 0;
+    margin-left: 0;
   }
-  /* @media (max-width: 768px) {
-    width: 100%;
-  } change it*/
+
 `;
 export const PortalContent = styled.div`
   display: flex;
-
+  flex-wrap: wrap;
   justify-content: space-between;
-
-  height: 80vh;
+  align-items: center;
+  /* align-items: center; */
+  height: 40%;
   margin-left: 10%;
-  padding-bottom: 5%;
-  @media (max-width: 1200px) {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0%;
-    justify-content: end;
+  margin-bottom: 1.5%;
+  gap: 10px 80px;
+  max-width: 1300px;
+
+  padding-left: 30px;
+
+  @media (max-width: 1100px) {
+    padding-left: 0%;
   }
-  @media (max-width: 480px) {
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3%;
+    max-width: 600px;
+
   }
-  /* @media (max-width: 768px) {
-    width: 100%;
-  } change it*/
+
   /* align-items:center; */
 `;
 
@@ -88,15 +98,15 @@ export const RegisterContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  max-width: 30%;
-  margin-left: 3%;
-  @media (max-width: 1200px) {
-    max-width: none;
+  width: 30%;
+  max-width: 260px;
+  order: 2;
+  @media (max-width: 1100px) {
+    width: 32%;
   }
-  @media (max-width: 480px) {
-    display: flex;
-    align-items: center;
+  @media (max-width: 768px) {
+    width: 80%;
+    max-width: 100%;
   }
 `;
 export const RegisterHeader = styled.text`
@@ -176,56 +186,30 @@ export const NavigationContainer = styled.div`
   display: flex;
   z-index: 2;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-
-  /* margin-left: 20%; */
+  align-items: center;
   position: relative;
-  width: 50vw;
-  @media (max-width: 1200px) {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 60vw;
-    /* flex-wrap: wrap; */
+  flex: 1;
+  height: 100%;
+  order: 3;
+  max-width: 550px;
+  @media (max-width: 1100px) {
   }
   @media (max-width: 768px) {
-    display: flex;
-  }
-  @media (max-width: 480) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  /* background-color: white; */
-`;
-export const NewOrderImage = styled.img`
-  width: 25%;
-  position: absolute;
-  bottom: -7%;
-  right: 3%;
-  @media (max-width: 1200px) {
-    position: static;
-  }
-  @media (max-width: 480px) {
-    display: none;
-  }
-`;
-export const SafariImage = styled.img`
-  width: 90%;
-  position: absolute;
-  bottom: 0%;
-  right: 5%;
-  @media (max-width: 1200px) {
-    position: static;
-    width: 60%;
-  }
-  @media (max-width: 480px) {
-    display: none;
+    flex-direction: column-reverse;
   }
 `;
 
-export const QRCode = styled.img`
+export const HeroImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.5/1;
+  position: relative;
+`;
+
+export const QRCode = styled.div`
   display: flex;
   width: 18%;
 
@@ -282,46 +266,19 @@ export const AppPlay = styled.div`
     width: 100%; */
   }
 `;
+export const NewOrder = styled.div``;
 
-export const AppPlayMobile = styled.div`
+
+export const DescriptionWrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  @media (min-width: 480px) {
-    display: none;
+  /* height: 100%; */
+  order: 4;
+  @media (max-width: 768px) {
+    padding-left: 0%;
+    padding-right: 0%;
+    order: 1;
   }
-`;
-
-export const MaskedGroup = styled.img`
-  @media (min-width: 480px) {
-    display: none;
-  }
-  padding-top: 85px;
-  width: 100%;
-`;
-
-export const MobileButton = styled.button`
-  @media (min-width: 480px) {
-    display: none;
-  }
-  display: flex;
-  align-items: center;
-  margin-top: 40px;
-  height: 60px;
-  width: 273px;
-  padding: 20px 36px;
-  gap: 12px;
-  color: #272727;
-  font-family: Quicksand;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-
-  border-radius: 15px;
-  background: #cda870;
-  border: none;
-`;
-export const Items = styled.div`
-  width: 100%;
 `;

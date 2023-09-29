@@ -9,7 +9,7 @@ import Mask from "../../assets/images/Portal/Mask group.png";
 
 import Description from "./../../components/Description/Description";
 
-interface IPortalContent {}
+interface IPortalContent { }
 
 const PortalContent: React.FunctionComponent<IPortalContent> = () => {
   const parentBackgroundColor = "black";
@@ -38,6 +38,26 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
         </Styled.RegisterContainer>
 
         <Styled.NavigationContainer>
+          <Styled.HeroImageWrapper>
+            <img src={SafariContent} style={{ width: "90%" }} />
+            <Styled.QRCode>
+              <img src={QRCode} />
+            </Styled.QRCode>
+
+            <img
+              src={NewOrder}
+              style={{
+                width: "20%",
+                position: "absolute",
+                top: "42%",
+                right: "3%",
+              }}
+            />
+
+            <Styled.AppPlay>
+              <img src={PlayMarket} />
+              <img src={AppStore} />
+            </Styled.AppPlay>
           <Styled.SafariImage className="safari" src={SafariContent} />
           {/* <Styled.Items> */}
 
@@ -51,17 +71,20 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
             <img src={AppStore} />
           </Styled.AppPlay>
 
-          <Styled.MaskedGroup src={Mask} />
+            <Styled.MaskedGroup src={Mask} />
+          </Styled.HeroImageWrapper>
         </Styled.NavigationContainer>
-        <Styled.MobileButton>
+          <Styled.MobileButton>
           <img src={UserOctagon} />
           Start Your Journey
         </Styled.MobileButton>
+      <Styled.DescriptionWrapper>
+          <Description
+            descriptionText={descriptionText}
+            parentBackgroundColor={parentBackgroundColor}
+          />
+        </Styled.DescriptionWrapper>
       </Styled.PortalContent>
-      <Description
-        descriptionText={descriptionText}
-        parentBackgroundColor={parentBackgroundColor}
-      />
     </Styled.PortalWrapper>
   );
 };

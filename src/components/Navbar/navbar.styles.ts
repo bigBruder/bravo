@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   width: 148px;
   height: 500px;
   z-index: 2;
-  @media (max-width: 768px) {
+  @media screen and (max-width: 1100px) {
     display: none;
   }
 `;

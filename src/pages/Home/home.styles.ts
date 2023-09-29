@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+/**
+ * Breakpoints list
+ * 1. 1440px
+ * 2. 1100px
+ * 3. 768px
+ * 4. 425px
+ * 5. 375px
+ */
+
 export const Wrapper = styled.div`
   display: flex;
   background-color: #111;
@@ -22,8 +31,9 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   /* padding: 30px 70px; */
-  padding: 30px 70px 0px 0px;
-  background-color: rgba(0, 0, 0, 0.7);
+  /* padding: 30px 70px 0px 0px; */
+  background-color: black;
+  opacity: 75%;
 `;
 
 export const MainContent = styled.div`
@@ -36,10 +46,17 @@ export const MainContent = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 150px 70px 30px 150px;
   margin-left: 100px;
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column-reverse;
+    padding: 75px 0;
+    text-align: center;
+    margin-left: 0;
+  }
 
   /* padding-left: 0; */
 `;
@@ -49,7 +66,13 @@ export const PageContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
-  margin-left: 5vw;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    padding: 0 20px;
+    max-width: 500px;
+  }
+
 `;
 
 export const TextHeader = styled.div`
@@ -59,6 +82,11 @@ export const TextHeader = styled.div`
   font-style: normal;
   font-weight: 650;
   line-height: 4vw;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 32px;
+    line-height: 1.1;
+  }
 `;
 
 export const TextContent = styled.p`
@@ -69,6 +97,11 @@ export const TextContent = styled.p`
   padding-top: 20px;
   font-weight: 400;
   line-height: 30px;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 `;
 export const ButtonContainer = styled.p`
   display: flex;
@@ -76,6 +109,10 @@ export const ButtonContainer = styled.p`
   align-items: center;
   justify-content: start;
   gap: 12px;
+
+  @media screen and (max-width: 1100px) {
+    justify-content: center;
+  }
 `;
 export const SignUpButton = styled.button`
   display: flex;
@@ -91,6 +128,11 @@ export const SignUpButton = styled.button`
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 `;
 export const DemoButton = styled.button`
   display: flex;
@@ -106,6 +148,11 @@ export const DemoButton = styled.button`
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
+
+  @media screen and (max-width: 1100px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 `;
 
 export const SmallLogo = styled.img`
@@ -114,9 +161,12 @@ export const SmallLogo = styled.img`
   /* margin-left: 150px; */
   /* padding-right: 200px; */
   width: 30%;
-  margin-right: 5vw;
   /* height: 337px; */
   img {
     width: 50vw;
+  }
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+    max-width: 200px;
   }
 `;
