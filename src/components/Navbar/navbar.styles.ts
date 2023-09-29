@@ -55,7 +55,7 @@ export const Text = styled.div`
     color: palevioletred;
     cursor: pointer;
   }
-  &:active {
+  /* &:active {
     color: red;
-  }
+  } */
 `;

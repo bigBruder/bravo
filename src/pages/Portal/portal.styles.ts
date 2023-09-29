@@ -24,6 +24,11 @@ export const Container = styled.div`
   padding: 30px 70px;
   background-color: rgba(0, 0, 0, 0.7);
 
+  /* @media (max-width: 480px) {
+    padding: 60px 15px 40px 15px;
+    align-items: center;
+    height: 100%;
+  } change it*/
   @media (max-width: 480px) {
     padding: 60px 15px 40px 15px;
     align-items: center;
@@ -51,6 +56,9 @@ export const PortalWrapper = styled.div`
   @media (max-width: 480px) {
     width: 90%;
   }
+  /* @media (max-width: 768px) {
+    width: 100%;
+  } change it*/
 `;
 export const PortalContent = styled.div`
   display: flex;
@@ -70,7 +78,9 @@ export const PortalContent = styled.div`
     justify-content: center;
     align-items: center;
   }
-
+  /* @media (max-width: 768px) {
+    width: 100%;
+  } change it*/
   /* align-items:center; */
 `;
 

@@ -11,6 +11,7 @@ import ContactPage from "../../pages/Contact Us/ContactPage";
 import Navbar from "../Navbar/Navbar";
 import useScrollBarPositions from "../../hooks/useScrollTop";
 import { useEffect, useState } from "react";
+import { useRef } from "react";
 import * as Styled from "./AnimatedRoutes.styles";
 interface AnimatedRoutesProps {}
 
@@ -43,6 +44,9 @@ const navArray = [
 const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
   const [activeItem, setActiveItem] = useState(0);
   const { ref, top } = useScrollBarPositions();
+  const windowHeight = useRef(window.innerHeight);
+  console.log(windowHeight);
+
   useEffect(() => {
     top < 747
       ? setActiveItem(0)
@@ -64,8 +68,22 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
       ? setActiveItem(8)
       : setActiveItem(9);
   }, [top]);
+  // const windowHeights = useRef(window.innerHeight);
+  // const windowHeight = windowHeights.current;
 
-  console.log(top);
+  // useEffect(() => {
+  //   const scrollPosition = top / windowHeight;
+  //   const numberOfItems = 10;
+  //   const activeItem = Math.min(
+  //     Math.floor(scrollPosition * numberOfItems),
+  //     numberOfItems - 1
+  //   );
+
+  //   setActiveItem(activeItem);
+  // }, [top, windowHeight]);
+
+  // console.log(top);
+
   return (
     // <AnimatePresence>
     //   <Routes location={location} key={location.pathname}>
