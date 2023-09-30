@@ -9,9 +9,9 @@ const Workflow: React.FunctionComponent<WorkflowPageProps> = () => {
     <Styled.Wrapper>
       <video src={videoBg} autoPlay loop muted />
       <Styled.Container>
-        <Styled.MainContent>
-          <WorkflowContent />
-        </Styled.MainContent>
+        {/* <Styled.MainContent> */}
+        <WorkflowContent />
+        {/* </Styled.MainContent> */}
       </Styled.Container>
     </Styled.Wrapper>
   );

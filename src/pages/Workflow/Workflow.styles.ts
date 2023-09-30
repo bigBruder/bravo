@@ -21,26 +21,50 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
+  @media (max-width: 1300px) {
+    padding: 10px 0px 0px 0px;
+  }
+  /* @media (max-width: 864px) {
+    height: 100%;
+  } */
+  @media (max-width: 768px) {
+    padding: 60px 0px 40px 0px;
+    /* height: 100%; */
+  }
+  @media (max-width: 656px) {
+    /* padding: 60px 0px 40px 0px; */
+    height: 100%;
+  }
   /* padding: 30px 70px; */
-  padding: 30px 70px 0px 0px;
+  /* padding: 30px 70px 0px 0px; */
 `;
 
-export const MainContent = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex: 1 0 0;
-  align-self: stretch;
-`;
+// export const MainContent = styled.div`
+//   display: flex;
+//   align-items: center;
+//   gap: 15px;
+//   flex: 1 0 0;
+//   align-self: stretch;
+// `;
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  flex-grow: 0.8;
-  padding: 150px 70px 30px 150px;
-  /* margin-left: 100px; */
+  /* flex-grow: 0.8; */
+  padding: 180px 70px 30px 150px;
+  @media (max-width: 1600px) {
+    padding: 100px 70px 30px 150px;
+  }
+  @media (max-width: 1300px) {
+    padding: 20px 0 0 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+  }
 `;
+
 export const DescriptionHeader = styled.text`
   color: #cda870;
   text-align: center;
@@ -50,7 +74,10 @@ export const DescriptionHeader = styled.text`
   font-weight: 650;
 
   @media (max-width: 1600px) {
-    font-size: 33px;
+    font-size: 23px;
+  }
+  @media (max-width: 480px) {
+    height: 100%;
   }
 `;
 export const WhiteText = styled.span`
@@ -69,18 +96,30 @@ export const DescriptionText = styled.text`
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  width: 30%;
-  padding-top: 1%;
+  width: 425px;
   @media (max-width: 1600px) {
     font-size: 35px;
     font-size: 16px;
+    width: 375px;
+  }
+  @media (max-width: 480px) {
+    font-size: 35px;
+    font-size: 16px;
+    max-width: 242px;
   }
 `;
 export const ContentPage = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: start;
-  padding: 5% 15% 2% 15%;
+  padding: 100px 10%;
+  @media (max-width: 1300px) {
+    flex-wrap: wrap;
+    padding: 10px 15%;
+  }
+  @media (max-width: 480px) {
+    padding: 10px 10% 50px 10%;
+  }
 `;
 export const ContentDepartment = styled.div`
   display: flex;
@@ -88,6 +127,16 @@ export const ContentDepartment = styled.div`
 
   justify-content: space-around;
   align-items: center;
+  width: 290px;
+  @media (max-width: 1600px) {
+    width: 230px;
+  }
+  @media (max-width: 768px) {
+    width: 210px;
+  }
+  @media (max-width: 480px) {
+    padding-top: 40px;
+  }
 `;
 
 export const NumberBackground = styled.div`
@@ -148,4 +197,17 @@ export const Text = styled.div`
   }
 `;
 
-export const Image = styled.div``;
+export const Image = styled.img`
+  @media (min-width: 481px) {
+    display: none;
+  }
+  width: 10px;
+  margin: 40px 100px 0;
+`;
+export const ArrowIcons = styled.img`
+  @media (max-width: 480px) {
+    display: none;
+  }
+  width: 75%;
+  margin-bottom: 4%;
+`;
