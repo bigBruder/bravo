@@ -29,7 +29,7 @@ export const Container = styled.div`
     align-items: center;
     height: 100%;
   } change it*/
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     padding: 60px 15px 40px 15px;
     align-items: center;
     height: 100%;
@@ -53,7 +53,7 @@ export const PortalWrapper = styled.div`
   /* padding: 70px 30px 150px; */
 
   /* margin-left: 100px; */
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     width: 90%;
   }
   /* @media (max-width: 768px) {
@@ -62,7 +62,7 @@ export const PortalWrapper = styled.div`
 `;
 export const PortalContent = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
 
   height: 80vh;
@@ -74,9 +74,10 @@ export const PortalContent = styled.div`
     margin-left: 0%;
     justify-content: end;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     justify-content: center;
     align-items: center;
+    height: 80%;
   }
   /* @media (max-width: 768px) {
     width: 100%;
@@ -94,7 +95,7 @@ export const RegisterContainer = styled.div`
   @media (max-width: 1200px) {
     max-width: none;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     display: flex;
     align-items: center;
   }
@@ -108,7 +109,7 @@ export const RegisterHeader = styled.text`
   @media (max-width: 1600px) {
     font-size: 45px;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 768px) {
     font-size: 23px;
     font-style: normal;
     font-weight: 650;
@@ -138,7 +139,7 @@ export const RegisterText = styled.text`
     font-size: 16px;
     padding-bottom: 30px;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -167,7 +168,7 @@ export const RegisterButton = styled.div`
     height: 60px;
     width: 260px;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     display: none;
   }
 `;
@@ -192,7 +193,7 @@ export const NavigationContainer = styled.div`
   @media (max-width: 768px) {
     display: flex;
   }
-  @media (max-width: 480) {
+  @media (max-width: 576px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -207,7 +208,7 @@ export const NewOrderImage = styled.img`
   @media (max-width: 1200px) {
     position: static;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     display: none;
   }
 `;
@@ -220,7 +221,7 @@ export const SafariImage = styled.img`
     position: static;
     width: 60%;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     display: none;
   }
 `;
@@ -246,7 +247,7 @@ export const QRCode = styled.img`
     height: 33%;
     padding: 0%;
   }
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     display: none;
   }
 `;
@@ -272,7 +273,7 @@ export const AppPlay = styled.div`
       width: 60%;
     }
   }
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     display: none;
     /* display: flex; */
     /* position: static;
@@ -288,13 +289,13 @@ export const AppPlayMobile = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  @media (min-width: 480px) {
+  @media (min-width: 577px) {
     display: none;
   }
 `;
 
 export const MaskedGroup = styled.img`
-  @media (min-width: 480px) {
+  @media (min-width: 577px) {
     display: none;
   }
   padding-top: 85px;
@@ -302,7 +303,7 @@ export const MaskedGroup = styled.img`
 `;
 
 export const MobileButton = styled.button`
-  @media (min-width: 480px) {
+  @media (min-width: 577px) {
     display: none;
   }
   display: flex;

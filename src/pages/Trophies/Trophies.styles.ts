@@ -22,11 +22,19 @@ export const Container = styled.div`
     rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0.75) 100%
   );
-  @media (max-width: 864px) {
-    height: 100%;
+  @media (max-width: 1300px) {
+    padding: 10px 0px 0px 0px;
   }
-  @media (max-width: 480px) {
+  /* @media (max-width: 864px) {
+    height: 100%;
+  } */
+  @media (max-width: 768px) {
     padding: 60px 0px 40px 0px;
+    /* height: 100%; */
+  }
+  @media (max-width: 656px) {
+    /* padding: 60px 0px 40px 0px; */
+    height: 100%;
   }
 `;
 
@@ -39,9 +47,10 @@ export const ContentWrapper = styled.div`
   @media (max-width: 1600px) {
     padding: 100px 70px 30px 150px;
   }
-  @media (max-width: 1600px) {
-    padding: 50px 70px 30px 150px;
+  @media (max-width: 1300px) {
+    padding: 0px;
   }
+
   @media (max-width: 480px) {
     padding: 20px;
   }
@@ -97,7 +106,7 @@ export const ContentPage = styled.div`
   padding: 100px 10%;
   @media (max-width: 1300px) {
     flex-wrap: wrap;
-    padding: 50px 10%;
+    padding: 10px 15%;
   }
   @media (max-width: 480px) {
     padding: 10px 10% 50px 10%;
@@ -113,6 +122,9 @@ export const ContentDepartment = styled.div`
   width: 290px;
   @media (max-width: 1600px) {
     width: 230px;
+  }
+  @media (max-width: 768px) {
+    width: 210px;
   }
   @media (max-width: 480px) {
     padding-top: 40px;

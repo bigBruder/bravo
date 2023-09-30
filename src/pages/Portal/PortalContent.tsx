@@ -5,11 +5,11 @@ import QRCode from "./../../assets/images/image 5.png";
 import NewOrder from "./../../assets/images/NEW ORDERdfgdfg 1.png";
 import PlayMarket from "./../../assets/icons/play-market.svg";
 import AppStore from "./../../assets/icons/app-store.svg";
-import Mask from "../../assets/images/Portal/Mask group.png";
+import Mask from "../../assets/images/Portal/MobileApp.png";
 
 import Description from "./../../components/Description/Description";
 
-interface IPortalContent { }
+interface IPortalContent {}
 
 const PortalContent: React.FunctionComponent<IPortalContent> = () => {
   const parentBackgroundColor = "black";
@@ -58,6 +58,10 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
           Start Your Journey
         </Styled.MobileButton>
       </Styled.PortalContent>
+      <Description
+        descriptionText={descriptionText}
+        parentBackgroundColor={parentBackgroundColor}
+      />
     </Styled.PortalWrapper>
   );
 };
