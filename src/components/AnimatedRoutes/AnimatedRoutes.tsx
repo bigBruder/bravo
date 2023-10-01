@@ -10,22 +10,26 @@ import Reviews from "../../pages/Reviews/Reviews";
 import ContactPage from "../../pages/Contact Us/ContactPage";
 import Navbar from "../Navbar/Navbar";
 import useScrollBarPositions from "../../hooks/useScrollTop";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 import * as Styled from "./AnimatedRoutes.styles";
-interface AnimatedRoutesProps {}
+interface AnimatedRoutesProps { }
 
-const itemArray = [
-  <Home />,
-  <Services />,
-  <Portal />,
-  <Team />,
-  <Trophies />,
-  <Pricing />,
-  <Workflow />,
-  <Reviews />,
-  <FAQ />,
-  <ContactPage />,
+export interface AnimatedPageProps {
+  animationActive?: boolean;
+}
+
+const itemArray: React.FC<AnimatedPageProps>[] = [
+  Home,
+  Services,
+  Portal,
+  Team,
+  Trophies,
+  Pricing,
+  Workflow,
+  Reviews,
+  FAQ,
+  ContactPage,
 ];
 
 const navArray = [
@@ -48,25 +52,29 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
   console.log(windowHeight);
 
   useEffect(() => {
-    top < 747
-      ? setActiveItem(0)
-      : top < 1494
-      ? setActiveItem(1)
-      : top < 2241
-      ? setActiveItem(2)
-      : top < 2988
-      ? setActiveItem(3)
-      : top < 3735
-      ? setActiveItem(4)
-      : top < 4482
-      ? setActiveItem(5)
-      : top < 5229
-      ? setActiveItem(6)
-      : top < 5976
-      ? setActiveItem(7)
-      : top < 6723
-      ? setActiveItem(8)
-      : setActiveItem(9);
+    // top < 747
+    //   ? setActiveItem(0)
+    //   : top < 1494
+    //   ? setActiveItem(1)
+    //   : top < 2241
+    //   ? setActiveItem(2)
+    //   : top < 2988
+    //   ? setActiveItem(3)
+    //   : top < 3735
+    //   ? setActiveItem(4)
+    //   : top < 4482
+    //   ? setActiveItem(5)
+    //   : top < 5229
+    //   ? setActiveItem(6)
+    //   : top < 5976
+    //   ? setActiveItem(7)
+    //   : top < 6723
+    //   ? setActiveItem(8)
+    //   : setActiveItem(9);
+    const step = Number((top / windowHeight.current).toFixed(0));
+    if (step !== activeItem) {
+      setActiveItem(step);
+    }
   }, [top]);
   // const windowHeights = useRef(window.innerHeight);
   // const windowHeight = windowHeights.current;
@@ -112,19 +120,19 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
         activeItem={activeItem}
         setActiveItem={setActiveItem}
       />
-      {itemArray.map((item, index) => {
+      {itemArray.map((Component, index) => {
         return (
           <Styled.ChildrenComponent
             //@ts-ignore
             parentPosition={top}
             id={navArray[index].id}
-            // style={{
-            //   position: "relative",
-            //   scrollSnapAlign: "start",
-            //   height: "100vh",
-            // }}
+          // style={{
+          //   position: "relative",
+          //   scrollSnapAlign: "start",
+          //   height: "100vh",
+          // }}
           >
-            {item}
+            <Component animationActive={index === activeItem} />
           </Styled.ChildrenComponent>
         );
       })}

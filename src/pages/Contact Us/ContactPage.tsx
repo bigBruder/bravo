@@ -2,14 +2,25 @@ import ContactContent from "./ContactContent";
 import * as Styled from "./ContactPage.styles";
 import Photo1 from "../../assets/icons/Contact/image 28.png";
 import Pointer from "../../assets/icons/Contact/pointer.svg";
+import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
+import { useEffect, useState } from "react";
 
-export interface ContactPagePageProps {}
+export interface ContactPagePageProps extends AnimatedPageProps{}
 
-const ContactPage: React.FunctionComponent<ContactPagePageProps> = () => {
+const ContactPage: React.FunctionComponent<ContactPagePageProps> = ({
+  animationActive
+}) => {
+  const [permanentAnimationState, setPermanentAnimationState] = useState(false);
+
+  useEffect(() => {
+    if (animationActive) {
+      setPermanentAnimationState(true);
+    }
+  }, [animationActive]);
   return (
     <Styled.Wrapper>
       <Styled.Container>
-        <Styled.MainContent>
+        <Styled.MainContent data-animation data-animation-active={permanentAnimationState}>
           <Styled.AdressContainer>
             <img src={Pointer} />
             <Styled.Adress>
