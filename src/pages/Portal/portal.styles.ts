@@ -36,16 +36,25 @@ export const Container = styled.div`
   }
 `;
 
-// export const MainContent = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 15px;
-//   flex: 1 0 0;
-//   align-self: stretch;
-// `;
+export const MainContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  /* padding: 70px 30px 150px; */
+
+  /* margin-left: 100px; */
+  @media (max-width: 576px) {
+    width: 90%;
+  }
+  /* @media (max-width: 768px) {
+    width: 100%;
+  } change it*/
+`;
 
 export const PortalWrapper = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -66,7 +75,7 @@ export const PortalContent = styled.div`
   justify-content: space-between;
 
   height: 80vh;
-  margin-left: 10%;
+  /* margin-left: 10%; */
   padding-bottom: 5%;
   @media (max-width: 1200px) {
     display: flex;

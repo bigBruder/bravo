@@ -10,7 +10,7 @@ import { OurServices } from "../../components/OurServices/OurServices";
 export interface ServicesPageProps extends AnimatedPageProps {}
 
 const Services: React.FunctionComponent<ServicesPageProps> = ({
-  animationActive
+  animationActive,
 }) => {
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
 
@@ -22,23 +22,23 @@ const Services: React.FunctionComponent<ServicesPageProps> = ({
 
   const isMobileServices = useMobileWidth(maxHeaderSize);
 
-  return (
-    isMobileServices ? (
-      <OurServices />
-    ) : (
-      <Styled.Wrapper>
-        <Styled.Container>
-          {/* <Header /> */}
-          <Styled.MainContent>
-            {/* <Navbar /> */}
-            <ServiceContent />
-          </Styled.MainContent>
-          {/* <Footer /> */}
-        </Styled.Container>
-      </Styled.Wrapper>
-    )
+  return isMobileServices ? (
+    <OurServices />
+  ) : (
+    <Styled.Wrapper>
+      <Styled.Container>
+        {/* <Header /> */}
+        <Styled.MainContent
+          data-animation
+          data-animation-active={permanentAnimationState}
+        >
+          {/* <Navbar /> */}
+          <ServiceContent />
+        </Styled.MainContent>
+        {/* <Footer /> */}
+      </Styled.Container>
+    </Styled.Wrapper>
   );
 };
 
 export default Services;
-

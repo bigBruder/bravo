@@ -4,10 +4,10 @@ import videoBg from "./../../assets/video/home_background.mp4";
 import * as Styled from "./portal.styles";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
 
-export interface PortalPageProps extends AnimatedPageProps { }
+export interface PortalPageProps extends AnimatedPageProps {}
 
 const Portal: React.FunctionComponent<PortalPageProps> = ({
-  animationActive
+  animationActive,
 }) => {
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
 
@@ -20,11 +20,14 @@ const Portal: React.FunctionComponent<PortalPageProps> = ({
     <Styled.Wrapper>
       <video src={videoBg} autoPlay loop muted />
       <Styled.Container>
-        {/* <Styled.MainContent> */}
-        <div data-animation data-animation-active={permanentAnimationState}>
+        <Styled.MainContent
+          data-animation
+          data-animation-active={permanentAnimationState}
+        >
+          {/* <div data-animation data-animation-active={permanentAnimationState}> */}
           <PortalContent />
-        </div>
-        {/* </Styled.MainContent> */}
+          {/* </div> */}
+        </Styled.MainContent>
       </Styled.Container>
     </Styled.Wrapper>
   );

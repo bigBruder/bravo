@@ -15,7 +15,7 @@ import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 
 import * as Styled from "./AnimatedRoutes.styles";
-interface AnimatedRoutesProps { }
+interface AnimatedRoutesProps {}
 
 export interface AnimatedPageProps {
   animationActive?: boolean;
@@ -50,23 +50,23 @@ const navArray = [
 const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
   const [activeItem, setActiveItem] = useState(0);
   const { ref, top } = useScrollBarPositions();
+  const windowHeight = useRef(window.innerHeight); // Define windowHeight using useRef
 
   useEffect(() => {
     // Oto tozhe norm varik
-    // 
-    // const step = Number((top / windowHeight.current).toFixed(0));
-    // if (step !== activeItem) {
-    //   setActiveItem(step);
-    // }
-    const scrollableHeight = ref?.current?.scrollHeight ?? 0;
-    const scrollPosition = top / scrollableHeight;
-    const numberOfItems = itemArray.length;
-    const activeItem = Math.min(
-      Math.floor(scrollPosition * numberOfItems),
-      numberOfItems - 1
-    );
-
-    setActiveItem(activeItem);
+    //
+    const step = Number((top / windowHeight.current).toFixed(0));
+    if (step !== activeItem) {
+      setActiveItem(step);
+    }
+    // const scrollableHeight = ref?.current?.scrollHeight ?? 0;
+    // const scrollPosition = top / scrollableHeight;
+    // const numberOfItems = itemArray.length;
+    // const activeItem = Math.min(
+    //   Math.floor(scrollPosition * numberOfItems),
+    //   numberOfItems - 1
+    // );
+    // setActiveItem(activeItem);
   }, [top]);
 
   return (
