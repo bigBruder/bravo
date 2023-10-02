@@ -145,13 +145,13 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
       </div>
 
       <div className={styles.footer}>
-        <img src={Quotes} />
+        <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
           Bravo Creations began operations in 1980.
           <br /> The second generation of jewelry artisans will handle your
           order
         </p>
-        <img src={Quotes} />
+        {screenSize.width > 767 ? <img src={Quotes} style={{ height: 29, width: 38 }} /> : null}
       </div>
     </div>
   );
