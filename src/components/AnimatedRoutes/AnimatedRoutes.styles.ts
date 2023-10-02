@@ -5,7 +5,7 @@ export const Wrapper = styled.div<AnimatedRoutesProps>`
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     scroll-snap-type: none;
     overflow-y: scroll;
 
@@ -14,11 +14,13 @@ export const Wrapper = styled.div<AnimatedRoutesProps>`
 `;
 export const ChildrenComponent = styled.div`
   position: relative;
-  scroll-snap-align: center;
   scroll-snap-type: y mandatory;
-  height: "100vh";
-  overflow: hidden;
-  @media (max-width: 480px) {
+  scroll-snap-align: start;
+  height: 100vh;
+  @media (max-width: 768px) {
+    height: 100%;
+  }
+  @media (max-width: 576px) {
     scroll-snap-align: none;
     scroll-snap-type: none;
     height: 100%;

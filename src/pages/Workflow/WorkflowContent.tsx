@@ -1,6 +1,7 @@
 import * as Styled from "./Workflow.styles";
 import Description from "../../components/Description/Description";
 import ArrowIcons from "../../assets/icons/workflow-arrow.png";
+import MobileIcon from "../../assets/images/Workflow/MobileWorkflowIcon.png";
 
 interface IWorkflowContent {}
 
@@ -27,6 +28,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
             time you need it.
           </Styled.Text>
         </Styled.ContentDepartment>
+        <Styled.Image src={MobileIcon} />
         <Styled.ContentDepartment>
           <Styled.NumberBackground>
             2<Styled.Number>2</Styled.Number>
@@ -37,6 +39,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
             time you need it.
           </Styled.Text>
         </Styled.ContentDepartment>
+        <Styled.Image src={MobileIcon} />
         <Styled.ContentDepartment>
           <Styled.NumberBackground>
             3<Styled.Number>3</Styled.Number>
@@ -47,6 +50,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
             time you need it.
           </Styled.Text>
         </Styled.ContentDepartment>
+        <Styled.Image src={MobileIcon} />
         <Styled.ContentDepartment>
           <Styled.NumberBackground>
             4<Styled.Number>4</Styled.Number>
@@ -58,8 +62,9 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           </Styled.Text>
         </Styled.ContentDepartment>
       </Styled.ContentPage>
+      <Styled.ArrowIcons src={ArrowIcons} />
 
-      <img src={ArrowIcons} style={{ width: "75%", marginBottom: "4%" }} />
+      {/* <img src={ArrowIcons} style={{ width: "75%", marginBottom: "4%" }} /> */}
 
       <Description
         descriptionText={

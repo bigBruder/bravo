@@ -20,9 +20,11 @@ const Workflow: React.FunctionComponent<WorkflowPageProps> = ({
     <Styled.Wrapper>
       <video src={videoBg} autoPlay loop muted />
       <Styled.Container>
-        <Styled.MainContent data-animation data-animation-active={permanentAnimationState}>
+        {/* <Styled.MainContent> */}
+        <div data-animation data-animation-active={permanentAnimationState}>
           <WorkflowContent />
-        </Styled.MainContent>
+        </div>
+        {/* </Styled.MainContent> */}
       </Styled.Container>
     </Styled.Wrapper>
   );
