@@ -10,21 +10,28 @@ import Reviews from "../../pages/Reviews/Reviews";
 import ContactPage from "../../pages/Contact Us/ContactPage";
 import Navbar from "../Navbar/Navbar";
 import useScrollBarPositions from "../../hooks/useScrollTop";
-import { useEffect, useState } from "react";
-import * as Styled from "./AnimatedRoutes.styles";
-interface AnimatedRoutesProps {}
 
-const itemArray = [
-  <Home />,
-  <Services />,
-  <Portal />,
-  <Team />,
-  <Trophies />,
-  <Pricing />,
-  <Workflow />,
-  <Reviews />,
-  <FAQ />,
-  <ContactPage />,
+import React, { useEffect, useState } from "react";
+import { useRef } from "react";
+
+import * as Styled from "./AnimatedRoutes.styles";
+interface AnimatedRoutesProps { }
+
+export interface AnimatedPageProps {
+  animationActive?: boolean;
+}
+
+const itemArray: React.FC<AnimatedPageProps>[] = [
+  Home,
+  Services,
+  Portal,
+  Team,
+  Trophies,
+  Pricing,
+  Workflow,
+  Reviews,
+  FAQ,
+  ContactPage,
 ];
 
 const navArray = [
@@ -45,6 +52,12 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
   const { ref, top } = useScrollBarPositions();
 
   useEffect(() => {
+    // Oto tozhe norm varik
+    // 
+    // const step = Number((top / windowHeight.current).toFixed(0));
+    // if (step !== activeItem) {
+    //   setActiveItem(step);
+    // }
     const scrollableHeight = ref?.current?.scrollHeight ?? 0;
     const scrollPosition = top / scrollableHeight;
     const numberOfItems = itemArray.length;
@@ -84,14 +97,14 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
         activeItem={activeItem}
         setActiveItem={setActiveItem}
       />
-      {itemArray.map((item, index) => {
+      {itemArray.map((Component, index) => {
         return (
           <Styled.ChildrenComponent
             //@ts-ignore
             parentPosition={top}
             id={navArray[index].id}
           >
-            {item}
+            <Component animationActive={index === activeItem} />
           </Styled.ChildrenComponent>
         );
       })}

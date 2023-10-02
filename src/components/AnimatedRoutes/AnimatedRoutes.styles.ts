@@ -14,6 +14,7 @@ export const Wrapper = styled.div<AnimatedRoutesProps>`
 `;
 export const ChildrenComponent = styled.div`
   position: relative;
+  scroll-snap-type: y mandatory;
   scroll-snap-align: start;
   height: 100vh;
   @media (max-width: 768px) {
@@ -21,6 +22,8 @@ export const ChildrenComponent = styled.div`
   }
   @media (max-width: 576px) {
     scroll-snap-align: none;
+    scroll-snap-type: none;
     height: 100%;
+    overflow: auto;
   }
 `;
