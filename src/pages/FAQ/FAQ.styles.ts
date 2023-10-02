@@ -25,14 +25,13 @@ export const Container = styled.div`
   opacity: 70%;
   /* padding: 30px 70px; */
   padding: 10px 20px 0px 0px;
-  
+
   @media (min-width: 768px) {
     padding: 30px 70px 0px 0px;
   }
 `;
 
-export const MainContent = styled.div`
-`;
+export const MainContent = styled.div``;
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -41,7 +40,7 @@ export const ContentWrapper = styled.div`
   /* padding: 0 6vw; */
   padding: 0 0 10px 20px;
   /* flex-grow: 0.8; */
-  
+
   @media (min-width: 768px) {
     margin-left: 100px;
     padding: 0 0 30px 70px;
@@ -115,7 +114,7 @@ export const ContentHeader = styled.div`
   font-size: 3vh;
   font-style: normal;
   font-weight: 650;
-  
+
   @media (min-width: 768px) {
     text-align: left;
   }
@@ -123,19 +122,16 @@ export const ContentHeader = styled.div`
 
 export const ContentDescription = styled.div`
   display: flex;
-
   color: #fff;
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-
   gap: 10px;
   @media (max-width: 1600px) {
     font-size: 14px;
     font-weight: 400;
   }
-
   /* img {
     width: 10%;
   } */
@@ -176,8 +172,8 @@ export const RegistrationText = styled.div`
 `;
 
 export const YellowText = styled.text`
-  color: #CDA870;
-`
+  color: #cda870;
+`;
 
 export const RegistrationButton = styled.button`
   display: flex;
@@ -213,7 +209,7 @@ export const RegistrationButtonSmall = styled.button`
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
-  
+
   @media (min-width: 768px) {
     display: none;
   }
@@ -225,10 +221,10 @@ export const RgistrationLeftContainer = styled.div`
 `;
 
 export const RegistrationDescription = styled.text`
-  color: #9799AC;
+  color: #9799ac;
   font-family: Quicksand;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
-`
+`;
