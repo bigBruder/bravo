@@ -101,14 +101,14 @@ const FaqContent: React.FunctionComponent<IWorkflowContent> = () => {
           <hr
             style={{ height: "100%", borderColor: "rgba(255, 255, 255, 0.10)" }}
           />
-          <Styled.RgistrationLeftContainer>
+          <Styled.RgistrationRightContainer>
             <Styled.RegistrationButton>
               {" "}
               <img src={OctagonIcon} style={{ color: "black" }} />
               Register Now
             </Styled.RegistrationButton>
             <img src={ItsFree} style={{ height: 18 }} />
-          </Styled.RgistrationLeftContainer>
+          </Styled.RgistrationRightContainer>
         </Styled.RegistrationField>
         <Styled.RegistrationButtonSmall>
           {" "}
