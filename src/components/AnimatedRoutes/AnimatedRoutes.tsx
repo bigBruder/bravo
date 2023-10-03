@@ -85,7 +85,7 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
     //   </Routes>
     // </AnimatePresence>
 
-    <Styled.Wrapper ref={ref}>
+    <Styled.Wrapper ref={ref} activeItem={activeItem}>
       {/* style={{
         scrollSnapType: "y proximity",
         overflowY: "scroll",
@@ -100,6 +100,7 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
       {itemArray.map((Component, index) => {
         return (
           <Styled.ChildrenComponent
+            activeItem={activeItem}
             //@ts-ignore
             parentPosition={top}
             id={navArray[index].id}

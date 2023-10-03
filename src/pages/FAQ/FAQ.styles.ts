@@ -21,14 +21,23 @@ export const Container = styled.div`
   z-index: 1;
   width: 100%;
   min-height: 100vh;
-  background-color: black;
-  opacity: 70%;
+  /* background-color: black; */
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  /* opacity: 70%; */
   /* padding: 30px 70px; */
   padding: 10px 20px 0px 0px;
 
   @media (min-width: 768px) {
     padding: 30px 70px 0px 0px;
   }
+  /* @media (max-width: 1100px) {
+    height: 100%;
+  } */
+  //
 `;
 
 export const MainContent = styled.div``;

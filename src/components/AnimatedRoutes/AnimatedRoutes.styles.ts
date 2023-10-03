@@ -5,11 +5,17 @@ export const Wrapper = styled.div<AnimatedRoutesProps>`
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
-  @media (max-width: 576px) {
+  /* @media (max-width: 576px) {
     scroll-snap-type: none;
     overflow-y: scroll;
 
     height: 100%;
+  } */
+
+  @media (max-width: 768px) {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    /* height: 100%; */
   }
 `;
 export const ChildrenComponent = styled.div`
@@ -19,11 +25,21 @@ export const ChildrenComponent = styled.div`
   height: 100vh;
   @media (max-width: 768px) {
     height: 100%;
+    scroll-snap-align: start;
+    scroll-snap-type: none;
+    overflow: auto;
   }
-  @media (max-width: 576px) {
+  /* @media (max-width: 576px) {
     scroll-snap-align: none;
     scroll-snap-type: none;
     height: 100%;
     overflow: auto;
-  }
+  } */
+
+  /* @media (max-width: 768px) {
+    scroll-snap-align: none;
+    scroll-snap-type: none;
+    height: 100%;
+    overflow: auto;
+  } */
 `;
