@@ -23,11 +23,15 @@ export const Container = styled.div`
 
   width: 100%;
   /* padding: 30px 70px; */
-  padding: 30px 70px 0px 0px;
+  @media (min-width: 1101px) {
+    padding: 30px 70px 0px 0px;
+  }
 `;
 export const MainContent = styled.div`
+  width: 100%;
   display: flex;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
   flex: 1 0 0;
 `;

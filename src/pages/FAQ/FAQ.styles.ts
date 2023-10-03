@@ -27,7 +27,10 @@ export const Container = styled.div`
   padding: 10px 20px 0px 0px;
 
   @media (min-width: 768px) {
-    padding: 30px 70px 0px 0px;
+    padding: 30px 20px 0px 0px;
+  }
+  @media (min-width: 1101px) {
+    padding: 0 0 30px 70px;
   }
 `;
 
@@ -42,6 +45,9 @@ export const ContentWrapper = styled.div`
   /* flex-grow: 0.8; */
 
   @media (min-width: 768px) {
+    padding: 0 0 30px 20px;
+  }
+  @media (min-width: 1101px) {
     margin-left: 100px;
     padding: 0 0 30px 70px;
   }
@@ -57,6 +63,7 @@ export const DescriptionHeader = styled.text`
   font-size: 42px;
   font-style: normal;
   font-weight: 650;
+  margin-top: 40px;
 
   @media (max-width: 1600px) {
     font-size: 31px;
@@ -91,7 +98,7 @@ export const ContentPage = styled.div`
   display: grid;
   grid-template-columns: 100%;
   padding: 2% 5% 2% 5%;
-  gap: 40px;
+  gap: 10px;
 
   @media (min-width: 768px) {
     grid-template-columns: 40% 60%;
@@ -140,6 +147,7 @@ export const ContentDescription = styled.div`
 export const RegistrationField = styled.div`
   display: none;
   padding: 3vh 30px;
+  max-height: 208px;
 
   flex-direction: row;
   justify-content: space-between;
@@ -151,7 +159,7 @@ export const RegistrationField = styled.div`
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12.5px);
   gap: 5vh;
-
+  
   @media (min-width: 768px) {
     display: flex;
   }
@@ -165,7 +173,7 @@ export const RegistrationText = styled.div`
   font-style: normal;
   font-weight: 650;
   margin-bottom: 20px;
-
+  
   @media (max-width: 1600px) {
     font-size: 18px;
   }
@@ -218,7 +226,14 @@ export const RegistrationButtonSmall = styled.button`
 export const RgistrationLeftContainer = styled.div`
   display: flex;
   flex-direction: column;
+  
+  overflow: hidden;
 `;
+
+export const RgistrationRightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 export const RegistrationDescription = styled.text`
   color: #9799ac;
@@ -227,4 +242,8 @@ export const RegistrationDescription = styled.text`
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
+
+  max-height: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `;
