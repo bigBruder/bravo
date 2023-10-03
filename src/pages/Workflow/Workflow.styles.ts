@@ -1,9 +1,14 @@
 import styled from "styled-components";
-
+import BackgroundImage from "./../../assets/images/Services.png";
 export const Wrapper = styled.div`
   display: flex;
   background-color: #111;
-  video {
+  //
+  background-image: url("${BackgroundImage}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+  /* video {
     position: absolute;
     top: 0;
     left: 0;
@@ -11,7 +16,7 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+  } */
 `;
 
 export const Container = styled.div`
@@ -22,6 +27,11 @@ export const Container = styled.div`
   z-index: 1;
   width: 100%;
   height: 100vh;
+  /* background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  ); */
   background-color: rgba(0, 0, 0, 0.7);
   @media (max-width: 1300px) {
     padding: 10px 0px 0px 0px;

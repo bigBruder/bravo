@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PortalContent from "./PortalContent";
-import videoBg from "./../../assets/video/home_background.mp4";
+// import videoBg from "./../../assets/video/home_background.mp4";
 import * as Styled from "./portal.styles";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
 

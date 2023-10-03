@@ -84,7 +84,7 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
     //     <Route path="/contact-us" element={<ContactPage />} />
     //   </Routes>
     // </AnimatePresence>
-
+    //@ts-ignore
     <Styled.Wrapper ref={ref} activeItem={activeItem}>
       {/* style={{
         scrollSnapType: "y proximity",
@@ -100,6 +100,7 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
       {itemArray.map((Component, index) => {
         return (
           <Styled.ChildrenComponent
+            //@ts-ignore
             activeItem={activeItem}
             //@ts-ignore
             parentPosition={top}

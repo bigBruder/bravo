@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import videoBg from "./../../assets/video/home_background.mp4";
+// import videoBg from "./../../assets/video/home_background.mp4";
 import WorkflowContent from "./WorkflowContent";
 import * as Styled from "./Workflow.styles";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
 
-export interface WorkflowPageProps extends AnimatedPageProps{}
+export interface WorkflowPageProps extends AnimatedPageProps {}
 
 const Workflow: React.FunctionComponent<WorkflowPageProps> = ({
-  animationActive
+  animationActive,
 }) => {
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
 
@@ -18,7 +18,7 @@ const Workflow: React.FunctionComponent<WorkflowPageProps> = ({
   }, [animationActive]);
   return (
     <Styled.Wrapper>
-      <video src={videoBg} autoPlay loop muted />
+      {/* <video src={videoBg} autoPlay loop muted /> */}
       <Styled.Container>
         {/* <Styled.MainContent> */}
         <div data-animation data-animation-active={permanentAnimationState}>
