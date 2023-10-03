@@ -18,16 +18,21 @@ const Portal: React.FunctionComponent<PortalPageProps> = ({
   }, [animationActive]);
   return (
     <Styled.Wrapper>
-      <video src={videoBg} autoPlay loop muted />
+      {/* <div style={{ height: "100%" }}> */}
+      {/* <video src={videoBg} autoPlay loop muted /> */}
+      {/* </div> */}
       <Styled.Container>
-        <Styled.MainContent
+        {/* <Styled.MainContent
           data-animation
           data-animation-active={permanentAnimationState}
-        >
-          {/* <div data-animation data-animation-active={permanentAnimationState}> */}
-          <PortalContent />
-          {/* </div> */}
-        </Styled.MainContent>
+        > */}
+        {/* <div data-animation data-animation-active={permanentAnimationState}> */}
+        <PortalContent
+          data-animation
+          data-animation-active={permanentAnimationState}
+        />
+        {/* </div> */}
+        {/* </Styled.MainContent> */}
       </Styled.Container>
     </Styled.Wrapper>
   );

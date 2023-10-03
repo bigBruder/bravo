@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
     left: 0;
     display: block;
     width: 100%;
-    height: 100%;
+    height: 100% !important;
     object-fit: cover;
   }
 `;
@@ -27,6 +27,7 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   flex-direction: column;
   align-items: center;
+
   z-index: 1;
   width: 100%;
   height: 100vh;
@@ -49,7 +50,7 @@ export const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 150px 70px 30px 150px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
 
   @media screen and (max-width: 1100px) {
     flex-direction: column-reverse;
@@ -66,13 +67,13 @@ export const PageContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
+  /* flex-grow: 1; */
 
   @media screen and (max-width: 1100px) {
     width: 100%;
     padding: 0 20px;
     max-width: 500px;
   }
-
 `;
 
 export const TextHeader = styled.div`
@@ -154,19 +155,95 @@ export const DemoButton = styled.button`
     line-height: 1.5;
   }
 `;
+export const FreeMark = styled.div`
+  padding-left: 5%;
+  padding-top: 2%;
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
 
 export const SmallLogo = styled.img`
   /* width: 100%;
   height: 100%; */
   /* margin-left: 150px; */
   /* padding-right: 200px; */
-  width: 30%;
+
   /* height: 337px; */
-  img {
-    width: 50vw;
-  }
-  @media screen and (max-width: 1100px) {
+  width: 30%;
+  /* width: 30%; */
+
+  @media (max-width: 1100px) {
     width: 100%;
     max-width: 200px;
   }
+`;
+
+export const LogoContainer = styled.div`
+  display: contents;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+`;
+export const ItemContainer = styled.div`
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  bottom: 0px;
+  left: 40vw;
+  align-self: center;
+  justify-content: center;
+  gap: 10px;
+  /* width: 400px; */
+  flex-wrap: wrap;
+  /* img {
+    width: 8%;
+    height: 100%;
+  } */
+  /* flex-grow: 1; */
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
+
+export const GoogleIcon = styled.img`
+  width: 14%;
+  height: 14%;
+`;
+export const AppStoreIcon = styled.img`
+  width: 14%;
+  height: 14%;
+`;
+export const GuaranteeIcon = styled.img`
+  width: 8%;
+  height: 8%;
+  margin-top: 1.2%;
+`;
+export const BestPrice = styled.img`
+  width: 8%;
+  height: 8%;
+`;
+
+export const MadeInIcon = styled.img`
+  width: 8%;
+  height: 8%;
+  margin-top: 0.5%;
+`;
+export const GuaranteedIcon2 = styled.img`
+  width: 8%;
+  height: 8%;
+  margin-top: 1.2%;
+`;
+
+export const NavigateIconContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+`;
+export const QualityIconContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `;

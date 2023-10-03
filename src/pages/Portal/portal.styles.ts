@@ -1,8 +1,16 @@
 import styled from "styled-components";
-
+import BackgroundImage from "../../assets/images/Portal/Services.png";
 export const Wrapper = styled.div`
   display: flex;
+  /* height: 100%; */
+  display: flex;
+  background-image: url("${BackgroundImage}");
+  background-size: cover;
 
+  background-repeat: no-repeat;
+  background-position: bottom 0px right 0px;
+
+  /* 
   video {
     position: absolute;
     top: 0;
@@ -11,7 +19,7 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+  }*/
 `;
 
 export const Container = styled.div`
@@ -29,7 +37,7 @@ export const Container = styled.div`
     align-items: center;
     height: 100%;
   } change it*/
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     padding: 60px 15px 40px 15px;
     align-items: center;
     height: 100%;
@@ -45,7 +53,7 @@ export const MainContent = styled.div`
   /* padding: 70px 30px 150px; */
 
   /* margin-left: 100px; */
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     width: 90%;
   }
   /* @media (max-width: 768px) {
@@ -54,15 +62,15 @@ export const MainContent = styled.div`
 `;
 
 export const PortalWrapper = styled.div`
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  /* padding: 70px 30px 150px; */
+  padding: 70px 30px 10px;
 
   /* margin-left: 100px; */
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     width: 90%;
   }
   /* @media (max-width: 768px) {
@@ -74,16 +82,18 @@ export const PortalContent = styled.div`
   /* flex-wrap: wrap; */
   justify-content: space-between;
 
-  height: 80vh;
+  height: 70vh;
   /* margin-left: 10%; */
   padding-bottom: 5%;
   @media (max-width: 1200px) {
     display: flex;
     flex-direction: column;
     margin-left: 0%;
-    justify-content: end;
+    justify-content: space-between;
   }
   @media (max-width: 768px) {
+    display: flex;
+
     justify-content: center;
     align-items: center;
     height: 80%;
@@ -103,8 +113,9 @@ export const RegisterContainer = styled.div`
   margin-left: 3%;
   @media (max-width: 1200px) {
     max-width: none;
+    align-items: center;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     display: flex;
     align-items: center;
   }
@@ -116,6 +127,9 @@ export const RegisterHeader = styled.text`
   font-style: normal;
   font-weight: 650;
   @media (max-width: 1600px) {
+    font-size: 45px;
+  }
+  @media (max-width: 1200px) {
     font-size: 45px;
   }
   @media (max-width: 768px) {
@@ -148,7 +162,10 @@ export const RegisterText = styled.text`
     font-size: 16px;
     padding-bottom: 30px;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 1200px) {
+    text-align: center;
+  }
+  @media (max-width: 768px) {
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -177,7 +194,8 @@ export const RegisterButton = styled.div`
     height: 60px;
     width: 260px;
   }
-  @media (max-width: 576px) {
+
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -192,17 +210,21 @@ export const NavigationContainer = styled.div`
   /* margin-left: 20%; */
   position: relative;
   width: 50vw;
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    width: 60vw;
-    /* flex-wrap: wrap; */
-  }
+    width: 60vw; */
+  /* flex-wrap: wrap; */
+  /* } */
   @media (max-width: 768px) {
     display: flex;
+    ///
+    flex-direction: column;
+    align-items: center;
+    ///
   }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,10 +236,10 @@ export const NewOrderImage = styled.img`
   position: absolute;
   bottom: -7%;
   right: 3%;
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     position: static;
-  }
-  @media (max-width: 576px) {
+  } */
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -226,11 +248,11 @@ export const SafariImage = styled.img`
   position: absolute;
   bottom: 0%;
   right: 5%;
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     position: static;
     width: 60%;
-  }
-  @media (max-width: 576px) {
+  } */
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -250,13 +272,13 @@ export const QRCode = styled.img`
   background: #fff;
   box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.25);
 
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     position: static;
     width: 15%;
     height: 33%;
     padding: 0%;
-  }
-  @media (max-width: 576px) {
+  } */
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -275,14 +297,14 @@ export const AppPlay = styled.div`
   }
 
   @media (max-width: 1200px) {
-    flex-direction: column;
+    /* flex-direction: column;
     bottom: 100%;
     right: -12%;
     img {
       width: 60%;
-    }
+    } */
   }
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     display: none;
     /* display: flex; */
     /* position: static;
@@ -298,13 +320,13 @@ export const AppPlayMobile = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  @media (min-width: 577px) {
+  @media (min-width: 769px) {
     display: none;
   }
 `;
 
 export const MaskedGroup = styled.img`
-  @media (min-width: 577px) {
+  @media (min-width: 769px) {
     display: none;
   }
   padding-top: 85px;
@@ -312,7 +334,7 @@ export const MaskedGroup = styled.img`
 `;
 
 export const MobileButton = styled.button`
-  @media (min-width: 577px) {
+  @media (min-width: 769px) {
     display: none;
   }
   display: flex;
