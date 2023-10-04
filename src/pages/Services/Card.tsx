@@ -32,43 +32,43 @@ const Card: React.FunctionComponent<IServiceCard> = () => {
         <Styled.GroupCardBottom>
           <ImageHoverComponent
             image={Cad}
-            title={'Stone Setting'}
+            title={'CAD'}
             text={'We offer Rush or date specific service to get your order done.'}
           />
           <ImageHoverComponent
             image={Engraving}
-            title={'Stone Setting'}
+            title={'Engraving'}
             text={'We offer Rush or date specific service to get your order done.'}
           />
         </Styled.GroupCardBottom>
         <Styled.GroupCardTop>
           <ImageHoverComponent
             image={Repair}
-            title={'Stone Setting'}
+            title={'Repair'}
             text={'We offer Rush or date specific service to get your order done.'}
           />
           <ImageHoverComponent
             image={Casting}
-            title={'Stone Setting'}
+            title={'Casting'}
             text={'We offer Rush or date specific service to get your order done.'}
           />
         </Styled.GroupCardTop>
         <Styled.GroupCardBottom >
           <ImageHoverComponent
             image={Manufacturing}
-            title={'Stone Setting'}
+            title={'Manufacturing'}
             text={'We offer Rush or date specific service to get your order done.'}
           />
           <ImageHoverComponent
             image={Wax}
-            title={'Stone Setting'}
+            title={'Wax Prototype'}
             text={'We offer Rush or date specific service to get your order done.'}
           />
         </Styled.GroupCardBottom>
         <Styled.GroupCardTop>
           <ImageHoverComponent
             image={Photography}
-            title={'Stone Setting'}
+            title={'Photography'}
             text={'We offer Rush or date specific service to get your order done.'}
           />
           <img src={Ask} />
@@ -76,20 +76,56 @@ const Card: React.FunctionComponent<IServiceCard> = () => {
       </Styled.Wrapper>
       <Styled.WrapperSmall>
         <Styled.GroupCardBottom>
-          <img src={Cad} />
-          <img src={DesignCard} />
-          <img src={Engraving} />
+          <ImageHoverComponent
+            image={Cad}
+            title={'CAD'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
+          <ImageHoverComponent
+            image={DesignCard}
+            title={'Custom design'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
+          <ImageHoverComponent
+            image={Engraving}
+            title={'Engraving'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
         </Styled.GroupCardBottom>
         <Styled.GroupCardTop>
-          <img src={Repair} />
-          <img src={Casting} />
-          <img src={StoneSetting} />
+          <ImageHoverComponent
+            image={Repair}
+            title={'Repair'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
+          <ImageHoverComponent
+            image={Casting}
+            title={'Casting'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
+          <ImageHoverComponent
+            image={StoneSetting}
+            title={'Stone Setting'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
           <img src={Ask} />
         </Styled.GroupCardTop>
         <Styled.GroupCardBottom >
-          <img src={Manufacturing} />
-          <img src={Photography} />
-          <img src={Wax} />
+          <ImageHoverComponent
+            image={Manufacturing}
+            title={'Manufacturing'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
+          <ImageHoverComponent
+            image={Photography}
+            title={'Photography'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
+          <ImageHoverComponent
+            image={Wax}
+            title={'Wax Prototype'}
+            text={'We offer Rush or date specific service to get your order done.'}
+          />
         </Styled.GroupCardBottom>
       </Styled.WrapperSmall>
     </div>
