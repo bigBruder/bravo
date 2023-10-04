@@ -185,6 +185,13 @@ export const AdressButton = styled.button`
     padding: 12px 34px;
     line-height: 24px;
   }
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(1);
+  }
 `;
 
 export const ButtonOctagon = styled.img`
@@ -243,15 +250,16 @@ export const Contact = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 5px;
 `;
 export const ContactIcon = styled.img`
-  width: 12px;
-  height: 12px;
+  width: 17px;
+  height: 17px;
 `;
 export const ContactIconPhone = styled.img`
   margin-left: 10px;
-  width: 12px;
-  height: 12px;
+  width: 17px;
+  height: 17px;
   @media (max-width: 768px) {
     margin-left: 0px;
   }

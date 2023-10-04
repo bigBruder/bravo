@@ -6,8 +6,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./Team.module.scss";
 
 import Title from "./../../assets/icons/TeamTitle.svg";
-import ArrowLeft from "./../../assets/icons/ArrowLeft.svg";
-import ArrowRight from "./../../assets/icons/ArrowRight.svg";
+import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
+import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
 
 import Name1 from "../../assets/images/HumanCard/Name1.svg";
 import Avatar1 from "../../assets/images/HumanCard/Human1.svg";
@@ -162,7 +162,9 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
           Even if we are not near you, we will provide you with the best
           experience and easy communication at your fingertips.
         </p>
-        {screenSize.width > 767 ? <img src={Quotes} style={{ height: 29, width: 38 }} /> : null}
+        {screenSize.width > 767 ? (
+          <img src={Quotes} style={{ height: 29, width: 38 }} />
+        ) : null}
       </div>
     </div>
   );

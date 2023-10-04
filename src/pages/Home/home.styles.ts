@@ -33,8 +33,14 @@ export const Container = styled.div`
   height: 100vh;
   /* padding: 30px 70px; */
   /* padding: 30px 70px 0px 0px; */
-  background-color: black;
-  opacity: 75%;
+  /* background-color: black;
+  opacity: 75%; */
+
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 `;
 
 export const MainContent = styled.div`
@@ -117,6 +123,8 @@ export const ButtonContainer = styled.p`
 `;
 export const SignUpButton = styled.button`
   display: flex;
+  //
+  /* position: relative; */
   padding: 2vh 2vw;
   align-items: center;
   gap: 12px;
@@ -129,6 +137,15 @@ export const SignUpButton = styled.button`
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
+  transition: transform 0.3s;
+  &:hover {
+    background-color: #b39362;
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.5);
+  }
 
   @media screen and (max-width: 1100px) {
     font-size: 16px;
@@ -149,6 +166,16 @@ export const DemoButton = styled.button`
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  &:active {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1);
+  }
 
   @media screen and (max-width: 1100px) {
     font-size: 16px;
@@ -210,10 +237,28 @@ export const ItemContainer = styled.div`
 export const GoogleIcon = styled.img`
   width: 14%;
   height: 14%;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(1);
+  }
 `;
+export const IconButton = styled.button`
+  display: contents;
+`;
+
 export const AppStoreIcon = styled.img`
   width: 14%;
   height: 14%;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(1);
+  }
 `;
 export const GuaranteeIcon = styled.img`
   width: 8%;

@@ -1,4 +1,5 @@
 import * as Styled from "./portal.styles";
+import { AppPlayButton, Star } from "./portal.styles";
 import UserOctagon from "./../../assets/icons/user-octagon.svg";
 import SafariContent from "./../../assets/images/Safari • Dark Mode ON 2.png";
 import QRCode from "./../../assets/images/image 5.png";
@@ -6,6 +7,7 @@ import NewOrder from "./../../assets/images/NEW ORDERdfgdfg 1.png";
 import PlayMarket from "./../../assets/icons/play-market.svg";
 import AppStore from "./../../assets/icons/app-store.svg";
 import Mask from "../../assets/images/Portal/MobileApp.png";
+import StarsIcon from "../../assets/icons/Portal/Stars.svg";
 
 import Description from "./../../components/Description/Description";
 
@@ -20,8 +22,9 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
       <Styled.PortalContent>
         <Styled.RegisterContainer>
           <Styled.RegisterHeader>
-            Portal <Styled.WhiteText>as</Styled.WhiteText> Easy{" "}
-            <Styled.WhiteText>as 1,2,3</Styled.WhiteText>
+            <Star src={StarsIcon} />
+            Portal <Styled.WhiteText>as</Styled.WhiteText>
+            <br /> Easy <Styled.WhiteText>as 1,2,3</Styled.WhiteText>
           </Styled.RegisterHeader>
 
           <Styled.RegisterText>
@@ -47,8 +50,12 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
             {/* <img src={QRCode} /> */}
           </Styled.QRCode>
           <Styled.AppPlay>
-            <img src={PlayMarket} />
-            <img src={AppStore} />
+            <AppPlayButton>
+              <img src={PlayMarket} />
+            </AppPlayButton>
+            <AppPlayButton>
+              <img src={AppStore} />
+            </AppPlayButton>
           </Styled.AppPlay>
 
           <Styled.MaskedGroup src={Mask} />

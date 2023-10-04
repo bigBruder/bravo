@@ -124,7 +124,15 @@ export const SButton = styled.button`
   font-style: normal;
   font-weight: 600;
   font-size: 1.7vh;
-
+  transition: transform 0.3s;
+  &:hover {
+    background-color: #b39362;
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.5);
+  }
   @media (max-width: 1600px) {
     padding: 10px 24px;
   }

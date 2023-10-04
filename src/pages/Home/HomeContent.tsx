@@ -91,8 +91,13 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
       <Styled.SmallLogo src={LogoIcon} />
       <Styled.ItemContainer>
         <NavigateIconContainer>
-          <GoogleIcon src={PlayStore} />
-          <AppStoreIcon src={AppStore} />
+          <Styled.IconButton>
+            {" "}
+            <GoogleIcon src={PlayStore} />
+          </Styled.IconButton>
+          <Styled.IconButton>
+            <AppStoreIcon src={AppStore} />
+          </Styled.IconButton>
         </NavigateIconContainer>
         <QualityIconContainer>
           <BestPrice src={BestPriceIcon} />

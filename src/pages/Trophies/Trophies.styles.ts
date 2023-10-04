@@ -23,6 +23,9 @@ export const Container = styled.div`
     rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0.75) 100%
   );
+  @media (min-width: 1300px) {
+    padding-bottom: 100px;
+  }
   @media (max-width: 1300px) {
     padding: 10px 0px 0px 0px;
   }
@@ -141,18 +144,21 @@ export const HalfNumberTop = styled.div`
   display: flex;
   justify-content: center;
   align-items: end;
-  width: 40px;
-  height: 35px;
+  width: 50px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 10px 10px 0px 0px;
   background: rgba(255, 255, 255, 0.05);
+  /* img {
+    width: 30%;
+  } */
 `;
 export const HalfNumberBottom = styled.div`
   display: flex;
   justify-content: center;
   align-items: start;
-  width: 40px;
-  height: 35px;
+  width: 50px;
+  height: 40px;
   flex-shrink: 0;
   border-radius: 0px 0px 10px 10px;
   background: rgba(255, 255, 255, 0.05);

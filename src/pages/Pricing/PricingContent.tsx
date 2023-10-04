@@ -9,8 +9,8 @@ import "swiper/css";
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./Pricing.module.scss";
 
-import ArrowLeft from "./../../assets/icons/ArrowLeft.svg";
-import ArrowRight from "./../../assets/icons/ArrowRight.svg";
+import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
+import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
 
 import PricingCard1 from "../../assets/images/PricingCard/Frame 813355.png";
 
