@@ -50,19 +50,24 @@ export const ContentWrapper = styled.div`
   justify-content: start;
   align-items: center;
   /* padding: 0 6vw; */
+  /* padding: 0 0 10px 20px; */
   padding: 0 0 10px 20px;
   /* flex-grow: 0.8; */
 
   @media (min-width: 768px) {
-    padding: 0 0 30px 20px;
+    /* padding: 0 0 30px 20px; */
   }
   @media (min-width: 1101px) {
     margin-left: 100px;
-    padding: 0 0 30px 70px;
+    padding: 0 0 0px 0px;
+    /* margin-left: 100px;
+    padding: 0 0 30px 70px; */
   }
   @media (min-width: 1600px) {
     margin-left: 100px;
-    padding: 0 0 30px 150px;
+    padding: 0 0 0px 0px;
+    /* margin-left: 100px;
+    padding: 0 0 30px 150px; */
   }
 `;
 export const DescriptionHeader = styled.text`
@@ -155,8 +160,9 @@ export const ContentDescription = styled.div`
 
 export const RegistrationField = styled.div`
   display: none;
-  padding: 3vh 30px;
+  padding: 30px 30px;
   max-height: 208px;
+  max-width: 585px;
 
   flex-direction: row;
   justify-content: space-between;
@@ -167,8 +173,8 @@ export const RegistrationField = styled.div`
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12.5px);
-  gap: 5vh;
-  
+  gap: 20px;
+
   @media (min-width: 768px) {
     display: flex;
   }
@@ -176,13 +182,13 @@ export const RegistrationField = styled.div`
 
 export const RegistrationText = styled.div`
   color: #fff;
-  text-align: center;
+  text-align: start;
   font-family: Gwen-Trial;
   font-size: 25px;
   font-style: normal;
   font-weight: 650;
   margin-bottom: 20px;
-  
+
   @media (max-width: 1600px) {
     font-size: 18px;
   }
@@ -206,6 +212,13 @@ export const RegistrationButton = styled.button`
   font-style: normal;
   font-weight: 600;
   margin-bottom: 20px;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1);
+  }
 
   @media (max-width: 1600px) {
     font-size: 16px;
@@ -235,14 +248,14 @@ export const RegistrationButtonSmall = styled.button`
 export const RgistrationLeftContainer = styled.div`
   display: flex;
   flex-direction: column;
-  
+  max-width: 347px;
   overflow: hidden;
 `;
 
 export const RgistrationRightContainer = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const RegistrationDescription = styled.text`
   color: #9799ac;

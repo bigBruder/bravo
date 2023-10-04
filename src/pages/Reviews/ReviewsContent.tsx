@@ -5,8 +5,8 @@ import "swiper/css";
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./Revievs.module.scss";
 
-import ArrowLeft from "./../../assets/icons/ArrowLeft.svg";
-import ArrowRight from "./../../assets/icons/ArrowRight.svg";
+import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
+import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
 
 import Avatar1 from "../../assets/images/HumanCard/Human2.1.svg";
 
@@ -151,7 +151,9 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
           <br /> The second generation of jewelry artisans will handle your
           order
         </p>
-        {screenSize.width > 767 ? <img src={Quotes} style={{ height: 29, width: 38 }} /> : null}
+        {screenSize.width > 767 ? (
+          <img src={Quotes} style={{ height: 29, width: 38 }} />
+        ) : null}
       </div>
     </div>
   );

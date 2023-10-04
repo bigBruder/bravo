@@ -24,6 +24,7 @@ export const Wrapper = styled.div<DescriptionProps>`
     font-family: Quicksand;
     font-size: 0.95vw;
     font-style: normal;
+    text-align: center;
     font-weight: 300;
     margin-top: 1vh;
     max-width: 75%;

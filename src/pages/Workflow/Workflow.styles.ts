@@ -33,6 +33,9 @@ export const Container = styled.div`
     rgba(0, 0, 0, 0.75) 100%
   ); */
   background-color: rgba(0, 0, 0, 0.7);
+  @media (min-width: 1300px) {
+    padding-bottom: 100px;
+  }
   @media (max-width: 1300px) {
     padding: 10px 0px 0px 0px;
   }
