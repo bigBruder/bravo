@@ -73,9 +73,6 @@ export const PortalWrapper = styled.div`
   @media (max-width: 768px) {
     width: 90%;
   }
-  /* @media (max-width: 768px) {
-    width: 100%;
-  } change it*/
 `;
 export const PortalContent = styled.div`
   display: flex;
