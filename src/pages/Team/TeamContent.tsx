@@ -57,8 +57,7 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.container_header}>
         <img src={Title} className={styles.container_title} />
         <p className={styles.container_text}>
-          The team is dedicated to delivering high-quality custom designs and
-          ensuring customer satisfaction.
+          Our team is a vibrant tapestry of talent, passion, and creativity. We're not just jewelers; we're visionaries who turn dreams into breathtaking reality.
         </p>
       </div>
 
@@ -159,8 +158,7 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
-          Even if we are not near you, we will provide you with the best
-          experience and easy communication at your fingertips.
+          Distance is no obstacle; we bring the best experience right to your fingertips, with seamless communication as our hallmark. Your satisfaction knows no bounds
         </p>
         {screenSize.width > 767 ? <img src={Quotes} style={{ height: 29, width: 38 }} /> : null}
       </div>

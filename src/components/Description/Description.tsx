@@ -18,7 +18,7 @@ const Description: React.FunctionComponent<DescriptionProps> = ({
         <img src={Icon} />
         <img src={Icon} />
       </Styled.IconContainer>
-      <p>{descriptionText}</p>
+      <Styled.Description>{descriptionText}</Styled.Description>
       <Styled.IconContainer>
         <img src={Icon} />
         <img src={Icon} />

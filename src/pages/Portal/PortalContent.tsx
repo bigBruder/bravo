@@ -14,7 +14,7 @@ interface IPortalContent {}
 const PortalContent: React.FunctionComponent<IPortalContent> = () => {
   const parentBackgroundColor = "black";
   const descriptionText =
-    "Our unique approach and attention to detail set us apart from our competitors, ensuring a truly memorable experience for our clients.";
+    "What sets us apart is our unwavering commitment to excellence, a fusion of craftsmanship, innovation, and a relentless pursuit of perfection.";
   return (
     <Styled.PortalWrapper>
       <Styled.PortalContent>
@@ -25,7 +25,7 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
           </Styled.RegisterHeader>
 
           <Styled.RegisterText>
-            Submit, Track, Ship, Communicate, Mobile Devices All in One Service
+            Submit, Track, Ship, Communicate – Your All-in-One Solution for Seamless Service Management.
           </Styled.RegisterText>
           <Styled.RegisterButton>
             <img src={UserOctagon} />
