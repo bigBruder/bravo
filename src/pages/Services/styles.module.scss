@@ -85,9 +85,9 @@
     margin-top: 20px;
 
     font-family: Quicksand;
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 12px;
     letter-spacing: 0em;
     text-align: center;
 
@@ -144,7 +144,7 @@
 @media (min-width: 768px) and (max-width: 1101px) {
   .container {
     &_title {
-      font-size: 18px;
+      font-size: 16px;
 
       &--top {
         animation-name: titleToTopXL;
@@ -154,17 +154,18 @@
     }
   }
   .container_over_container {
-    padding: 0 30px;
+    padding: 0 16px;
   }
   .container_text {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
 @media (min-width: 1300px) {
   .container {
     &_title {
-      font-size: 18px;
+      font-size: 16px;
 
       &--top {
         animation-name: titleToTopXL;
@@ -174,9 +175,10 @@
     }
   }
   .container_over_container {
-    padding: 0 30px;
+    padding: 0 16px;
   }
   .container_text {
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
