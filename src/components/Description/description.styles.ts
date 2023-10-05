@@ -109,3 +109,7 @@ export const MobileIcon = styled.img`
     display: none;
   }
 `;
+
+export const Description = styled.p`
+  text-align: center;
+`;

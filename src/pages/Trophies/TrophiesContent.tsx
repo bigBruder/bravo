@@ -17,8 +17,7 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
     <Styled.ContentWrapper>
       <Styled.DescriptionHeader>Our Trophies</Styled.DescriptionHeader>
       <Styled.DescriptionText lang="en">
-        Please understand this is based on average results. Real time depends on
-        complexity of jobs
+        Unlocking Speed and Precision: Please note, our turnaround times are based on averages and may vary depending on job complexity.
       </Styled.DescriptionText>
 
       <Styled.ContentPage>
@@ -35,8 +34,7 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
           <Styled.Hours>Hours</Styled.Hours>
           <Styled.Header>Message Response Time</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+            Rapid Response: Timely and Professional Communication, Always at Your Service.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
@@ -53,8 +51,7 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
 
           <Styled.Header>EST Prod. Time</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+            We strive to provide you with quick and accurate estimates, ensuring you have the information you need promptly for your jewelry decisions."
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
@@ -71,8 +68,7 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
 
           <Styled.Header>CAD Prod. Time</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+            Our CAD production is swift, bringing your designs to life in no time.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
@@ -88,8 +84,7 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
           <Styled.Hours>Days</Styled.Hours>
           <Styled.Header>Prod. Time after approval</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+            With all approvals in place, we swiftly craft your jewelry to perfection, delivering quality without delay.
           </Styled.Text>
         </Styled.ContentDepartment>
       </Styled.ContentPage>
