@@ -25,6 +25,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 
@@ -54,11 +56,15 @@ export const MainContent = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 150px 70px 30px 150px;
-  /* margin-left: 100px; */
+  gap: 8vw;
 
+  align-items: center;
+  padding: 0px 30px 0 100px;
+  margin-left: 5vw;
+  /* padding: 150px 70px 30px 150px; */
+  /* margin-left: 100px; */
   @media screen and (max-width: 1100px) {
+    gap: 0;
     flex-direction: column-reverse;
     padding: 75px 0;
     text-align: center;
@@ -69,10 +75,14 @@ export const ContentWrapper = styled.div`
 `;
 export const PageContent = styled.div`
   display: flex;
-  width: 40%;
+
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
+  @media (min-width: 1101px) {
+    width: 37%;
+  }
+
   /* flex-grow: 1; */
 
   @media screen and (max-width: 1100px) {
@@ -89,17 +99,27 @@ export const TextHeader = styled.div`
   font-style: normal;
   font-weight: 650;
   line-height: 4vw;
+  position: relative;
+  img {
+    position: absolute;
+    width: 5%;
+    left: 27vw;
+    bottom: 2vh;
+  }
 
   @media screen and (max-width: 1100px) {
     font-size: 32px;
     line-height: 1.1;
+    img {
+      display: none;
+    }
   }
 `;
 
 export const TextContent = styled.p`
-  color: #9799ac;
+  color: #fbfdfc;
   font-family: Quicksand;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-style: normal;
   padding-top: 20px;
   font-weight: 400;
@@ -183,7 +203,7 @@ export const DemoButton = styled.button`
   }
 `;
 export const FreeMark = styled.div`
-  padding-left: 5%;
+  padding-left: 3vw;
   padding-top: 2%;
   @media (max-width: 1100px) {
     display: none;
@@ -197,7 +217,7 @@ export const SmallLogo = styled.img`
   /* padding-right: 200px; */
 
   /* height: 337px; */
-  width: 30%;
+  width: 35%;
   /* width: 30%; */
 
   @media (max-width: 1100px) {
@@ -214,16 +234,17 @@ export const LogoContainer = styled.div`
   flex-grow: 1;
 `;
 export const ItemContainer = styled.div`
-  display: flex;
+  display: content;
   position: absolute;
   flex-direction: column;
   bottom: 0px;
-  left: 40vw;
+  /* left: 50vw; */
+  left: 50vw;
   align-self: center;
   justify-content: center;
   gap: 10px;
   /* width: 400px; */
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   /* img {
     width: 8%;
     height: 100%;
@@ -235,8 +256,9 @@ export const ItemContainer = styled.div`
 `;
 
 export const GoogleIcon = styled.img`
-  width: 14%;
-  height: 14%;
+  width: 20%;
+  height: 20%;
+  border-radius: 0.8vw;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -250,8 +272,9 @@ export const IconButton = styled.button`
 `;
 
 export const AppStoreIcon = styled.img`
-  width: 14%;
-  height: 14%;
+  width: 20%;
+  height: 20%;
+  border-radius: 0.8vw;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -261,24 +284,24 @@ export const AppStoreIcon = styled.img`
   }
 `;
 export const GuaranteeIcon = styled.img`
-  width: 8%;
-  height: 8%;
-  margin-top: 1.2%;
+  width: 10%;
+  height: 10%;
+  margin-top: 1.6%;
 `;
 export const BestPrice = styled.img`
-  width: 8%;
-  height: 8%;
+  width: 10%;
+  height: 10%;
 `;
 
 export const MadeInIcon = styled.img`
-  width: 8%;
-  height: 8%;
-  margin-top: 0.5%;
+  width: 10%;
+  height: 10%;
+  margin-top: 0.7%;
 `;
 export const GuaranteedIcon2 = styled.img`
-  width: 8%;
-  height: 8%;
-  margin-top: 1.2%;
+  width: 10%;
+  height: 10%;
+  margin-top: 1.6%;
 `;
 
 export const NavigateIconContainer = styled.div`

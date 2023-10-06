@@ -51,7 +51,9 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.container_header}>
         <p className={styles.container_title}>Pricing</p>
         <p className={styles.container_text}>
-          Our transparent pricing reflects a starting point for basic services, ensuring clarity and transparency in meeting your jewelry service needs.
+          Our transparent pricing reflects a starting point for basic services,
+          ensuring clarity and transparency in meeting your jewelry service
+          needs.
         </p>
       </div>
 
@@ -70,7 +72,9 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
+            // loop={true}
             slidesPerView={getItemsPerPage}
+            initialSlide={2}
             coverflowEffect={{
               rotate: 35,
               stretch: 0,
@@ -80,7 +84,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             }}
             pagination={false}
             modules={[EffectCoverflow, Pagination]}
-            className={styles.mySwiper}
+            className={styles.mySwipes}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
@@ -128,7 +132,9 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
-          Transparency is our cornerstone. Starting prices offer a clear beginning for your jewelry journey. For precise quotes, submit a request on our portal.
+          Transparency is our cornerstone. Starting prices offer a clear
+          beginning for your jewelry journey. For precise quotes, submit a
+          request on our portal.
         </p>
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />

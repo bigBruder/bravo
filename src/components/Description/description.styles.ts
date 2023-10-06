@@ -5,10 +5,12 @@ interface DescriptionProps {
 export const Wrapper = styled.div<DescriptionProps>`
   display: flex;
 
-  padding: 1.5% 2%;
+  /* padding: 1.5% 2%; */
+  padding: 20px 20px;
   justify-content: space-between;
   align-items: center;
-  flex: 1 0 0;
+  margin: 0 auto;
+  /* flex: 1 0 0; */
   border-radius: 15px;
   background: ${(props) =>
     props?.parentbackgroundColor === "white"
@@ -26,7 +28,7 @@ export const Wrapper = styled.div<DescriptionProps>`
     font-style: normal;
     text-align: center;
     font-weight: 300;
-    margin-top: 1vh;
+    /* margin-top: 1vh; */
     max-width: 75%;
   }
   @media (max-width: 480px) {

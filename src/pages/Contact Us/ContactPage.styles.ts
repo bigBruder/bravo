@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BackgroundImage from "./../../assets/images/snazzy-image3.png";
+import BackgroundImage from "./../../assets/images/Contact Us/BackgroundImage.png";
 export const Wrapper = styled.div`
   display: flex;
   background-image: url("${BackgroundImage}");

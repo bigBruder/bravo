@@ -47,6 +47,7 @@ import MadeUsaIcon from "../../assets/icons/Home/made-in-usa.png";
 import AppStore from "../../assets/icons/Home/App Store.png";
 import PlayStore from "../../assets/icons/Home/PlayMarket.png";
 import ItsFree from "../../assets/icons/Home/It’s Free.png";
+import Stars from "../../assets/icons/Home/Star.png";
 
 import {
   GoogleIcon,
@@ -66,13 +67,13 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
     {/* <Styled.LogoWrapper> */}
     <Styled.PageContent>
       <Styled.TextHeader>
-        Number One Service Jeweler in America
+        Number One Service Jeweler in America <img src={Stars} />
       </Styled.TextHeader>
       <Styled.TextContent>
         Experience the difference that sets us apart: We have redefined
-        exceptional customer service by exceeding your expectations.
-        Our team of expert jewelers, highly skilled craftsmen and
-        state-of-the-art technology ensure unmatched quality.
+        exceptional customer service by exceeding your expectations. Our team of
+        expert jewelers, highly skilled craftsmen and state-of-the-art
+        technology ensure unmatched quality.
       </Styled.TextContent>
       <Styled.ButtonContainer>
         <Styled.SignUpButton>

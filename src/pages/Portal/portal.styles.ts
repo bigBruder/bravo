@@ -317,9 +317,25 @@ export const AppPlay = styled.div`
   right: 30%;
 
   img {
-    width: 30%;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.05);
+    }
+    &:active {
+      transform: scale(1);
+    }
+    width: 50%;
   }
-
+  @media (max-width: 1601px) {
+    img {
+      width: 50%;
+    }
+  }
+  @media (max-width: 1401px) {
+    img {
+    }
+    right: 13vw;
+  }
   @media (max-width: 1200px) {
     /* flex-direction: column;
     bottom: 100%; */
@@ -327,6 +343,9 @@ export const AppPlay = styled.div`
     /* img {
       width: 60%;
     } */
+    img {
+      width: 30%;
+    }
   }
   @media (max-width: 768px) {
     display: none;
@@ -341,6 +360,15 @@ export const AppPlay = styled.div`
 
 export const AppPlayButton = styled.button`
   display: contents;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1);
+  }
 `;
 export const AppPlayMobile = styled.div`
   display: flex;

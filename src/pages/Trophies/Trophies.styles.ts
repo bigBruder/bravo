@@ -74,7 +74,7 @@ export const DescriptionHeader = styled.text`
   font-weight: 650;
 
   @media (max-width: 1600px) {
-    font-size: 23px;
+    font-size: 32px;
   }
   @media (max-width: 480px) {
     height: 100%;
