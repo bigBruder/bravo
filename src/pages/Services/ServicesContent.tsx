@@ -13,9 +13,10 @@ const ServiceContent: React.FunctionComponent<IServiceContent> = () => {
           alignItems: "center",
         }}
       >
-        <Styled.DescriptionHeader>Services</Styled.DescriptionHeader>
+        <Styled.DescriptionHeader>Our Services</Styled.DescriptionHeader>
         <Styled.DescriptionText>
-          Choose the service you {`\n`} are interested in
+          Discover the full spectrum of our services at Bravo Creations<br/>
+          and experience the essence of jewelry craftsmanship
         </Styled.DescriptionText>
       </div>
       <Styled.ContentPage>

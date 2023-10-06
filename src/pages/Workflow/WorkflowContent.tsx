@@ -21,8 +21,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           We Make it <Styled.WhiteText>Extremely Easy</Styled.WhiteText>
         </Styled.DescriptionHeader>
         <Styled.DescriptionText lang="en">
-          Please understand this is based on average results. Real time depends
-          on complexity of jobs
+          With our innovative portal and app, we've redefined the process of submission, tracking, and communication. Join us, and experience the future of seamless jewelry service.
         </Styled.DescriptionText>
       </div>
       <Styled.ContentPage>
@@ -30,10 +29,9 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           <Styled.NumberBackground>
             1<Styled.Number>1</Styled.Number>
           </Styled.NumberBackground>
-          <Styled.Header>Submit Job</Styled.Header>
+          <Styled.Header>Request Service</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+            Kickstart your journey by submitting your jewelry service request. Our user-friendly portal ensures a seamless start.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.Image src={MobileIcon} />
@@ -41,10 +39,9 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           <Styled.NumberBackground>
             2<Styled.Number>2</Styled.Number>
           </Styled.NumberBackground>
-          <Styled.Header>Receive EST & Approve it</Styled.Header>
+          <Styled.Header>Estimate and Approval</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+            We'll promptly provide you with an estimate. Once you're satisfied, give the green light to proceed.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.Image src={MobileIcon} />
@@ -52,10 +49,9 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           <Styled.NumberBackground>
             3<Styled.Number>3</Styled.Number>
           </Styled.NumberBackground>
-          <Styled.Header>Receive CAD & Approve it</Styled.Header>
+          <Styled.Header>CAD Design and Approval</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+            Receive CAD & Approve it: Visualize your design with our detailed CAD mockup. Approve it, and we'll initiate production
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.Image src={MobileIcon} />
@@ -63,10 +59,9 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           <Styled.NumberBackground>
             4<Styled.Number>4</Styled.Number>
           </Styled.NumberBackground>
-          <Styled.Header>Receive Your Item</Styled.Header>
+          <Styled.Header>Receive Your jewelry</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+            Once production is complete, the jewelry piece undergoes meticulous inspection and is then prepared for swift delivery, making its way to your store.
           </Styled.Text>
         </Styled.ContentDepartment>
       </Styled.ContentPage>
@@ -76,9 +71,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
 
       <Description
         descriptionText={
-          "First, jewelers create sketches and select suitable materials, then jewelry making begins, which" +
-          "\n" +
-          "includes operations such as casting, machining and polishing, gemstone inlay and final finishing."
+          'Stop the constant back-and-forth emails, phone calls, and uncertainty about your job\'s progress. It\'s time for a change. Join us and experience a streamlined process that puts you in control of your jewelry orders.'
         }
         parentBackgroundColor={parentBackgroundColor}
       />

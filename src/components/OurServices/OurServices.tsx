@@ -10,9 +10,8 @@ export const OurServices = () => {
         Our Services
       </Styled.Title>
       <Styled.SectionDiscription>
-        Please understand this is based on
-        average results. Real time depends
-        on complexity of jobs
+        Discover the full spectrum of our services at Bravo Creations
+        and experience the essence of jewelry craftsmanship
       </Styled.SectionDiscription>
       <Styled.Section>
         <Styled.Article>

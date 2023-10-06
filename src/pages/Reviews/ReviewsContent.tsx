@@ -54,7 +54,7 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.container_header}>
         <p className={styles.container_title}>Reviews</p>
         <p className={styles.container_text}>
-          Transparency & Streamline Process
+          Celebrate Our Success Stories: Uncover the Insights and Experiences Shared by Our Delighted and Loyal Clients
         </p>
       </div>
 
@@ -147,9 +147,7 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
-          Bravo Creations began operations in 1980.
-          <br /> The second generation of jewelry artisans will handle your
-          order
+          Our unwavering commitment is to satisfy every client and make their journey hassle-free. You could be our next delighted client—join us on the path to exceptional service.
         </p>
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />

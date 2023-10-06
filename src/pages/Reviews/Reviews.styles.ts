@@ -5,6 +5,8 @@ export const Wrapper = styled.div`
   display: flex;
   background-image: none;
 
+  height: 100%;
+
   @media (min-width: 768px) {
     background-image: url("${BackgroundImage}");
     background-size: 550px;
@@ -25,6 +27,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  height: 100%;
+
   width: 100%;
   /* padding: 30px 70px; */
   padding: 30px 0px 0px 0px;
@@ -37,6 +41,9 @@ export const MainContent = styled.div`
   display: flex;
   align-items: start;
   justify-content: center;
+
+  height: 100%;
+  
   gap: 15px;
   flex: 1 0 0;
 `;

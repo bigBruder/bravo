@@ -1,8 +1,12 @@
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+
   width: 90%;
-  height: 100%;
   padding: 50px 20px 30px 20px;
-  height: 100vh;
+  height: 98vh;
 
   @media (min-width: 1101px) {
     margin-left: 100px;
@@ -48,6 +52,7 @@
   &_wrapper {
     display: flex;
     align-items: center;
+    margin: 0 -200px;
   }
 
   &_center {
@@ -66,6 +71,8 @@
   width: 100%;
   background-color: rgba(205, 168, 112, 0.1);
   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   margin: 0 auto;
   padding: 20px 30px;
   border-radius: 15px;
@@ -130,6 +137,9 @@
 
 @media (min-width: 768px) {
   .container {
+    &_wrapper {
+      margin: 0;
+    }
     &_header {
       gap: 0px;
     }
@@ -140,6 +150,10 @@
     &_text {
       font-size: 14px;
     }
+  }
+  .footer {
+    flex-direction: row;
+    width: 80%;
   }
 }
 
