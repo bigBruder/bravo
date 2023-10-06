@@ -17,74 +17,51 @@ const FaqContent: React.FunctionComponent<IWorkflowContent> = () => {
           <Styled.ContentHeader>Account</Styled.ContentHeader>
           <QuestionAnswer
             question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
+              'To create an account, click on the "Sign Up" or "Create Account" button on our website\'s homepage. Follow the prompts to provide your information and create a secure account.'
             }
-            summary={"Forgot my password, what should I do?"}
+            summary={"How do I create an account?"}
           />
           <QuestionAnswer
             question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
+              'Your account provides the tools to view invoices, submit service requests, track orders, and communicate effortlessly with our team.'
             }
-            summary={"How do I register?"}
-          />
-          <QuestionAnswer
-            question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
-            }
-            summary={
-              "What are the benefits of having a Bravo Creation account?"
-            }
+            summary={"What does my account offer?"}
           />
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.ContentHeader>Payment</Styled.ContentHeader>
           <QuestionAnswer
             question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
+              'At the moment, we accept payment via check, wire transfer, or Zelle for your convenience.'
             }
-            summary={"When will I be charged?"}
+            summary={"What payment methods do you accept?"}
           />
           <QuestionAnswer
             question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
+              'Billing timelines may vary based on your account terms. However, typically, you will receive your invoice after the item is shipped or picked up, allowing you 30 days to make the payment. Please refer to your account terms for specific billing details.'
             }
-            summary={"Is it safe to purchase items on vivaia.com?"}
-          />
-          <QuestionAnswer
-            question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
-            }
-            summary={"What payment methods can I use with my order?"}
+            summary={"When will I be billed for my jewelry service?"}
           />
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.ContentHeader>Orders</Styled.ContentHeader>
           <QuestionAnswer
             question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
+              'Log in to your account and click on the "add project" button. Fill out the necessary details about your project and submit it through our user-friendly portal.'
             }
-            summary={"I forgot my password, what should I do?"}
+            summary={'How do I submit a jewelry service request?'}
           />
           <QuestionAnswer
             question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
+              'After submitting a service request, you can track its progress in real-time by logging into your account. Click on the "workflow" tab to view updates.'
             }
-            summary={"Can I cancel or change my order?"}
+            summary={'How can I track the progress of my order?'}
           />
           <QuestionAnswer
             question={
-              "Navigate to the ‘Account’ page and click ‘Create Account.’ Then, fill in your Name\n" +
-              "and Email as required."
+              'Changes may be possible depending on the stage of production. To request changes to your order, simply use the job chat feature in your account..'
             }
-            summary={"How do I track my order?"}
+            summary={'Can I make changes to my order after submission?'}
           />
         </Styled.ContentDepartment>
         <Styled.RegistrationField>

@@ -4,11 +4,13 @@ import BackgroundImage2 from "../../assets/images/TeamsBackground.svg";
 
 export const Wrapper = styled.div`
   display: flex;
-
-  background-image: url("${BackgroundImage}");
-  background-size: 550px;
-  background-repeat: no-repeat;
-  background-position: bottom 0px right 0px;
+  
+  @media (min-width: 768px) {
+    background-image: url("${BackgroundImage}");
+    background-size: 550px;
+    background-repeat: no-repeat;
+    background-position: bottom 0px right 0px;
+  }
 `;
 export const InnerWrapper = styled.div`
   display: flex;

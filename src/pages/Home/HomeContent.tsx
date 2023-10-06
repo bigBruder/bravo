@@ -69,8 +69,10 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
         Number One Service Jeweler in America
       </Styled.TextHeader>
       <Styled.TextContent>
-        Let us show you why we are different by providing exceptional customer
-        service and going above and beyond to meet your needs.
+        Experience the difference that sets us apart: We have redefined
+        exceptional customer service by exceeding your expectations.
+        Our team of expert jewelers, highly skilled craftsmen and
+        state-of-the-art technology ensure unmatched quality.
       </Styled.TextContent>
       <Styled.ButtonContainer>
         <Styled.SignUpButton>
@@ -79,7 +81,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
         </Styled.SignUpButton>
         <Styled.DemoButton>
           <img src={OctagonIcon} />
-          Demo Video
+          Find out more
         </Styled.DemoButton>
       </Styled.ButtonContainer>
       <Styled.FreeMark>

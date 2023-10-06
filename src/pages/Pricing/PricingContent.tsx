@@ -51,17 +51,19 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.container_header}>
         <p className={styles.container_title}>Pricing</p>
         <p className={styles.container_text}>
-          Transparency & Streamline Process
+          Our transparent pricing reflects a starting point for basic services, ensuring clarity and transparency in meeting your jewelry service needs.
         </p>
       </div>
 
       <div className={styles.container_wrapper}>
-        <div
-          className={styles.slider_arrow}
-          onClick={() => swiperRef.current?.slidePrev()}
-        >
-          <img src={ArrowLeft} />
-        </div>
+        {screenSize.width > 767 ? (
+          <div
+            className={styles.slider_arrow}
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            <img src={ArrowLeft} />
+          </div>
+        ) : null}
 
         <div className={styles.container_center}>
           <Swiper
@@ -113,23 +115,27 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
           </Swiper>
         </div>
 
-        <div
-          className={styles.slider_arrow}
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          <img src={ArrowRight} />
-        </div>
+        {screenSize.width > 767 ? (
+          <div
+            className={styles.slider_arrow}
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            <img src={ArrowRight} />
+          </div>
+        ) : null}
       </div>
 
       <div className={styles.footer}>
-        <img src={Quotes} />
+        <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
           We aim to show you all our prices to build a good relationship from
           the start.
           <br /> Transparency and craftsmanship - guaranteeing the perfect
           product
         </p>
-        <img src={Quotes} />
+        {screenSize.width > 767 ? (
+          <img src={Quotes} style={{ height: 29, width: 38 }} />
+        ) : null}
       </div>
     </div>
   );
