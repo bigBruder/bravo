@@ -20,8 +20,7 @@ export const ContactContent: React.FC<IContactContent> = () => {
               Give <Styled.WhiteText> us a try!</Styled.WhiteText>
             </Styled.AdressHeader>
             <Styled.AdressDescription>
-              Please understand this is based on <br /> average results. Real
-              time depends <br /> on complexity of jobs
+              Experience the Difference with Bravo Creations. Elevate Your Business Service Needs with Exceptional Customer Service and Outstanding Craftsmanship.
             </Styled.AdressDescription>
             <Styled.AdressButton>
               <Styled.ButtonOctagon src={Octagon} />
