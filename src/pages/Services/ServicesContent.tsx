@@ -6,11 +6,18 @@ interface IServiceContent {}
 const ServiceContent: React.FunctionComponent<IServiceContent> = () => {
   return (
     <Styled.ContentWrapper>
-      <Styled.DescriptionHeader>Services</Styled.DescriptionHeader>
-      <Styled.DescriptionText>
-        Choose the service you {`\n`} are interested in
-      </Styled.DescriptionText>
-
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Styled.DescriptionHeader>Services</Styled.DescriptionHeader>
+        <Styled.DescriptionText>
+          Choose the service you {`\n`} are interested in
+        </Styled.DescriptionText>
+      </div>
       <Styled.ContentPage>
         <Card />
       </Styled.ContentPage>

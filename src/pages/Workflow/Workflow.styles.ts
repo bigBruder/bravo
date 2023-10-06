@@ -68,6 +68,11 @@ export const ContentWrapper = styled.div`
   align-items: center;
   /* flex-grow: 0.8; */
   padding: 180px 70px 30px 150px;
+  @media (min-width: 1600px) {
+    justify-content: space-between;
+    gap: 5vh;
+    padding: 150px 70px 30px 150px;
+  }
   @media (max-width: 1600px) {
     padding: 100px 70px 30px 150px;
   }
@@ -127,10 +132,10 @@ export const ContentPage = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: start;
-  padding: 100px 10%;
+  padding: 100px 10% 40px 10%;
   @media (max-width: 1300px) {
     flex-wrap: wrap;
-    padding: 10px 15%;
+    padding: 20px 15%;
   }
   @media (max-width: 480px) {
     padding: 10px 10% 50px 10%;
@@ -225,4 +230,7 @@ export const ArrowIcons = styled.img`
   }
   width: 75%;
   margin-bottom: 4%;
+  @media (min-width: 1301) {
+    margin-bottom: 10%;
+  }
 `;

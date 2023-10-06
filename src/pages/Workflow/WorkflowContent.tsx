@@ -9,14 +9,22 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
   const parentBackgroundColor = "black";
   return (
     <Styled.ContentWrapper>
-      <Styled.DescriptionHeader>
-        {" "}
-        We Make it <Styled.WhiteText>Extremely Easy</Styled.WhiteText>
-      </Styled.DescriptionHeader>
-      <Styled.DescriptionText lang="en">
-        Please understand this is based on average results. Real time depends on
-        complexity of jobs
-      </Styled.DescriptionText>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Styled.DescriptionHeader>
+          {" "}
+          We Make it <Styled.WhiteText>Extremely Easy</Styled.WhiteText>
+        </Styled.DescriptionHeader>
+        <Styled.DescriptionText lang="en">
+          Please understand this is based on average results. Real time depends
+          on complexity of jobs
+        </Styled.DescriptionText>
+      </div>
       <Styled.ContentPage>
         <Styled.ContentDepartment>
           <Styled.NumberBackground>

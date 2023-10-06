@@ -10,6 +10,9 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
+  @media (min-width: 1500px) {
+    height: 70vh;
+  }
 `;
 
 export const WrapperSmall = styled.div`
@@ -32,11 +35,22 @@ export const GroupCardTop = styled.div`
   padding-bottom: 33px;
   margin: 0;
   flex: 1 0 0;
+
   & img {
     width: 100%;
     max-width: 180px;
+    /* max-width: 250px; */
     aspect-ratio: 1/1;
     object-fit: cover;
+    @media (min-width: 1600px) {
+      max-width: 222px;
+    }
+    @media (min-width: 1700px) {
+      max-width: 240px;
+    }
+  }
+  @media (min-width: 1500px) {
+    margin-bottom: 50px;
   }
 `;
 export const GroupCardBottom = styled.div`
@@ -48,7 +62,21 @@ export const GroupCardBottom = styled.div`
   & img {
     width: 100%;
     max-width: 180px;
+    /* max-width: 250px; */
     aspect-ratio: 1/1;
     object-fit: cover;
+    @media (min-width: 1600px) {
+      max-width: 222px;
+
+      /* padding-top: 5px; */
+      /* padding-top: 10px; */
+      /* padding-bottom: 33px; */
+    }
+    @media (min-width: 1700px) {
+      max-width: 240px;
+    }
+  }
+  @media (min-width: 1500px) {
+    margin-top: 50px;
   }
 `;
