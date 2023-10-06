@@ -128,10 +128,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
-          We aim to show you all our prices to build a good relationship from
-          the start.
-          <br /> Transparency and craftsmanship - guaranteeing the perfect
-          product
+          Transparency is our cornerstone. Starting prices offer a clear beginning for your jewelry journey. For precise quotes, submit a request on our portal.
         </p>
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />
