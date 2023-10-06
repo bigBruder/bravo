@@ -8,10 +8,18 @@ interface IWorkflowContent {}
 const FaqContent: React.FunctionComponent<IWorkflowContent> = () => {
   return (
     <Styled.ContentWrapper>
+      {/* <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      > */}
       <Styled.DescriptionHeader>FAQ</Styled.DescriptionHeader>
       <Styled.DescriptionText lang="en">
         Here you will find answers to the most popular questions
       </Styled.DescriptionText>
+      {/* </div> */}
       <Styled.ContentPage>
         <Styled.ContentDepartment>
           <Styled.ContentHeader>Account</Styled.ContentHeader>

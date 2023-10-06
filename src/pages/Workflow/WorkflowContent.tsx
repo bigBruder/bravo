@@ -9,13 +9,21 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
   const parentBackgroundColor = "black";
   return (
     <Styled.ContentWrapper>
-      <Styled.DescriptionHeader>
-        {" "}
-        We Make it <Styled.WhiteText>Extremely Easy</Styled.WhiteText>
-      </Styled.DescriptionHeader>
-      <Styled.DescriptionText lang="en">
-        With our innovative portal and app, we've redefined the process of submission, tracking, and communication. Join us, and experience the future of seamless jewelry service.
-      </Styled.DescriptionText>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Styled.DescriptionHeader>
+          {" "}
+          We Make it <Styled.WhiteText>Extremely Easy</Styled.WhiteText>
+        </Styled.DescriptionHeader>
+        <Styled.DescriptionText lang="en">
+          With our innovative portal and app, we've redefined the process of submission, tracking, and communication. Join us, and experience the future of seamless jewelry service.
+        </Styled.DescriptionText>
+      </div>
       <Styled.ContentPage>
         <Styled.ContentDepartment>
           <Styled.NumberBackground>

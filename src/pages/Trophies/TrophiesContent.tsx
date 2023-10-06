@@ -15,11 +15,19 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
 
   return (
     <Styled.ContentWrapper>
-      <Styled.DescriptionHeader>Our Trophies</Styled.DescriptionHeader>
-      <Styled.DescriptionText lang="en">
-        Unlocking Speed and Precision: Please note, our turnaround times are based on averages and may vary depending on job complexity.
-      </Styled.DescriptionText>
-
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Styled.DescriptionHeader>Our Trophies</Styled.DescriptionHeader>
+        <Styled.DescriptionText lang="en">
+          Unlocking Speed and Precision: Please note, our turnaround times are
+          based on averages and may vary depending on job complexity.
+        </Styled.DescriptionText>
+      </div>
       <Styled.ContentPage>
         <Styled.ContentDepartment>
           <Styled.Number>
@@ -34,7 +42,8 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
           <Styled.Hours>Hours</Styled.Hours>
           <Styled.Header>Message Response Time</Styled.Header>
           <Styled.Text>
-            Rapid Response: Timely and Professional Communication, Always at Your Service.
+            Rapid Response: Timely and Professional Communication, Always at
+            Your Service.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
@@ -51,7 +60,9 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
 
           <Styled.Header>EST Prod. Time</Styled.Header>
           <Styled.Text>
-            We strive to provide you with quick and accurate estimates, ensuring you have the information you need promptly for your jewelry decisions."
+            We strive to provide you with quick and accurate estimates, ensuring
+            you have the information you need promptly for your jewelry
+            decisions."
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
@@ -68,7 +79,8 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
 
           <Styled.Header>CAD Prod. Time</Styled.Header>
           <Styled.Text>
-            Our CAD production is swift, bringing your designs to life in no time.
+            Our CAD production is swift, bringing your designs to life in no
+            time.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
@@ -84,7 +96,8 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
           <Styled.Hours>Days</Styled.Hours>
           <Styled.Header>Prod. Time after approval</Styled.Header>
           <Styled.Text>
-            With all approvals in place, we swiftly craft your jewelry to perfection, delivering quality without delay.
+            With all approvals in place, we swiftly craft your jewelry to
+            perfection, delivering quality without delay.
           </Styled.Text>
         </Styled.ContentDepartment>
       </Styled.ContentPage>

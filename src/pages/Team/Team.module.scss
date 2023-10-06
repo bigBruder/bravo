@@ -146,3 +146,12 @@
     padding: 30px 60px;
   }
 }
+@media (min-width: 1601px) {
+  .container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+  }
+}
