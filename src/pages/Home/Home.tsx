@@ -4,6 +4,7 @@ import videoBg from "./../../assets/video/home_background.mp4";
 import React from "react";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
 import { maxHeaderSize } from "../../constants";
+import Footer from "../../components/Footer/Footer";
 
 import HomeContent from "./HomeContent";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
@@ -14,9 +15,7 @@ import { HomeMobile } from "../../components/HomeMobile/HomeMobile";
 
 export interface IHomePageProps extends AnimatedPageProps {}
 
-const Home: React.FunctionComponent<IHomePageProps> = ({
-  animationActive
-}) => {
+const Home: React.FunctionComponent<IHomePageProps> = ({ animationActive }) => {
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
 
   useEffect(() => {
@@ -24,27 +23,28 @@ const Home: React.FunctionComponent<IHomePageProps> = ({
       setPermanentAnimationState(true);
     }
   }, [animationActive]);
-  
+
   const isMobileHeader = useMobileWidth(maxHeaderSize);
   return (
     <>
-      {isMobileHeader
-        ? (
-          <HomeMobile />
-        )
-        : (
-          <>
-            <Styled.Wrapper>
-              <video src={videoBg} autoPlay loop muted />
-              <Styled.Container>
-                <Styled.MainContent data-animation data-animation-active={permanentAnimationState}>
-                  <HomeContent />
-                </Styled.MainContent>
-              </Styled.Container>
-            </Styled.Wrapper>
-          </>
-        )
-      }
+      {isMobileHeader ? (
+        <HomeMobile />
+      ) : (
+        <>
+          <Styled.Wrapper>
+            <video src={videoBg} autoPlay loop muted />
+            <Styled.Container>
+              <Footer />
+              <Styled.MainContent
+                data-animation
+                data-animation-active={permanentAnimationState}
+              >
+                <HomeContent />
+              </Styled.MainContent>
+            </Styled.Container>
+          </Styled.Wrapper>
+        </>
+      )}
     </>
   );
 };

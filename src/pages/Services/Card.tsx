@@ -9,6 +9,7 @@ import Manufacturing from "./../../assets/icons/Manufacturing.png";
 import Wax from "./../../assets/icons/Wax.png";
 import Photography from "./../../assets/icons/Photography.png";
 import Ask from "./../../assets/icons/Ask.png";
+import AskResponse from "../../assets/icons/AskResponce.png";
 import ImageHoverComponent from "./ImageHoverComponent.tsx";
 
 interface IServiceCard {}
@@ -89,7 +90,15 @@ const Card: React.FunctionComponent<IServiceCard> = () => {
               "Our state-of-the-art setup and skilled photographer capture the essence of your jewelry, ensuring stunning visuals"
             }
           />
-          <img src={Ask} />
+          <ImageHoverComponent
+            image={AskResponse}
+            title={"Not Sure? Ask us"}
+            text={
+              "We offer Rush or date specific service to get your order done at the time you need it."
+            }
+            askCard={true}
+          />
+          {/* <img src={Ask} /> */}
         </Styled.GroupCardTop>
       </Styled.Wrapper>
       <Styled.WrapperSmall>
@@ -138,7 +147,15 @@ const Card: React.FunctionComponent<IServiceCard> = () => {
               "From prong to intricate French pavé, our skilled jewelers ensure flawless settings, perfecting every detail."
             }
           />
-          <img src={Ask} />
+          <ImageHoverComponent
+            image={AskResponse}
+            title={"Not Sure? Ask us"}
+            text={
+              "We offer Rush or date specific service to get your order done at the time you need it."
+            }
+            askCard={true}
+          />
+          {/* <img src={Ask} /> */}
         </Styled.GroupCardTop>
         <Styled.GroupCardBottom>
           <ImageHoverComponent

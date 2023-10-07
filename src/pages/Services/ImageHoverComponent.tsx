@@ -6,9 +6,15 @@ interface Props {
   image: string;
   title: string;
   text: string;
+  askCard: boolean;
 }
 
-const ImageHoverComponent: React.FC<Props> = ({ image, title, text }) => {
+const ImageHoverComponent: React.FC<Props> = ({
+  image,
+  title,
+  text,
+  askCard,
+}) => {
   const [isTextShown, setIsTextShown] = useState(false);
 
   const toggleOverlay = useCallback(() => {
@@ -24,12 +30,13 @@ const ImageHoverComponent: React.FC<Props> = ({ image, title, text }) => {
       <img
         src={image}
         className={cn(styles.container_image, {
-          [styles["container_image--dark"]]: isTextShown,
+          [styles["container_image--dark"]]: isTextShown & !askCard,
         })}
       />
       <p
         className={cn(styles.container_title, {
           [styles["container_title--top"]]: isTextShown,
+          [styles["container_title--askCard"]]: askCard,
         })}
       >
         {title}

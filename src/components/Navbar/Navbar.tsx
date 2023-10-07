@@ -13,7 +13,7 @@ const Navbar: React.FunctionComponent<IMyProps> = ({
   activeItem,
   setActiveItem,
 }) => {
-  console.log(activeItem);
+  // console.log(activeItem);
   const navArray = [
     { text: "Greeting", path: "/", id: "section-greeting" },
     { text: "Services", path: "/services", id: "section-services" },
