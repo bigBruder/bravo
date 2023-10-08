@@ -4,7 +4,7 @@ import BackgroundImage2 from "../../assets/images/TeamsBackground.svg";
 
 export const Wrapper = styled.div`
   display: flex;
-  
+  height: 100%;
   @media (min-width: 768px) {
     background-image: url("${BackgroundImage}");
     background-size: 550px;
@@ -22,7 +22,7 @@ export const InnerWrapper = styled.div`
 export const Container = styled.div`
   flex-direction: column;
   align-items: center;
-
+  height: 100%;
   width: 100%;
   /* padding: 30px 70px; */
   @media (min-width: 1101px) {
@@ -31,6 +31,7 @@ export const Container = styled.div`
 `;
 export const MainContent = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

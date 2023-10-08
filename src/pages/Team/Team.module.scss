@@ -1,6 +1,6 @@
 .container {
   width: 90%;
-  height: 98vh;
+  height: 100%;
   padding: 20px;
   margin: 0 auto;
   display: flex;
@@ -66,6 +66,7 @@
 .footer {
   display: flex;
   width: 80%;
+  gap: 40px;
   background-color: rgba(205, 168, 112, 0.1);
   justify-content: space-between;
   align-items: center;
@@ -102,7 +103,8 @@
 @media (min-width: 768px) {
   .container {
     display: flex;
-    padding: 50px 30px 30px 150px;
+    height: 85%;
+    padding: 0 30px 30px 150px;
   }
 
   .container_title {
@@ -149,10 +151,8 @@
 }
 @media (min-width: 1601px) {
   .container {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80vh;
   }
 }

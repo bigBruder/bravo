@@ -100,7 +100,6 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  width: 10%;
   @media (max-width: 1300px) {
     display: none;
   }

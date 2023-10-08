@@ -66,8 +66,10 @@
   margin: 0 auto;
   padding: 30px 20px;
   border-radius: 15px;
+  gap: 20px;
 
   &_text {
+    font-family: Quicksand;
     color: #164d59;
     text-align: center;
     font-size: 14px;
@@ -106,6 +108,7 @@
 
 @media (min-width: 768px) {
   .container {
+    height: 85%;
     //display: block;
     padding: 20px 0 30px 150px;
   }
@@ -118,7 +121,8 @@
   .footer {
     flex-direction: row;
     padding: 30px 60px;
-    margin: 20px auto;
+    margin: 0 auto;
+    gap: 40px;
 
     &_text {
       font-size: 16px;
@@ -144,11 +148,9 @@
 }
 @media (min-width: 1601px) {
   .container {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80vh;
   }
 }
 
