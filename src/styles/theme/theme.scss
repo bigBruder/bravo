@@ -1,0 +1,56 @@
+:root {
+  --body: #fff;
+  --text: #363537;
+}
+
+body * {
+  transition:
+    color 1s cubic-bezier(0.19, 1, 0.22, 1),
+    background 1s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 1s cubic-bezier(0.19, 1, 0.22, 1),
+    background-color 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body.light {
+  --body: #fff;
+  --text: #363537;
+  --toggleBorder: #fff;
+  --background: #363537;
+  --greetingsTextColor: #9799ac;
+  --greetingsHeaderColor: #164d59;
+  --greetingsBackgroundVideoDisplay: none;
+  --greetingsBackgroundVideoOpacity: 0;
+  --greetingsBackground: rgba(0,0,0,0);
+  --greetings-signUpBackground: rgba(205, 168, 112, 0.75);
+  --greetings-findOutBackground: rgba(205, 168, 112, 0.15);
+  --greetings-signUpText: #164d59;
+  --greetings-findOutText: #c19b61;
+  --greetings-userIconDarkDisplay: none;
+  --greetings-userIconLightDisplay: block;
+  --greetings-googleIcon: none;
+  --greetings-googleIconLight: block;
+  --greetings-appIcon: none;
+  --greetings-appIconLight: block;
+}
+
+body.dark {
+  --body: #363537;
+  --text: #fafafa;
+  --toggleBorder: #6b8096;
+  --background: #999;
+  --greetingsTextColor: #fbfdfc;
+  --greetingsHeaderColor: #fff;
+  --greetingsBackgroundVideoDisplay: block;
+  --greetingsBackgroundVideoOpacity: 1;
+  --greetingsBackground: linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.6) 100%);
+  --greetings-signUpBackground: #cda870;
+  --greetings-findOutBackground: rgba(255, 255, 255, 0.15);
+  --greetings-signUpText: #272727;
+  --greetings-findOutText: #cda870;
+  --greetings-userIconDarkDisplay: block;
+  --greetings-userIconLightDisplay: none;
+  --greetings-googleIconLight: none;
+  --greetings-googleIcon: block;
+  --greetings-appIconLight: none;
+  --greetings-appIcon: block;
+}

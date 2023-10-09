@@ -15,7 +15,8 @@ export const Wrapper = styled.div`
 
   video {
     /* display: none; */
-    display: ${(props) => props.theme.greetingsBackgroundVideoDisplay};
+    display: block;
+    opacity: var(--greetingsBackgroundVideoOpacity);
     position: absolute;
     top: 0;
     left: 0;
@@ -42,7 +43,7 @@ export const Container = styled.div`
   opacity: 75%; */
 
   /* background: none; */
-  background: ${(props) => props.theme.greetingsBackground};
+  background: var(--greetingsBackground);
   @media (max-height: 768px) {
     height: 100%;
   }
@@ -98,7 +99,7 @@ export const PageContent = styled.div`
 export const TextHeader = styled.text`
   /* display: flex; */
 
-  color: ${(props) => props.theme.greetingsHeaderColor};
+  color: var(--greetingsHeaderColor);
   font-family: Gwen-Trial;
   font-size: 3vw;
   font-style: normal;
@@ -126,7 +127,7 @@ export const WhiteText = styled.text`
 
 export const TextContent = styled.p`
   /* color: #fbfdfc; */
-  color: ${(props) => props.theme.greetingsTextColor};
+  color: var(--greetingsTextColor);
   font-family: Quicksand;
   font-size: 1vw;
   font-style: normal;
@@ -159,8 +160,8 @@ export const SignUpButton = styled.button`
   gap: 12px;
   border: none;
   border-radius: 15px;
-  background: ${(props) => props.theme.greetings.signUpBackground};
-  color: ${(props) => props.theme.greetings.signUpText};
+  background: var(--greetings-signUpBackground);
+  color: var(--greetings-signUpText);
   font-family: Quicksand;
   font-size: 1.2vw;
   font-style: normal;
@@ -191,8 +192,8 @@ export const DemoButton = styled.button`
   gap: 12px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: ${(props) => props.theme.greetings.findOutBackground};
-  color: ${(props) => props.theme.greetings.findOutText};
+  background: var(--greetings-findOutBackground);
+  color: var(--greetings-findOutText);
   font-family: Quicksand;
   font-size: 1.2vw;
   font-style: normal;
@@ -268,7 +269,7 @@ export const ItemContainer = styled.div`
 `;
 
 export const GoogleIcon = styled.img`
-  display: ${(props) => props.theme.greetings.googleIcon};
+  display: var(--greetings-googleIcon);
   width: 20%;
   height: 20%;
   border-radius: 0.8vw;
@@ -281,7 +282,7 @@ export const GoogleIcon = styled.img`
   }
 `;
 export const GoogleIconLight = styled.img`
-  display: ${(props) => props.theme.greetings.googleIconLight};
+  display: var(--greetings-googleIconLight);
   width: 20%;
   height: 20%;
   border-radius: 0.8vw;
@@ -298,16 +299,16 @@ export const IconButton = styled.button`
 `;
 
 export const DarkUserIcon = styled.img`
-  display: ${(props) => props.theme.greetings.userIconDarkDisplay};
+  display: var(--greetings-userIconDarkDisplay);
 `;
 export const LightUserIcon = styled.img`
-  display: ${(props) => props.theme.greetings.userIconLightDisplay};
+  display: var(--greetings-userIconLightDisplay);
 `;
 // export const DarkUserIcon = styled.img``
 // export const DarkUserIcon = styled.img``
 
 export const AppStoreIcon = styled.img`
-  display: ${(props) => props.theme.greetings.appIcon};
+  display: var(--greetings-appIcon);
   width: 20%;
   height: 20%;
   border-radius: 0.8vw;
@@ -320,7 +321,7 @@ export const AppStoreIcon = styled.img`
   }
 `;
 export const AppStoreIconLight = styled.img`
-  display: ${(props) => props.theme.greetings.appIconLight};
+  display: var(--greetings-appIconLight);
   width: 20%;
   height: 20%;
   border-radius: 0.8vw;
