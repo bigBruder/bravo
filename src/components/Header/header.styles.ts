@@ -17,10 +17,10 @@ export const Wrapper = styled.div`
   /* margin: 0 auto; */
 `;
 
-export const SearchVector = styled.div`
-  width: 25px;
-  height: 25px;
-`;
+// export const SearchVector = styled.div`
+//   width: 25px;
+//   height: 25px;
+// `;
 
 // export const LineSetVector = styled.div`
 //   width: 25px;

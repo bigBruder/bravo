@@ -38,20 +38,27 @@
 
 import * as Styled from "./home.styles";
 // import LogoIcon from "./../../assets/icons/logo-icon.svg";
-import GiftIcon from "./../../assets/icons/gift.svg";
+// import GiftIcon from "./../../assets/icons/gift.svg";
 import OctagonIcon from "./../../assets/icons/video-octagon.svg";
 import LogoIcon from "../../assets/images/bc_logo.png";
 import BestPriceIcon from "../../assets/icons/Home/best-price.png";
 import GuaranteedIcon from "../../assets/icons/Home/guaranteed.png";
 import MadeUsaIcon from "../../assets/icons/Home/made-in-usa.png";
 import AppStore from "../../assets/icons/Home/App Store.png";
+import AppStoreLight from "../../assets/icons/App StoreLight.png";
 import PlayStore from "../../assets/icons/Home/PlayMarket.png";
+import PlayStoreLight from "../../assets/icons/PlayMarketLight.png";
 import ItsFree from "../../assets/icons/Home/It’s Free.png";
 import Stars from "../../assets/icons/Home/Star.png";
+import DarkUser from "../../assets/icons/octagon-personal-dark.png";
+import LightUser from "../../assets/icons/user-octagon-light.png";
+import { DarkUserIcon, LightUserIcon } from "./home.styles";
 
 import {
   GoogleIcon,
+  GoogleIconLight,
   AppStoreIcon,
+  AppStoreIconLight,
   GuaranteeIcon,
   BestPrice,
   MadeInIcon,
@@ -67,7 +74,9 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
     {/* <Styled.LogoWrapper> */}
     <Styled.PageContent>
       <Styled.TextHeader>
-        Number One Service Jeweler in America <img src={Stars} />
+        Jewelry Service
+        <img src={Stars} />
+        Shop <Styled.WhiteText> Like No Other</Styled.WhiteText>{" "}
       </Styled.TextHeader>
       <Styled.TextContent>
         Experience the difference that sets us apart: We have redefined
@@ -77,7 +86,8 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
       </Styled.TextContent>
       <Styled.ButtonContainer>
         <Styled.SignUpButton>
-          <img src={GiftIcon} />
+          <DarkUserIcon src={DarkUser} />
+          <LightUserIcon src={LightUser} />
           Sign up
         </Styled.SignUpButton>
         <Styled.DemoButton>
@@ -97,9 +107,11 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
           <Styled.IconButton>
             {" "}
             <GoogleIcon src={PlayStore} />
+            <GoogleIconLight src={PlayStoreLight} />
           </Styled.IconButton>
           <Styled.IconButton>
             <AppStoreIcon src={AppStore} />
+            <AppStoreIconLight src={AppStoreLight} />
           </Styled.IconButton>
         </NavigateIconContainer>
         <QualityIconContainer>
