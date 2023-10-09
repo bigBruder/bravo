@@ -3,11 +3,9 @@ import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoute
 import * as Styled from "./Team.styles";
 import TeamContent from "./TeamContent.tsx";
 
-export interface TeamPageProps extends AnimatedPageProps{}
+export interface TeamPageProps extends AnimatedPageProps {}
 
-const Team: React.FunctionComponent<TeamPageProps> = ({
-  animationActive
-}) => {
+const Team: React.FunctionComponent<TeamPageProps> = ({ animationActive }) => {
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
 
   useEffect(() => {
@@ -19,7 +17,10 @@ const Team: React.FunctionComponent<TeamPageProps> = ({
     <Styled.Wrapper>
       <Styled.Container>
         {/* <Header /> */}
-        <Styled.MainContent data-animation data-animation-active={permanentAnimationState}>
+        <Styled.MainContent
+          data-animation
+          data-animation-active={permanentAnimationState}
+        >
           {/* <Navbar /> */}
           <TeamContent />
         </Styled.MainContent>

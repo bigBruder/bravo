@@ -4,7 +4,7 @@ import videoBg from "./../../assets/video/home_background.mp4";
 import React from "react";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
 import { maxHeaderSize } from "../../constants";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/FooterScrollDown";
 
 import HomeContent from "./HomeContent";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";

@@ -65,16 +65,16 @@ export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: space-around;
   /* flex-grow: 0.8; */
   padding: 180px 70px 30px 150px;
   @media (min-width: 1600px) {
     justify-content: space-between;
     gap: 5vh;
-    padding: 150px 70px 30px 150px;
+    padding: 150px 40px 30px 120px;
   }
   @media (max-width: 1600px) {
-    padding: 100px 70px 30px 150px;
+    padding: 100px 40px 30px 120px;
   }
   @media (max-width: 1300px) {
     padding: 20px 0 0 0;
@@ -94,7 +94,7 @@ export const DescriptionHeader = styled.text`
   font-weight: 650;
 
   @media (max-width: 1600px) {
-    font-size: 23px;
+    font-size: 32px;
   }
   @media (max-width: 480px) {
     height: 100%;
@@ -132,6 +132,7 @@ export const ContentPage = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: start;
+  flex-wrap: wrap;
   padding: 100px 10% 40px 10%;
   @media (max-width: 1300px) {
     flex-wrap: wrap;
@@ -147,7 +148,7 @@ export const ContentDepartment = styled.div`
 
   justify-content: space-around;
   align-items: center;
-  width: 290px;
+  width: 270px;
   @media (max-width: 1600px) {
     width: 230px;
   }
@@ -207,10 +208,11 @@ export const Text = styled.div`
   color: #9799ac;
   text-align: center;
   font-family: Quicksand;
-  font-size: 15px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 300;
   padding-top: 2%;
+  width: 90%;
 
   @media (max-width: 1600px) {
     font-size: 14px;
@@ -229,7 +231,7 @@ export const ArrowIcons = styled.img`
     display: none;
   }
   width: 75%;
-  margin-bottom: 4%;
+  margin-top: 1%;
   @media (min-width: 1301) {
     margin-bottom: 10%;
   }

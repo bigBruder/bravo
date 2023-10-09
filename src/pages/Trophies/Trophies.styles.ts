@@ -17,12 +17,15 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  padding: 30px 70px 0px 0px;
-  background: linear-gradient(
+  /* padding: 30px 70px 0px 0px; */
+  ////!!!!!
+  /* background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0.75) 100%
-  );
+  ); */
+  background-color: rgba(0, 0, 0, 0.7);
+
   @media (min-width: 1300px) {
     padding-bottom: 100px;
   }
@@ -48,13 +51,14 @@ export const ContentWrapper = styled.div`
   justify-content: start;
   align-items: center;
   padding: 180px 70px 30px 150px;
+  gap: 5%;
   @media (min-width: 1600px) {
-    justify-content: space-between;
-    gap: 8vh;
-    padding: 100px 70px 30px 150px;
+    justify-content: stretch;
+    gap: 5vh;
+    padding: 150px 40px 30px 120px;
   }
   @media (max-width: 1600px) {
-    padding: 100px 70px 30px 150px;
+    padding: 100px 40px 30px 120px;
   }
   @media (max-width: 1300px) {
     padding: 0px;
@@ -130,7 +134,7 @@ export const ContentDepartment = styled.div`
 
   justify-content: space-around;
   align-items: center;
-  width: 290px;
+  width: 270px;
   @media (max-width: 1600px) {
     width: 230px;
   }

@@ -4,7 +4,7 @@ import BackgroundImage2 from "../../assets/images/TeamsBackground.svg";
 
 export const Wrapper = styled.div`
   display: flex;
-  
+
   @media (min-width: 768px) {
     background-image: url("${BackgroundImage}");
     background-size: 550px;
