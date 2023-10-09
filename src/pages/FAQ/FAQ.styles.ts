@@ -21,6 +21,7 @@ export const Container = styled.div`
   z-index: 1;
   width: 100%;
   min-height: 100vh;
+  max-height: 100%;
   /* background-color: black; */
   background: linear-gradient(
     0deg,
@@ -39,6 +40,9 @@ export const Container = styled.div`
   }
   @media (min-width: 1601px) {
     padding: 0 0 10px 70px;
+  }
+  @media (max-height: 768px) {
+    height: 100%;
   }
   /* @media (max-width: 1100px) {
     height: 100%;

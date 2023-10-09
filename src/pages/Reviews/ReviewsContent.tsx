@@ -43,7 +43,7 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
     } else if (screenSize.width > 1099) {
       return 2;
     } else if (screenSize.width > 768) {
-      return 1;
+      return 2;
     } else {
       return 1;
     }

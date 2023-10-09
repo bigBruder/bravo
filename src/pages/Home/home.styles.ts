@@ -34,7 +34,8 @@ export const Container = styled.div`
 
   z-index: 1;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   /* padding: 30px 70px; */
   /* padding: 30px 70px 0px 0px; */
   /* background-color: black;
@@ -42,6 +43,9 @@ export const Container = styled.div`
 
   /* background: none; */
   background: ${(props) => props.theme.greetingsBackground};
+  @media (max-height: 768px) {
+    height: 100%;
+  }
 `;
 
 export const MainContent = styled.div`
