@@ -34,16 +34,16 @@ export const Container = styled.div`
   padding: 30px 0px 0px 0px;
 
   @media (min-width: 768px) {
-    padding: 30px 70px 0 0;
+    padding: 30px 0px 0 0;
   }
 `;
 export const MainContent = styled.div`
   display: flex;
   align-items: start;
   justify-content: center;
-
+  width: 100%;
   height: 100%;
-  
+
   gap: 15px;
   flex: 1 0 0;
 `;

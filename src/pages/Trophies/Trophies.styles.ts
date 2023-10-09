@@ -35,9 +35,9 @@ export const Container = styled.div`
   /* @media (max-width: 864px) {
     height: 100%;
   } */
-  @media (max-width: 768px) {
+  @media (max-width: 768px)  or (max-height: 768px)  {
     padding: 60px 0px 40px 0px;
-    /* height: 100%; */
+    height: 100%;
   }
   @media (max-width: 656px) {
     /* padding: 60px 0px 40px 0px; */

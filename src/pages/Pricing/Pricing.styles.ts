@@ -22,11 +22,16 @@ export const InnerWrapper = styled.div`
 export const Container = styled.div`
   flex-direction: column;
   align-items: center;
-  height: 100%;
+
+  height: 100vh;
+
   width: 100%;
   /* padding: 30px 70px; */
   @media (min-width: 1101px) {
     padding: 30px 70px 0px 0px;
+  }
+  @media (max-width: 768px) or (max-height: 768px)  {
+    height: 100%;
   }
 `;
 export const MainContent = styled.div`

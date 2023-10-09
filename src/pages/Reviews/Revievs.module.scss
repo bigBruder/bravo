@@ -44,7 +44,7 @@
     align-items: center;
     background-color: rgba(255, 255, 255, 0.6);
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 20px;
   }
   @media (max-width: 1600px) {
     &_header {
@@ -106,12 +106,15 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1100.02px) {
   .container {
-    height: 85%;
-    //display: block;
-    padding: 20px 0 30px 150px;
+    padding: 20px 30px 30px 150px;
+    display: flex;
   }
+}
+
+@media (min-width: 768.02px) {
+
 
   .container_title {
     width: 300px;
@@ -146,7 +149,7 @@
     }
   }
 }
-@media (min-width: 1601px) {
+@media (min-width: 1600.02px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -154,7 +157,7 @@
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1300.02px) {
   .container_title {
     width: 400px;
     height: 40px;

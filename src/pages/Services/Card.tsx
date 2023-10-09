@@ -1,6 +1,6 @@
 import * as Styled from "./Card.style";
 import DesignCard from "../../assets/icons/DesignCard.png";
-import StoneSetting from "./../../assets/icons/StoneSetting.png";
+import StoneSetting from "./../../assets/icons/StoneSetting-update.png";
 import Cad from "../../assets/icons/CAD.png";
 import Engraving from "./../../assets/icons/Engraving.png";
 import Repair from "./../../assets/icons/Repair.png";

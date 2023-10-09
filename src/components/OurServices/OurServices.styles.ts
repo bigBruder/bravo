@@ -5,7 +5,6 @@ export const Services = styled.div`
   padding: 60px 20px 20px;
   font-family: Quicksand;
   font-weight: 400;
-  height: 100%;
 `;
 
 export const Title = styled.h1`

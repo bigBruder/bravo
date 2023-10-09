@@ -111,6 +111,7 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
       {itemArray.map((Component, index) => {
         return (
           <Styled.ChildrenComponent
+            key={index}
             //@ts-ignore
             activeItem={activeItem}
             //@ts-ignore

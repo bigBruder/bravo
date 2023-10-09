@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: bottom 0px right 0px;
 
-  /* 
+  /*
   video {
     position: absolute;
     top: 0;
@@ -28,7 +28,8 @@ export const Container = styled.div`
   align-items: center;
   z-index: 1;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   padding: 30px 70px;
   background-color: rgba(0, 0, 0, 0.7);
 
@@ -40,6 +41,9 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     padding: 60px 15px 40px 15px;
     align-items: center;
+    height: 100%;
+  }
+  @media (max-height: 768px) {
     height: 100%;
   }
 `;
@@ -88,13 +92,14 @@ export const PortalContent = styled.div`
   @media (max-width: 1200px) {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     margin-left: 0%;
     justify-content: space-between;
     height: 75vh;
   }
   @media (max-width: 768px) {
     display: flex;
-
     justify-content: center;
     align-items: center;
     height: 80%;
@@ -234,6 +239,7 @@ export const NavigationContainer = styled.div`
   /* margin-left: 20%; */
   position: relative;
   width: 50vw;
+  min-height: 25vw;
   /* @media (max-width: 1200px) {
     display: flex;
     justify-content: space-between;
@@ -241,11 +247,15 @@ export const NavigationContainer = styled.div`
     width: 60vw; */
   /* flex-wrap: wrap; */
   /* } */
+  @media (max-width: 1200px) {
+    max-width: 480px;
+  }
   @media (max-width: 768px) {
     display: flex;
     ///
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
     ///
   }
   @media (max-width: 768px) {

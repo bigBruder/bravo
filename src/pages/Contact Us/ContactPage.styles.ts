@@ -15,8 +15,9 @@ export const Container = styled.div`
   justify-content: center;
 
   width: 100%;
-  height: 100vh;
-  @media (max-width: 768px) {
+  min-height: 100vh;
+  max-height: 100%;
+  @media (max-width: 768px) or (max-height: 768px) {
     height: 100%;
   }
 
@@ -115,8 +116,8 @@ export const AdressInfo = styled.div`
   }
 `;
 export const HousePhotoMobile = styled.img`
-  width: 210px;
-  height: 120px;
+  width: 100%;
+  aspect-ratio: 210 / 120;
   @media (min-width: 1201px) {
     display: none;
   }
@@ -136,7 +137,8 @@ export const Adress = styled.div`
   gap: 30px;
   @media (max-width: 1200px) {
     flex-direction: column;
-    width: 230px;
+    width: 100%;
+    max-width: 267px;
   }
   /* img {
     width: 11%;
