@@ -6,14 +6,15 @@ interface Props {
   image: string;
   title: string;
   text: string;
-  askCard?: boolean;
+  // askCard: boolean;
 }
 
 const ImageHoverComponent: React.FC<Props> = ({
   image,
   title,
   text,
-  askCard = false,
+  //@ts-ignore
+  askCard,
 }) => {
   const [isTextShown, setIsTextShown] = useState(false);
 

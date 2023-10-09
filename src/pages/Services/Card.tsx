@@ -8,7 +8,7 @@ import Casting from "./../../assets/icons/Casting.png";
 import Manufacturing from "./../../assets/icons/Manufacturing.png";
 import Wax from "./../../assets/icons/Wax.png";
 import Photography from "./../../assets/icons/Photography.png";
-import Ask from "./../../assets/icons/Ask.png";
+// import Ask from "./../../assets/icons/Ask.png";
 import AskResponse from "../../assets/icons/AskResponce.png";
 import ImageHoverComponent from "./ImageHoverComponent.tsx";
 
@@ -96,6 +96,7 @@ const Card: React.FunctionComponent<IServiceCard> = () => {
             text={
               "We offer Rush or date specific service to get your order done at the time you need it."
             }
+            //@ts-ignore
             askCard={true}
           />
           {/* <img src={Ask} /> */}
@@ -153,6 +154,7 @@ const Card: React.FunctionComponent<IServiceCard> = () => {
             text={
               "We offer Rush or date specific service to get your order done at the time you need it."
             }
+            //@ts-ignore
             askCard={true}
           />
           {/* <img src={Ask} /> */}
