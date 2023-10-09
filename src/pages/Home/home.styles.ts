@@ -240,19 +240,22 @@ export const SmallLogo = styled.img`
 `;
 
 export const LogoContainer = styled.div`
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   position: relative;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
 `;
 export const ItemContainer = styled.div`
-  display: content;
+  display: block;
+  width: 100%;
   position: absolute;
   flex-direction: column;
-  bottom: 0px;
+  top: 100%;
+  transform: translateY(-50%);
   /* left: 50vw; */
-  left: 50vw;
   align-self: center;
   justify-content: center;
   gap: 10px;
