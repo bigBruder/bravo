@@ -16,7 +16,7 @@ const App: React.FunctionComponent<IAppProps> = () => {
   return (
     // <ThemeProvider theme={themeMode}>
       <>
-        <Toggle theme={theme} toggleTheme={themeToggler} />
+        {/* <Toggle theme={theme} toggleTheme={themeToggler} /> */}
         <Header />
         <AnimatedRoutes />
         {/* <Footer /> */}

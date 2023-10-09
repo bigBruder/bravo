@@ -5,7 +5,7 @@ export const Wrapper = styled.div<AnimatedRoutesProps>`
   /* scroll-snap-type: y proximity; */
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     height: 100vh;
   @keyframes scroll {
@@ -36,9 +36,9 @@ export const ChildrenComponent = styled.div`
   scroll-snap-align: start;
   height: 100vh;
   @media (max-width: 768px) or (max-height: 768px){
-    height: 100%;
     /* scroll-snap-align: start;
     scroll-snap-type: none; */
+    height: 100%;
     overflow: auto;
   }
   @media (max-width: 576px) {

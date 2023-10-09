@@ -23,6 +23,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
+  height: 100%;
+  // min-height: 100vh;
   width: 100%;
   /* padding: 30px 70px; */
   padding: 30px 70px 0px 0px;
@@ -65,7 +67,6 @@ export const ContentWrapper = styled.div`
   margin-left: 100px;
   @media (min-width: 1500px) {
     justify-content: space-between;
-    height: 80vh;
     padding: 0px 70px 30px 100px;
     margin-left: 50px;
   }
