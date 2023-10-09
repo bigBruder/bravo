@@ -7,6 +7,7 @@ const QuestionAnswer = ({
   summary: string;
   question: string;
 }) => {
+  //@ts-ignore
   function closeOtherDetails(targetDetail) {
     details.forEach((detail) => {
       if (detail !== targetDetail) {
