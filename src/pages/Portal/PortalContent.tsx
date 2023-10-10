@@ -1,6 +1,6 @@
 import * as Styled from "./portal.styles";
 import {
-  AppPlayButton,
+  // AppPlayButton,
   Star,
   DarkUserIcon,
   LightUserIcon,
@@ -35,7 +35,9 @@ interface IPortalContent {}
 const PortalContent: React.FunctionComponent<IPortalContent> = () => {
   const parentBackgroundColor = "black";
   const descriptionText =
-    "What sets us apart is our unwavering commitment to excellence, a fusion" + "\n" + "of craftsmanship, innovation, and a relentless pursuit of perfection.";
+    "What sets us apart is our unwavering commitment to excellence, a fusion" +
+    "\n" +
+    "of craftsmanship, innovation, and a relentless pursuit of perfection.";
   return (
     <Styled.PortalWrapper>
       <Styled.PortalContent>

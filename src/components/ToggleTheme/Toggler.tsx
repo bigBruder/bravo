@@ -1,5 +1,4 @@
-import { Button, Icon } from "./Toggler.styles";
-import Moon from "./../../assets/icons/moon.png";
+import { Button } from "./Toggler.styles";
 
 interface IToggleProps {}
 //@ts-ignore

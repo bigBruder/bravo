@@ -1,13 +1,13 @@
 import * as Styled from "./Trophies.styles";
 import Description from "../../components/Description/Description";
-import oneTopImage from "./../../assets/images/1.png";
-import oneBottomImage from "./../../assets/images/1.1.png";
-import fourTopImage from "./../../assets/images/4.png";
-import fourBottomImage from "./../../assets/images/4.1.png";
-import twoTopImage from "./../../assets/images/2.png";
-import twoBottomImage from "./../../assets/images/2.2.png";
-import sixTopImage from "./../../assets/images/6.png";
-import sixBottomImage from "./../../assets/images/6.6.png";
+// import oneTopImage from "./../../assets/images/1.png";
+// import oneBottomImage from "./../../assets/images/1.1.png";
+// import fourTopImage from "./../../assets/images/4.png";
+// import fourBottomImage from "./../../assets/images/4.1.png";
+// import twoTopImage from "./../../assets/images/2.png";
+// import twoBottomImage from "./../../assets/images/2.2.png";
+// import sixTopImage from "./../../assets/images/6.png";
+// import sixBottomImage from "./../../assets/images/6.6.png";
 
 import FirstIconLight from "../../assets/icons/Trophies/FirstLightIcon.png";
 import SecondIconLight from "../../assets/icons/Trophies/SecondLightIcon.png";
