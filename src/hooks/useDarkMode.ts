@@ -19,7 +19,7 @@ export const useDarkMode = () => {
     const localTheme = window.localStorage.getItem(
       "theme"
     ) as ThemeModes | null;
-    localTheme && setMode(localTheme);
+    setMode(localTheme ?? "dark");
   }, []);
   return [theme, themeToggler];
 };

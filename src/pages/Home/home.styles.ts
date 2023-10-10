@@ -152,9 +152,9 @@ export const TextContent = styled.p`
 export const ButtonContainer = styled.p`
   display: flex;
   padding-top: 6%;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  gap: 22px;
+  gap: 40px;
 
   @media screen and (max-width: 1100px) {
     justify-content: center;
