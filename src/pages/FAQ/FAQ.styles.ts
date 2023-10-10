@@ -168,8 +168,8 @@ export const ContentDescription = styled.div`
 
 export const RegistrationField = styled.div`
   display: none;
-  padding: 40px 40px;
-  max-height: 250px;
+  padding: 30px 40px;
+  max-height: 230px;
   max-width: 670px;
 
   flex-direction: row;

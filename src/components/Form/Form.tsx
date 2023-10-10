@@ -24,7 +24,7 @@ const Form = () => {
       <SInputMultiple placeholder={"Your Question"} />
       <SButton>
         <img src={Button} />
-        Send Form
+        Send Message
       </SButton>
     </SForm>
   );

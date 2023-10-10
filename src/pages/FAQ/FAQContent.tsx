@@ -88,13 +88,12 @@ const FaqContent: React.FunctionComponent<IWorkflowContent> = () => {
         <Styled.RegistrationField>
           <Styled.RgistrationLeftContainer>
             <Styled.RegistrationText>
-              Maximize Your Business{" "}
-              <Styled.YellowText>Potential with Us</Styled.YellowText>
+              Stop Waste <Styled.YellowText> Your Time</Styled.YellowText>
             </Styled.RegistrationText>
             <Styled.RegistrationDescription>
-              Seize the Opportunity to Elevate Your Business Needs with Our
-              Exceptional Services. Sign Up for Free and Experience the
-              Difference Today!
+              The jewelry designer explores different materials to create
+              exclusive jewelry that highlights each client's personality and
+              style.
             </Styled.RegistrationDescription>
           </Styled.RgistrationLeftContainer>
           <hr
