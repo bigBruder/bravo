@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 import "./styles/theme/theme.scss";
 import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
@@ -21,7 +21,7 @@ const App: React.FunctionComponent<IAppProps> = () => {
       <Toggle theme={theme} toggleTheme={themeToggler} />
       <Header />
       <AnimatedRoutes />
-      {/* <Footer /> */}
+      <Footer />
     </>
     //{" "}
     // </ThemeProvider>

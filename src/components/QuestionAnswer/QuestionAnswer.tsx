@@ -24,7 +24,10 @@ const QuestionAnswer = ({
   });
 
   return (
-    <details style={{ color: "white" }} className={styles.details}>
+    <details
+      style={{ color: "var(--faq-textContent)" }}
+      className={styles.details}
+    >
       <summary className={styles.summary}>{summary}</summary>
       <p className={styles.text}>{question}</p>
     </details>

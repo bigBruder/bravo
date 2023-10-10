@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  background-color: #111;
+  /* background-color: #111; */
 
   video {
     position: absolute;
@@ -18,15 +18,12 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   flex-direction: column;
   align-items: center;
+
   z-index: 1;
   width: 100%;
   min-height: 100vh;
   /* background-color: black; */
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.75) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+  background: var(--faq-background);
   /* opacity: 70%; */
   /* padding: 30px 70px; */
   padding: 10px 20px 0px 0px;
@@ -49,6 +46,7 @@ export const Container = styled.div`
 export const MainContent = styled.div``;
 export const ContentWrapper = styled.div`
   display: flex;
+
   flex-direction: column;
   justify-content: start;
   align-items: center;
@@ -68,7 +66,7 @@ export const ContentWrapper = styled.div`
   }
   @media (min-width: 1600px) {
     margin-left: 100px;
-    padding: 100px 0 0px 0px;
+    padding: 50px 0 0px 0px;
     justify-content: space-between;
     /* gap: 15px; */
     /* flex: 1; */
@@ -77,7 +75,7 @@ export const ContentWrapper = styled.div`
   }
 `;
 export const DescriptionHeader = styled.text`
-  color: #fff;
+  color: var(--trophies-headerText);
   text-align: center;
   font-family: Gwen-Trial;
   font-size: 42px;
@@ -109,7 +107,7 @@ export const DescriptionText = styled.text`
   @media (min-width: 768px) {
     width: 40%;
   }
-  @media (max-width: 1600px) {
+  @media (max-width: 1400px) {
     font-size: 16px;
   }
 `;
@@ -132,7 +130,7 @@ export const ContentDepartment = styled.div`
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 1vh;
+  gap: 3vh;
   margin-bottom: 3vh;
 `;
 
@@ -141,7 +139,7 @@ export const ContentHeader = styled.div`
   width: 100%;
   text-align: center;
   font-family: Gwen-Trial;
-  font-size: 3vh;
+  font-size: 25px;
   font-style: normal;
   font-weight: 650;
 
@@ -152,9 +150,10 @@ export const ContentHeader = styled.div`
 
 export const ContentDescription = styled.div`
   display: flex;
-  color: #fff;
+  color: var(--faq-textContent);
   font-family: Quicksand;
   font-size: 18px;
+  /* z-index: 100000; */
   font-style: normal;
   font-weight: 500;
   gap: 10px;
@@ -169,9 +168,9 @@ export const ContentDescription = styled.div`
 
 export const RegistrationField = styled.div`
   display: none;
-  padding: 30px 30px;
-  max-height: 208px;
-  max-width: 585px;
+  padding: 40px 40px;
+  max-height: 250px;
+  max-width: 670px;
 
   flex-direction: row;
   justify-content: space-between;
@@ -180,7 +179,7 @@ export const RegistrationField = styled.div`
   flex: 0.6 0 0;
 
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--faq-backgroundField);
   backdrop-filter: blur(12.5px);
   gap: 20px;
 
@@ -190,7 +189,7 @@ export const RegistrationField = styled.div`
 `;
 
 export const RegistrationText = styled.div`
-  color: #fff;
+  color: var(--faq-textDescription);
   text-align: start;
   font-family: Gwen-Trial;
   font-size: 25px;
@@ -198,7 +197,7 @@ export const RegistrationText = styled.div`
   font-weight: 650;
   margin-bottom: 20px;
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1400px) {
     font-size: 18px;
   }
 `;
@@ -215,7 +214,7 @@ export const RegistrationButton = styled.button`
   border: none;
   border-radius: 15px;
   background: #cda870;
-  color: #272727;
+  color: var(--faq-buttonText);
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
@@ -229,7 +228,7 @@ export const RegistrationButton = styled.button`
     transform: scale(1);
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1400px) {
     font-size: 16px;
     padding: 10px 24px;
   }
@@ -257,7 +256,7 @@ export const RegistrationButtonSmall = styled.button`
 export const RgistrationLeftContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 347px;
+  max-width: 320px;
   overflow: hidden;
 `;
 
@@ -277,4 +276,11 @@ export const RegistrationDescription = styled.text`
   max-height: 100px;
   text-overflow: ellipsis;
   overflow: hidden;
+`;
+
+export const OctagonIconLight = styled.img`
+  display: var(--faq-buttonOctagonLight);
+`;
+export const OctagonIconDark = styled.img`
+  display: var(--faq-buttonOctagonDark);
 `;

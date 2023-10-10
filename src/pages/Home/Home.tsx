@@ -34,7 +34,7 @@ const Home: React.FunctionComponent<IHomePageProps> = ({ animationActive }) => {
           <Styled.Wrapper>
             <video src={videoBg} autoPlay loop muted />
             <Styled.Container>
-              <Footer />
+              {/* <Footer /> */}
               <Styled.MainContent
                 data-animation
                 data-animation-active={permanentAnimationState}
