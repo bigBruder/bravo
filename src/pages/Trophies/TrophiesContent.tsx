@@ -8,6 +8,15 @@ import twoTopImage from "./../../assets/images/2.png";
 import twoBottomImage from "./../../assets/images/2.2.png";
 import sixTopImage from "./../../assets/images/6.png";
 import sixBottomImage from "./../../assets/images/6.6.png";
+
+import FirstIconLight from "../../assets/icons/Trophies/FirstLightIcon.png";
+import SecondIconLight from "../../assets/icons/Trophies/SecondLightIcon.png";
+import ThirdIconLight from "../../assets/icons/Trophies/ThirdIconLight.png";
+import FourthIconLight from "../../assets/icons/Trophies/FourthIconLight.png";
+import FirstIconDark from "../../assets/icons/Trophies/FirstDarkIcon.png";
+import SecondIconDark from "../../assets/icons/Trophies/SecondDarkIcon.png";
+import ThirdIconDark from "../../assets/icons/Trophies/ThirdIconDark.png";
+import FourthIconDark from "../../assets/icons/Trophies/FourthIconDark.png";
 interface ITrophiesContent {}
 
 const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
@@ -22,7 +31,9 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
           alignItems: "center",
         }}
       >
-        <Styled.DescriptionHeader>Our Trophies</Styled.DescriptionHeader>
+        <Styled.DescriptionHeader>
+          Our <Styled.WhiteText>Trophies</Styled.WhiteText>
+        </Styled.DescriptionHeader>
         <Styled.DescriptionText lang="en">
           Unlocking Speed and Precision: Please note, our turnaround times are
           based on averages and may vary depending on job complexity.
@@ -30,7 +41,7 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
       </div>
       <Styled.ContentPage>
         <Styled.ContentDepartment>
-          <Styled.Number>
+          {/* <Styled.Number>
             <Styled.HalfNumberTop>
               <img src={oneTopImage} />
             </Styled.HalfNumberTop>
@@ -38,66 +49,55 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
               {" "}
               <img src={oneBottomImage} />
             </Styled.HalfNumberBottom>
+          </Styled.Number> */}
+
+          <Styled.Number>
+            <Styled.OneIconLight src={FirstIconLight}></Styled.OneIconLight>
+            <Styled.OneIconDark src={FirstIconDark}></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>Hours</Styled.Hours>
+          <Styled.Hours>hours</Styled.Hours>
           <Styled.Header>Message Response Time</Styled.Header>
           <Styled.Text>
-            Rapid Response: Timely and Professional Communication, Always at
-            Your Service.
+            RWe offer Rush or date specific service to get your order done at
+            the time you need it.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.HalfNumberTop>
-              <img src={fourTopImage} />
-            </Styled.HalfNumberTop>
-            <Styled.HalfNumberBottom>
-              {" "}
-              <img src={fourBottomImage} />
-            </Styled.HalfNumberBottom>
+            <Styled.OneIconLight src={SecondIconLight}></Styled.OneIconLight>
+            <Styled.OneIconDark src={SecondIconDark}></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>Hours</Styled.Hours>
+          <Styled.Hours>hours</Styled.Hours>
 
           <Styled.Header>EST Prod. Time</Styled.Header>
           <Styled.Text>
-            We strive to provide you with quick and accurate estimates, ensuring
-            you have the information you need promptly for your jewelry
-            decisions."
+            We offer Rush or date specific service to get your order done at the
+            time you need it.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.HalfNumberTop>
-              <img src={twoTopImage} />
-            </Styled.HalfNumberTop>
-            <Styled.HalfNumberBottom>
-              {" "}
-              <img src={twoBottomImage} />
-            </Styled.HalfNumberBottom>
+            <Styled.OneIconLight src={ThirdIconLight}></Styled.OneIconLight>
+            <Styled.OneIconDark src={ThirdIconDark}></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>Days</Styled.Hours>
+          <Styled.Hours>hours</Styled.Hours>
 
           <Styled.Header>CAD Prod. Time</Styled.Header>
           <Styled.Text>
-            Our CAD production is swift, bringing your designs to life in no
-            time.
+            We offer Rush or date specific service to get your order done at the
+            time you need it.
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.HalfNumberTop>
-              <img src={sixTopImage} />
-            </Styled.HalfNumberTop>
-            <Styled.HalfNumberBottom>
-              {" "}
-              <img src={sixBottomImage} />
-            </Styled.HalfNumberBottom>
+            <Styled.OneIconLight src={FourthIconLight}></Styled.OneIconLight>
+            <Styled.OneIconDark src={FourthIconDark}></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>Days</Styled.Hours>
+          <Styled.Hours>hours</Styled.Hours>
           <Styled.Header>Prod. Time after approval</Styled.Header>
           <Styled.Text>
-            With all approvals in place, we swiftly craft your jewelry to
-            perfection, delivering quality without delay.
+            We offer Rush or date specific service to get your order done at the
+            time you need it.
           </Styled.Text>
         </Styled.ContentDepartment>
       </Styled.ContentPage>

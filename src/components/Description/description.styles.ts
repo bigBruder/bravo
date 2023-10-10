@@ -4,7 +4,8 @@ interface DescriptionProps {
 }
 export const Wrapper = styled.div<DescriptionProps>`
   display: flex;
-
+  width: 55vw;
+  height: 12vh;
   /* padding: 1.5% 2%; */
   padding: 20px 20px;
   justify-content: space-between;

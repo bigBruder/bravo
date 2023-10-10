@@ -36,6 +36,13 @@ body.light {
   --portal-textQuotesColor: #164d59;
   --quotes-iconLight: block;
   --quotes-iconDark: none;
+  --trophies-headerText: #164d59;
+  --trophies-background-color: #fff;
+  --trophies-headerHalfText: #cda870;
+  --trophies-displayIconsLight: block;
+  --trophies-displayIconsDark: none;
+  --trophies-hourContent: #9799ac;
+  --trophies-headerContent: #cda870;
 }
 
 body.dark {
@@ -73,4 +80,11 @@ body.dark {
   --portal-textQuotesColor: #fff;
   --quotes-iconLight: none;
   --quotes-iconDark: block;
+  --trophies-headerText: #fff;
+  --trophies-background-color: rgba(0, 0, 0, 0.7);
+  --trophies-headerHalfText: #fff;
+  --trophies-displayIconsLight: none;
+  --trophies-displayIconsDark: block;
+  --trophies-hourContent: #fff;
+  --trophies-headerContent: #cda870;
 }

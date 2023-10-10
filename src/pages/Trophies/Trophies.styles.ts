@@ -24,10 +24,9 @@ export const Container = styled.div`
     rgba(0, 0, 0, 0.75) 0%,
     rgba(0, 0, 0, 0.75) 100%
   ); */
-  background-color: rgba(0, 0, 0, 0.7);
-
+  background-color: var(--trophies-background-color);
   @media (min-width: 1300px) {
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
   @media (max-width: 1300px) {
     padding: 10px 0px 0px 0px;
@@ -48,17 +47,18 @@ export const Container = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  padding: 180px 70px 30px 150px;
-  gap: 5%;
+  height: 100vh;
+  /* height: 10vh; */
+  padding: 40px 70px 30px 80px;
+  /* gap: 5%; */
   @media (min-width: 1600px) {
-    justify-content: stretch;
     gap: 5vh;
-    padding: 150px 40px 30px 120px;
+    padding: 40px 40px 30px 80px;
   }
   @media (max-width: 1600px) {
-    padding: 100px 40px 30px 120px;
+    padding: 30px 40px 30px 80px;
   }
   @media (max-width: 1300px) {
     padding: 0px;
@@ -70,7 +70,7 @@ export const ContentWrapper = styled.div`
 `;
 
 export const DescriptionHeader = styled.text`
-  color: #fff;
+  color: var(--trophies-headerText);
   text-align: center;
   font-family: Gwen-Trial;
   font-size: 42px;
@@ -83,6 +83,10 @@ export const DescriptionHeader = styled.text`
   @media (max-width: 480px) {
     height: 100%;
   }
+`;
+
+export const WhiteText = styled.text`
+  color: var(--trophies-headerHalfText);
 `;
 export const DescriptionText = styled.text`
   display: flex;
@@ -115,13 +119,15 @@ export const ContentPage = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: start;
+  gap: 3vw;
 
   /* padding: 100px 10%; */
-  padding: 100px 10% 80px 10%;
+  /* padding: 100px 10% 80px 10%; */
   @media (max-width: 1300px) {
     flex-wrap: wrap;
     /* padding: 10px 15%; */
     padding: 20px 15%;
+    gap: 3px;
   }
   @media (max-width: 480px) {
     padding: 10px 10% 50px 10%;
@@ -150,6 +156,7 @@ export const Number = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 2px;
+  padding-bottom: 10px;
 `;
 export const HalfNumberTop = styled.div`
   display: flex;
@@ -178,13 +185,13 @@ export const Hours = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #cda870;
+  color: var(--trophies-hourContent);
   text-align: center;
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
-
+  padding-bottom: 18px;
   @media (max-width: 1600px) {
     font-size: 16px;
     font-weight: 400;
@@ -192,14 +199,14 @@ export const Hours = styled.div`
 `;
 
 export const Header = styled.div`
-  color: #fff;
+  color: var(--trophies-headerContent);
   text-align: center;
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   padding-top: 3%;
-
+  padding-bottom: 9px;
   @media (max-width: 1600px) {
     font-size: 16px;
     font-weight: 400;
@@ -217,4 +224,13 @@ export const Text = styled.div`
   @media (max-width: 1600px) {
     font-size: 14px;
   }
+`;
+
+export const OneIconLight = styled.img`
+  width: 45%;
+  display: var(--trophies-displayIconsLight);
+`;
+export const OneIconDark = styled.img`
+  width: 45%;
+  display: var(--trophies-displayIconsDark);
 `;
