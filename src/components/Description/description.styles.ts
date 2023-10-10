@@ -12,17 +12,11 @@ export const Wrapper = styled.div<DescriptionProps>`
   margin: 0 auto;
   /* flex: 1 0 0; */
   border-radius: 15px;
-  background: ${(props) =>
-    props?.parentbackgroundColor === "white"
-      ? "rgba(205, 168, 112, 0.10)"
-      : "rgba(255, 255, 255, 0.1)"};
+  background: var(--portal-backgroundColor);
   backdrop-filter: blur(12.5px);
 
-  color: ${(props) =>
-    props.parentbackgroundColor === "white" ? "#164D59" : "#fff"};
-  width: 80%;
-
   p {
+    color: var(--portal-textQuotesColor);
     font-family: Quicksand;
     font-size: 0.95vw;
     font-style: normal;
@@ -41,7 +35,6 @@ export const Wrapper = styled.div<DescriptionProps>`
 
     width: 80%;
     p {
-      color: #fff;
       text-align: center;
       font-family: Quicksand;
       font-size: 14px;
@@ -62,7 +55,6 @@ export const Wrapper = styled.div<DescriptionProps>`
 
     width: 80%;
     p {
-      color: #fff;
       text-align: center;
       font-family: Quicksand;
       font-size: 14px;
@@ -83,7 +75,6 @@ export const Wrapper = styled.div<DescriptionProps>`
 
     width: 80%;
     p {
-      color: #fff;
       text-align: center;
       font-family: Quicksand;
       font-size: 14px;
@@ -113,4 +104,11 @@ export const MobileIcon = styled.img`
 
 export const Description = styled.p`
   text-align: center;
+`;
+
+export const QuoteIconLight = styled.img`
+  display: var(--quotes-iconLight);
+`;
+export const QuoteIconDark = styled.img`
+  display: var(--quotes-iconDark);
 `;
