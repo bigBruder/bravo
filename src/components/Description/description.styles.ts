@@ -111,6 +111,7 @@ export const MobileIcon = styled.img`
 
 export const Description = styled.p`
   text-align: center;
+  white-space: pre-line;
 `;
 
 export const QuoteIconLight = styled.img`

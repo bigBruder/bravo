@@ -12,12 +12,14 @@
     margin-left: 100px;
     padding: 0 50px 30px 150px;
   }
+  @media (min-width: 1500px) {
+    padding: 150px 50px 30px 22px;
+  }
   @media (min-width: 1601px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 100px;
-    padding: 0 50px 30px 150px;
   }
 
   &_header {

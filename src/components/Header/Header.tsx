@@ -1,44 +1,22 @@
 import * as Styled from "./header.styles";
-// import HorizontalVector from "../../assets/icons/horizontal-vector.svg";
-// import VerticalVector from "../../assets/icons/vertical-vector.svg";
-// import LeftArch from "../../assets/icons/left-arch.svg";
-// import RightArch from "../../assets/icons/right-arch.svg";
-// import Search from "../../assets/icons/search.svg";
-// import SearchIcon from "../../assets/icons/search2.svg";
-// import IconSet from "../../assets/icons/line-icon-set.svg";
+import logo from "../../assets/icons/logo.svg";
+import text from "../../assets/mock/HeaderText.svg";
+import UserBrown from "../../assets/icons/UserBrown.svg";
 
 const Header = () => {
   return (
     <Styled.Wrapper>
-      {/* <Styled.SearchVector>
-        <img src={Search} />
-      </Styled.SearchVector>
-
-      <Styled.Arch>
-        <img src={LeftArch} />
-
-        <img src={VerticalVector} />
-
-        <img src={VerticalVector} />
-
-        <img src={HorizontalVector} style={{ width: "100%" }} />
-      </Styled.Arch>
-
-      <img src={IconSet} />
-
-      <Styled.Arch>
-        <img src={HorizontalVector} style={{ width: "100%" }} />
-
-        <img src={VerticalVector} />
-
-        <img src={VerticalVector} />
-
-        <img src={RightArch} />
-      </Styled.Arch>
-
-      <Styled.SearchVector>
-        <img src={SearchIcon} />
-      </Styled.SearchVector> */}
+      <div style={{ width: 153 }}>
+        <Styled.SmallLogo src={logo} />
+      </div>
+      <Styled.Text src={text}></Styled.Text>
+      <Styled.Button>
+        <Styled.ButtonIcon
+          src={UserBrown}
+          alt='Sign In'
+        />
+        Sign In
+      </Styled.Button>
     </Styled.Wrapper>
   );
 };

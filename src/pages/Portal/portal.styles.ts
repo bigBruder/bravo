@@ -120,7 +120,23 @@ export const RegisterHeader = styled.text`
   }
 `;
 
+export const RedStar = styled.img`
+  position: absolute;
+  left: -30px;
+  top: -32px;
+
+  height: 20px;
+  width: 20px;
+
+  display: none;
+  
+  @media (min-width: 1201px) {
+    display: block;
+  }
+`;
+
 export const TopText = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   gap: 16px;
