@@ -26,6 +26,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   z-index: 1;
   width: 100%;
   height: 100vh;
@@ -64,10 +65,11 @@ export const MainContent = styled.div`
 export const PortalWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   z-index: 1;
-  padding: 70px 30px 10px;
+  padding: 70px 30px 0;
+  height: 100%;
   @media (max-width: 1200px) {
     padding: 20px 30px 10px;
   }
@@ -83,6 +85,7 @@ export const PortalContent = styled.div`
   justify-content: center;
 
   height: 70vh;
+  width: 80%;
   /* margin-left: 10%; */
   padding-bottom: 5%;
   @media (max-width: 1200px) {
@@ -111,7 +114,6 @@ export const RegisterContainer = styled.div`
   justify-content: center;
 
   max-width: 30%;
-  margin-left: 3%;
   @media (max-width: 1200px) {
     max-width: none;
     align-items: center;
@@ -142,6 +144,12 @@ export const RegisterHeader = styled.text`
     line-height: 30px;
     text-align: center;
   }
+`;
+
+export const TopText = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
 `;
 
 export const Star = styled.img`
@@ -224,6 +232,12 @@ export const RegisterButton = styled.button`
   }
 `;
 
+export const NavigationContainerWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
 export const NavigationContainer = styled.div`
   display: flex;
   z-index: 2;
@@ -234,13 +248,10 @@ export const NavigationContainer = styled.div`
   /* margin-left: 20%; */
   position: relative;
   width: 50vw;
-  /* @media (max-width: 1200px) {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 60vw; */
-  /* flex-wrap: wrap; */
-  /* } */
+  right: -200px;
+  @media (max-width: 1200px) {
+    right: 0;
+  }
   @media (max-width: 768px) {
     display: flex;
     ///
@@ -268,7 +279,7 @@ export const NewOrderImage = styled.img`
   }
 `;
 export const SafariImage = styled.img`
-  width: 90%;
+  width: 100%;
   position: absolute;
   bottom: 0%;
   right: 5%;
@@ -283,7 +294,7 @@ export const SafariImage = styled.img`
 
 export const QRCode = styled.img`
   display: flex;
-  width: 18%;
+  width: 22%;
 
   position: absolute;
   bottom: 2%;

@@ -22,9 +22,10 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
       <Styled.PortalContent>
         <Styled.RegisterContainer>
           <Styled.RegisterHeader>
-            <Star src={StarsIcon} />
-            Portal <Styled.WhiteText>as</Styled.WhiteText>
-            <br /> Easy <Styled.WhiteText>as 1,2,3</Styled.WhiteText>
+            <Styled.TopText>
+              Portal{' '}<Styled.WhiteText>as</Styled.WhiteText><Star src={StarsIcon} />
+            </Styled.TopText>
+            Easy <Styled.WhiteText>as 1,2,3</Styled.WhiteText>
           </Styled.RegisterHeader>
 
           <Styled.RegisterText>
@@ -40,26 +41,29 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
           </Styled.AppPlayMobile>
         </Styled.RegisterContainer>
 
-        <Styled.NavigationContainer>
-          <Styled.SafariImage className="safari" src={SafariContent} />
-          {/* <Styled.Items> */}
+        <Styled.NavigationContainerWrapper>
+          <Styled.NavigationContainer>
+            <Styled.SafariImage className="safari" src={SafariContent} />
+            {/* <Styled.Items> */}
 
-          {/* </Styled.Items> */}
-          <Styled.NewOrderImage className="newOrder" src={NewOrder} />
-          <Styled.QRCode src={QRCode}>
-            {/* <img src={QRCode} /> */}
-          </Styled.QRCode>
-          <Styled.AppPlay>
-            <AppPlayButton>
-              <img src={PlayMarket} />
-            </AppPlayButton>
-            <AppPlayButton>
-              <img src={AppStore} />
-            </AppPlayButton>
-          </Styled.AppPlay>
+            {/* </Styled.Items> */}
+            <Styled.NewOrderImage className="newOrder" src={NewOrder} />
+            <Styled.QRCode src={QRCode}>
+              {/* <img src={QRCode} /> */}
+            </Styled.QRCode>
+            <Styled.AppPlay>
+              <AppPlayButton>
+                <img src={PlayMarket} />
+              </AppPlayButton>
+              <AppPlayButton>
+                <img src={AppStore} />
+              </AppPlayButton>
+            </Styled.AppPlay>
 
-          <Styled.MaskedGroup src={Mask} />
-        </Styled.NavigationContainer>
+            <Styled.MaskedGroup src={Mask} />
+          </Styled.NavigationContainer>
+        </Styled.NavigationContainerWrapper>
+
         <Styled.MobileButton>
           <img src={UserOctagon} />
           Start Your Journey

@@ -26,6 +26,15 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const HomeStar = styled.img`
+  position: relative;
+  left: -20px;
+  margin-bottom: 32px;
+  
+  height: 20px;
+  width: 20px;
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -101,12 +110,6 @@ export const TextHeader = styled.text`
   font-weight: 650;
   line-height: 4vw;
   position: relative;
-  img {
-    position: absolute;
-    width: 5%;
-    left: 19.5vw;
-    bottom: 2vh;
-  }
 
   @media screen and (max-width: 1100px) {
     font-size: 32px;
@@ -116,6 +119,19 @@ export const TextHeader = styled.text`
     }
   }
 `;
+
+export const TopText = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+`;
+
+export const TextStar = styled.img`
+  height: 45px;
+  width: 37px;
+`;
+
 export const WhiteText = styled.text`
   color: #cda870;
 `;
@@ -138,18 +154,22 @@ export const TextContent = styled.p`
 export const ButtonContainer = styled.p`
   display: flex;
   padding-top: 6%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: start;
-  gap: 12px;
+  gap: 22px;
 
   @media screen and (max-width: 1100px) {
     justify-content: center;
   }
 `;
+
+export const SignUpContainer = styled.div`
+  
+`;
+
 export const SignUpButton = styled.button`
   display: flex;
-  //
-  /* position: relative; */
+  position: relative;
   padding: 2vh 2vw;
   align-items: center;
   gap: 12px;
@@ -158,7 +178,7 @@ export const SignUpButton = styled.button`
   background: ${(props) => props.theme.greetings.signUpBackground};
   color: ${(props) => props.theme.greetings.signUpText};
   font-family: Quicksand;
-  font-size: 1.2vw;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
@@ -190,7 +210,7 @@ export const DemoButton = styled.button`
   background: ${(props) => props.theme.greetings.findOutBackground};
   color: ${(props) => props.theme.greetings.findOutText};
   font-family: Quicksand;
-  font-size: 1.2vw;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
@@ -211,8 +231,15 @@ export const DemoButton = styled.button`
   }
 `;
 export const FreeMark = styled.div`
-  padding-left: 3vw;
-  padding-top: 2%;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  
+  height: 15px;
+  width: 60px;
+  
   @media (max-width: 1100px) {
     display: none;
   }
@@ -225,7 +252,7 @@ export const SmallLogo = styled.img`
   /* padding-right: 200px; */
 
   /* height: 337px; */
-  width: 35%;
+  width: 40%;
   /* width: 30%; */
 
   @media (max-width: 1100px) {
@@ -242,15 +269,15 @@ export const LogoContainer = styled.div`
   flex-grow: 1;
 `;
 export const ItemContainer = styled.div`
-  display: content;
   position: absolute;
+  display: flex;
   flex-direction: column;
   bottom: 0px;
   /* left: 50vw; */
   left: 50vw;
   align-self: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
   /* width: 400px; */
   /* flex-wrap: wrap; */
   /* img {

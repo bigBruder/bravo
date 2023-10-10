@@ -11,6 +11,7 @@ const ServiceContent: React.FunctionComponent<IServiceContent> = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          gap: 12,
         }}
       >
         <Styled.DescriptionHeader>Our Services</Styled.DescriptionHeader>

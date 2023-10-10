@@ -87,7 +87,7 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
             <SwiperSlide>
               <Card
                 avatar={Avatar1}
-                titleImage={Name1}
+                titleImage={Name2}
                 description={
                   "We offer Rush or date specific\n" +
                   "service to get your order done\n" +

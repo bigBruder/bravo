@@ -26,7 +26,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   /* padding: 30px 70px; */
-  padding: 30px 70px 0px 0px;
+  padding: 30px 0 0px 0px;
 
   @media screen and (max-width: 1100px) {
     padding: 0;
@@ -58,16 +58,16 @@ export const MainContent = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
+  gap: 75px;
   flex-direction: column;
-  justify-content: start;
+  //justify-content: start;
   align-items: center;
 
-  padding: 50px 70px 30px 200px;
+  padding: 50px 0 30px 200px;
   margin-left: 100px;
   @media (min-width: 1500px) {
     justify-content: space-between;
-    height: 80vh;
-    padding: 0px 70px 30px 100px;
+    padding: 0px 0 30px 100px;
     margin-left: 50px;
   }
   @media screen and (max-width: 1100px) {

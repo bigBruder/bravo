@@ -33,7 +33,7 @@
 //     </Styled.ContentWrapper>
 //   );
 // };
-
+import RedStar from '../../assets/icons/Home/RedStar.svg';
 // export default HomeContent;
 
 import * as Styled from "./home.styles";
@@ -73,9 +73,11 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
   <Styled.ContentWrapper>
     {/* <Styled.LogoWrapper> */}
     <Styled.PageContent>
+      <Styled.HomeStar src={RedStar} />
       <Styled.TextHeader>
-        Jewelry Service
-        <img src={Stars} />
+        <Styled.TopText>
+          Jewelry Service <Styled.TextStar src={Stars} /><br />
+        </Styled.TopText>
         Shop <Styled.WhiteText> Like No Other</Styled.WhiteText>{" "}
       </Styled.TextHeader>
       <Styled.TextContent>
@@ -88,16 +90,16 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
         <Styled.SignUpButton>
           <DarkUserIcon src={DarkUser} />
           <LightUserIcon src={LightUser} />
-          Sign up
+          Start Your Journey
+          <Styled.FreeMark>
+            <img src={ItsFree} style={{ width: 'inherit', height: 'inherit'}} />
+          </Styled.FreeMark>
         </Styled.SignUpButton>
         <Styled.DemoButton>
           <img src={OctagonIcon} />
           Find out more
         </Styled.DemoButton>
       </Styled.ButtonContainer>
-      <Styled.FreeMark>
-        <img src={ItsFree} style={{ width: "13%" }} />
-      </Styled.FreeMark>
     </Styled.PageContent>
 
     <Styled.LogoContainer>
