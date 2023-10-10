@@ -250,7 +250,7 @@ export const SmallLogo = styled.img`
   /* padding-right: 200px; */
 
   /* height: 337px; */
-  width: 40%;
+  width: 50%;
   /* width: 30%; */
 
   @media (max-width: 1100px) {
@@ -272,10 +272,10 @@ export const ItemContainer = styled.div`
   flex-direction: column;
   bottom: 0px;
   /* left: 50vw; */
-  left: 50vw;
+  left: 50%;
   align-self: center;
   justify-content: center;
-  gap: 30px;
+  gap: 60px;
   /* width: 400px; */
   /* flex-wrap: wrap; */
   /* img {
@@ -378,7 +378,7 @@ export const NavigateIconContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5px;
+  gap: 50px;
 `;
 export const QualityIconContainer = styled.div`
   display: flex;

@@ -20,13 +20,17 @@ export const Container = styled.div`
   z-index: 1;
   width: 100%;
   height: 100vh;
-  padding: 30px 70px;
   background: var(--portal-imageColor);
+  padding: 30px 70px;
 
   @media (max-width: 768px) {
     padding: 60px 15px 40px 15px;
     align-items: center;
     height: 100%;
+  }
+
+  @media (min-width: 1500px) {
+    padding: 30px 70px 113px;
   }
 `;
 
@@ -263,8 +267,8 @@ export const NavigationContainer = styled.div`
 export const NewOrderImage = styled.img`
   width: 25%;
   position: absolute;
-  bottom: -7%;
-  right: 3%;
+  bottom: -12%;
+  right: 0%;
 
   @media (max-width: 768px) {
     display: none;
@@ -287,8 +291,8 @@ export const QRCode = styled.img`
   width: 22%;
 
   position: absolute;
-  bottom: 2%;
-  left: 3%;
+  bottom: -4%;
+  left: -10%;
 
   justify-content: center;
   align-items: center;
@@ -307,13 +311,14 @@ export const QRCode = styled.img`
 
 export const AppPlay = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
   gap: 10px;
   justify-content: center;
   position: absolute;
   bottom: -3%;
   right: 0%;
-  left: 0%;
+  left: -5%;
 
   /* img {
     transition: transform 0.2s;
