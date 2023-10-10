@@ -10,6 +10,7 @@ import HomeContent from "./HomeContent";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
 
 import { HomeMobile } from "../../components/HomeMobile/HomeMobile";
+import Header from "../../components/Header/Header.tsx";
 
 // import "animate.css/animate.min.css";
 

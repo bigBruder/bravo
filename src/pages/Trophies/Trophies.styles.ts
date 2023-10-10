@@ -51,11 +51,11 @@ export const ContentWrapper = styled.div`
   align-items: center;
   height: 100vh;
   /* height: 10vh; */
-  padding: 40px 70px 30px 80px;
+  padding: 30px 70px 30px 80px;
   /* gap: 5%; */
-  @media (min-width: 1600px) {
+  @media (min-width: 1500px) {
     gap: 5vh;
-    padding: 40px 40px 30px 80px;
+    padding: 180px 40px 30px 40px;
   }
   @media (max-width: 1600px) {
     padding: 30px 40px 30px 80px;

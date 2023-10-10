@@ -64,9 +64,9 @@ export const ContentWrapper = styled.div`
     /* margin-left: 100px;
     padding: 0 0 30px 70px; */
   }
-  @media (min-width: 1600px) {
-    margin-left: 100px;
-    padding: 50px 0 0px 0px;
+  @media (min-width: 1500px) {
+    margin-left: -80px;
+    padding: 180px 0 0px 0px;
     justify-content: space-between;
     /* gap: 15px; */
     /* flex: 1; */
@@ -81,7 +81,6 @@ export const DescriptionHeader = styled.text`
   font-size: 42px;
   font-style: normal;
   font-weight: 650;
-  margin-top: 40px;
 
   @media (max-width: 1600px) {
     font-size: 31px;
@@ -117,8 +116,8 @@ export const ContentPage = styled.div`
   grid-template-columns: 100%;
   padding: 2% 5% 2% 5%;
   gap: 10px;
-  @media (min-width: 1600px) {
-    margin-left: 100px;
+  @media (min-width: 1500px) {
+    margin-left: 300px;
     margin-top: 10vh;
   }
   @media (min-width: 768px) {
@@ -168,9 +167,8 @@ export const ContentDescription = styled.div`
 
 export const RegistrationField = styled.div`
   display: none;
-  padding: 30px 40px;
-  max-height: 230px;
-  max-width: 670px;
+  padding: 30px 30px;
+  max-width: 585px;
 
   flex-direction: row;
   justify-content: space-between;
