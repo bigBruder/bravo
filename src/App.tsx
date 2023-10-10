@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
-import "./styles/theme/theme.module.scss";
+import "./styles/theme/theme.scss";
 import AnimatedRoutes from "./components/AnimatedRoutes/AnimatedRoutes";
 // import { lightTheme, darkTheme } from "./components/Themes/Themes";
 // import { useDarkMode } from "./hooks/useDarkMode";
