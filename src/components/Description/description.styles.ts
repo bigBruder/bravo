@@ -4,8 +4,10 @@ interface DescriptionProps {
 }
 export const Wrapper = styled.div<DescriptionProps>`
   display: flex;
+
   width: 55vw;
-  height: 12vh;
+  height: 13vh;
+
   /* padding: 1.5% 2%; */
   padding: 20px 20px;
   justify-content: space-between;
@@ -22,7 +24,7 @@ export const Wrapper = styled.div<DescriptionProps>`
     font-size: 0.95vw;
     font-style: normal;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     /* margin-top: 1vh; */
     max-width: 75%;
   }
@@ -85,6 +87,10 @@ export const Wrapper = styled.div<DescriptionProps>`
       margin-top: 0;
       max-width: 100%;
     }
+  }
+  @media (max-width: 768px) {
+    max-width: 55vw;
+    height: auto;
   }
 `;
 
