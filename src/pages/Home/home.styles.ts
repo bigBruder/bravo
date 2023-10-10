@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
   /* background-color: #111; */
 
   video {
-    /* display: none; */
     display: block;
     opacity: var(--greetingsBackgroundVideoOpacity);
     position: absolute;
@@ -35,18 +34,13 @@ export const Container = styled.div`
 
   z-index: 1;
   width: 100%;
-  min-height: 100vh;
-  max-height: 100%;
+  height: 100vh;
   /* padding: 30px 70px; */
   /* padding: 30px 70px 0px 0px; */
   /* background-color: black;
   opacity: 75%; */
 
-  /* background: none; */
   background: var(--greetingsBackground);
-  @media (max-height: 768px) {
-    height: 100%;
-  }
 `;
 
 export const MainContent = styled.div`
@@ -126,7 +120,6 @@ export const WhiteText = styled.text`
 `;
 
 export const TextContent = styled.p`
-  /* color: #fbfdfc; */
   color: var(--greetingsTextColor);
   font-family: Quicksand;
   font-size: 1vw;
@@ -160,6 +153,7 @@ export const SignUpButton = styled.button`
   gap: 12px;
   border: none;
   border-radius: 15px;
+
   background: var(--greetings-signUpBackground);
   color: var(--greetings-signUpText);
   font-family: Quicksand;
@@ -192,6 +186,7 @@ export const DemoButton = styled.button`
   gap: 12px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+
   background: var(--greetings-findOutBackground);
   color: var(--greetings-findOutText);
   font-family: Quicksand;
@@ -240,22 +235,19 @@ export const SmallLogo = styled.img`
 `;
 
 export const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: contents;
   position: relative;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
 `;
 export const ItemContainer = styled.div`
-  display: block;
-  width: 100%;
+  display: content;
   position: absolute;
   flex-direction: column;
-  top: 100%;
-  transform: translateY(-50%);
+  bottom: 0px;
   /* left: 50vw; */
+  left: 50vw;
   align-self: center;
   justify-content: center;
   gap: 10px;
