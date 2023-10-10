@@ -1,4 +1,4 @@
-import Icon from "../../assets/icons/Footer/FooterIcon.png";
+import Icon from "../../assets/images/Footer/FooterNew.png";
 import * as Styled from "./footer.styles";
 
 const Footer = () => {

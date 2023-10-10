@@ -3,15 +3,15 @@
   display: flex;
   align-items: center;
   font-family: Quicksand;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 30px;
   margin-left: 31px;
+  font-weight: 500;
   cursor: pointer;
 
   &:before {
-
     position: absolute;
-    content: '';
+    content: "";
     height: 21px;
     width: 21px;
     display: block;
@@ -23,7 +23,9 @@
   }
 }
 
-.details[open] > .details::before { transform: rotate(90deg); }
+.details[open] > .details::before {
+  transform: rotate(90deg);
+}
 
 details > summary {
   list-style: none;
