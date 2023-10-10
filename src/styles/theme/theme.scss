@@ -43,6 +43,10 @@ body.light {
   --trophies-displayIconsDark: none;
   --trophies-hourContent: #9799ac;
   --trophies-headerContent: #cda870;
+  --workflow-headerHalfText: #164d59;
+  --workflow-contentHeader: #164d59;
+  --workflow-arrowDark: none;
+  --workflow-arrowLight: block;
 }
 
 body.dark {
@@ -87,4 +91,8 @@ body.dark {
   --trophies-displayIconsDark: block;
   --trophies-hourContent: #fff;
   --trophies-headerContent: #cda870;
+  --workflow-headerHalfText: #fff;
+  --workflow-contentHeader: #fff;
+  --workflow-arrowDark: block;
+  --workflow-arrowLight: none;
 }
