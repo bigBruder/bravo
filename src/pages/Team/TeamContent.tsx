@@ -9,7 +9,7 @@ import Title from "./../../assets/icons/TeamTitle.svg";
 import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
 import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
 
-import Name1 from "../../assets/images/HumanCard/Name1.svg";
+// import Name1 from "../../assets/images/HumanCard/Name1.svg";
 import Avatar1 from "../../assets/images/HumanCard/Human1.svg";
 import Name2 from "../../assets/images/HumanCard/Name2.svg";
 import Avatar2 from "../../assets/images/HumanCard/Human2.svg";
@@ -57,7 +57,9 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.container_header}>
         <img src={Title} className={styles.container_title} />
         <p className={styles.container_text}>
-          Our team is a vibrant tapestry of talent, passion, and creativity. We're not just jewelers; we're visionaries who turn dreams into breathtaking reality.
+          Our team is a vibrant tapestry of talent, passion, and creativity.
+          We're not just jewelers; we're visionaries who turn dreams into
+          breathtaking reality.
         </p>
       </div>
 
@@ -153,7 +155,9 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
-          Distance is no obstacle; we bring the best experience right to your fingertips, with <br /> seamless communication as our hallmark. Your satisfaction knows no bounds
+          Distance is no obstacle; we bring the best experience right to your
+          fingertips, with <br /> seamless communication as our hallmark. Your
+          satisfaction knows no bounds
         </p>
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />
