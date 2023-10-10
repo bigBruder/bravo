@@ -55,6 +55,8 @@ body.light {
   --faq-buttonText: #164d59;
   --faq-buttonOctagonLight: block;
   --faq-buttonOctagonDark: none;
+  --color-bg: #ffffff;
+  --color-fg: #000000;
 }
 
 body.dark {
@@ -115,4 +117,6 @@ body.dark {
   --faq-buttonText: #272727;
   --faq-buttonOctagonLight: none;
   --faq-buttonOctagonDark: block;
+  --color-bg: #343434;
+  --color-fg: #ffffff;
 }
