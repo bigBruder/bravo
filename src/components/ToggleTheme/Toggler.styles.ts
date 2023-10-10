@@ -3,12 +3,18 @@
 import styled from "styled-components";
 export const Button = styled.button`
   position: absolute;
+  top: 10px;
+  left: 10px;
   z-index: 10000;
-  background: ${({ theme }) => theme.background};
-  border: 2px solid ${({ theme }) => theme.toggleBorder};
+
   color: ${({ theme }) => theme.text};
   border-radius: 30px;
   cursor: pointer;
-  font-size: 0.8rem;
+  border: solid gray;
+  /* font-size: 0.8rem; */
   padding: 0.6rem;
+  background: var(--color-fg);
+`;
+export const Icon = styled.img`
+  width: 5%;
 `;
