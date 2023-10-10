@@ -47,6 +47,14 @@ body.light {
   --workflow-contentHeader: #164d59;
   --workflow-arrowDark: none;
   --workflow-arrowLight: block;
+  --faq-background: #fff;
+  --faq-textContent: #9799ac;
+  --faq-textDescription: #164d59;
+  --faq-textButton: #164d59;
+  --faq-backgroundField: rgba(205, 168, 112, 0.1);
+  --faq-buttonText: #164d59;
+  --faq-buttonOctagonLight: block;
+  --faq-buttonOctagonDark: none;
 }
 
 body.dark {
@@ -95,4 +103,16 @@ body.dark {
   --workflow-contentHeader: #fff;
   --workflow-arrowDark: block;
   --workflow-arrowLight: none;
+  --faq-background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  --faq-textContent: #fff;
+  --faq-textDescription: #fff;
+  --faq-textButton: #272727;
+  --faq-backgroundField: rgba(255, 255, 255, 0.1);
+  --faq-buttonText: #272727;
+  --faq-buttonOctagonLight: none;
+  --faq-buttonOctagonDark: block;
 }
