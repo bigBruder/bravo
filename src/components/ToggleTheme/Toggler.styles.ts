@@ -14,6 +14,9 @@ export const Button = styled.button`
   /* font-size: 0.8rem; */
   padding: 0.6rem;
   background: var(--color-fg);
+  @media (max-width: 1100px) {
+    display: none;
+  }
 `;
 export const Icon = styled.img`
   width: 5%;
