@@ -30,6 +30,12 @@ body.light {
   --greetings-googleIconLight: block;
   --greetings-appIcon: none;
   --greetings-appIconLight: block;
+  --portal-imageColor: white;
+  --portal-headerTextColor: #164d59;
+  --portal-backgroundColor: rgba(205, 168, 112, 0.1);
+  --portal-textQuotesColor: #164d59;
+  --quotes-iconLight: block;
+  --quotes-iconDark: none;
 }
 
 body.dark {
@@ -56,4 +62,15 @@ body.dark {
   --greetings-googleIcon: block;
   --greetings-appIconLight: none;
   --greetings-appIcon: block;
+
+  --portal-imageColor: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  --portal-backgroundColor: rgba(255, 255, 255, 0.1);
+  --portal-headerTextColor: #fff;
+  --portal-textQuotesColor: #fff;
+  --quotes-iconLight: none;
+  --quotes-iconDark: block;
 }

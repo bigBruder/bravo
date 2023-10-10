@@ -30,7 +30,7 @@ export const HomeStar = styled.img`
   position: relative;
   left: -20px;
   margin-bottom: 32px;
-  
+
   height: 20px;
   width: 20px;
 `;
@@ -161,9 +161,7 @@ export const ButtonContainer = styled.p`
   }
 `;
 
-export const SignUpContainer = styled.div`
-  
-`;
+export const SignUpContainer = styled.div``;
 
 export const SignUpButton = styled.button`
   display: flex;
@@ -234,12 +232,12 @@ export const FreeMark = styled.div`
   position: absolute;
   bottom: -30px;
   left: 50%;
-  
+
   transform: translateX(-50%);
-  
+
   height: 15px;
   width: 60px;
-  
+
   @media (max-width: 1100px) {
     display: none;
   }
