@@ -103,8 +103,7 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
       </Styled.ContentPage>
       <Description
         descriptionText={
-          "We offer Rush or date specific service to get " +
-          "\n" +
+          "We offer Rush or date specific service to get \n" +
           "your order done at the time you need it."
         }
         parentBackgroundColor={parentBackgroundColor}

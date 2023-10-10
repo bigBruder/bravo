@@ -67,8 +67,8 @@ export const ContentWrapper = styled.div`
   margin-left: 100px;
   @media (min-width: 1500px) {
     justify-content: space-between;
-    padding: 0px 0 30px 100px;
-    margin-left: 50px;
+    padding: 150px 0 30px 0;
+    margin-left: 0;
   }
   @media screen and (max-width: 1100px) {
     flex-direction: column;

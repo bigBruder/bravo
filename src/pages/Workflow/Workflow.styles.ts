@@ -57,6 +57,9 @@ export const ContentWrapper = styled.div`
   @media (max-width: 480px) {
     padding: 20px;
   }
+  @media (min-width: 1500px) {
+    padding: 180px 40px 30px 22px;
+  }
 `;
 
 export const DescriptionHeader = styled.text`
