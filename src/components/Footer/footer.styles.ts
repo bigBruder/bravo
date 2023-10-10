@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   img {
     width: 100%;
   }
-  @media (max-width: 1100px) {
+  @media (max-width: 1500px) {
     display: none;
   }
 `;
