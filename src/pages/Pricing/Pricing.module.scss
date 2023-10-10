@@ -5,19 +5,19 @@
   overflow-x: hidden;
 
   width: 90%;
-  padding: 50px 20px 30px 20px;
+  padding: 60px 20px 30px 20px;
   height: 100%;
 
   @media (min-width: 1101px) {
     margin-left: 100px;
-    padding: 50px 50px 30px 150px;
+    padding: 0 50px 30px 150px;
   }
   @media (min-width: 1601px) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 100px;
-    padding: 50px 50px 30px 150px;
+    padding: 0 50px 30px 150px;
   }
 
   &_header {
@@ -86,10 +86,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
-    @media (max-width: 768px) {
-      font-size: 14px;
-      line-height: 22px;
-    }
   }
 }
 
@@ -143,7 +139,7 @@
 
 @media (min-width: 768px) {
   .container {
-    // height: 85%;
+    height: 100%;
 
     &_wrapper {
       margin: 0;

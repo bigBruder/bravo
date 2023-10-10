@@ -1,22 +1,13 @@
 import styled from "styled-components";
 import BackgroundImage from "./../../assets/images/Services.png";
+
 export const Wrapper = styled.div`
   display: flex;
   background-color: #111;
-  //
   background-image: url("${BackgroundImage}");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom 0px right 0px;
-  /* video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
 `;
 
 export const Container = styled.div`
@@ -27,11 +18,6 @@ export const Container = styled.div`
   z-index: 1;
   width: 100%;
   height: 100vh;
-  /* background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  ); */
   background-color: rgba(0, 0, 0, 0.7);
   @media (min-width: 1300px) {
     padding-bottom: 100px;
@@ -39,42 +25,29 @@ export const Container = styled.div`
   @media (max-width: 1300px) {
     padding: 10px 0px 0px 0px;
   }
-  /* @media (max-width: 864px) {
-    height: 100%;
-  } */
-  @media (max-width: 768px)  or (max-height: 768px)  {
+
+  @media (max-width: 768px) {
     padding: 60px 0px 40px 0px;
-    height: 100%;
   }
   @media (max-width: 656px) {
-    /* padding: 60px 0px 40px 0px; */
     height: 100%;
   }
-  /* padding: 30px 70px; */
-  /* padding: 30px 70px 0px 0px; */
 `;
 
-// export const MainContent = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 15px;
-//   flex: 1 0 0;
-//   align-self: stretch;
-// `;
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: space-around;
   /* flex-grow: 0.8; */
-  padding: 180px 70px 30px 150px;
+  padding: 30px 70px 30px 150px;
   @media (min-width: 1600px) {
     justify-content: space-between;
     gap: 5vh;
-    padding: 150px 40px 30px 120px;
+    padding: 30px 40px 30px 120px;
   }
   @media (max-width: 1600px) {
-    padding: 100px 40px 30px 120px;
+    padding: 30px 40px 30px 120px;
   }
   @media (max-width: 1300px) {
     padding: 20px 0 0 0;
