@@ -155,9 +155,12 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
-          Distance is no obstacle; we bring the best experience right to your
-          fingertips, with seamless communication as our hallmark. Your
-          satisfaction knows no bounds
+          {screenSize.width >= 1600 ? 'Distance is no obstacle; we bring the best experience right to your' +
+            '          fingertips, with\n seamless communication as our hallmark. Your' +
+            '          satisfaction knows no bounds' :
+            'Distance is no obstacle; we bring the best experience right to your' +
+            '          fingertips, with seamless communication as our hallmark. Your' +
+            '          satisfaction knows no bounds'}
         </p>
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />
