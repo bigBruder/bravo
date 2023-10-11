@@ -63,7 +63,7 @@ export const MainContent = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   justify-content: center;
-  gap: 8vw;
+  gap: 2vw;
 
   align-items: center;
   padding: 0px 30px 0 100px;
@@ -272,7 +272,7 @@ export const ItemContainer = styled.div`
   flex-direction: column;
   bottom: 0px;
   /* left: 50vw; */
-  left: 50%;
+  left: 44%;
   align-self: center;
   justify-content: center;
   gap: 60px;

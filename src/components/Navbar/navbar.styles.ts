@@ -6,7 +6,8 @@ interface ArrowFieldProps {
 export const Wrapper = styled.div`
   display: flex;
   position: fixed;
-  top: 120px;
+  top: 50%;
+  transform: translateY(-50%);
   flex-direction: row;
   justify-content: start;
   padding: 25px 0;

@@ -47,11 +47,9 @@ export const MainContent = styled.div`
   background-color: rgba(255, 255, 255, 0.6);
   @media screen and (max-width: 1100px) {
     flex-direction: column;
-    align-items: center;
     gap: 0px;
   }
   @media (min-width: 1500px) {
-    align-items: center;
     justify-content: center;
   }
 `;
