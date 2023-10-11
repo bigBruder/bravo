@@ -55,14 +55,14 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
             Submit, Track, Ship, Communicate – Your All-in-One Solution for
             Seamless Service Management.
           </Styled.RegisterText>
-          <Styled.RegisterButton>
+          <Styled.RegisterButton onClick={() => open('https://my.bravocreations.com/registration')}>
             <DarkUserIcon src={DarkUser} />
             <LightUserIcon src={LightUser} />
             Register Right Now
           </Styled.RegisterButton>
           <Styled.AppPlayMobile>
-            <img src={PlayMarketMobile} />
-            <img src={AppStoreMobile} />
+            <img src={PlayMarketMobile} onClick={() => open('https://play.google.com/store/apps/details?id=com.bravocrm')} />
+            <img src={AppStoreMobile} onClick={() => open('https://apps.apple.com/us/app/bravo-creations/id6450965519')} />
           </Styled.AppPlayMobile>
         </Styled.RegisterContainer>
 
@@ -73,11 +73,11 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
             <Styled.NewOrderImage className="newOrder" src={NewOrder} />
             <Styled.QRCode src={QRCode}></Styled.QRCode>
             <Styled.AppPlay>
-              <Styled.IconButton>
+              <Styled.IconButton onClick={() => open('https://play.google.com/store/apps/details?id=com.bravocrm')}>
                 <PlayMarketIconLight src={PlayStoreLight} />
                 <PlayMarketIconDark src={PlayStoreDark} />
               </Styled.IconButton>
-              <Styled.IconButton>
+              <Styled.IconButton onClick={() => open('https://apps.apple.com/us/app/bravo-creations/id6450965519')}>
                 <AppStoreIconLight src={AppStoreLight} />
                 <AppStoreIconDark src={AppStoreDark} />
               </Styled.IconButton>

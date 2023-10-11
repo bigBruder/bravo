@@ -10,7 +10,7 @@ const Header = () => {
         <Styled.SmallLogo src={logo} />
       </div>
       <Styled.Text src={text}></Styled.Text>
-      <Styled.Button>
+      <Styled.Button onClick={() => open('https://my.bravocreations.com/login')}>
         <Styled.ButtonIcon
           src={UserBrown}
           alt='Sign In'

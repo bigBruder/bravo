@@ -87,7 +87,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
         technology ensure unmatched quality.
       </Styled.TextContent>
       <Styled.ButtonContainer>
-        <Styled.SignUpButton>
+        <Styled.SignUpButton onClick={() => open('https://my.bravocreations.com/registration')}>
           <DarkUserIcon src={DarkUser} />
           <LightUserIcon src={LightUser} />
           Start Your Journey
@@ -95,7 +95,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
             <img src={ItsFree} style={{ width: 'inherit', height: 'inherit'}} />
           </Styled.FreeMark>
         </Styled.SignUpButton>
-        <Styled.DemoButton>
+        <Styled.DemoButton onClick={() => open('https://bravocreations.com')} >
           <img src={OctagonIcon} />
           Find out more
         </Styled.DemoButton>
@@ -106,12 +106,12 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
       <Styled.SmallLogo src={LogoIcon} />
       <Styled.ItemContainer>
         <NavigateIconContainer>
-          <Styled.IconButton>
+          <Styled.IconButton onClick={() => open('https://play.google.com/store/apps/details?id=com.bravocrm')}>
             {" "}
             <GoogleIcon src={PlayStore} />
             <GoogleIconLight src={PlayStoreLight} />
           </Styled.IconButton>
-          <Styled.IconButton>
+          <Styled.IconButton onClick={() => open('https://apps.apple.com/us/app/bravo-creations/id6450965519')}>
             <AppStoreIcon src={AppStore} />
             <AppStoreIconLight src={AppStoreLight} />
           </Styled.IconButton>

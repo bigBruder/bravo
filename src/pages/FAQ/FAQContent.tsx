@@ -100,7 +100,7 @@ const FaqContent: React.FunctionComponent<IWorkflowContent> = () => {
             style={{ height: "100%", borderColor: "rgba(255, 255, 255, 0.10)" }}
           />
           <Styled.RgistrationRightContainer>
-            <Styled.RegistrationButton>
+            <Styled.RegistrationButton onClick={() => open('https://my.bravocreations.com/registration')}>
               {" "}
               <Styled.OctagonIconDark
                 src={OctagonIcon}

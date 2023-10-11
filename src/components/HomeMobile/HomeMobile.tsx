@@ -20,7 +20,7 @@ export const HomeMobile = () => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     }
-    
+
     return () => {
       if (isMenuOpen) {
         document.body.style.overflow = 'auto';
@@ -59,7 +59,7 @@ export const HomeMobile = () => {
             </Styled.WelcomeText>
           </Styled.WelcomeContainer>
           <Styled.Actions>
-            <Styled.Button>
+            <Styled.Button onClick={() => open('https://my.bravocreations.com/registration')}>
               <Styled.ButtonIcon
                 src={userOctagon}
                 alt='Start your journey icon'
@@ -69,7 +69,7 @@ export const HomeMobile = () => {
             <Styled.ActionsText>
               It’s Free
             </Styled.ActionsText>
-            <Styled.ButtonModified>
+            <Styled.ButtonModified onClick={() => open('https://bravocreations.com')}>
               <Styled.ButtonIcon
                 src={videoOctagon}
                 alt='Our exprertise icon'

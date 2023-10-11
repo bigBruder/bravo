@@ -24,7 +24,7 @@ export const ContactContent: React.FC<IContactContent> = () => {
               Business Service Needs with Exceptional Customer Service and
               Outstanding Craftsmanship.
             </Styled.AdressDescription>
-            <Styled.AdressButton>
+            <Styled.AdressButton onClick={() => open('https://my.bravocreations.com/registration')}>
               <Styled.ButtonOctagon src={Octagon} />
               Register Now
             </Styled.AdressButton>
