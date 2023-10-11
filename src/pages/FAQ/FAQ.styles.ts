@@ -167,8 +167,9 @@ export const ContentDescription = styled.div`
 
 export const RegistrationField = styled.div`
   display: none;
-  padding: 30px 30px;
+  padding: 30px;
   max-width: 585px;
+  max-height: 225px;
 
   flex-direction: row;
   justify-content: space-between;
@@ -206,18 +207,20 @@ export const YellowText = styled.text`
 
 export const RegistrationButton = styled.button`
   display: flex;
-  padding: 20px 36px;
+  padding: 13px 24px;
   align-items: center;
+  min-width: 178px;
   gap: 12px;
   border: none;
   border-radius: 15px;
   background: #cda870;
   color: var(--faq-buttonText);
   font-family: Quicksand;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
   margin-bottom: 20px;
+  min-width: 185px;
   transition: transform 0.3s;
   &:hover {
     transform: scale(1.1);
@@ -227,7 +230,7 @@ export const RegistrationButton = styled.button`
   }
 
   @media (max-width: 1400px) {
-    font-size: 16px;
+    /* font-size: 16px; */
     padding: 10px 24px;
   }
 `;

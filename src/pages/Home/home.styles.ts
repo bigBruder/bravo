@@ -155,9 +155,12 @@ export const ButtonContainer = styled.p`
   justify-content: start;
   align-items: center;
   gap: 40px;
-
+  @media screen and (max-width: 1500px) {
+    gap: 5px;
+  }
   @media screen and (max-width: 1100px) {
     justify-content: center;
+    gap: 15px;
   }
 `;
 
@@ -166,7 +169,8 @@ export const SignUpContainer = styled.div``;
 export const SignUpButton = styled.button`
   display: flex;
   position: relative;
-  padding: 2vh 2vw;
+  /* padding: 2vh 2vw; */
+  padding: 20px 36px;
   align-items: center;
   gap: 12px;
   border: none;
@@ -180,6 +184,7 @@ export const SignUpButton = styled.button`
   font-weight: 600;
   line-height: 28px;
   transition: transform 0.3s;
+  min-width: 241px;
   img {
     /* display: none; */
   }
@@ -191,18 +196,24 @@ export const SignUpButton = styled.button`
     transform: scale(1);
     background: rgba(255, 255, 255, 0.5);
   }
-
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1650px) {
     font-size: 16px;
+    padding: 2vh 2vw;
+  }
+  @media screen and (max-width: 1100px) {
+    /* font-size: 16px; */
     line-height: 1.5;
+    min-width: auto;
   }
 `;
 export const DemoButton = styled.button`
   display: flex;
-  padding: 2vh 2vw;
+  /* padding: 2vh 2vw; */
+  padding: 20px 36px;
   align-items: center;
   gap: 12px;
   border-radius: 15px;
+  min-width: 219px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   background: var(--greetings-findOutBackground);
@@ -222,10 +233,17 @@ export const DemoButton = styled.button`
     background: rgba(255, 255, 255, 0.5);
     transform: scale(1);
   }
-
-  @media screen and (max-width: 1100px) {
+  /* max-width: 219px; */
+  @media screen and (max-width: 1650px) {
+    /* max-width: 219px; */
     font-size: 16px;
     line-height: 1.5;
+    padding: 2vh 2vw;
+  }
+  @media screen and (max-width: 1100px) {
+    /* font-size: 16px; */
+    line-height: 1.5;
+    min-width: auto;
   }
 `;
 export const FreeMark = styled.div`

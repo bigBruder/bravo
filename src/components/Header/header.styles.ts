@@ -9,11 +9,11 @@ export const Wrapper = styled.div`
   height: 120px;
   width: 100%;
   z-index: 1000;
-  
+
   justify-content: space-between;
-  
+
   display: none;
-  
+
   @media (min-width: 1500px) {
     display: flex;
   }
@@ -36,17 +36,16 @@ export const SmallLogo = styled.img`
   }
 `;
 
-export const Text = styled.img`
-
-`;
+export const Text = styled.img``;
 
 export const Button = styled.button`
   display: flex;
-  
-  min-height: 56px;
-  padding: 16px 36px;
+  width: 129px;
+  height: 56px;
+  /* min-height: 56px; */
+  padding: 13px 24px;
   gap: 10px;
-  color: #CDA870;
+  color: #cda870;
   font-family: Quicksand;
   font-size: 16px;
   font-style: normal;
@@ -58,6 +57,17 @@ export const Button = styled.button`
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.15);
+  img {
+    width: 18px;
+    height: 18px;
+  }
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1);
+  }
 `;
 
 export const ButtonIcon = styled.img`
