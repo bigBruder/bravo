@@ -51,6 +51,9 @@ export const ScreenHeader = styled.div`
   flex-direction: column;
   margin-top: 180px;
   gap: 12px;
+  @media (max-width: 1700px) {
+    margin-top: 110px;
+  }
   @media (max-width: 1500px) {
     margin-top: 50px;
   }
