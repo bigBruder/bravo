@@ -66,7 +66,7 @@ export const ContentWrapper = styled.div`
   gap: 2vw;
 
   align-items: center;
-  padding: 130px 30px 0 100px;
+  padding: 30px 30px 0 100px;
   margin-left: 5vw;
   /* padding: 150px 70px 30px 150px; */
   /* margin-left: 100px; */
@@ -268,7 +268,7 @@ export const SmallLogo = styled.img`
   /* padding-right: 200px; */
 
   /* height: 337px; */
-  width: 45%;
+  width: 40%;
   /* width: 30%; */
 
   @media (max-width: 1100px) {
@@ -293,7 +293,7 @@ export const ItemContainer = styled.div`
   left: 44%;
   align-self: center;
   justify-content: center;
-  gap: 60px;
+  gap: 30px;
   /* width: 400px; */
   /* flex-wrap: wrap; */
   /* img {
