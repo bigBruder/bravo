@@ -4,12 +4,13 @@ import videoBg from "./../../assets/video/home_background.mp4";
 import React from "react";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
 import { maxHeaderSize } from "../../constants";
-import Footer from "../../components/Footer/FooterScrollDown";
+// import Footer from "../../components/Footer/FooterScrollDown";
 
 import HomeContent from "./HomeContent";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
 
 import { HomeMobile } from "../../components/HomeMobile/HomeMobile";
+// import Header from "../../components/Header/Header.tsx";
 
 // import "animate.css/animate.min.css";
 
@@ -34,7 +35,7 @@ const Home: React.FunctionComponent<IHomePageProps> = ({ animationActive }) => {
           <Styled.Wrapper>
             <video src={videoBg} autoPlay loop muted />
             <Styled.Container>
-              <Footer />
+              {/* <Footer /> */}
               <Styled.MainContent
                 data-animation
                 data-animation-active={permanentAnimationState}

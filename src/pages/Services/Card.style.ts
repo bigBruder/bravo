@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   padding-top: 10px;
   align-items: center;
   justify-content: center;
-  gap: 5px;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -40,7 +39,6 @@ export const GroupCardTop = styled.div`
     max-width: 180px;
     /* max-width: 250px; */
     aspect-ratio: 1/1;
-    object-fit: cover;
     @media (min-width: 1600px) {
       max-width: 222px;
     }
@@ -63,7 +61,6 @@ export const GroupCardBottom = styled.div`
     max-width: 180px;
     /* max-width: 250px; */
     aspect-ratio: 1/1;
-    object-fit: cover;
     @media (min-width: 1600px) {
       max-width: 222px;
 

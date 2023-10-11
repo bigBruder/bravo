@@ -1,10 +1,23 @@
-import Icon from "../../assets/icons/Footer/FooterIcon.png";
 import * as Styled from "./footer.styles";
 
 const Footer = () => {
   return (
     <Styled.Wrapper>
-      <img src={Icon} />
+      <Styled.Container>
+        <Styled.BallsContainer>
+          <Styled.Ball />
+          <Styled.Ball />
+        </Styled.BallsContainer>
+        <Styled.Line />
+      </Styled.Container>
+      <Styled.Triangle />
+      <Styled.Container>
+        <Styled.Line />
+        <Styled.BallsContainer>
+          <Styled.Ball />
+          <Styled.Ball />
+        </Styled.BallsContainer>
+      </Styled.Container>
     </Styled.Wrapper>
   );
 };

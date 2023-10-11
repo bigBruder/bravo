@@ -112,6 +112,7 @@ export const SInputMultiple = styled.input`
 
 export const SButton = styled.button`
   display: flex;
+  justify-content: center;
   padding: 20px 36px;
   align-items: center;
   gap: 12px;
@@ -120,10 +121,10 @@ export const SButton = styled.button`
   background: #cda870;
   color: #272727;
   font-family: Quicksand;
-  font-size: 1.5vh;
+  width: 100%;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.7vh;
+  font-size: 18px;
   transition: transform 0.3s;
   &:hover {
     background-color: #b39362;
@@ -137,7 +138,7 @@ export const SButton = styled.button`
     padding: 10px 24px;
   }
   img {
-    width: 15%;
+    width: 10%;
   }
 `;
 

@@ -2,6 +2,7 @@ import * as Styled from "./Workflow.styles";
 import Description from "../../components/Description/Description";
 import ArrowIcons from "../../assets/icons/workflow-arrow.png";
 import MobileIcon from "../../assets/images/Workflow/MobileWorkflowIcon.png";
+import ArrowIconsLight from "../../assets/icons/workflow-icons-light.png";
 
 interface IWorkflowContent {}
 
@@ -14,11 +15,12 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          gap: "12px",
         }}
       >
         <Styled.DescriptionHeader>
           {" "}
-          We Make it <Styled.WhiteText>Extremely Easy</Styled.WhiteText>
+          <Styled.WhiteText>We Make it</Styled.WhiteText> Extremely Easy
         </Styled.DescriptionHeader>
         <Styled.DescriptionText lang="en">
           With our innovative portal and app, we've redefined the process of
@@ -72,6 +74,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ArrowIcons src={ArrowIcons} />
+        <Styled.LightArrowIcons src={ArrowIconsLight} />
       </Styled.ContentPage>
       {/* <Styled.ArrowIcons src={ArrowIcons} /> */}
 

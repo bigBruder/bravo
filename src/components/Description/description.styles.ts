@@ -5,6 +5,9 @@ interface DescriptionProps {
 export const Wrapper = styled.div<DescriptionProps>`
   display: flex;
 
+  width: 55vw;
+  height: 13vh;
+
   /* padding: 1.5% 2%; */
   padding: 20px 20px;
   justify-content: space-between;
@@ -12,22 +15,16 @@ export const Wrapper = styled.div<DescriptionProps>`
   margin: 0 auto;
   /* flex: 1 0 0; */
   border-radius: 15px;
-  background: ${(props) =>
-    props?.parentbackgroundColor === "white"
-      ? "rgba(205, 168, 112, 0.10)"
-      : "rgba(255, 255, 255, 0.1)"};
+  background: var(--portal-backgroundColor);
   backdrop-filter: blur(12.5px);
 
-  color: ${(props) =>
-    props.parentbackgroundColor === "white" ? "#164D59" : "#fff"};
-  width: 80%;
-
   p {
+    color: var(--portal-textQuotesColor);
     font-family: Quicksand;
     font-size: 0.95vw;
     font-style: normal;
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     /* margin-top: 1vh; */
     max-width: 75%;
   }
@@ -41,7 +38,6 @@ export const Wrapper = styled.div<DescriptionProps>`
 
     width: 80%;
     p {
-      color: #fff;
       text-align: center;
       font-family: Quicksand;
       font-size: 14px;
@@ -62,7 +58,6 @@ export const Wrapper = styled.div<DescriptionProps>`
 
     width: 80%;
     p {
-      color: #fff;
       text-align: center;
       font-family: Quicksand;
       font-size: 14px;
@@ -83,7 +78,6 @@ export const Wrapper = styled.div<DescriptionProps>`
 
     width: 80%;
     p {
-      color: #fff;
       text-align: center;
       font-family: Quicksand;
       font-size: 14px;
@@ -93,6 +87,10 @@ export const Wrapper = styled.div<DescriptionProps>`
       margin-top: 0;
       max-width: 100%;
     }
+  }
+  @media (max-width: 768px) {
+    max-width: 55vw;
+    height: auto;
   }
 `;
 
@@ -113,4 +111,12 @@ export const MobileIcon = styled.img`
 
 export const Description = styled.p`
   text-align: center;
+  white-space: pre-line;
+`;
+
+export const QuoteIconLight = styled.img`
+  display: var(--quotes-iconLight);
+`;
+export const QuoteIconDark = styled.img`
+  display: var(--quotes-iconDark);
 `;

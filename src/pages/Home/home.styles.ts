@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
   /* background-color: #111; */
 
   video {
-    /* display: none; */
     display: block;
     opacity: var(--greetingsBackgroundVideoOpacity);
     position: absolute;
@@ -27,6 +26,15 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const HomeStar = styled.img`
+  position: relative;
+  left: -20px;
+  margin-bottom: 32px;
+
+  height: 20px;
+  width: 20px;
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -35,18 +43,13 @@ export const Container = styled.div`
 
   z-index: 1;
   width: 100%;
-  min-height: 100vh;
-  max-height: 100%;
+  height: 100vh;
   /* padding: 30px 70px; */
   /* padding: 30px 70px 0px 0px; */
   /* background-color: black;
   opacity: 75%; */
 
-  /* background: none; */
   background: var(--greetingsBackground);
-  @media (max-height: 768px) {
-    height: 100%;
-  }
 `;
 
 export const MainContent = styled.div`
@@ -106,12 +109,6 @@ export const TextHeader = styled.text`
   font-weight: 650;
   line-height: 4vw;
   position: relative;
-  img {
-    position: absolute;
-    width: 5%;
-    left: 19.5vw;
-    bottom: 2vh;
-  }
 
   @media screen and (max-width: 1100px) {
     font-size: 32px;
@@ -121,12 +118,24 @@ export const TextHeader = styled.text`
     }
   }
 `;
+
+export const TopText = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+`;
+
+export const TextStar = styled.img`
+  height: 45px;
+  width: 37px;
+`;
+
 export const WhiteText = styled.text`
   color: #cda870;
 `;
 
 export const TextContent = styled.p`
-  /* color: #fbfdfc; */
   color: var(--greetingsTextColor);
   font-family: Quicksand;
   font-size: 1vw;
@@ -143,27 +152,30 @@ export const TextContent = styled.p`
 export const ButtonContainer = styled.p`
   display: flex;
   padding-top: 6%;
-  align-items: center;
   justify-content: start;
-  gap: 12px;
+  align-items: center;
+  gap: 40px;
 
   @media screen and (max-width: 1100px) {
     justify-content: center;
   }
 `;
+
+export const SignUpContainer = styled.div``;
+
 export const SignUpButton = styled.button`
   display: flex;
-  //
-  /* position: relative; */
+  position: relative;
   padding: 2vh 2vw;
   align-items: center;
   gap: 12px;
   border: none;
   border-radius: 15px;
+
   background: var(--greetings-signUpBackground);
   color: var(--greetings-signUpText);
   font-family: Quicksand;
-  font-size: 1.2vw;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
@@ -192,10 +204,11 @@ export const DemoButton = styled.button`
   gap: 12px;
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+
   background: var(--greetings-findOutBackground);
   color: var(--greetings-findOutText);
   font-family: Quicksand;
-  font-size: 1.2vw;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
@@ -216,8 +229,15 @@ export const DemoButton = styled.button`
   }
 `;
 export const FreeMark = styled.div`
-  padding-left: 3vw;
-  padding-top: 2%;
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  height: 15px;
+  width: 60px;
+
   @media (max-width: 1100px) {
     display: none;
   }
@@ -230,7 +250,7 @@ export const SmallLogo = styled.img`
   /* padding-right: 200px; */
 
   /* height: 337px; */
-  width: 35%;
+  width: 50%;
   /* width: 30%; */
 
   @media (max-width: 1100px) {
@@ -240,25 +260,22 @@ export const SmallLogo = styled.img`
 `;
 
 export const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: contents;
   position: relative;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
 `;
 export const ItemContainer = styled.div`
-  display: block;
-  width: 100%;
   position: absolute;
+  display: flex;
   flex-direction: column;
-  top: 100%;
-  transform: translateY(-50%);
+  bottom: 0px;
   /* left: 50vw; */
+  left: 50%;
   align-self: center;
   justify-content: center;
-  gap: 10px;
+  gap: 60px;
   /* width: 400px; */
   /* flex-wrap: wrap; */
   /* img {
@@ -361,7 +378,7 @@ export const NavigateIconContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5px;
+  gap: 50px;
 `;
 export const QualityIconContainer = styled.div`
   display: flex;

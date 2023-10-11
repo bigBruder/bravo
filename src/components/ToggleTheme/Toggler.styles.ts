@@ -1,12 +1,23 @@
-import React from "react";
+// import React from "react";
 
 import styled from "styled-components";
 export const Button = styled.button`
-  background: ${({ theme }) => theme.background};
-  border: 2px solid ${({ theme }) => theme.toggleBorder};
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10000;
+
   color: ${({ theme }) => theme.text};
   border-radius: 30px;
   cursor: pointer;
-  font-size: 0.8rem;
+  border: solid gray;
+  /* font-size: 0.8rem; */
   padding: 0.6rem;
+  background: var(--color-fg);
+  @media (max-width: 1100px) {
+    display: none;
+  }
+`;
+export const Icon = styled.img`
+  width: 5%;
 `;

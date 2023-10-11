@@ -1,22 +1,13 @@
 import styled from "styled-components";
 import BackgroundImage from "./../../assets/images/Services.png";
+
 export const Wrapper = styled.div`
   display: flex;
   background-color: #111;
-  //
   background-image: url("${BackgroundImage}");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom 0px right 0px;
-  /* video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
 `;
 
 export const Container = styled.div`
@@ -27,54 +18,37 @@ export const Container = styled.div`
   z-index: 1;
   width: 100%;
   height: 100vh;
-  /* background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  ); */
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--trophies-background-color);
   @media (min-width: 1300px) {
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
   }
   @media (max-width: 1300px) {
     padding: 10px 0px 0px 0px;
   }
-  /* @media (max-width: 864px) {
-    height: 100%;
-  } */
-  @media (max-width: 768px)  or (max-height: 768px)  {
+
+  @media (max-width: 768px) {
     padding: 60px 0px 40px 0px;
-    height: 100%;
   }
   @media (max-width: 656px) {
-    /* padding: 60px 0px 40px 0px; */
     height: 100%;
   }
-  /* padding: 30px 70px; */
-  /* padding: 30px 70px 0px 0px; */
 `;
 
-// export const MainContent = styled.div`
-//   display: flex;
-//   align-items: center;
-//   gap: 15px;
-//   flex: 1 0 0;
-//   align-self: stretch;
-// `;
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-between;
   align-items: space-around;
+  height: 100vh;
   /* flex-grow: 0.8; */
-  padding: 180px 70px 30px 150px;
+  padding: 30px 70px 30px 80px;
   @media (min-width: 1600px) {
     justify-content: space-between;
     gap: 5vh;
-    padding: 150px 40px 30px 120px;
+    padding: 30px 40px 30px 80px;
   }
   @media (max-width: 1600px) {
-    padding: 100px 40px 30px 120px;
+    padding: 30px 40px 30px 80px;
   }
   @media (max-width: 1300px) {
     padding: 20px 0 0 0;
@@ -82,6 +56,9 @@ export const ContentWrapper = styled.div`
 
   @media (max-width: 480px) {
     padding: 20px;
+  }
+  @media (min-width: 1500px) {
+    padding: 180px 40px 113px 22px;
   }
 `;
 
@@ -92,6 +69,7 @@ export const DescriptionHeader = styled.text`
   font-size: 42px;
   font-style: normal;
   font-weight: 650;
+  line-height: 54px;
 
   @media (max-width: 1600px) {
     font-size: 32px;
@@ -100,8 +78,8 @@ export const DescriptionHeader = styled.text`
     height: 100%;
   }
 `;
-export const WhiteText = styled.span`
-  color: white;
+export const WhiteText = styled.text`
+  color: var(--workflow-headerHalfText);
 `;
 export const DescriptionText = styled.text`
   display: flex;
@@ -116,11 +94,17 @@ export const DescriptionText = styled.text`
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  width: 425px;
+  line-height: 30px;
+  width: 800px;
   @media (max-width: 1600px) {
     font-size: 35px;
     font-size: 16px;
-    width: 375px;
+    width: 800px;
+  }
+  @media (max-width: 800px) {
+    font-size: 35px;
+    font-size: 16px;
+    width: 400px;
   }
   @media (max-width: 480px) {
     font-size: 35px;
@@ -171,6 +155,7 @@ export const NumberBackground = styled.div`
   font-style: normal;
   font-weight: 650;
   line-height: 46px;
+  padding-bottom: 20px;
   @media (max-width: 1600px) {
     font-size: 100px;
   }
@@ -191,17 +176,18 @@ export const Number = styled.div`
   }
 `;
 export const Header = styled.div`
-  color: #fff;
+  color: var(--workflow-contentHeader);
   text-align: center;
   font-family: Quicksand;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   padding-top: 3%;
+  padding-bottom: 10px;
 
   @media (max-width: 1600px) {
     font-size: 16px;
-    font-weight: 400;
+    /* font-weight: 500; */
   }
 `;
 export const Text = styled.div`
@@ -230,8 +216,20 @@ export const ArrowIcons = styled.img`
   @media (max-width: 480px) {
     display: none;
   }
+  display: var(--workflow-arrowDark);
   width: 75%;
-  margin-top: 1%;
+  margin-top: 4%;
+  @media (min-width: 1301) {
+    margin-bottom: 10%;
+  }
+`;
+export const LightArrowIcons = styled.img`
+  @media (max-width: 480px) {
+    display: none;
+  }
+  display: var(--workflow-arrowLight);
+  width: 75%;
+  margin-top: 4%;
   @media (min-width: 1301) {
     margin-bottom: 10%;
   }

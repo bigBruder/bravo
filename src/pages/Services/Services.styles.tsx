@@ -23,11 +23,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  height: 100%;
-  // min-height: 100vh;
   width: 100%;
+  height: 100vh;
   /* padding: 30px 70px; */
-  padding: 30px 70px 0px 0px;
+  padding: 30px 0 0px 0px;
 
   @media screen and (max-width: 1100px) {
     padding: 0;
@@ -59,16 +58,17 @@ export const MainContent = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
+  gap: 75px;
   flex-direction: column;
-  justify-content: start;
+  //justify-content: start;
   align-items: center;
 
-  padding: 50px 70px 30px 200px;
+  padding: 50px 0 30px 200px;
   margin-left: 100px;
   @media (min-width: 1500px) {
     justify-content: space-between;
-    padding: 0px 70px 30px 100px;
-    margin-left: 50px;
+    padding: 150px 0 30px 0;
+    margin-left: 0;
   }
   @media screen and (max-width: 1100px) {
     flex-direction: column;
@@ -112,7 +112,6 @@ export const DescriptionText = styled.text`
 `;
 
 export const ContentPage = styled.div`
-  margin-top: 48px;
   display: flex;
   justify-content: space-around;
   align-items: center;

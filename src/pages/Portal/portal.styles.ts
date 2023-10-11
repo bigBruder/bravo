@@ -2,49 +2,35 @@ import styled from "styled-components";
 import BackgroundImage from "../../assets/images/Portal/Services.png";
 export const Wrapper = styled.div`
   display: flex;
-  /* height: 100%; */
+
   display: flex;
   background-image: url("${BackgroundImage}");
+
   background-size: cover;
 
   background-repeat: no-repeat;
   background-position: bottom 0px right 0px;
-
-  /*
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }*/
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   z-index: 1;
   width: 100%;
-  min-height: 100vh;
-  max-height: 100%;
+  height: 100vh;
+  background: var(--portal-imageColor);
   padding: 30px 70px;
-  background-color: rgba(0, 0, 0, 0.7);
 
-  /* @media (max-width: 480px) {
-    padding: 60px 15px 40px 15px;
-    align-items: center;
-    height: 100%;
-  } change it*/
   @media (max-width: 768px) {
     padding: 60px 15px 40px 15px;
     align-items: center;
     height: 100%;
   }
-  @media (max-height: 768px) {
-    height: 100%;
+
+  @media (min-width: 1500px) {
+    padding: 30px 70px 113px;
   }
 `;
 
@@ -54,24 +40,20 @@ export const MainContent = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 1;
-  /* padding: 70px 30px 150px; */
 
-  /* margin-left: 100px; */
   @media (max-width: 768px) {
     width: 90%;
   }
-  /* @media (max-width: 768px) {
-    width: 100%;
-  } change it*/
 `;
 
 export const PortalWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   z-index: 1;
-  padding: 70px 30px 10px;
+  padding: 70px 30px 0;
+  height: 100%;
   @media (max-width: 1200px) {
     padding: 20px 30px 10px;
   }
@@ -83,31 +65,27 @@ export const PortalWrapper = styled.div`
 `;
 export const PortalContent = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
+
   justify-content: center;
 
   height: 70vh;
-  /* margin-left: 10%; */
+  width: 80%;
+
   padding-bottom: 5%;
   @media (max-width: 1200px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
     margin-left: 0%;
     justify-content: space-between;
     height: 75vh;
   }
   @media (max-width: 768px) {
     display: flex;
+
     justify-content: center;
     align-items: center;
     height: 80%;
   }
-  /* @media (max-width: 768px) {
-    width: 100%;
-  } change it*/
-  /* align-items:center; */
 `;
 
 export const RegisterContainer = styled.div`
@@ -116,12 +94,9 @@ export const RegisterContainer = styled.div`
   justify-content: center;
 
   max-width: 30%;
-  margin-left: 3%;
   @media (max-width: 1200px) {
     max-width: none;
     align-items: center;
-
-    /* margin-bottom: 50px; */
   }
   @media (max-width: 768px) {
     display: flex;
@@ -149,6 +124,28 @@ export const RegisterHeader = styled.text`
   }
 `;
 
+export const RedStar = styled.img`
+  position: absolute;
+  left: -30px;
+  top: -32px;
+
+  height: 20px;
+  width: 20px;
+
+  display: none;
+  
+  @media (min-width: 1201px) {
+    display: block;
+  }
+`;
+
+export const TopText = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`;
+
 export const Star = styled.img`
   width: 37px;
   height: 45px;
@@ -158,7 +155,7 @@ export const Star = styled.img`
 `;
 
 export const WhiteText = styled.span`
-  color: white;
+  color: var(--portal-headerTextColor);
 `;
 
 export const RegisterText = styled.text`
@@ -206,7 +203,9 @@ export const RegisterButton = styled.button`
   font-weight: 600;
 
   border-radius: 15px;
-  background: #cda870;
+  /* background: #cda870; */
+  background: var(--greetings-signUpBackground);
+  color: var(--greetings-signUpText);
   border: none;
 
   transition: transform 0.2s;
@@ -229,33 +228,33 @@ export const RegisterButton = styled.button`
   }
 `;
 
+export const NavigationContainerWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+export const DarkUserIcon = styled.img`
+  display: var(--greetings-userIconDarkDisplay);
+`;
+export const LightUserIcon = styled.img`
+  display: var(--greetings-userIconLightDisplay);
+`;
 export const NavigationContainer = styled.div`
   display: flex;
   z-index: 2;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
 
-  /* margin-left: 20%; */
   position: relative;
   width: 50vw;
-  min-height: 25vw;
-  /* @media (max-width: 1200px) {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 60vw; */
-  /* flex-wrap: wrap; */
-  /* } */
+  right: -200px;
   @media (max-width: 1200px) {
-    max-width: 480px;
+    right: 0;
   }
   @media (max-width: 768px) {
     display: flex;
     ///
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
     ///
   }
   @media (max-width: 768px) {
@@ -268,23 +267,19 @@ export const NavigationContainer = styled.div`
 export const NewOrderImage = styled.img`
   width: 25%;
   position: absolute;
-  bottom: -7%;
-  right: 3%;
-  /* @media (max-width: 1200px) {
-    position: static;
-  } */
+  bottom: -12%;
+  right: 0%;
+
   @media (max-width: 768px) {
     display: none;
   }
 `;
 export const SafariImage = styled.img`
-  width: 90%;
+  width: 100%;
   position: absolute;
   bottom: 0%;
   right: 5%;
   @media (max-width: 1200px) {
-    /* position: static;
-    width: 60%; */
   }
   @media (max-width: 768px) {
     display: none;
@@ -293,11 +288,11 @@ export const SafariImage = styled.img`
 
 export const QRCode = styled.img`
   display: flex;
-  width: 18%;
+  width: 22%;
 
   position: absolute;
-  bottom: 2%;
-  left: 3%;
+  bottom: -4%;
+  left: -10%;
 
   justify-content: center;
   align-items: center;
@@ -307,9 +302,6 @@ export const QRCode = styled.img`
   box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.25);
 
   @media (max-width: 1200px) {
-    /* position: static;
-    width: 15%;
-    height: 33%; */
     bottom: 3vw;
   }
   @media (max-width: 768px) {
@@ -319,14 +311,16 @@ export const QRCode = styled.img`
 
 export const AppPlay = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
   gap: 10px;
   justify-content: center;
   position: absolute;
-  bottom: 0%;
-  right: 30%;
+  bottom: -3%;
+  right: 0%;
+  left: -5%;
 
-  img {
+  /* img {
     transition: transform 0.2s;
     &:hover {
       transform: scale(1.05);
@@ -345,26 +339,21 @@ export const AppPlay = styled.div`
     img {
     }
     right: 13vw;
-  }
+  } */
   @media (max-width: 1200px) {
+    /*  */
     /* flex-direction: column;
     bottom: 100%; */
-    left: 15%;
+    /* left: 15%; */
     /* img {
       width: 60%;
     } */
-    img {
+    /* img {
       width: 30%;
-    }
+    } */
   }
   @media (max-width: 768px) {
     display: none;
-    /* display: flex; */
-    /* position: static;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    width: 100%; */
   }
 `;
 
@@ -380,6 +369,61 @@ export const AppPlayButton = styled.button`
     transform: scale(1);
   }
 `;
+
+// export const GoogleIcon = styled.img`
+//   display: var(--greetings-googleIcon);
+//   width: 20%;
+//   height: 20%;
+//   border-radius: 0.8vw;
+//   transition: transform 0.2s;
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+//   &:active {
+//     transform: scale(1);
+//   }
+// `;
+// export const GoogleIconLight = styled.img`
+//   display: var(--greetings-googleIconLight);
+//   width: 20%;
+//   height: 20%;
+//   border-radius: 0.8vw;
+//   transition: transform 0.2s;
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+//   &:active {
+//     transform: scale(1);
+//   }
+// `;
+
+// export const AppStoreIcon = styled.img`
+//   display: var(--greetings-appIcon);
+//   width: 20%;
+//   height: 20%;
+//   border-radius: 0.8vw;
+//   transition: transform 0.2s;
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+//   &:active {
+//     transform: scale(1);
+//   }
+// `;
+// export const AppStoreIconLight = styled.img`
+//   display: var(--greetings-appIconLight);
+//   width: 20%;
+//   height: 20%;
+//   border-radius: 0.8vw;
+//   transition: transform 0.2s;
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+//   &:active {
+//     transform: scale(1);
+//   }
+// `;
+
 export const AppPlayMobile = styled.div`
   display: flex;
   flex-direction: row;
@@ -421,4 +465,59 @@ export const MobileButton = styled.button`
 `;
 export const Items = styled.div`
   width: 100%;
+`;
+export const AppStoreIconDark = styled.img`
+  display: var(--greetings-appIcon);
+  border-radius: 0.6vw;
+  width: 18%;
+  transition: transform 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(1);
+  }
+`;
+export const AppStoreIconLight = styled.img`
+  display: var(--greetings-appIconLight);
+  border-radius: 0.6vw;
+  width: 18%;
+  transition: transform 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(1);
+  }
+`;
+export const PlayMarketIconDark = styled.img`
+  display: var(--greetings-googleIcon);
+  border-radius: 0.6vw;
+  width: 18%;
+  transition: transform 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(1);
+  }
+`;
+export const PlayMarketIconLight = styled.img`
+  display: var(--greetings-googleIconLight);
+  border-radius: 0.6vw;
+  width: 18%;
+  transition: transform 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(1);
+  }
+`;
+export const IconButton = styled.div`
+  display: contents;
 `;
