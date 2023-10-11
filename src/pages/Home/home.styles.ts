@@ -200,6 +200,11 @@ export const SignUpButton = styled.button`
     font-size: 16px;
     padding: 2vh 2vw;
   }
+  @media (min-width: 1101px) and (max-width: 1435px) {
+    font-size: 14px;
+    padding: 10px 15px;
+    min-width: 200px;
+  }
   @media screen and (max-width: 1100px) {
     /* font-size: 16px; */
     line-height: 1.5;
@@ -239,6 +244,11 @@ export const DemoButton = styled.button`
     font-size: 16px;
     line-height: 1.5;
     padding: 2vh 2vw;
+  }
+  @media (min-width: 1101px) and (max-width: 1435px) {
+    font-size: 14px;
+    padding: 10px 15px;
+    min-width: 160px;
   }
   @media screen and (max-width: 1100px) {
     /* font-size: 16px; */
