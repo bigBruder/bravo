@@ -59,6 +59,8 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
+  width: 100%;
+
   padding: 50px 0 30px 200px;
   margin-left: 100px;
   

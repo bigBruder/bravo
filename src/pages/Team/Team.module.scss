@@ -96,7 +96,7 @@
 
 @media (max-width: 1600px) {
   .container_header {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .container_text {
@@ -118,7 +118,7 @@
 
   .footer {
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 20px;
 
     &_text {
       font-size: 16px;
@@ -154,7 +154,7 @@
   }
 
   .footer {
-    padding: 30px 60px;
+    padding: 10px 60px;
   }
 }
 

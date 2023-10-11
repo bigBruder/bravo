@@ -132,9 +132,12 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
-          Transparency is our cornerstone. Starting prices offer a clear
-          beginning for your <br /> jewelry journey. For precise quotes, submit a
-          request on our portal.
+          {screenSize.width >= 1600 ? 'Transparency is our cornerstone. Starting prices offer a clear' +
+            '          beginning for your \n jewelry journey. For precise quotes, submit a' +
+            '          request on our portal.' :
+            'Transparency is our cornerstone. Starting prices offer a clear' +
+            '          beginning for your jewelry journey. For precise quotes, submit a' +
+            '          request on our portal.'}
         </p>
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />

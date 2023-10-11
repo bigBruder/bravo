@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   width: 90%;
   height: 100%;
@@ -36,6 +37,11 @@
   &_wrapper {
     display: flex;
     align-items: center;
+    max-width: 80%;
+  }
+
+  @media (max-width: 1499px) {
+    max-width: 90%;
   }
 
   &_center {
@@ -161,7 +167,7 @@
   }
 
   .footer {
-    padding: 30px 60px;
+    padding: 10px 60px;
   }
 }
 

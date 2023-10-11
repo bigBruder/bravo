@@ -38,9 +38,9 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
   }, [screenSize]);
 
   const getItemsPerPage = useMemo(() => {
-    if (screenSize.width > 1300) {
+    if (screenSize.width > 1500) {
       return 3;
-    } else if (screenSize.width > 1099) {
+    } else if (screenSize.width > 1200) {
       return 2;
     } else if (screenSize.width > 768) {
       return 1;
@@ -68,7 +68,7 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
 
         <div className={styles.container_center}>
           <Swiper
-            spaceBetween={120}
+            spaceBetween={80}
             style={
               {
                 // margin: 0,
@@ -147,7 +147,7 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
-          Our unwavering commitment is to satisfy every client and make their journey hassle-free.<br /> You could be our next delighted client—join us on the path to exceptional service.
+          Our unwavering commitment is to satisfy every client and make their journey hassle-free. You could be our next delighted client—join us on the path to exceptional service.
         </p>
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />
