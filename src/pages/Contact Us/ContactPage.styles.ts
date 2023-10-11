@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   background-image: url("${BackgroundImage}");
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   background-position: center;
 `;
 
@@ -65,7 +65,7 @@ export const ContentWrapper = styled.div`
   /* flex: 1; */
   /* gap: 200px; */
   align-items: end;
-  gap: 19%;
+  gap: 27%;
   margin-bottom: 150px;
   margin-left: 70px;
   /* margin-left: */

@@ -26,7 +26,7 @@ export const Container = styled.div`
   background: var(--faq-background);
   /* opacity: 70%; */
   /* padding: 30px 70px; */
-  padding: 10px 20px 0px 0px;
+  /* padding: 10px 20px 0px 0px; */
 
   @media (min-width: 768px) {
     padding: 30px 20px 0px 0px;
@@ -59,12 +59,23 @@ export const ContentWrapper = styled.div`
     /* padding: 0 0 30px 20px; */
   }
   @media (min-width: 1101px) {
-    margin-left: 100px;
+    /* margin-left: 100px; */
     padding: 50px 0 0px 0px;
     /* margin-left: 100px;
     padding: 0 0 30px 70px; */
   }
   @media (min-width: 1500px) {
+    margin-left: -80px;
+    /* margin-left: -80px; */
+    padding: 110px 0 0px 0px;
+  }
+  @media (min-width: 1600px) {
+    margin-left: -80px;
+    /* margin-left: -80px; */
+    padding: 110px 0 0px 0px;
+  }
+
+  @media (min-width: 1700px) {
     margin-left: -80px;
     padding: 180px 0 0px 0px;
     justify-content: space-between;
@@ -106,19 +117,29 @@ export const DescriptionText = styled.text`
   @media (min-width: 768px) {
     width: 40%;
   }
+  @media (max-width: 1600px) {
+    padding-top: 0%;
+  }
   @media (max-width: 1400px) {
     font-size: 16px;
   }
 `;
 export const ContentPage = styled.div`
-  width: 100%;
+  width: 70%;
   display: grid;
   grid-template-columns: 100%;
-  padding: 2% 5% 2% 5%;
+  /* padding: 2% 5% 2% 5%; */
+
   gap: 10px;
-  @media (min-width: 1500px) {
-    margin-left: 300px;
-    margin-top: 10vh;
+  margin-left: 300px;
+  margin-top: 7vh;
+  margin-bottom: 100px;
+  @media (max-width: 1600px) {
+    margin-top: 5vh;
+  }
+  @media (max-width: 1500px) {
+    margin-left: 0px;
+    margin-bottom: 0px;
   }
   @media (min-width: 768px) {
     grid-template-columns: 40% 60%;
@@ -131,6 +152,9 @@ export const ContentDepartment = styled.div`
   align-items: start;
   gap: 3vh;
   margin-bottom: 3vh;
+  @media (max-width: 1600px) {
+    gap: 1vh;
+  }
 `;
 
 export const ContentHeader = styled.div`
