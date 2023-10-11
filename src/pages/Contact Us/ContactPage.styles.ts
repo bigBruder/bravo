@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
   background-image: url("${BackgroundImage}");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom 0px right 0px;
+  
+  background-position: center;
 `;
 
 export const Container = styled.div`
