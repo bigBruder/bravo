@@ -135,7 +135,7 @@ export const SButton = styled.button`
     background: rgba(255, 255, 255, 0.5);
   }
   @media (max-width: 1600px) {
-    padding: 10px 24px;
+    padding: 15px 30px;
   }
   img {
     width: 10%;
