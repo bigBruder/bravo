@@ -48,30 +48,46 @@ export const ScreenHeader = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
-  @media (min-width: 1600px) {
-    margin-top: 150px;
-  }
-  @media (max-width: 1200px) {
+  margin-top: 180px;
+  gap: 12px;
+  @media (max-width: 1500px) {
     margin-top: 50px;
   }
+  /* @media (max-width: 1200px) {
+    margin-top: 50px;
+  } */
 `;
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   /* flex: 1; */
   /* gap: 200px; */
   align-items: end;
-  gap: 10%;
+  gap: 19%;
   margin-bottom: 150px;
-  @media (min-width: 1600px) {
+  margin-left: 70px;
+  /* margin-left: */
+  @media (max-width: 1600px) {
+    /* margin-bottom: 200px; */
+
+    gap: 15%;
+  }
+  @media (max-width: 1500px) {
     /* margin-bottom: 200px; */
     margin-right: 100px;
-    gap: 17%;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 1400px) {
+    /* margin-bottom: 200px; */
+    justify-content: end;
+    margin-left: 300px;
+    gap: 7%;
   }
   @media (max-width: 1200px) {
     margin-bottom: 100px;
+    justify-content: center;
+    margin-left: 100px;
   }
   @media (max-width: 768px) {
     flex-direction: column;
@@ -229,16 +245,25 @@ export const AdressText = styled.div`
 `;
 
 export const Line = styled.img`
-  width: 100px;
+  width: 500px;
+  height: 1px;
+  margin: 15px 0px;
+  @media (max-width: 1200px) {
+    width: 230px;
+  }
+  @media (max-width: 768px) {
+    margin: 0px 0px;
+  }
 `;
 
 export const DescriptionHeader = styled.text`
   color: #fff;
   text-align: center;
   font-family: Gwen-Trial;
-  font-size: 4vh;
+  font-size: 50px;
   font-style: normal;
   font-weight: 650;
+  line-height: 66px;
   @media (max-width: 768px) {
     font-size: 25px;
     font-style: normal;
@@ -323,4 +348,5 @@ export const LineMobile = styled.div`
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   margin-bottom: 30px;
+  margin-top: 30px;
 `;
