@@ -66,7 +66,7 @@ export const ContentWrapper = styled.div`
   gap: 2vw;
 
   align-items: center;
-  padding: 0px 30px 0 100px;
+  padding: 130px 30px 0 100px;
   margin-left: 5vw;
   /* padding: 150px 70px 30px 150px; */
   /* margin-left: 100px; */
@@ -268,7 +268,7 @@ export const SmallLogo = styled.img`
   /* padding-right: 200px; */
 
   /* height: 337px; */
-  width: 50%;
+  width: 45%;
   /* width: 30%; */
 
   @media (max-width: 1100px) {

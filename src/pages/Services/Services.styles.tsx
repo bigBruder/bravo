@@ -56,13 +56,13 @@ export const MainContent = styled.div`
 
 export const ContentWrapper = styled.div`
   display: flex;
-  gap: 75px;
   flex-direction: column;
-  //justify-content: start;
   align-items: center;
 
   padding: 50px 0 30px 200px;
   margin-left: 100px;
+  
+  gap: 40px;
   @media (min-width: 1500px) {
     justify-content: space-between;
     padding: 150px 0 30px 0;

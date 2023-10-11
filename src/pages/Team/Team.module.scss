@@ -36,6 +36,16 @@
   &_wrapper {
     display: flex;
     align-items: center;
+    max-width: 80%;
+    align-self: center;
+
+    @media (max-width: 1499px) {
+      max-width: 90%;
+    }
+
+    @media (max-width: 1099px) {
+      max-width: 100%;
+    }
   }
 
   &_center {
@@ -98,7 +108,7 @@
   .container {
     display: flex;
     height: 100%;
-    padding: 0 0 30px 150px;
+    padding: 0 0 30px 0;
   }
 
   .container_title {
@@ -128,6 +138,12 @@
     &:active {
       background: rgba(255, 255, 255, 0.2) !important;
     }
+  }
+}
+
+@media (min-width: 1100px) {
+  .container {
+    padding: 0 0 30px 150px;
   }
 }
 

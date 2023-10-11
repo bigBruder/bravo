@@ -41,7 +41,7 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
   }, [screenSize]);
 
   const getItemsPerPage = useMemo(() => {
-    if (screenSize.width > 1300) {
+    if (screenSize.width > 1815) {
       return 4;
     } else if (screenSize.width > 1099) {
       return 3;

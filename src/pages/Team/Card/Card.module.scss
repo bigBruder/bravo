@@ -29,16 +29,16 @@
   }
 }
 
-@media (min-width: 1300px) {
-  .card_image {
-    width: 200px;
-    height: 200px;
-  }
-}
-
 @media (min-width: 768px) {
   .card_image {
     width: 120px;
     height: 120px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .card_image {
+    width: 200px;
+    height: 200px;
   }
 }
