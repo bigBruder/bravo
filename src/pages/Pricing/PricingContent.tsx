@@ -16,12 +16,18 @@ import PricingCard1 from "../../assets/images/PricingCard/Frame 813355.png";
 
 import Quotes from "../../assets/icons/Quotes.svg";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
+import PricingCard from "../../components/PricingCard/PricingCard.tsx";
+
+import Card1 from '../../assets/images/PricingCard/Card1.png';
 
 interface IProps {}
+
+const SLIDES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 const PricingContent: React.FunctionComponent<IProps> = () => {
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  const [activeSlideIndex, setActiveSlideIndex] = useState(2);
 
   useEffect(() => {
     const updateDimension = () => {
@@ -35,12 +41,12 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
   }, [screenSize]);
 
   const getItemsPerPage = useMemo(() => {
-    if (screenSize.width > 1300) {
-      return 5;
-    } else if (screenSize.width > 1099) {
+    if (screenSize.width > 1799) {
       return 4;
-    } else if (screenSize.width > 768) {
+    } else if (screenSize.width > 1399) {
       return 3;
+    } else if (screenSize.width > 768) {
+      return 2;
     } else {
       return 2;
     }
@@ -72,50 +78,29 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             effect={"coverflow"}
             grabCursor={true}
             centeredSlides={true}
-            // loop={true}
             slidesPerView={getItemsPerPage}
             initialSlide={2}
             coverflowEffect={{
-              rotate: 35,
+              rotate: 0,
               stretch: 0,
               depth: 100,
               modifier: 1,
               slideShadows: false,
             }}
             pagination={false}
+            spaceBetween={90}
+            onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
             modules={[EffectCoverflow, Pagination]}
             className={styles.mySwipes}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
           >
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
-            <SwiperSlide className={styles.card}>
-              <img src={PricingCard1} />
-            </SwiperSlide>
+            {SLIDES.map((slide) => (
+              <SwiperSlide className={styles.card} key={slide}>
+                <PricingCard isFocused={slide === activeSlideIndex} image={Card1} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 

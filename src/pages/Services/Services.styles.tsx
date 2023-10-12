@@ -61,7 +61,7 @@ export const ContentWrapper = styled.div`
 
   width: 100%;
 
-  padding: 50px 0 30px 200px;
+  padding: 50px 0 30px 0;
   margin-left: 100px;
   
   gap: 40px;

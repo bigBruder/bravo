@@ -30,7 +30,6 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
   }
   &_title {
     color: #164d59;
@@ -176,7 +175,6 @@
 @media (min-width: 1101px) {
   .container {
     &_header {
-      margin-bottom: 60px;
     }
   }
 
