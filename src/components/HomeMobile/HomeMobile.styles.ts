@@ -126,7 +126,7 @@ export const Video = styled.video`
 export const StarYellowIcon = styled.img`
   position: absolute;
   z-index: 0;
-  left: 85vw;
+  left: 88vw;
 
   top: 161px;
 `;
