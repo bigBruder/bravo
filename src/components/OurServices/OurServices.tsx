@@ -6,17 +6,19 @@ import betweenLine from "../../assets/icons/between_line.svg";
 export const OurServices = () => {
   return (
     <Styled.Services>
-      <Styled.Title>
-        Our Services
-      </Styled.Title>
+      <Styled.Title>Our Services</Styled.Title>
       <Styled.SectionDiscription>
-        Discover the full spectrum of our services at Bravo Creations
-        and experience the essence of jewelry craftsmanship
+        Discover the full spectrum of our services at Bravo Creations and
+        experience the essence of jewelry craftsmanship
       </Styled.SectionDiscription>
       <Styled.Section>
         <Styled.Article>
           {ourServicesArray.map((service, index) => (
-            <OurServiceMap service={service} index={index} key={service.title} />
+            <OurServiceMap
+              service={service}
+              index={index}
+              key={service.title}
+            />
           ))}
         </Styled.Article>
       </Styled.Section>
@@ -28,13 +30,13 @@ export const OurServices = () => {
           <Styled.Icon src={betweenLine} />
           <Styled.ExtraDisc>
             We offer Rush or date specific
-            <br/>
+            <br />
             service to get your order done at the
-            <br/>
+            <br />
             time you need it.
           </Styled.ExtraDisc>
         </Styled.ExtraSection>
       </Styled.Section>
     </Styled.Services>
-  )
-}
+  );
+};

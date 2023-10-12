@@ -29,6 +29,11 @@ export const Wrapper = styled.div<AnimatedRoutesProps>`
     height: 100vh;
     /* height: 100%; */
   }
+  @media (max-width: 480px) {
+    scroll-snap-type: none;
+    overflow-y: hidden;
+    height: 100%;
+  }
 `;
 export const ChildrenComponent = styled.div`
   position: relative;
@@ -40,6 +45,11 @@ export const ChildrenComponent = styled.div`
     scroll-snap-align: start;
     scroll-snap-type: none;
     overflow: auto;
+  }
+  @media (max-width: 480px) {
+    scroll-snap-type: none;
+    scroll-snap-align: none;
+    overflow-y: hidden;
   }
   /* @media (max-width: 576px) {
     scroll-snap-align: none;

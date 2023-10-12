@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -10,7 +11,7 @@ export const Wrapper = styled.div`
   background-color: #000000d9;
 `;
 
-export const WelcomeTitle = styled.p`
+export const WelcomeTitle = styled.text`
   font-family: Gwen-Trial;
   font-size: 30px;
   font-weight: 650;
@@ -24,6 +25,7 @@ export const Actions = styled.div`
   gap: 15px;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 20px;
 `;
 
 export const ActionsText = styled.div`
@@ -56,8 +58,8 @@ export const Button = styled.button`
 `;
 
 export const ButtonModified = styled(Button)`
-  background-color: #FFFFFF1A;
-  border: 1px solid #FFFFFF1A;
+  background-color: #ffffff1a;
+  border: 1px solid #ffffff1a;
   color: #cda870;
 `;
 export const ButtonIcon = styled.img`
@@ -65,7 +67,7 @@ export const ButtonIcon = styled.img`
   height: 20px;
 `;
 
-export const WelcomeTitleColored = styled(WelcomeTitle)`
+export const WelcomeTitleColored = styled.text`
   color: #cda870;
 `;
 
@@ -76,6 +78,7 @@ export const WelcomeText = styled.p`
   line-height: 22px;
   text-align: center;
   color: #fff;
+  padding: 0px 0px;
 `;
 
 export const WelcomeContainer = styled.div`
@@ -114,4 +117,20 @@ export const Video = styled.video`
   object-fit: cover;
   position: absolute;
   z-index: -1;
+  @media screen and (max-width: 480px) {
+    height: 100%;
+  }
+`;
+
+export const StarYellowIcon = styled.img`
+  position: absolute;
+  z-index: 0;
+  left: 91vw;
+
+  top: 161px;
+`;
+export const StarsPinkIcon = styled.img`
+  position: absolute;
+  left: -1px;
+  top: 94px;
 `;

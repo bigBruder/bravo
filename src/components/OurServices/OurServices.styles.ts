@@ -19,8 +19,15 @@ export const Title = styled.h1`
 `;
 
 export const SectionDiscription = styled.p`
-  text-align: center;
   margin-bottom: 40px;
+  color: #9799ac;
+
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
 `;
 
 export const Section = styled.div`
@@ -72,5 +79,5 @@ export const ExtraDisc = styled.p`
 `;
 
 export const Icon = styled.img`
-  height: 3px;
+  height: 4px;
 `;

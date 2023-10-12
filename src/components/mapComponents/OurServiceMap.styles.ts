@@ -4,9 +4,9 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 20px;
-  width: 280px;
-  margin:0 auto;
+  gap: 6.5vw;
+  max-width: 320px;
+  margin: 0 auto;
 `;
 
 export const Image = styled.img``;
@@ -25,7 +25,7 @@ export const Title = styled.h2`
   font-weight: 650;
   line-height: 24px;
   text-align: center;
-  color: #164D59;
+  color: #164d59;
 `;
 
 export const Discription = styled.p`
@@ -33,5 +33,5 @@ export const Discription = styled.p`
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #9799AC;
+  color: #9799ac;
 `;

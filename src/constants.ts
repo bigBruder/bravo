@@ -9,18 +9,55 @@ import stoneSetting from "./assets/images/OurServices/stone_setting.jpg";
 import waxPrototype from "./assets/images/OurServices/wax_prototype.jpg";
 
 export const ourServicesArray = [
-  {title: 'Custom design', text: `We offer Rush or date specific service to get your order done.`, image: customDesign },
-  {title: 'Stone Setting', text: `We offer Rush or date specific service to get your order done.`, image: stoneSetting },
-  {title: 'CAD', text: `We offer Rush or date specific service to get your order done.`, image: cad },
-  {title: 'Engraving', text: `We offer Rush or date specific service to get your order done.`, image: engraving },
-  {title: 'Repair', text: `We offer Rush or date specific service to get your order done.`, image: repair },
-  {title: 'Casting', text: `We offer Rush or date specific service to get your order done.`, image: casting },
-  {title: 'Manufacturing', text: `We offer Rush or date specific service to get your order done.`, image: manufacturing },
-  {title: 'Wax Prototype', text: `We offer Rush or date specific service to get your order done.`, image: waxPrototype },
-  {title: 'Photography', text: `We offer Rush or date specific service to get your order done.`, image: photography },
+  {
+    title: "Custom design",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: customDesign,
+  },
+  {
+    title: "Stone Setting",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: stoneSetting,
+  },
+  {
+    title: "CAD",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: cad,
+  },
+  {
+    title: "Engraving",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: engraving,
+  },
+  {
+    title: "Repair",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: repair,
+  },
+  {
+    title: "Casting",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: casting,
+  },
+  {
+    title: "Manufacturing",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: manufacturing,
+  },
+  {
+    title: "Wax Prototype",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: waxPrototype,
+  },
+  {
+    title: "Photography",
+    text: `We offer Rush or date specific service to get your order done.`,
+    image: photography,
+  },
 ];
 
 export const maxHeaderSize = 576;
+export const maxMobileSize = 480;
 
 export const navArray = [
   { text: "Greeting", path: "/", id: "section-greeting" },
@@ -34,4 +71,3 @@ export const navArray = [
   { text: "FAQ", path: "/faq", id: "section-faq" },
   { text: "Contact Us", path: "/contact-us", id: "section-contact" },
 ];
-
