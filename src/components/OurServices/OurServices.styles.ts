@@ -34,7 +34,7 @@ export const Section = styled.div`
   font-size: 14px;
   line-height: 22px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   overflow: auto;
 `;
 

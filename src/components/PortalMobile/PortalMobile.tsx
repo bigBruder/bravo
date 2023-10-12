@@ -4,7 +4,7 @@ import * as Styled from "./PortalMobile";
 import GoogleIcon from "../../assets/images/PortalMobile/Google.svg";
 import AppleIcon from "../../assets/images/PortalMobile/Apple.svg";
 import StartButton from "../../assets/images/PortalMobile/Button.svg";
-
+import VectorIcon from "../../assets/images/PortalMobile/DescriptionVector.svg";
 import PortalImageAdv from "../../assets/images/PortalMobile/PortalAdvert.svg";
 import { WelcomeTitle, WelcomeText, WelcomeTitleColored } from "./PortalMobile";
 
@@ -31,6 +31,7 @@ const PortalMobile: React.FC<IPortalMobile> = () => {
       <Styled.AdvertContainer>
         <Styled.ButtonContainer>
           <Styled.GoogleImage src={GoogleIcon} />
+
           <Styled.AppImage src={AppleIcon} />
         </Styled.ButtonContainer>
         <Styled.AdvertImage src={PortalImageAdv} />
@@ -39,6 +40,17 @@ const PortalMobile: React.FC<IPortalMobile> = () => {
         <img src={StartButton} />
         Start Your Journey
       </Styled.ButtonStart>
+      <Styled.DescriptionContainer>
+        <Styled.VectorRow>
+          <Styled.VectorIcons src={VectorIcon} />
+          <Styled.VectorIcons src={VectorIcon} />
+          <Styled.VectorIcons />
+        </Styled.VectorRow>
+        <Styled.DescriptionText>
+          Our unique approach and attention to detail set us apart from our
+          competitors, ensuring a truly memorable experience for our clients.
+        </Styled.DescriptionText>
+      </Styled.DescriptionContainer>
     </Wrapper>
   );
 };

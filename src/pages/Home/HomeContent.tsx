@@ -33,14 +33,14 @@
 //     </Styled.ContentWrapper>
 //   );
 // };
-import RedStar from '../../assets/icons/Home/RedStar.svg';
+import RedStar from "../../assets/icons/Home/RedStar.svg";
 // export default HomeContent;
 
 import * as Styled from "./home.styles";
 // import LogoIcon from "./../../assets/icons/logo-icon.svg";
 // import GiftIcon from "./../../assets/icons/gift.svg";
 import OctagonIcon from "./../../assets/icons/video-octagon.svg";
-import LogoIcon from "../../assets/icons/logo.svg";
+// import LogoIcon from "../../assets/icons/logo.svg";
 import BestPriceIcon from "../../assets/icons/Home/best-price.png";
 import GuaranteedIcon from "../../assets/icons/Home/guaranteed.png";
 import MadeUsaIcon from "../../assets/icons/Home/made-in-usa.png";
@@ -76,7 +76,8 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
       <Styled.HomeStar src={RedStar} />
       <Styled.TextHeader>
         <Styled.TopText>
-          Jewelry Service <Styled.TextStar src={Stars} /><br />
+          Jewelry Service <Styled.TextStar src={Stars} />
+          <br />
         </Styled.TopText>
         Shop <Styled.WhiteText> Like No Other</Styled.WhiteText>{" "}
       </Styled.TextHeader>
@@ -87,15 +88,20 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
         technology ensure unmatched quality.
       </Styled.TextContent>
       <Styled.ButtonContainer>
-        <Styled.SignUpButton onClick={() => open('https://my.bravocreations.com/registration')}>
+        <Styled.SignUpButton
+          onClick={() => open("https://my.bravocreations.com/registration")}
+        >
           <DarkUserIcon src={DarkUser} />
           <LightUserIcon src={LightUser} />
           Start Your Journey
           <Styled.FreeMark>
-            <img src={ItsFree} style={{ width: 'inherit', height: 'inherit'}} />
+            <img
+              src={ItsFree}
+              style={{ width: "inherit", height: "inherit" }}
+            />
           </Styled.FreeMark>
         </Styled.SignUpButton>
-        <Styled.DemoButton onClick={() => open('https://bravocreations.com')} >
+        <Styled.DemoButton onClick={() => open("https://bravocreations.com")}>
           <img src={OctagonIcon} />
           Find out more
         </Styled.DemoButton>
@@ -106,12 +112,20 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
       {/*<Styled.SmallLogo src={LogoIcon} />*/}
       <Styled.ItemContainer>
         <NavigateIconContainer>
-          <Styled.IconButton onClick={() => open('https://play.google.com/store/apps/details?id=com.bravocrm')}>
+          <Styled.IconButton
+            onClick={() =>
+              open("https://play.google.com/store/apps/details?id=com.bravocrm")
+            }
+          >
             {" "}
             <GoogleIcon src={PlayStore} />
             <GoogleIconLight src={PlayStoreLight} />
           </Styled.IconButton>
-          <Styled.IconButton onClick={() => open('https://apps.apple.com/us/app/bravo-creations/id6450965519')}>
+          <Styled.IconButton
+            onClick={() =>
+              open("https://apps.apple.com/us/app/bravo-creations/id6450965519")
+            }
+          >
             <AppStoreIcon src={AppStore} />
             <AppStoreIconLight src={AppStoreLight} />
           </Styled.IconButton>
