@@ -29,7 +29,7 @@ export const Container = styled.div`
     height: 100%;
   }
 
-  @media (min-width: 1500px) {
+  @media (min-width: 1500px) and (min-height: 800px)  {
     padding: 30px 70px 113px;
   }
 `;
@@ -67,6 +67,7 @@ export const PortalContent = styled.div`
   display: flex;
 
   justify-content: center;
+  align-items: center;
 
   height: 70vh;
   width: 80%;
@@ -77,6 +78,7 @@ export const PortalContent = styled.div`
     flex-direction: column;
     margin-left: 0%;
     justify-content: space-between;
+    align-items:center;
     height: 75vh;
   }
   @media (max-width: 768px) {
@@ -133,7 +135,7 @@ export const RedStar = styled.img`
   width: 20px;
 
   display: none;
-  
+
   @media (min-width: 1201px) {
     display: block;
   }
@@ -229,9 +231,14 @@ export const RegisterButton = styled.button`
 `;
 
 export const NavigationContainerWrapper = styled.div`
+  max-width: 90vh;
+  min-height: min(40vh, 50vw);
   width: 100%;
   display: flex;
   justify-content: center;
+  @media (max-width: 1200px) and (max-height: 800px) {
+    max-width: min(55vh, 70vw);
+  }
 `;
 export const DarkUserIcon = styled.img`
   display: var(--greetings-userIconDarkDisplay);

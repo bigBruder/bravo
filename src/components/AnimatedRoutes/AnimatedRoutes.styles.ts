@@ -1,5 +1,5 @@
 import styled from "styled-components";
-interface AnimatedRoutesProps {}
+interface AnimatedRoutesProps { }
 
 export const Wrapper = styled.div<AnimatedRoutesProps>`
   /* scroll-snap-type: y proximity; */
@@ -29,7 +29,7 @@ export const Wrapper = styled.div<AnimatedRoutesProps>`
     height: 100vh;
     height: 100%;
   } */
-  @media (max-width: 1001px) {
+  @media (max-width: 1001px) and (min-height: 800px) {
     scroll-snap-type: none;
     overflow-y: hidden;
     height: 100%;
@@ -51,7 +51,7 @@ export const ChildrenComponent = styled.div`
     scroll-snap-type: none;
     overflow: auto;
   } */
-  @media (max-width: 1001px) {
+  @media (max-width: 1001px) and (min-height: 800px) {
     scroll-snap-type: none;
     height: 100%;
     scroll-snap-align: none;
