@@ -4,6 +4,7 @@ import * as Styled from "./portal.styles";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
 import { maxMobileSize } from "../../constants";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
+import PortalMobile from "../../components/PortalMobile/PortalMobile.tsx";
 export interface PortalPageProps extends AnimatedPageProps {}
 
 const Portal: React.FunctionComponent<PortalPageProps> = ({
@@ -17,17 +18,23 @@ const Portal: React.FunctionComponent<PortalPageProps> = ({
     }
   }, [animationActive]);
 
-  const isMobileHeader = useMobileWidth(maxMobileSize);
+  const isMobile = useMobileWidth(maxMobileSize);
   return (
     <>
-      <Styled.Wrapper>
-        <Styled.Container>
-          <PortalContent
-            data-animation
-            data-animation-active={permanentAnimationState}
-          />
-        </Styled.Container>
-      </Styled.Wrapper>
+      {isMobile ? (
+        <PortalMobile />
+      ) : (
+        <>
+          <Styled.Wrapper>
+            <Styled.Container>
+              <PortalContent
+                data-animation
+                data-animation-active={permanentAnimationState}
+              />
+            </Styled.Container>
+          </Styled.Wrapper>
+        </>
+      )}
     </>
   );
 };

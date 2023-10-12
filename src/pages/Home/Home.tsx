@@ -3,7 +3,7 @@ import * as Styled from "./home.styles";
 import videoBg from "./../../assets/video/home_background.mp4";
 import React from "react";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
-import { maxHeaderSize } from "../../constants";
+import { maxMobileSize } from "../../constants";
 // import Footer from "../../components/Footer/FooterScrollDown";
 
 import HomeContent from "./HomeContent";
@@ -25,7 +25,7 @@ const Home: React.FunctionComponent<IHomePageProps> = ({ animationActive }) => {
     }
   }, [animationActive]);
 
-  const isMobileHeader = useMobileWidth(maxHeaderSize);
+  const isMobileHeader = useMobileWidth(maxMobileSize);
   return (
     <>
       {isMobileHeader ? (

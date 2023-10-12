@@ -24,44 +24,42 @@ export const Wrapper = styled.div<AnimatedRoutesProps>`
     height: 100%;
   } */
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     scroll-snap-type: y mandatory;
     height: 100vh;
-    /* height: 100%; */
-  }
-  @media (max-width: 480px) {
+    height: 100%;
+  } */
+  @media (max-width: 1001px) {
     scroll-snap-type: none;
     overflow-y: hidden;
     height: 100%;
   }
+  /* @media (max-width: 480px) {
+    scroll-snap-type: none;
+    overflow-y: hidden;
+    height: 100%;
+  } */
 `;
 export const ChildrenComponent = styled.div`
   position: relative;
   scroll-snap-type: y mandatory;
   scroll-snap-align: start;
   height: 100vh;
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     height: 100%;
     scroll-snap-align: start;
     scroll-snap-type: none;
     overflow: auto;
-  }
-  @media (max-width: 480px) {
+  } */
+  @media (max-width: 1001px) {
     scroll-snap-type: none;
+    height: 100%;
     scroll-snap-align: none;
     overflow-y: hidden;
   }
-  /* @media (max-width: 576px) {
-    scroll-snap-align: none;
+  /* @media (max-width: 480px) {
     scroll-snap-type: none;
-    height: 100%;
-    overflow: auto;
-  } */
-
-  /* @media (max-width: 768px) {
     scroll-snap-align: none;
-    scroll-snap-type: none;
-    height: 100%;
-    overflow: auto;
+    overflow-y: hidden;
   } */
 `;

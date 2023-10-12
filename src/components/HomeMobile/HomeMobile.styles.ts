@@ -119,13 +119,14 @@ export const Video = styled.video`
   z-index: -1;
   @media screen and (max-width: 480px) {
     height: 100%;
+    width: 100%;
   }
 `;
 
 export const StarYellowIcon = styled.img`
   position: absolute;
   z-index: 0;
-  left: 91vw;
+  left: 85vw;
 
   top: 161px;
 `;

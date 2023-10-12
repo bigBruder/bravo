@@ -3,7 +3,7 @@ import ServiceContent from "./ServicesContent";
 import * as Styled from "./Services.styles";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
 
-import { maxHeaderSize } from "../../constants";
+import { maxMobileSize } from "../../constants";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
 import { OurServices } from "../../components/OurServices/OurServices";
 
@@ -20,7 +20,7 @@ const Services: React.FunctionComponent<ServicesPageProps> = ({
     }
   }, [animationActive]);
 
-  const isMobileServices = useMobileWidth(maxHeaderSize);
+  const isMobileServices = useMobileWidth(maxMobileSize);
 
   return isMobileServices ? (
     <OurServices />
