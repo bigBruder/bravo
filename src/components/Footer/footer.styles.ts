@@ -7,14 +7,18 @@ export const Wrapper = styled.div`
   position: absolute;
   bottom: 0;
   z-index: 10000;
-  height: 120px;
+  height: 60px;
   width: 100%;
   
   gap: 20px;
   
   padding: 0 83px;
+
+  @media (min-height: 800px) {
+    height: 120px;
+  }
   
-  @media (max-width: 1500px) {
+  @media (max-width: 1500px) and (max-height: 700px) {
     display: none;
   }
 `;

@@ -12,8 +12,6 @@ import styles from "./Pricing.module.scss";
 import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
 import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
 
-import PricingCard1 from "../../assets/images/PricingCard/Frame 813355.png";
-
 import Quotes from "../../assets/icons/Quotes.svg";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import PricingCard from "../../components/PricingCard/PricingCard.tsx";

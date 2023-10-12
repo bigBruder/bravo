@@ -108,6 +108,8 @@ export const AdressContainer = styled.div`
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12.5px);
+  
+  
 
   gap: 15px;
   @media (max-width: 768px) {

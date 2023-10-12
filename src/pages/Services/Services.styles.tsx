@@ -61,20 +61,21 @@ export const ContentWrapper = styled.div`
 
   width: 100%;
 
-  padding: 50px 0 30px 0;
+  padding: 0 0 30px 0;
   margin-left: 100px;
   
   gap: 40px;
   @media (min-width: 1500px) {
-    justify-content: space-between;
-    padding: 150px 0 30px 0;
+    padding: 100px 0 30px 0;
     margin-left: 0;
+    gap: 0;
   }
   @media screen and (max-width: 1100px) {
     flex-direction: column;
     padding: 75px 0;
     text-align: center;
     margin-left: 0;
+    gap: 0;
   }
   @media screen and (max-width: 768px) {
     padding: 50px 0;

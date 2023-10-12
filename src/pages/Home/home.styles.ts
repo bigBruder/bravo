@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import BackgroundImage from "./../../assets/images/bc_logo.png";
 /**
  * Breakpoints list
  * 1. 1440px
@@ -288,20 +288,26 @@ export const SmallLogo = styled.img`
 `;
 
 export const LogoContainer = styled.div`
-  display: contents;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
+  display: flex;
+
+  width: 50%;
+  
+  background-image: url("${BackgroundImage}");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  @media (min-width: 1101px) {
+    height: 80vh;
+  }
 `;
 export const ItemContainer = styled.div`
-  position: absolute;
   display: flex;
   flex-direction: column;
   bottom: 0px;
   /* left: 50vw; */
   left: 44%;
-  align-self: center;
+  align-self: flex-end;
   justify-content: center;
   gap: 30px;
   /* width: 400px; */
@@ -318,9 +324,9 @@ export const ItemContainer = styled.div`
 
 export const GoogleIcon = styled.img`
   display: var(--greetings-googleIcon);
-  width: 20%;
-  height: 20%;
-  border-radius: 0.8vw;
+  width: 25%;
+  height: 25%;
+  border-radius: 0.6vw;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -331,9 +337,9 @@ export const GoogleIcon = styled.img`
 `;
 export const GoogleIconLight = styled.img`
   display: var(--greetings-googleIconLight);
-  width: 20%;
-  height: 20%;
-  border-radius: 0.8vw;
+  width: 25%;
+  height: 25%;
+  border-radius: 0.6vw;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -344,6 +350,7 @@ export const GoogleIconLight = styled.img`
 `;
 export const IconButton = styled.button`
   display: contents;
+  width: 60px;
 `;
 
 export const DarkUserIcon = styled.img`
@@ -357,9 +364,9 @@ export const LightUserIcon = styled.img`
 
 export const AppStoreIcon = styled.img`
   display: var(--greetings-appIcon);
-  width: 20%;
-  height: 20%;
-  border-radius: 0.8vw;
+  width: 25%;
+  height: 25%;
+  border-radius: 0.6vw;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -370,9 +377,9 @@ export const AppStoreIcon = styled.img`
 `;
 export const AppStoreIconLight = styled.img`
   display: var(--greetings-appIconLight);
-  width: 20%;
-  height: 20%;
-  border-radius: 0.8vw;
+  width: 25%;
+  height: 25%;
+  border-radius: 0.6vw;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -382,23 +389,23 @@ export const AppStoreIconLight = styled.img`
   }
 `;
 export const GuaranteeIcon = styled.img`
-  width: 10%;
-  height: 10%;
-  margin-top: 1.6%;
+  width: 15%;
+  height: 15%;
+  margin-top: 2%;
 `;
 export const BestPrice = styled.img`
-  width: 10%;
-  height: 10%;
+  width: 15%;
+  height: 15%;
 `;
 
 export const MadeInIcon = styled.img`
-  width: 10%;
-  height: 10%;
+  width: 15%;
+  height: 15%;
   margin-top: 0.7%;
 `;
 export const GuaranteedIcon2 = styled.img`
-  width: 10%;
-  height: 10%;
+  width: 15%;
+  height: 15%;
   margin-top: 1.6%;
 `;
 
@@ -406,7 +413,7 @@ export const NavigateIconContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 50px;
+  gap: 2%;
 `;
 export const QualityIconContainer = styled.div`
   display: flex;

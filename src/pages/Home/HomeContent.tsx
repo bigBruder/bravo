@@ -103,7 +103,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
     </Styled.PageContent>
 
     <Styled.LogoContainer>
-      <Styled.SmallLogo src={LogoIcon} />
+      {/*<Styled.SmallLogo src={LogoIcon} />*/}
       <Styled.ItemContainer>
         <NavigateIconContainer>
           <Styled.IconButton onClick={() => open('https://play.google.com/store/apps/details?id=com.bravocrm')}>
