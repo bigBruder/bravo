@@ -28,7 +28,7 @@ export const WelcomeContainer = styled.div`
 `;
 
 export const WelcomeTitle = styled.text`
-  color: #cda870;
+  color: #fff;
 
   text-align: center;
   font-family: Gwen-Trial;
@@ -39,7 +39,7 @@ export const WelcomeTitle = styled.text`
 `;
 
 export const WelcomeTitleColored = styled.text`
-  color: #fff;
+  color: #cda870;
 `;
 
 export const WelcomeText = styled.p`
@@ -51,75 +51,8 @@ export const WelcomeText = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
-  padding: 0px 40px;
+  padding: 0px 20px;
 `;
-
-export const AdvertContainer = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-`;
-export const ButtonContainer = styled.div`
-  gap: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-`;
-export const Button = styled.button`
-  /* opacity: 0; */
-`;
-export const AppImage = styled.img`
-  transition: transform 0.2s;
-  &:hover {
-    transform: scale(1);
-  }
-  &:active {
-    transform: scale(0.9);
-  }
-`;
-
-export const GoogleImage = styled.img`
-  transition: transform 0.2s;
-  &:hover {
-    transform: scale(1);
-  }
-  &:active {
-    transform: scale(0.9);
-  }
-`;
-
-export const AdvertImage = styled.img``;
-
-export const ButtonStart = styled.button`
-  display: flex;
-  padding: 16px 36px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
-  border-radius: 15px;
-  background: #cda870;
-
-  box-shadow: 0px 10px 20px 0px rgba(205, 168, 112, 0.1);
-  color: #272727;
-  border: none;
-  font-family: Quicksand;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  transition: transform 0.2s;
-  &:hover {
-    transform: scale(1);
-  }
-  &:active {
-    transform: scale(0.9);
-  }
-`;
-
 export const DescriptionContainer = styled.div`
   display: flex;
   padding: 30px 15px;
@@ -152,4 +85,59 @@ export const DescriptionText = styled.text`
   line-height: 22px;
   padding: 0px 15px;
   align-self: stretch;
+`;
+
+export const ContentDepartment = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 20px;
+`;
+
+export const TimeDepartment = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+`;
+
+export const Number = styled.img``;
+export const Hours = styled.text`
+  color: #fff;
+
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+`;
+
+export const TitleContent = styled.text`
+  color: #cda870;
+
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+`;
+export const TextContent = styled.text`
+  display: flex;
+  /* max-height: 44px; */
+  flex-direction: column;
+  justify-content: center;
+  /* align-self: stretch; */
+  overflow: hidden;
+  color: #9799ac;
+
+  text-align: center;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  font-family: Quicksand;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
 `;
