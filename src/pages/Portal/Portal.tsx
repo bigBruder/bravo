@@ -21,21 +21,21 @@ const Portal: React.FunctionComponent<PortalPageProps> = ({
   const isMobile = useMobileWidth(maxMobileSize);
   return (
     <>
-      {isMobile ? (
+      {/* {isMobile ? (
         <PortalMobile />
       ) : (
-        <>
-          <Styled.Wrapper>
-            <Styled.Container>
-              <PortalContent
-                data-animation
-                data-animation-active={permanentAnimationState}
-              />
-            </Styled.Container>
-          </Styled.Wrapper>
-        </>
-      )}
+        <> */}
+      <Styled.Wrapper>
+        <Styled.Container>
+          <PortalContent
+            data-animation
+            data-animation-active={permanentAnimationState}
+          />
+        </Styled.Container>
+      </Styled.Wrapper>
     </>
+    //   )}
+    // </>
   );
 };
 export default Portal;
