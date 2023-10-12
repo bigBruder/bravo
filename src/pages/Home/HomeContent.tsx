@@ -40,7 +40,7 @@ import * as Styled from "./home.styles";
 // import LogoIcon from "./../../assets/icons/logo-icon.svg";
 // import GiftIcon from "./../../assets/icons/gift.svg";
 import OctagonIcon from "./../../assets/icons/video-octagon.svg";
-import LogoIcon from "../../assets/images/bc_logo.png";
+import LogoIcon from "../../assets/icons/logo.svg";
 import BestPriceIcon from "../../assets/icons/Home/best-price.png";
 import GuaranteedIcon from "../../assets/icons/Home/guaranteed.png";
 import MadeUsaIcon from "../../assets/icons/Home/made-in-usa.png";

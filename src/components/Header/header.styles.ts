@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
 
   display: none;
 
-  @media (min-width: 1500px) {
+  @media (min-width: 1500px) and (min-height: 800px) {
     display: flex;
   }
 `;

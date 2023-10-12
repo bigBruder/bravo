@@ -36,7 +36,7 @@ export const Container = styled.div`
   padding: 10px 0 0 0;
 
   @media (min-width: 768px) {
-    padding: 30px 70px 0 0;
+    padding: 30px 0 0 0;
   }
 `;
 export const MainContent = styled.div`

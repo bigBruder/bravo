@@ -11,10 +11,10 @@
 
   @media (min-width: 1101px) {
     margin-left: 100px;
-    padding: 0 50px 30px 150px;
+    padding: 0 50px 30px 50px;
   }
-  @media (min-width: 1500px) {
-    padding: 150px 50px 113px 22px;
+  @media (min-width: 1500px) and (min-height: 800px) {
+    padding: 100px 50px 113px 22px;
   }
   @media (min-width: 1601px) {
     display: flex;
@@ -48,7 +48,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
-    max-width: 464px;
+    max-width: 650px;
   }
 
   &_wrapper {
@@ -77,7 +77,7 @@
 
 .footer {
   display: flex;
-  width: 100%;
+  width: 55vw;
   background-color: rgba(205, 168, 112, 0.1);
   justify-content: space-between;
   align-items: center;
@@ -167,7 +167,6 @@
   }
   .footer {
     flex-direction: row;
-    width: 80%;
     gap: 40px;
   }
 }

@@ -2,7 +2,6 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding-top: 10px;
   align-items: center;
   justify-content: center;
 

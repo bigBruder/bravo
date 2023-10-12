@@ -66,7 +66,7 @@ export const ContentWrapper = styled.div`
   gap: 2vw;
 
   align-items: center;
-  padding: 30px 30px 0 100px;
+  padding: 0 30px 0 100px;
   margin-left: 5vw;
   /* padding: 150px 70px 30px 150px; */
   /* margin-left: 100px; */
@@ -77,7 +77,10 @@ export const ContentWrapper = styled.div`
     text-align: center;
     margin-left: 0;
   }
-
+  
+  @media (min-height: 800px) {
+    padding: 30px 30px 0 100px;
+  }
   /* padding-left: 0; */
 `;
 export const PageContent = styled.div`
@@ -300,6 +303,8 @@ export const LogoContainer = styled.div`
   @media (min-width: 1101px) {
     height: 80vh;
   }
+  
+  
 `;
 export const ItemContainer = styled.div`
   display: flex;
@@ -309,7 +314,7 @@ export const ItemContainer = styled.div`
   left: 44%;
   align-self: flex-end;
   justify-content: center;
-  gap: 30px;
+  gap: 0;
   /* width: 400px; */
   /* flex-wrap: wrap; */
   /* img {
@@ -320,12 +325,16 @@ export const ItemContainer = styled.div`
   @media (max-width: 1100px) {
     display: none;
   }
+  
+  @media (min-height: 800px) {
+    gap: 30px;
+  }
 `;
 
 export const GoogleIcon = styled.img`
   display: var(--greetings-googleIcon);
-  width: 25%;
-  height: 25%;
+  width: 160px;
+  height: 54px;
   border-radius: 0.6vw;
   transition: transform 0.2s;
   &:hover {
@@ -337,8 +346,8 @@ export const GoogleIcon = styled.img`
 `;
 export const GoogleIconLight = styled.img`
   display: var(--greetings-googleIconLight);
-  width: 25%;
-  height: 25%;
+  width: 160px;
+  height: 54px;
   border-radius: 0.6vw;
   transition: transform 0.2s;
   &:hover {
@@ -364,8 +373,8 @@ export const LightUserIcon = styled.img`
 
 export const AppStoreIcon = styled.img`
   display: var(--greetings-appIcon);
-  width: 25%;
-  height: 25%;
+  width: 160px;
+  height: 54px;
   border-radius: 0.6vw;
   transition: transform 0.2s;
   &:hover {
@@ -377,8 +386,8 @@ export const AppStoreIcon = styled.img`
 `;
 export const AppStoreIconLight = styled.img`
   display: var(--greetings-appIconLight);
-  width: 25%;
-  height: 25%;
+  width: 160px;
+  height: 54px;
   border-radius: 0.6vw;
   transition: transform 0.2s;
   &:hover {

@@ -79,14 +79,14 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             slidesPerView={getItemsPerPage}
             initialSlide={2}
             coverflowEffect={{
-              rotate: 0,
+              rotate: 25,
               stretch: 0,
               depth: 100,
               modifier: 1,
               slideShadows: false,
             }}
             pagination={false}
-            spaceBetween={90}
+            spaceBetween={120}
             onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
             modules={[EffectCoverflow, Pagination]}
             className={styles.mySwipes}

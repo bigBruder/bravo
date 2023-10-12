@@ -57,8 +57,8 @@ export const ContentWrapper = styled.div`
   @media (max-width: 480px) {
     padding: 20px;
   }
-  @media (min-width: 1500px) {
-    padding: 180px 40px 113px 22px;
+  @media (min-width: 1500px) and (min-height: 800px) {
+    padding: 100px 40px 113px 60px;
   }
 `;
 
@@ -117,7 +117,7 @@ export const ContentPage = styled.div`
   justify-content: space-around;
   align-items: start;
   flex-wrap: wrap;
-  padding: 100px 10% 40px 10%;
+  padding: 50px 10% 40px 10%;
   @media (max-width: 1300px) {
     flex-wrap: wrap;
     padding: 20px 15%;

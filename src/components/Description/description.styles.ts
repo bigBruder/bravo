@@ -26,7 +26,7 @@ export const Wrapper = styled.div<DescriptionProps>`
     text-align: center;
     font-weight: 400;
     /* margin-top: 1vh; */
-    max-width: 75%;
+    max-width: 90%;
   }
   @media (max-width: 480px) {
     display: flex;

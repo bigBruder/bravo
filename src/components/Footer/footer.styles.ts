@@ -21,6 +21,10 @@ export const Wrapper = styled.div`
   @media (max-width: 1500px) and (max-height: 700px) {
     display: none;
   }
+
+  @media (max-height: 800px) {
+    display: none;
+  }
 `;
 
 export const Triangle = styled.div`

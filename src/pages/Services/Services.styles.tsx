@@ -64,8 +64,9 @@ export const ContentWrapper = styled.div`
   padding: 0 0 30px 0;
   margin-left: 100px;
   
-  gap: 40px;
-  @media (min-width: 1500px) {
+  gap: 30px;
+  
+  @media (min-width: 1500px) and (min-height: 800px) {
     padding: 100px 0 30px 0;
     margin-left: 0;
     gap: 0;
