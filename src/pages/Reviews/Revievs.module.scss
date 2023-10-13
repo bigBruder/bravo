@@ -171,8 +171,8 @@
   }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1500px) and (min-height: 800px){
   .container {
-    padding: 150px 0 113px 74px;
+    padding: 10vh 0 113px 74px;
   }
 }

@@ -82,7 +82,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
 
       <Description
         descriptionText={
-          "Stop the constant back-and-forth emails, phone calls, and uncertainty about your job's progress. It's time for a change. Join us and experience a streamlined process that puts you in control of your jewelry orders."
+          "Stop the constant back-and-forth emails, phone calls, and uncertainty about your\n job's progress. It's time for a change. Join us and experience a streamlined \nprocess that puts you in control of your jewelry orders."
         }
         parentBackgroundColor={parentBackgroundColor}
       />

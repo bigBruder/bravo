@@ -43,7 +43,7 @@ export const MainContent = styled.div`
   justify-content: center;
 
   height: 100%;
-  
+
   gap: 15px;
   flex: 1 0 0;
 `;

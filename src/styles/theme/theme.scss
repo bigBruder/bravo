@@ -1,6 +1,17 @@
 :root {
   --body: #fff;
   --text: #363537;
+
+  --quotes-staticLightBackgroundColor: rgba(205, 168, 112, 0.1);
+  --quotes-staticDarkBackgroundColor: rgba(0, 0, 0, 0.75);
+  --quotes-staticLightTextColor: #164d59;
+  --quotes-staticDarkTextColor: #fff;
+
+  --quotes-staticLightDisplayLightIcon: block;
+  --quotes-staticLightDisplayDarkIcon: none;
+
+  --quotes-staticDarkDisplayLightIcon: none;
+  --quotes-staticDarkDisplayDarkIcon: block;
 }
 
 body * {
@@ -34,8 +45,6 @@ body.light {
   --portal-headerTextColor: #164d59;
   --portal-backgroundColor: rgba(205, 168, 112, 0.1);
   --portal-textQuotesColor: #164d59;
-  --quotes-iconLight: block;
-  --quotes-iconDark: none;
   --trophies-headerText: #164d59;
   --trophies-background-color: #fff;
   --trophies-headerHalfText: #cda870;
@@ -57,6 +66,12 @@ body.light {
   --faq-buttonOctagonDark: none;
   --color-bg: #ffffff;
   --color-fg: #000000;
+
+  --quotes-iconLight: block;
+  --quotes-iconDark: none;
+  --quotes-backgroundColor: rgba(205, 168, 112, 0.1);
+  --quotes-textColor: #164d59;
+
 }
 
 body.dark {
@@ -92,8 +107,6 @@ body.dark {
   --portal-backgroundColor: rgba(255, 255, 255, 0.1);
   --portal-headerTextColor: #fff;
   --portal-textQuotesColor: #fff;
-  --quotes-iconLight: none;
-  --quotes-iconDark: block;
   --trophies-headerText: #fff;
   --trophies-background-color: rgba(0, 0, 0, 0.7);
   --trophies-headerHalfText: #fff;
@@ -119,4 +132,9 @@ body.dark {
   --faq-buttonOctagonDark: block;
   --color-bg: #343434;
   --color-fg: #ffffff;
+
+  --quotes-iconLight: none;
+  --quotes-iconDark: block;
+  --quotes-backgroundColor: rgba(0, 0, 0, 0.75);
+  --quotes-textColor: #fff;
 }

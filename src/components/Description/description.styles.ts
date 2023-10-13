@@ -1,12 +1,14 @@
 import styled from "styled-components";
 interface DescriptionProps {
   parentbackgroundColor?: string;
+  backgroundColor?: string;
+  textColor?: string;
 }
 export const Wrapper = styled.div<DescriptionProps>`
   display: flex;
 
   width: 55vw;
-  height: 13vh;
+  // height: 13vh;
 
   /* padding: 1.5% 2%; */
   padding: 20px 20px;
@@ -15,13 +17,13 @@ export const Wrapper = styled.div<DescriptionProps>`
   margin: 0 auto;
   /* flex: 1 0 0; */
   border-radius: 15px;
-  background: var(--portal-backgroundColor);
+  background: ${(props) => props.backgroundColor};
   backdrop-filter: blur(12.5px);
 
   p {
-    color: var(--portal-textQuotesColor);
+    color: ${(props) => props.textColor};
     font-family: Quicksand;
-    font-size: 0.95vw;
+    // font-size: 0.95vw;
     font-style: normal;
     text-align: center;
     font-weight: 400;
@@ -114,9 +116,13 @@ export const Description = styled.p`
   white-space: pre-line;
 `;
 
-export const QuoteIconLight = styled.img`
-  display: var(--quotes-iconLight);
+export const QuoteIconLight = styled.img<{
+  display: string;
+}>`
+  display: ${(props) => props.display};
 `;
-export const QuoteIconDark = styled.img`
-  display: var(--quotes-iconDark);
-`;
+export const QuoteIconDark = styled.img<{
+  display: string;
+}>`
+  display: ${(props) => props.display};
+`
