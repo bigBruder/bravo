@@ -32,7 +32,7 @@ export const Container = styled.div`
     padding: 30px 20px 0px 0px;
   }
   @media (min-width: 1101px) {
-    padding: 0 0 30px 40px;
+    padding: 0 0 30px 0;
   }
   @media (min-width: 1601px) {
     padding: 0 0 10px 70px;
@@ -64,7 +64,7 @@ export const ContentWrapper = styled.div`
     /* margin-left: 100px;
     padding: 0 0 30px 70px; */
   }
-  @media (min-width: 1500px) {
+  @media (min-width: 1500px) and (min-height: 800px) {
     margin-left: -80px;
     /* margin-left: -80px; */
     padding: 110px 0 0px 0px;
@@ -131,7 +131,7 @@ export const ContentPage = styled.div`
   /* padding: 2% 5% 2% 5%; */
 
   gap: 10px;
-  margin-left: 300px;
+  margin-left: 175px;
   margin-top: 7vh;
   margin-bottom: 100px;
   @media (max-width: 1600px) {

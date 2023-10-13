@@ -159,7 +159,7 @@ export const ButtonContainer = styled.p`
   align-items: center;
   gap: 40px;
   @media screen and (max-width: 1500px) {
-    gap: 5px;
+    gap: 15px;
   }
   @media screen and (max-width: 1100px) {
     justify-content: center;
@@ -335,7 +335,7 @@ export const GoogleIcon = styled.img`
   display: var(--greetings-googleIcon);
   width: 160px;
   height: 54px;
-  border-radius: 0.6vw;
+  border-radius: 12px;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -348,7 +348,7 @@ export const GoogleIconLight = styled.img`
   display: var(--greetings-googleIconLight);
   width: 160px;
   height: 54px;
-  border-radius: 0.6vw;
+  border-radius: 12px;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -375,7 +375,7 @@ export const AppStoreIcon = styled.img`
   display: var(--greetings-appIcon);
   width: 160px;
   height: 54px;
-  border-radius: 0.6vw;
+  border-radius: 12px;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
@@ -388,7 +388,7 @@ export const AppStoreIconLight = styled.img`
   display: var(--greetings-appIconLight);
   width: 160px;
   height: 54px;
-  border-radius: 0.6vw;
+  border-radius: 12px;
   transition: transform 0.2s;
   &:hover {
     transform: scale(1.05);
