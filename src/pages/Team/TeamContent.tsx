@@ -21,6 +21,7 @@ import Avatar4 from "../../assets/images/HumanCard/Human3.svg";
 import Quotes from "../../assets/icons/Quotes.svg";
 import Card from "./Card/Card.tsx";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
+import Description from "../../components/Description/Description.tsx";
 
 interface IProps {}
 
@@ -152,7 +153,7 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
         </div>
       </div>
 
-      <div className={styles.footer}>
+      {/* <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
           {screenSize.width >= 1600 ? 'Distance is no obstacle; we bring the best experience right to your' +
@@ -165,7 +166,20 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />
         ) : null}
-      </div>
+      </div> */}
+      <Description
+        descriptionText={screenSize.width >= 1500 ? 'Distance is no obstacle; we bring the best experience right to your' +
+        '          fingertips, with\n seamless communication as our hallmark. Your' +
+        '          satisfaction knows no bounds' :
+        'Distance is no obstacle; we bring the best experience right to your' +
+        '          fingertips, with seamless communication as our hallmark. Your' +
+        '          satisfaction knows no bounds'}
+        parentBackgroundColor="white"
+        backgroundColor="var(--quotes-staticLightBackgroundColor)"
+        textColor="var(--pricing-staticLightTextColor)"
+        displayLightIcon="var(--quotes-staticLightDisplayLightIcon)"
+        displayDarkIcon="var(--quotes-staticLightDisplayDarkIcon)"
+      />
     </div>
   );
 };
