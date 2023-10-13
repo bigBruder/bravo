@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import WorkflowContent from "./WorkflowContent";
 import * as Styled from "./Workflow.styles";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
-
+import { maxMobileSize } from "../../constants";
+import WorkflowMobile from "../../components/WorkflowMobile/WorkflowMobile.tsx";
+import { useMobileWidth } from "../../hooks/useMobileWidth";
 export interface WorkflowPageProps extends AnimatedPageProps {}
 
 const Workflow: React.FunctionComponent<WorkflowPageProps> = ({
@@ -16,17 +18,24 @@ const Workflow: React.FunctionComponent<WorkflowPageProps> = ({
       setPermanentAnimationState(true);
     }
   }, [animationActive]);
+  const isMobile = useMobileWidth(maxMobileSize);
   return (
-    <Styled.Wrapper>
-      {/* <video src={videoBg} autoPlay loop muted /> */}
-      <Styled.Container>
-        {/* <Styled.MainContent> */}
-        <div data-animation data-animation-active={permanentAnimationState}>
-          <WorkflowContent />
-        </div>
-        {/* </Styled.MainContent> */}
-      </Styled.Container>
-    </Styled.Wrapper>
+    <>
+      {isMobile ? (
+        <WorkflowMobile />
+      ) : (
+        <Styled.Wrapper>
+          {/* <video src={videoBg} autoPlay loop muted /> */}
+          <Styled.Container>
+            {/* <Styled.MainContent> */}
+            <div data-animation data-animation-active={permanentAnimationState}>
+              <WorkflowContent />
+            </div>
+            {/* </Styled.MainContent> */}
+          </Styled.Container>
+        </Styled.Wrapper>
+      )}
+    </>
   );
 };
 export default Workflow;
