@@ -19,8 +19,9 @@ import Avatar4 from "../../assets/images/HumanCard/Human2.1.svg";
 import Quotes from "../../assets/icons/Quotes.svg";
 import Card from "./Card/Card.tsx";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
+import Description from "../../components/Description/Description.tsx";
 
-interface IProps {}
+interface IProps { }
 
 const ReviewsContent: React.FunctionComponent<IProps> = () => {
   const swiperRef = useRef<any>();
@@ -144,7 +145,7 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
         </div>
       </div>
 
-      <div className={styles.footer}>
+      {/* <div className={styles.footer}>
         <img src={Quotes} style={{ height: 29, width: 38 }} />
         <p className={styles.footer_text}>
           Our unwavering commitment is to satisfy every client and make their journey hassle-free. You could be our next delighted client—join us on the path to exceptional service.
@@ -152,7 +153,21 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
         {screenSize.width > 767 ? (
           <img src={Quotes} style={{ height: 29, width: 38 }} />
         ) : null}
-      </div>
+      </div> */}
+
+      <Description
+        descriptionText={screenSize.width >= 1600 ? 'Transparency is our cornerstone. Starting prices offer a clear' +
+          '          beginning for your \n jewelry journey. For precise quotes, submit a' +
+          '          request on our portal.' :
+          'Transparency is our cornerstone. Starting prices offer a clear' +
+          '          beginning for your jewelry journey. For precise quotes, submit a' +
+          '          request on our portal.'}
+        parentBackgroundColor="white"
+        backgroundColor="var(--quotes-staticLightBackgroundColor)"
+        textColor="var(--pricing-staticLightTextColor)"
+        displayLightIcon="var(--quotes-staticLightDisplayLightIcon)"
+        displayDarkIcon="var(--quotes-staticLightDisplayDarkIcon)"
+      />
     </div>
   );
 };

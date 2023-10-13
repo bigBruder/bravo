@@ -6,27 +6,38 @@ import { QuoteIconLight, QuoteIconDark } from "./description.styles";
 interface DescriptionProps {
   descriptionText: string;
   parentBackgroundColor: string;
+  backgroundColor?: string;
+  textColor?: string;
+  displayLightIcon?: string;
+  displayDarkIcon?: string;
 }
 
 const Description: React.FunctionComponent<DescriptionProps> = ({
   descriptionText,
   parentBackgroundColor,
+  backgroundColor = "var(--portal-backgroundColor)",
+  textColor = "var(--portal-textQuotesColor)",
+  displayLightIcon = "var(--quotes-iconLight)",
+  displayDarkIcon = "var(--quotes-iconDark)",
 }) => {
   return (
-    <Styled.Wrapper parentbackgroundColor={parentBackgroundColor}>
+    <Styled.Wrapper parentbackgroundColor={parentBackgroundColor}
+      backgroundColor={backgroundColor}
+      textColor={textColor}
+    >
       <Styled.MobileIcon src={MobileIcon} />
       <Styled.IconContainer>
-        <QuoteIconDark src={IconDark} />
-        <QuoteIconDark src={IconDark} />
-        <QuoteIconLight src={IconLight} />
-        <QuoteIconLight src={IconLight} />
+        <QuoteIconDark src={IconDark} display={displayDarkIcon} />
+        <QuoteIconDark src={IconDark} display={displayDarkIcon} />
+        <QuoteIconLight src={IconLight} display={displayLightIcon} />
+        <QuoteIconLight src={IconLight} display={displayLightIcon} />
       </Styled.IconContainer>
       <Styled.Description>{descriptionText}</Styled.Description>
       <Styled.IconContainer>
-        <QuoteIconDark src={IconDark} />
-        <QuoteIconDark src={IconDark} />
-        <QuoteIconLight src={IconLight} />
-        <QuoteIconLight src={IconLight} />
+        <QuoteIconDark src={IconDark} display={displayDarkIcon} />
+        <QuoteIconDark src={IconDark} display={displayDarkIcon} />
+        <QuoteIconLight src={IconLight} display={displayLightIcon} />
+        <QuoteIconLight src={IconLight} display={displayLightIcon} />
       </Styled.IconContainer>
     </Styled.Wrapper>
   );

@@ -53,15 +53,15 @@ export const ContentWrapper = styled.div`
   /* height: 10vh; */
   padding: 30px 70px 30px 80px;
   /* gap: 5%; */
-  @media (min-width: 1500px) {
+  @media (min-width: 1500px) and (min-height: 800px){
     gap: 5vh;
-    padding: 180px 40px 113px 40px;
+    padding: 130px 40px 113px 40px;
   }
   @media (max-width: 1600px) {
-    padding: 30px 40px 30px 80px;
+    // padding: 30px 40px 30px 80px;
   }
   @media (max-width: 1300px) {
-    padding: 0px;
+    // padding: 0px;
   }
 
   @media (max-width: 480px) {
