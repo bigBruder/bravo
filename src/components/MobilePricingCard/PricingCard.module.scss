@@ -1,0 +1,164 @@
+.card {
+  position: relative;
+
+  border-radius: 15px;
+  width: 210px;
+  height: 281px;
+
+  &__blur {
+    position: absolute;
+
+    height: 281px;
+    width: 210px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+
+    &--active {
+      background-color: rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  &__content {
+    width: 110%;
+    height: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 10;
+    flex-shrink: -1;
+    flex-direction: column;
+    gap: 5%;
+
+    position: absolute;
+
+    color: #ffffff;
+  }
+
+  &__title {
+    color: #fff;
+
+    text-align: center;
+    font-family: Gwen-Trial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 24px;
+  }
+
+  &__text {
+    color: #9799ac;
+
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    max-width: 170px;
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &__text {
+      color: #fff;
+
+      text-align: center;
+      font-family: Quicksand;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    &__price {
+      color: #f7ca8e;
+
+      text-align: center;
+      font-family: Quicksand;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+}
+
+@keyframes fadeAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  &_line {
+    background-color: rgba(255, 255, 255, 0.25);
+    height: 1px;
+    width: 10px;
+
+    border-radius: 10px;
+
+    &_wrapper {
+      height: 1px;
+
+      display: flex;
+      gap: 1px;
+
+      animation-name: separatorAnimation;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+
+      &--inverse-animation {
+        animation-name: separatorAnimationInverse;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+    }
+
+    &--vertical {
+      height: 3px;
+      width: 1px;
+
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@keyframes separatorAnimation {
+  from {
+    transform: translateX(-200%);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes separatorAnimationInverse {
+  from {
+    transform: translateX(200%);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
