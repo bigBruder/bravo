@@ -16,12 +16,12 @@ import Avatar3 from "../../assets/images/HumanCard/Human2.3.svg";
 
 import Avatar4 from "../../assets/images/HumanCard/Human2.1.svg";
 
-import Quotes from "../../assets/icons/Quotes.svg";
+// import Quotes from "../../assets/icons/Quotes.svg";
 import Card from "./Card/Card.tsx";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import Description from "../../components/Description/Description.tsx";
 
-interface IProps { }
+interface IProps {}
 
 const ReviewsContent: React.FunctionComponent<IProps> = () => {
   const swiperRef = useRef<any>();
@@ -55,7 +55,8 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
       <div className={styles.container_header}>
         <p className={styles.container_title}>Reviews</p>
         <p className={styles.container_text}>
-          Celebrate Our Success Stories: Uncover the Insights and Experiences Shared by Our Delighted and Loyal Clients
+          Celebrate Our Success Stories: Uncover the Insights and Experiences
+          Shared by Our Delighted and Loyal Clients
         </p>
       </div>
 
@@ -156,12 +157,15 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
       </div> */}
 
       <Description
-        descriptionText={screenSize.width >= 1600 ? 'Transparency is our cornerstone. Starting prices offer a clear' +
-          '          beginning for your \n jewelry journey. For precise quotes, submit a' +
-          '          request on our portal.' :
-          'Transparency is our cornerstone. Starting prices offer a clear' +
-          '          beginning for your jewelry journey. For precise quotes, submit a' +
-          '          request on our portal.'}
+        descriptionText={
+          screenSize.width >= 1600
+            ? "Transparency is our cornerstone. Starting prices offer a clear" +
+              "          beginning for your \n jewelry journey. For precise quotes, submit a" +
+              "          request on our portal."
+            : "Transparency is our cornerstone. Starting prices offer a clear" +
+              "          beginning for your jewelry journey. For precise quotes, submit a" +
+              "          request on our portal."
+        }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"
         textColor="var(--pricing-staticLightTextColor)"

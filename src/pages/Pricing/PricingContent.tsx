@@ -6,20 +6,20 @@ import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
 import "swiper/css";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Pricing.module.scss";
 
-import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
-import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
+// import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
+// import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
 
-import Quotes from "../../assets/icons/Quotes.svg";
+// import Quotes from "../../assets/icons/Quotes.svg";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import PricingCard from "../../components/PricingCard/PricingCard.tsx";
 
-import Card1 from '../../assets/images/PricingCard/Card1.png';
+import Card1 from "../../assets/images/PricingCard/Card1.png";
 import Description from "../../components/Description/Description.tsx";
 
-interface IProps { }
+interface IProps {}
 
 const SLIDES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -48,7 +48,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
   }, [screenSize]);
 
   useEffect(() => {
-    console.log("Screen changed", screenSize.width)
+    console.log("Screen changed", screenSize.width);
     if (screenSize.width > 1799) {
       setSwiperParams({
         itemsPerPage: 3,
@@ -57,7 +57,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         depth: 320,
         modifier: 1,
         slideShadows: true,
-      })
+      });
     } else if (screenSize.width > 1678) {
       setSwiperParams({
         itemsPerPage: 3,
@@ -66,7 +66,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         depth: 100,
         modifier: 1,
         slideShadows: true,
-      })
+      });
     } else if (screenSize.width > 1399) {
       setSwiperParams({
         itemsPerPage: 3,
@@ -75,7 +75,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         depth: 50,
         modifier: 1,
         slideShadows: true,
-      })
+      });
     } else if (screenSize.width > 768) {
       setSwiperParams({
         itemsPerPage: 2,
@@ -84,7 +84,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         depth: 100,
         modifier: 1,
         slideShadows: false,
-      })
+      });
     } else {
       setSwiperParams({
         itemsPerPage: 1,
@@ -93,7 +93,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         depth: 100,
         modifier: 1,
         slideShadows: false,
-      })
+      });
     }
   }, [screenSize.width]);
 
@@ -136,17 +136,20 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             modules={[EffectCoverflow, Pagination]}
             className={styles.mySwipes}
             onBeforeInit={(swiper) => {
-              console.log("Swiper initialized!")
+              console.log("Swiper initialized!");
               swiperRef.current = swiper;
             }}
             onUpdate={(swiper) => {
-              console.log("Swiper updated!")
+              console.log("Swiper updated!");
               swiperRef.current = swiper;
             }}
           >
             {SLIDES.map((slide) => (
               <SwiperSlide className={styles.card} key={slide}>
-                <PricingCard isFocused={slide === activeSlideIndex} image={Card1} />
+                <PricingCard
+                  isFocused={slide === activeSlideIndex}
+                  image={Card1}
+                />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -177,12 +180,15 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         ) : null}
       </div> */}
       <Description
-        descriptionText={screenSize.width >= 1500 ? 'Transparency is our cornerstone. Starting prices offer a clear' +
-          '          beginning for your \n jewelry journey. For precise quotes, submit a' +
-          '          request on our portal.' :
-          'Transparency is our cornerstone. Starting prices offer a clear' +
-          '          beginning for your jewelry journey. For precise quotes, submit a' +
-          '          request on our portal.'}
+        descriptionText={
+          screenSize.width >= 1500
+            ? "Transparency is our cornerstone. Starting prices offer a clear" +
+              "          beginning for your \n jewelry journey. For precise quotes, submit a" +
+              "          request on our portal."
+            : "Transparency is our cornerstone. Starting prices offer a clear" +
+              "          beginning for your jewelry journey. For precise quotes, submit a" +
+              "          request on our portal."
+        }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"
         textColor="var(--pricing-staticLightTextColor)"

@@ -18,7 +18,7 @@ import Avatar3 from "../../assets/images/HumanCard/Human3.svg";
 import Name4 from "../../assets/images/HumanCard/Name4.svg";
 import Avatar4 from "../../assets/images/HumanCard/Human3.svg";
 
-import Quotes from "../../assets/icons/Quotes.svg";
+// import Quotes from "../../assets/icons/Quotes.svg";
 import Card from "./Card/Card.tsx";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import Description from "../../components/Description/Description.tsx";
@@ -168,12 +168,15 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
         ) : null}
       </div> */}
       <Description
-        descriptionText={screenSize.width >= 1500 ? 'Distance is no obstacle; we bring the best experience right to your' +
-        '          fingertips, with\n seamless communication as our hallmark. Your' +
-        '          satisfaction knows no bounds' :
-        'Distance is no obstacle; we bring the best experience right to your' +
-        '          fingertips, with seamless communication as our hallmark. Your' +
-        '          satisfaction knows no bounds'}
+        descriptionText={
+          screenSize.width >= 1500
+            ? "Distance is no obstacle; we bring the best experience right to your" +
+              "          fingertips, with\n seamless communication as our hallmark. Your" +
+              "          satisfaction knows no bounds"
+            : "Distance is no obstacle; we bring the best experience right to your" +
+              "          fingertips, with seamless communication as our hallmark. Your" +
+              "          satisfaction knows no bounds"
+        }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"
         textColor="var(--pricing-staticLightTextColor)"
