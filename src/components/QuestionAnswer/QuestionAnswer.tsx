@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
-import {useCallback, useState} from "react";
-import Plus from '../../assets/icons/FAQ/plus.svg';
-import Cross from '../../assets/icons/FAQ/Cross.svg';
+import { useState } from "react";
+import Plus from "../../assets/icons/FAQ/plus.svg";
+import Cross from "../../assets/icons/FAQ/Cross.svg";
 
 const QuestionAnswer = ({
   summary,
@@ -31,9 +31,20 @@ const QuestionAnswer = ({
   return (
     <div style={{ color: "var(--faq-textContent)" }} className={styles.details}>
       <div className={styles.details__inner}>
-        {isOpen ? <img src={Cross} className={styles.cross} width={22} height={22}/> : <img src={Plus} style={{marginLeft: 3.5, marginRight: 3.5}} width={15} height={15}/>}
+        {isOpen ? (
+          <img src={Cross} className={styles.cross} width={22} height={22} />
+        ) : (
+          <img
+            src={Plus}
+            style={{ marginLeft: 3.5, marginRight: 3.5 }}
+            width={15}
+            height={15}
+          />
+        )}
 
-        <p className={styles.summary} onClick={() => setIsOpen(!isOpen)}>{summary}</p>
+        <p className={styles.summary} onClick={() => setIsOpen(!isOpen)}>
+          {summary}
+        </p>
       </div>
       {isOpen ? <p className={styles.text}>{question}</p> : null}
     </div>
