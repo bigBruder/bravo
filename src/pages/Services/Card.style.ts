@@ -33,10 +33,13 @@ export const GroupCardTop = styled.div`
   padding-bottom: 33px;
   margin: 0;
   flex: 1 0 0;
-
+  gap: 15px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   & img {
     width: 100%;
     max-width: 180px;
+
     /* max-width: 250px; */
     aspect-ratio: 1/1;
     @media (min-width: 1600px) {
@@ -55,7 +58,10 @@ export const GroupCardBottom = styled.div`
   flex-direction: column;
   padding-top: 33px;
   margin: 0;
+  gap: 15px;
   flex: 1 0 0;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
   & img {
     width: 100%;
     max-width: 180px;
