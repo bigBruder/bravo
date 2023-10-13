@@ -2,48 +2,61 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
   font-family: Quicksand;
   font-size: 18px;
   line-height: 30px;
-  margin-left: 31px;
   font-weight: 500;
   cursor: pointer;
 
-  &:before {
-    position: absolute;
-    content: "";
-    height: 21px;
-    width: 21px;
-    display: block;
-    left: -31px;
-    top: 4.5px;
+  &__inner {
+    width: 100%;
 
-    background-image: url("../../assets/icons/FAQ/plus.svg");
-    background-size: cover;
+    display: flex;
+    gap: 25px;
+    align-items: center;
   }
-}
-
-.details[open] > .details::before {
-  transform: rotate(90deg);
-}
-
-details > summary {
-  list-style: none;
 }
 
 .text {
   font-size: 12px;
   line-height: 20px;
+
+  padding-left: 48px;
+
+  animation-name: AnimationText;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .summary::marker {
   display: none;
 }
 
-@media (min-width: 768px) {
-  .details {
+.cross {
+  rotate: -45deg;
+
+  animation-name: AnimationCross;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes AnimationCross {
+  from {
+    rotate: -45deg;
+  }
+  to {
+    rotate: 2deg;
+  }
+}
+
+@keyframes AnimationText {
+  from {
+    opacity: 0;
   }
 
-  .summary {
+  to {
+    opacity: 1;
   }
 }
