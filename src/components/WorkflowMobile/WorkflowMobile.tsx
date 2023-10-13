@@ -100,8 +100,9 @@ const WorkflowMobile: React.FC<IWorkflowMobile> = () => {
           <Styled.VectorIcons />
         </Styled.VectorRow>
         <Styled.DescriptionText>
-          We offer Rush or date specific service to get your order done at the
-          time you need it.
+          First, jewelers create sketches and select suitable materials, then
+          jewelry making begins, which includes operations such as casting,
+          machining and polishing, gemstone inlay and final finishing.
         </Styled.DescriptionText>
       </Styled.DescriptionContainer>
     </Wrapper>

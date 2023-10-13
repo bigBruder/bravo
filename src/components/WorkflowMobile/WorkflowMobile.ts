@@ -83,7 +83,7 @@ export const DescriptionText = styled.text`
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
-  padding: 0px 15px;
+  padding: 0px 3px;
   align-self: stretch;
 `;
 
