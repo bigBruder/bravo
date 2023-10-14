@@ -37,6 +37,9 @@ export const Container = styled.div`
   @media (min-width: 1601px) {
     padding: 0 0 10px 70px;
   }
+  @media (max-width: 480px) {
+    padding: 60px 20px 40px 20px;
+  }
   /* @media (max-width: 1100px) {
     height: 100%;
   } */
@@ -84,6 +87,11 @@ export const ContentWrapper = styled.div`
     /* margin-left: 100px;
     padding: 0 0 30px 150px; */
   }
+  @media (max-width: 480px) {
+    padding: 0px 0px 0px 0px;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 export const DescriptionHeader = styled.text`
   color: var(--trophies-headerText);
@@ -95,6 +103,17 @@ export const DescriptionHeader = styled.text`
 
   @media (max-width: 1600px) {
     font-size: 31px;
+  }
+  @media (max-width: 480px) {
+    color: #fff;
+
+    text-align: center;
+    font-family: Gwen-Trial;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 30px;
+    padding-bottom: 10px;
   }
 `;
 
@@ -123,6 +142,19 @@ export const DescriptionText = styled.text`
   @media (max-width: 1400px) {
     font-size: 16px;
   }
+  @media (max-width: 480px) {
+    color: #9799ac;
+
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  /* @media (max-width: 480px) {
+    width: 100%;
+  } */
 `;
 export const ContentPage = styled.div`
   width: 70%;
@@ -144,6 +176,12 @@ export const ContentPage = styled.div`
   @media (min-width: 768px) {
     grid-template-columns: 40% 60%;
   }
+  @media (max-width: 480px) {
+    width: 100%;
+    gap: 40px;
+    margin: 0px;
+    margin-top: 40px;
+  }
 `;
 
 export const ContentDepartment = styled.div`
@@ -155,6 +193,13 @@ export const ContentDepartment = styled.div`
   @media (max-width: 1600px) {
     gap: 1vh;
   }
+  @media (max-width: 480px) {
+    gap: 20px;
+    margin-bottom: 0px;
+  }
+  /* @media (max-width: 480px) {
+    width: 100%;
+  } */
 `;
 
 export const ContentHeader = styled.div`
@@ -168,6 +213,16 @@ export const ContentHeader = styled.div`
 
   @media (min-width: 768px) {
     text-align: left;
+  }
+  @media (max-width: 480px) {
+    color: #cda870;
+
+    text-align: center;
+    font-family: Gwen-Trial;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 26px;
   }
 `;
 
@@ -184,6 +239,10 @@ export const ContentDescription = styled.div`
     font-size: 14px;
     font-weight: 400;
   }
+
+  /* @media (max-width: 480px) {
+    width: 100%;
+  } */
   /* img {
     width: 10%;
   } */
@@ -275,6 +334,14 @@ export const RegistrationButtonSmall = styled.button`
 
   @media (min-width: 768px) {
     display: none;
+  }
+  @media (max-width: 480px) {
+    display: flex;
+    padding: 16px 36px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
   }
 `;
 

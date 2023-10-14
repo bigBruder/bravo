@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import { useState } from "react";
 import Plus from "../../assets/icons/FAQ/plus.svg";
-import Cross from "../../assets/icons/FAQ/Cross.svg";
+// import Cross from "../../assets/icons/FAQ/Cross.svg";
 
 const QuestionAnswer = ({
   summary,
@@ -38,7 +38,7 @@ const QuestionAnswer = ({
           onClick={() => setIsOpen(!isOpen)}
           src={Plus}
           className={styles.cross + " " + (isOpen ? styles.cross__open : "")}
-          style={{ marginLeft: 3.5, marginRight: 3.5 }}
+          // style={{ marginLeft: 3.5, marginRight: 3.5 }}
           width={22}
           height={22}
         />
