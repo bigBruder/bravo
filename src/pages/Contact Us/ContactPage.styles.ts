@@ -3,10 +3,24 @@ import BackgroundImage from "./../../assets/images/Contact Us/BackgroundImage.pn
 export const Wrapper = styled.div`
   display: flex;
   background-image: url("${BackgroundImage}");
-  background-size: cover;
+  background-size: 130%;
   background-repeat: no-repeat;
 
-  background-position: center;
+  background-position: left 70%;
+  @media (max-aspect-ratio: 1634/1254) {
+    background-size: cover;
+  }
+  @media (max-width: 1000px) {
+    background-size: 300%;
+    background-position: 20% bottom;
+  }
+  @media (max-width: 768px) {
+    background-size: cover;
+    background-position: 40% 30%;
+  }
+  @media (max-width: 480px) {
+    background-position: 30% 60%;
+  }
 `;
 
 export const Container = styled.div`
@@ -108,8 +122,8 @@ export const AdressContainer = styled.div`
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12.5px);
-  
-  
+
+
 
   gap: 15px;
   @media (max-width: 768px) {

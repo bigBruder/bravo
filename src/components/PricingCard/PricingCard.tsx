@@ -5,18 +5,19 @@ import cn from "classnames";
 interface Props {
   image: string;
   isFocused: boolean;
+  isNearby?: boolean;
 }
 
-const PricingCard: FC<Props> = ({ image, isFocused }) => {
+const PricingCard: FC<Props> = ({ image, isFocused, isNearby = false }) => {
+  const showContents = isFocused || isNearby;
   return (
     <>
       <img src={image} className={styles.card} />
       <div
-        className={`${styles.card__blur} ${
-          isFocused && styles["card__blur--active"]
-        }`}
+        className={`${styles.card__blur} ${showContents && styles["card__blur--active"]
+          }`}
       />
-      {isFocused ? (
+      {showContents ? (
         <div className={styles.card__content}>
           <p className={styles.card__title}>CAD Design</p>
           <div className={styles.card__center}>
@@ -42,9 +43,8 @@ interface PropsLine {
 
 const SeparatorLine: FC<PropsLine> = ({ inverseAnim }) => (
   <div
-    className={`${styles.container_line_wrapper} ${
-      inverseAnim && styles["container_line_wrapper--inverse-animation"]
-    }`}
+    className={`${styles.container_line_wrapper} ${inverseAnim && styles["container_line_wrapper--inverse-animation"]
+      }`}
   >
     <div className={styles.container_line} />
     <div

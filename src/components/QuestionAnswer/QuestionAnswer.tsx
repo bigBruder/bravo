@@ -31,16 +31,17 @@ const QuestionAnswer = ({
   return (
     <div style={{ color: "var(--faq-textContent)" }} className={styles.details}>
       <div className={styles.details__inner}>
-        {isOpen ? (
-          <img src={Cross} className={styles.cross} width={22} height={22} />
-        ) : (
-          <img
-            src={Plus}
-            style={{ marginLeft: 3.5, marginRight: 3.5 }}
-            width={15}
-            height={15}
-          />
-        )}
+        {/* <img src={Cross} className={styles.cross + " " + (
+            isOpen ? (styles.cross__open) : ""
+          )} width={33} height={33} /> */}
+        <img
+          onClick={() => setIsOpen(!isOpen)}
+          src={Plus}
+          className={styles.cross + " " + (isOpen ? styles.cross__open : "")}
+          style={{ marginLeft: 3.5, marginRight: 3.5 }}
+          width={22}
+          height={22}
+        />
 
         <p className={styles.summary} onClick={() => setIsOpen(!isOpen)}>
           {summary}
