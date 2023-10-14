@@ -33,7 +33,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
     stretch: 0,
     depth: 320,
     modifier: 1,
-    slideShadows: true,
+    slideShadows: false,
   });
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         stretch: 0,
         depth: 320,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: false,
       });
     } else if (screenSize.width > 1678) {
       setSwiperParams({
@@ -65,7 +65,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: false,
       });
     } else if (screenSize.width > 1399) {
       setSwiperParams({
@@ -74,7 +74,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         stretch: 0,
         depth: 50,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: false,
       });
     } else if (screenSize.width > 768) {
       setSwiperParams({
@@ -147,6 +147,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             {SLIDES.map((slide) => (
               <SwiperSlide className={styles.card} key={slide}>
                 <PricingCard
+                  isNearby={Math.abs(slide - activeSlideIndex) < 2}
                   isFocused={slide === activeSlideIndex}
                   image={Card1}
                 />

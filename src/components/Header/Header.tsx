@@ -15,7 +15,7 @@ const Header = () => {
           src={UserBrown}
           alt='Sign In'
         />
-        Sign In
+        Sign&nbsp;In
       </Styled.Button>
     </Styled.Wrapper>
   );

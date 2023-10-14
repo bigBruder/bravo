@@ -94,10 +94,14 @@ export const RegisterContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  min-width: 430px;
   max-width: 30%;
+  @media (max-width: 1600px) {
+    min-width: 270px;
+  }
   @media (max-width: 1200px) {
-    max-width: none;
+    min-width: 0%;
+    max-width: 100%;
     align-items: center;
   }
   @media (max-width: 768px) {
@@ -232,7 +236,7 @@ export const RegisterButton = styled.button`
 
 export const NavigationContainerWrapper = styled.div`
   max-width: 90vh;
-  min-height: min(40vh, 50vw);
+  aspect-ratio: 847/546;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -253,7 +257,7 @@ export const NavigationContainer = styled.div`
 
   position: relative;
   width: 50vw;
-  right: -200px;
+  right: -100px;
   @media (max-width: 1200px) {
     right: 0;
   }

@@ -34,22 +34,25 @@
   display: none;
 }
 
+
 .cross {
-  rotate: -45deg;
-
-  animation-name: AnimationCross;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-@keyframes AnimationCross {
-  from {
-    rotate: -45deg;
-  }
-  to {
-    rotate: 2deg;
+  rotate: 0deg;
+  filter: grayscale(0%);
+  transition: filter 1s ease-out, rotate 1s ease-out;
+  &__open {
+    filter: grayscale(100%);
+    rotate: 45deg;
   }
 }
+
+// @keyframes AnimationCross {
+//   from {
+//     rotate: -45deg;
+//   }
+//   to {
+//     rotate: 2deg;
+//   }
+// }
 
 @keyframes AnimationText {
   from {

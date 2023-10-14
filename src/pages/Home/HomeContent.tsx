@@ -93,7 +93,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
         >
           <DarkUserIcon src={DarkUser} />
           <LightUserIcon src={LightUser} />
-          Start Your Journey
+          Start&nbsp;Your&nbsp;Journey
           <Styled.FreeMark>
             <img
               src={ItsFree}
@@ -103,7 +103,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => (
         </Styled.SignUpButton>
         <Styled.DemoButton onClick={() => open("https://bravocreations.com")}>
           <img src={OctagonIcon} />
-          Find out more
+          Find&nbsp;out&nbsp;more
         </Styled.DemoButton>
       </Styled.ButtonContainer>
     </Styled.PageContent>
