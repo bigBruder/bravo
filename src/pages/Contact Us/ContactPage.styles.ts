@@ -129,8 +129,9 @@ export const AdressContainer = styled.div`
   align-items: center;
   padding: 3vh 2vw;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12.5px);
+  /* background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12.5px); */
+  background: rgba(40, 40, 40, 1);
 
   gap: 15px;
 
