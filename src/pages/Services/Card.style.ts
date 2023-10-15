@@ -65,6 +65,7 @@ export const GroupCardBottom = styled.div`
   & img {
     width: 100%;
     max-width: 180px;
+
     /* max-width: 250px; */
     aspect-ratio: 1/1;
     @media (min-width: 1600px) {

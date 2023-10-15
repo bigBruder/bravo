@@ -64,11 +64,14 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
-
+    filter: brightness(60%);
     &--dark {
       animation-name: darkenImageAnimation;
       animation-duration: 0.5s;
       animation-fill-mode: both;
+    }
+    &--ask {
+      filter: brightness(100%);
     }
   }
 
@@ -138,10 +141,10 @@
 
 @keyframes darkenImageAnimation {
   from {
-    filter: brightness(100%);
+    filter: brightness(60%);
   }
   to {
-    filter: brightness(60%);
+    filter: brightness(25%);
   }
 }
 

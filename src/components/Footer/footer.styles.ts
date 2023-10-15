@@ -9,15 +9,15 @@ export const Wrapper = styled.div`
   z-index: 10000;
   height: 60px;
   width: 100%;
-  
+
   gap: 20px;
-  
+
   padding: 0 83px;
 
   @media (min-height: 800px) {
     height: 120px;
   }
-  
+
   @media (max-width: 1500px) and (max-height: 700px) {
     display: none;
   }
@@ -25,22 +25,25 @@ export const Wrapper = styled.div`
   @media (max-height: 800px) {
     display: none;
   }
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const Triangle = styled.div`
   position: relative;
-  transform: scale(var(--ggs,1));
+  transform: scale(var(--ggs, 1));
   width: 23px;
   height: 21px;
   border-left: 3px solid transparent;
-  border-bottom: 1px solid #9799AC;
+  border-bottom: 1px solid #9799ac;
 
   display: block;
   box-sizing: border-box;
   border-right: 1px solid transparent;
-  
+
   rotate: 180deg;
-  
+
   &:before {
     display: block;
     box-sizing: border-box;
@@ -50,10 +53,10 @@ export const Triangle = styled.div`
     position: absolute;
     width: 21px;
     height: 21px;
-    border-left: 1px solid #9799AC;
-    border-top: 1px solid #9799AC;
+    border-left: 1px solid #9799ac;
+    border-top: 1px solid #9799ac;
     border-bottom: 1px solid transparent;
-    transform: rotate(45deg) skew(10deg,10deg);
+    transform: rotate(45deg) skew(10deg, 10deg);
     left: -2px;
     bottom: -11px;
   }
@@ -69,7 +72,7 @@ export const Container = styled.div`
 export const Line = styled.div`
   flex-grow: 1;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.10);
+  background-color: rgba(0, 0, 0, 0.1);
 `;
 
 export const BallsContainer = styled.div`
@@ -80,6 +83,6 @@ export const BallsContainer = styled.div`
 export const Ball = styled.div`
   height: 4px;
   width: 4px;
-  background-color: rgba(0, 0, 0, 0.10);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 `;

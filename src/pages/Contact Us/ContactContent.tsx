@@ -24,7 +24,9 @@ export const ContactContent: React.FC<IContactContent> = () => {
               Business Service Needs with Exceptional Customer Service and
               Outstanding Craftsmanship.
             </Styled.AdressDescription>
-            <Styled.AdressButton onClick={() => open('https://my.bravocreations.com/registration')}>
+            <Styled.AdressButton
+              onClick={() => open("https://my.bravocreations.com/registration")}
+            >
               <Styled.ButtonOctagon src={Octagon} />
               Register Now
             </Styled.AdressButton>
@@ -37,6 +39,12 @@ export const ContactContent: React.FC<IContactContent> = () => {
       </Styled.AdressContainer>
       <Styled.LineMobile />
       <Form />
+      <Styled.LineForMobile />
+      <Styled.ContentFooter>
+        <Styled.YellowTextFooter>Terms & Conditions</Styled.YellowTextFooter>
+        <Styled.YellowTextFooter>Privacy Notice</Styled.YellowTextFooter>
+        <Styled.WhiteTextFooter>© Bravo Creations 2023</Styled.WhiteTextFooter>
+      </Styled.ContentFooter>
     </Styled.ContentWrapper>
   );
 };

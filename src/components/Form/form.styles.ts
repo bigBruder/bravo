@@ -19,6 +19,9 @@ export const SForm = styled.form`
   @media (max-width: 480px) {
     background: none;
     width: 240px;
+    gap: 20px;
+    padding: 5px 0px 0px 0px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -34,6 +37,15 @@ export const SFormTitle = styled.text`
     font-style: normal;
     font-weight: 650;
     line-height: 30px;
+  }
+  @media (max-width: 480px) {
+    text-align: center;
+    font-family: Gwen-Trial;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 650;
+    line-height: 30px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -72,6 +84,15 @@ export const SInput = styled.input`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+  @media (max-width: 480px) {
+    display: flex;
+    height: 50px;
+    padding: 0px 15px;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 `;
 
 export const SInputMultiple = styled.input`
@@ -108,6 +129,18 @@ export const SInputMultiple = styled.input`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+  @media (max-width: 480px) {
+    display: flex;
+    height: 130px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: rgba(251, 253, 252, 0.05);
+    backdrop-filter: blur(12.5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
 `;
 
 export const SButton = styled.button`
@@ -139,6 +172,16 @@ export const SButton = styled.button`
   }
   img {
     width: 10%;
+  }
+  @media (max-width: 480px) {
+    margin-top: 10px;
+    color: #272727;
+
+    font-family: Quicksand;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
   }
 `;
 

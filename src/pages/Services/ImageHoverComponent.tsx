@@ -32,6 +32,7 @@ const ImageHoverComponent: React.FC<Props> = ({
         src={image}
         className={cn(styles.container_image, {
           [styles["container_image--dark"]]: isTextShown && !askCard,
+          [styles["container_image--ask"]]: askCard,
         })}
       />
       <p

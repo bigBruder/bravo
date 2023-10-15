@@ -71,6 +71,10 @@ export const ScreenHeader = styled.div`
   @media (max-width: 1500px) {
     margin-top: 50px;
   }
+  @media (max-width: 480px) {
+    margin-top: 60px;
+  }
+
   /* @media (max-width: 1200px) {
     margin-top: 50px;
   } */
@@ -112,6 +116,11 @@ export const ContentWrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
+  @media (max-width: 480px) {
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+  }
 `;
 export const AdressContainer = styled.div`
   display: flex;
@@ -123,9 +132,8 @@ export const AdressContainer = styled.div`
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12.5px);
 
-
-
   gap: 15px;
+
   @media (max-width: 768px) {
     padding: 15px;
     width: 300px;
@@ -173,6 +181,9 @@ export const Adress = styled.div`
   @media (max-width: 1200px) {
     flex-direction: column;
     width: 230px;
+  }
+  @media (max-width: 480px) {
+    gap: 20px;
   }
   /* img {
     width: 11%;
@@ -369,4 +380,52 @@ export const LineMobile = styled.div`
   background: rgba(255, 255, 255, 0.1);
   margin-bottom: 30px;
   margin-top: 30px;
+  @media (max-width: 480px) {
+    margin: 40px 0px;
+  }
+`;
+
+export const LineForMobile = styled.div`
+  display: flex;
+  @media (min-width: 480px) {
+    display: none;
+  }
+  width: 240px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+  margin-top: 30px;
+`;
+
+export const ContentFooter = styled.div`
+  display: none;
+  @media (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+`;
+
+export const YellowTextFooter = styled.text`
+  @media (max-width: 480px) {
+    color: #cda870;
+
+    font-family: Quicksand;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+  }
+`;
+export const WhiteTextFooter = styled.text`
+  @media (max-width: 480px) {
+    color: #9799ac;
+
+    font-family: Quicksand;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+  }
 `;
