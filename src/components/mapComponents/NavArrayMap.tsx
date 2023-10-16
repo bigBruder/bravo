@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom';
 import { FC } from "react";
 import * as Styled from "./NavArrayMap.styles";
 
@@ -13,11 +12,16 @@ interface ComponentProps {
 }
 
 export const NavArrayMap: FC<ComponentProps> = ({ item }) => {
+  const handleItemClick = () => {
+    //@ts-ignore
+    document?.getElementById(item.id).scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <Styled.navArrayItem>
-      {/* <Link to={item.path}> */}
+    <Styled.navArrayItem onClick={handleItemClick}>
       {item.text}
-      {/* </Link> */}
     </Styled.navArrayItem>
   );
 };
