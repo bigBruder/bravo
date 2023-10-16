@@ -1,8 +1,11 @@
 import * as Styled from "./header.styles";
 import logo from "../../assets/icons/logo.svg";
 import UserBrown from "../../assets/icons/UserBrown.svg";
+import {useDarkMode} from "../../hooks/useDarkMode.ts";
 
 const Header = () => {
+  const [theme, themeToggler, getTheme] = useDarkMode();
+
   return (
     <Styled.Wrapper>
       <div style={{ width: 153 }}>
@@ -14,7 +17,7 @@ const Header = () => {
           Where Craftsmanship and Quality Begin
         </Styled.Text>
         <Styled.TextOver>
-          Where Craftsmanship and Quality Begin
+          Made with Love
         </Styled.TextOver>
       </Styled.TextContainer>
       <Styled.Button onClick={() => open('https://my.bravocreations.com/login')}>

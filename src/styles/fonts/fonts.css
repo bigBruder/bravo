@@ -6,9 +6,9 @@
 }
 
 @font-face {
-    font-family: 'DearJoe';
-    src: local('DearJoe'),
-    url('../../assets/fonts/dearJoeFive.woff') format('woff'),
-    url('../../assets/fonts/dearJoeFive.woff2') format('woff2');
+    font-family: 'HandstaSignature';
+    src: local('HandstaSignature'),
+    url('../../assets/fonts/Handsta Signature.woff') format('woff'),
+    url('../../assets/fonts/Handsta Signature.woff2') format('woff2');
 }
 

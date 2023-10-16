@@ -41,19 +41,19 @@ export const TextContainer = styled.div`
 `;
 
 export const Text = styled.p`
-  font-family: DearJoe, sans-serif;
-  font-size: 46px;
+  font-family: HandstaSignature, sans-serif;
+  font-size: 96px;
   color: var(--text-header-over);
 `;
 
 export const TextOver = styled.p`
   position: absolute;
   top: 50%;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   width: 100%;
   text-align: center;
-  font-family: DearJoe, sans-serif;
-  font-size: 25px;
+  font-family: HandstaSignature, sans-serif;
+  font-size: 90px;
   color: var(--text-header);
   z-index: 100;
 `;
