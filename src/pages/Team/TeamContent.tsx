@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -23,7 +23,46 @@ import Card from "./Card/Card.tsx";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import Description from "../../components/Description/Description.tsx";
 
-interface IProps {}
+interface IProps { }
+
+const TEAM = [
+  {
+    avatar: Avatar1,
+    titleImage: Name2,
+    description:
+      "We offer Rush or date specific\n" +
+      "service to get your order done\n" +
+      "at the time you need it.",
+    role: "Jewelry Artist",
+  },
+  {
+    avatar: Avatar2,
+    titleImage: Name2,
+    description:
+      "We offer Rush or date specific\n" +
+      "service to get your order done\n" +
+      "at the time you need it.",
+    role: "Jewelry Artist",
+  },
+  {
+    avatar: Avatar3,
+    titleImage: Name3,
+    description:
+      "We offer Rush or date specific\n" +
+      "service to get your order done\n" +
+      "at the time you need it.",
+    role: "Jewelry Artist",
+  },
+  {
+    avatar: Avatar4,
+    titleImage: Name4,
+    description:
+      "We offer Rush or date specific\n" +
+      "service to get your order done\n" +
+      "at the time you need it.",
+    role: "Jewelry Artist",
+  },
+]
 
 const TeamContent: React.FunctionComponent<IProps> = () => {
   // @ts-ignore
@@ -74,74 +113,27 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
 
         <div className={styles.container_center}>
           <Swiper
+            loop={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false
+            }}
             spaceBetween={50}
             slidesPerView={getItemsPerPage}
-            modules={[Navigation]}
+            modules={[Autoplay, Navigation]}
             className={styles.slider}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
           >
-            <SwiperSlide>
-              <Card
-                avatar={Avatar1}
-                titleImage={Name2}
-                description={
-                  "We offer Rush or date specific\n" +
-                  "service to get your order done\n" +
-                  "at the time you need it."
-                }
-                role={"Jewelry Artist"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                avatar={Avatar2}
-                titleImage={Name2}
-                description={
-                  "We offer Rush or date specific\n" +
-                  "service to get your order done\n" +
-                  "at the time you need it."
-                }
-                role={"Jewelry Artist"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                avatar={Avatar3}
-                titleImage={Name3}
-                description={
-                  "We offer Rush or date specific\n" +
-                  "service to get your order done\n" +
-                  "at the time you need it."
-                }
-                role={"Jewelry Artist"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                avatar={Avatar4}
-                titleImage={Name4}
-                description={
-                  "We offer Rush or date specific\n" +
-                  "service to get your order done\n" +
-                  "at the time you need it."
-                }
-                role={"Jewelry Artist"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                avatar={Avatar2}
-                titleImage={Name4}
-                description={
-                  "We offer Rush or date specific\n" +
-                  "service to get your order done\n" +
-                  "at the time you need it."
-                }
-                role={"Jewelry Artist"}
-              />
-            </SwiperSlide>
+            {[ // We need to get double amount of items in order to make loop work
+              ...TEAM,
+              ...TEAM
+            ].map(x => (
+              <SwiperSlide>
+                <Card {...x} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 
@@ -171,11 +163,11 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
         descriptionText={
           screenSize.width >= 1500
             ? "Distance is no obstacle; we bring the best experience right to your" +
-              "          fingertips, with\n seamless communication as our hallmark. Your" +
-              "          satisfaction knows no bounds"
+            "          fingertips, with\n seamless communication as our hallmark. Your" +
+            "          satisfaction knows no bounds"
             : "Distance is no obstacle; we bring the best experience right to your" +
-              "          fingertips, with seamless communication as our hallmark. Your" +
-              "          satisfaction knows no bounds"
+            "          fingertips, with seamless communication as our hallmark. Your" +
+            "          satisfaction knows no bounds"
         }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"

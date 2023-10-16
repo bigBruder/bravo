@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -21,7 +21,49 @@ import Card from "./Card/Card.tsx";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import Description from "../../components/Description/Description.tsx";
 
-interface IProps {}
+interface IProps { }
+
+const REVIEWS = [
+  {
+    avatar: Avatar1,
+    titleName: "Chloe Anderson",
+    description:
+      "The jewelry maker displays\n" +
+      "unsurpassed skill and creativity in\n" +
+      "creating unique jewelry that\n" +
+      "delightswith its beauty.",
+    role: "09 Jul 2023",
+  },
+  {
+    avatar: Avatar3,
+    titleName: "Elizabeth Smith",
+    description:
+      "The jeweler has high precision\n" +
+      "and attention to detail, which allows\n" +
+      "him to create exquisite and\n" +
+      "beautiful jewelry.",
+    role: "07 Jan 2023",
+  },
+  {
+    avatar: Avatar4,
+    titleName: "Elizabeth Smith",
+    description:
+      "The jeweler has high precision\n" +
+      "and attention to detail, which allows\n" +
+      "him to create exquisite and\n" +
+      "beautiful jewelry.",
+    role: "11 Apr 2023",
+  },
+  {
+    avatar: Avatar2,
+    titleName: "Chloe Anderson",
+    description:
+      "We offer Rush or date specific\n" +
+      "service to get your order done\n" +
+      "at the time you need it.",
+    role: "15 Apr 2023",
+  },
+]
 
 const ReviewsContent: React.FunctionComponent<IProps> = () => {
   const swiperRef = useRef<any>();
@@ -70,6 +112,11 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
 
         <div className={styles.container_center}>
           <Swiper
+            loop
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false
+            }}
             spaceBetween={80}
             style={
               {
@@ -77,64 +124,20 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
               }
             }
             slidesPerView={getItemsPerPage}
-            modules={[Navigation]}
+            modules={[Autoplay, Navigation]}
             className={styles.slider}
             onBeforeInit={(swiper) => {
               swiperRef.current = swiper;
             }}
           >
-            <SwiperSlide>
-              <Card
-                avatar={Avatar1}
-                titleName={"Chloe Anderson"}
-                description={
-                  "The jewelry maker displays\n" +
-                  "unsurpassed skill and creativity in\n" +
-                  "creating unique jewelry that\n" +
-                  "delightswith its beauty."
-                }
-                role={"09 Jul 2023"}
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Card
-                avatar={Avatar3}
-                titleName={"Elizabeth Smith"}
-                description={
-                  "The jeweler has high precision\n" +
-                  "and attention to detail, which allows\n" +
-                  "him to create exquisite and\n" +
-                  "beautiful jewelry."
-                }
-                role={"07 Jan 2023"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                avatar={Avatar4}
-                titleName={"Elizabeth Smith"}
-                description={
-                  "The jeweler has high precision\n" +
-                  "and attention to detail, which allows\n" +
-                  "him to create exquisite and\n" +
-                  "beautiful jewelry."
-                }
-                role={"11 Apr 2023"}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card
-                avatar={Avatar2}
-                titleName={"Chloe Anderson"}
-                description={
-                  "We offer Rush or date specific\n" +
-                  "service to get your order done\n" +
-                  "at the time you need it."
-                }
-                role={"15 Apr 2023"}
-              />
-            </SwiperSlide>
+            {[
+              ...REVIEWS,
+              ...REVIEWS,
+            ].map(x => (
+              <SwiperSlide>
+                <Card {...x} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 
@@ -160,11 +163,11 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
         descriptionText={
           screenSize.width >= 1600
             ? "Transparency is our cornerstone. Starting prices offer a clear" +
-              "          beginning for your \n jewelry journey. For precise quotes, submit a" +
-              "          request on our portal."
+            "          beginning for your \n jewelry journey. For precise quotes, submit a" +
+            "          request on our portal."
             : "Transparency is our cornerstone. Starting prices offer a clear" +
-              "          beginning for your jewelry journey. For precise quotes, submit a" +
-              "          request on our portal."
+            "          beginning for your jewelry journey. For precise quotes, submit a" +
+            "          request on our portal."
         }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"
