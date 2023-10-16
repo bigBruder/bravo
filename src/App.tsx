@@ -17,28 +17,7 @@ const App: React.FunctionComponent<IAppProps> = () => {
   // const [theme] = useDarkMode();
   // console.log("app", theme);
   // const themeMode = theme === "light" ? lightTheme : darkTheme;
-  const [isFooterShown, setIsFooterShown] = useState(true);
 
-  useEffect(() => {
-    let timer: number | null = null;
-
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (isFooterShown) {
-          setIsFooterShown(false);
-        }
-
-        if (timer !== null) {
-          clearTimeout(timer);
-        }
-        timer = setTimeout(function () {
-          setIsFooterShown(true);
-        }, 150);
-      },
-      true
-    );
-  }, []);
 
   return (
     <>
@@ -46,7 +25,6 @@ const App: React.FunctionComponent<IAppProps> = () => {
       <Toggle theme={theme} toggleTheme={themeToggler} />
       <Header />
       <AnimatedRoutes />
-      {isFooterShown ? <Footer /> : null}
     </>
   );
 };

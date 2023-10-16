@@ -15,7 +15,8 @@ import React, { useEffect, useState } from "react";
 import { useRef } from "react";
 
 import * as Styled from "./AnimatedRoutes.styles";
-interface AnimatedRoutesProps {}
+import Footer from "../Footer/Footer";
+interface AnimatedRoutesProps { }
 
 export interface AnimatedPageProps {
   animationActive?: boolean;
@@ -50,78 +51,82 @@ const navArray = [
 const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
   const [activeItem, setActiveItem] = useState(0);
   const { ref, top } = useScrollBarPositions();
-  const windowHeight = useRef(window.innerHeight); // Define windowHeight using useRef
+  // const windowHeight = useRef(window.innerHeight); // Define windowHeight using useRef
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [isFooterShown, setIsFooterShown] = useState(true);
 
   useEffect(() => {
-    // Oto tozhe norm varik
-    //
-    const step = Number((top / windowHeight.current).toFixed(0));
+    setWindowHeight(window.innerHeight)
+  }, [window.innerHeight])
+
+  useEffect(() => {
+    const step = Number((top / windowHeight).toFixed(0));
     if (step !== activeItem) {
       setActiveItem(step);
     }
-    // const scrollableHeight = ref?.current?.scrollHeight ?? 0;
-    // const scrollPosition = top / scrollableHeight;
-    // const numberOfItems = itemArray.length;
-    // const activeItem = Math.min(
-    //   Math.floor(scrollPosition * numberOfItems),
-    //   numberOfItems - 1
-    // );
-    // setActiveItem(activeItem);
   }, [top]);
-  // const container = document.querySelector(".scroll-container");
-  // const items = document.querySelectorAll(".scroll-item");
 
-  // container.addEventListener("wheel", (event) => {
-  //   event.preventDefault();
-  //   const delta = event.deltaY;
+  useEffect(() => {
+    let timer: number | null = null;
 
-  //   container.scrollBy({
-  //     top: delta,
-  //     behavior: "smooth",
-  //   });
-  // });
+    const handleScroll = () => {
+      if (isFooterShown) {
+        setIsFooterShown(false);
+      }
+
+      if (timer !== null) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(function () {
+        setIsFooterShown(true);
+      }, 150);
+    };
+
+    window.addEventListener(
+      "scroll",
+      handleScroll,
+      true
+    );
+    return () => {
+      window.removeEventListener(
+        "scroll",
+        handleScroll,
+        true
+      );
+    }
+  }, [activeItem]);
+
+  const lastPage = activeItem === navArray.length - 1;
+  const showFooter = !lastPage && isFooterShown;
+
   return (
-    // <AnimatePresence>
-    //   <Routes location={location} key={location.pathname}>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/services" element={<Services />} />
-    //     <Route path="/portal" element={<Portal />} />
-    //     <Route path="/team" element={<Team />} />
-    //     <Route path="/trophies" element={<Trophies />} />
-    //     <Route path="/pricing" element={<Pricing />} />
-    //     <Route path="/workflow" element={<Workflow />} />
-    //     <Route path="/reviews" element={<Reviews />} />
-    //     <Route path="/faq" element={<FAQ />} />
-    //     <Route path="/contact-us" element={<ContactPage />} />
-    //   </Routes>
-    // </AnimatePresence>
-    //@ts-ignore
-    <Styled.Wrapper ref={ref} activeItem={activeItem}>
-      {/* style={{
-        scrollSnapType: "y proximity",
-        overflowY: "scroll",
-        overflowX: "hidden",
-        height: "100vh",
-      }} */}
-      <Navbar
-        navArray={navArray}
-        activeItem={activeItem}
-        setActiveItem={setActiveItem}
-      />
-      {itemArray.map((Component, index) => {
-        return (
-          <Styled.ChildrenComponent
-            //@ts-ignore
-            activeItem={activeItem}
-            //@ts-ignore
-            parentPosition={top}
-            id={navArray[index].id}
-          >
-            <Component animationActive={index === activeItem} />
-          </Styled.ChildrenComponent>
-        );
-      })}
-    </Styled.Wrapper>
+
+    <>
+      {/* @ts-ignore */}
+      <Styled.Wrapper ref={ref} activeItem={activeItem}>
+
+        <Navbar
+          navArray={navArray}
+          activeItem={activeItem}
+          setActiveItem={setActiveItem}
+        />
+        {itemArray.map((Component, index) => {
+          return (
+            <Styled.ChildrenComponent
+              key={index}
+              //@ts-ignore
+              activeItem={activeItem}
+              //@ts-ignore
+              parentPosition={top}
+              id={navArray[index].id}
+            >
+              <Component animationActive={index === activeItem} />
+            </Styled.ChildrenComponent>
+          );
+        })}
+      </Styled.Wrapper>
+      {showFooter ? <Footer /> : null}
+    </>
   );
 };
 export default AnimatedRoutes;

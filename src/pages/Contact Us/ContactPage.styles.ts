@@ -3,23 +3,29 @@ import BackgroundImage from "./../../assets/images/Contact Us/BackgroundImage.pn
 export const Wrapper = styled.div`
   display: flex;
   background-image: url("${BackgroundImage}");
-  background-size: 130%;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // I need transition that will be very fast in the beginning and then slowly moving to the end
+  transition: background-size 2s cubic-bezier(0.4, 0, 0.2, 1) 0s, background-position 2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  &.set_point {
+    background-size: 130%;
 
-  background-position: left 70%;
-  @media (max-aspect-ratio: 1634/1254) {
-    background-size: cover;
-  }
-  @media (max-width: 1000px) {
-    background-size: 300%;
-    background-position: 20% bottom;
-  }
-  @media (max-width: 768px) {
-    background-size: cover;
-    background-position: 40% 30%;
-  }
-  @media (max-width: 480px) {
-    background-position: 30% 60%;
+    background-position: left 70%;
+    @media (max-aspect-ratio: 1634/1254) {
+      background-size: cover;
+    }
+    @media (max-width: 1000px) {
+      background-size: 300%;
+      background-position: 20% bottom;
+    }
+    @media (max-width: 768px) {
+      background-size: cover;
+      background-position: 40% 30%;
+    }
+    @media (max-width: 480px) {
+      background-position: 30% 60%;
+    }
   }
 `;
 
@@ -429,4 +435,82 @@ export const WhiteTextFooter = styled.text`
     font-weight: 500;
     line-height: 18px;
   }
+`;
+
+export const FooterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 83px 49.5px;
+  @media (max-width: 768px) {
+    gap: 0;
+  }
+`;
+
+export const FooterContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+`;
+
+export const FooterLeftContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 768px) {
+    gap: 0;
+  }
+`;
+
+export const FooterSeparator = styled.div`
+  display: block;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  flex: 1 0 0;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const FooterRightContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  @media (max-width: 768px) {
+    gap: 0;
+  }
+`;
+
+export const FooterDotsWrapper = styled.div`
+  display: flex;
+  gap: 5px;
+`;
+
+export const FooterText = styled.text`
+color: #9799AC;
+font-family: Quicksand;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px; /* 150% */
+
+`;
+
+export const FooterLink = styled.a`
+color: #CDA870;
+font-family: Quicksand;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 18px; /* 150% */
+
 `;

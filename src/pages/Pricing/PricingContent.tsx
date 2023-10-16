@@ -1,9 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import { useEffect, useRef, useState } from "react";
@@ -19,7 +19,7 @@ import PricingCard from "../../components/PricingCard/PricingCard.tsx";
 import Card1 from "../../assets/images/PricingCard/Card1.png";
 import Description from "../../components/Description/Description.tsx";
 
-interface IProps {}
+interface IProps { }
 
 const SLIDES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
@@ -122,18 +122,28 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             centeredSlides={true}
             updateOnWindowResize={true}
             slidesPerView={swiperParams.itemsPerPage}
             initialSlide={2}
+            loop={true}
             coverflowEffect={{
               ...swiperParams,
             }}
             observer={true}
             pagination={false}
             spaceBetween={150}
-            onSlideChange={(swiper) => setActiveSlideIndex(swiper.activeIndex)}
-            modules={[EffectCoverflow, Pagination]}
+            onSlideChange={(swiper) => {
+              console.log("Swiper active index: ", swiper.realIndex)
+              if (!Number.isNaN(swiper.realIndex)) {
+                setActiveSlideIndex(swiper.realIndex)
+              }
+            }}
+            modules={[Autoplay, EffectCoverflow, Pagination]}
             className={styles.mySwipes}
             onBeforeInit={(swiper) => {
               console.log("Swiper initialized!");
@@ -147,7 +157,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             {SLIDES.map((slide) => (
               <SwiperSlide className={styles.card} key={slide}>
                 <PricingCard
-                  isNearby={Math.abs(slide - activeSlideIndex) < 2}
+                  isNearby={Math.abs(getSwiperSlidesDistance(slide, activeSlideIndex, SLIDES.length)) < 2}
                   isFocused={slide === activeSlideIndex}
                   image={Card1}
                 />
@@ -184,11 +194,11 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
         descriptionText={
           screenSize.width >= 1500
             ? "Transparency is our cornerstone. Starting prices offer a clear" +
-              "          beginning for your \n jewelry journey. For precise quotes, submit a" +
-              "          request on our portal."
+            "          beginning for your \n jewelry journey. For precise quotes, submit a" +
+            "          request on our portal."
             : "Transparency is our cornerstone. Starting prices offer a clear" +
-              "          beginning for your jewelry journey. For precise quotes, submit a" +
-              "          request on our portal."
+            "          beginning for your jewelry journey. For precise quotes, submit a" +
+            "          request on our portal."
         }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"
@@ -199,5 +209,13 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
     </div>
   );
 };
+
+function getSwiperSlidesDistance(firstIndex: number, secondIndex: number, slidesCount: number) {
+  const slidesDistance = Math.abs(firstIndex - secondIndex);
+  if (slidesDistance > slidesCount / 2) {
+    return slidesCount - slidesDistance;
+  }
+  return slidesDistance;
+}
 
 export default PricingContent;
