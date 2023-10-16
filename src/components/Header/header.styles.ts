@@ -36,7 +36,27 @@ export const SmallLogo = styled.img`
   }
 `;
 
-export const Text = styled.img``;
+export const TextContainer = styled.div`
+  position: relative;
+`;
+
+export const Text = styled.p`
+  font-family: DearJoe, sans-serif;
+  font-size: 46px;
+  color: var(--text-header-over);
+`;
+
+export const TextOver = styled.p`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 100%;
+  text-align: center;
+  font-family: DearJoe, sans-serif;
+  font-size: 25px;
+  color: var(--text-header);
+  z-index: 100;
+`;
 
 export const Button = styled.button`
   display: flex;
@@ -46,7 +66,7 @@ export const Button = styled.button`
   padding: 13px 24px;
   gap: 10px;
   color: #cda870;
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;

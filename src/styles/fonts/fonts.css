@@ -4,3 +4,11 @@
     url('../../assets/fonts/Gwen-Trial-Regular.woff') format('woff'),
     url('../../assets/fonts/Gwen-Trial-Regular.woff2') format('woff2');
 }
+
+@font-face {
+    font-family: 'DearJoe';
+    src: local('DearJoe'),
+    url('../../assets/fonts/dearJoeFive.woff') format('woff'),
+    url('../../assets/fonts/dearJoeFive.woff2') format('woff2');
+}
+
