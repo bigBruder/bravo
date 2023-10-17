@@ -1,3 +1,4 @@
+// @ts-nocheck
 import RedStar from "../../assets/icons/Home/RedStar.svg";
 // export default HomeContent;
 
@@ -41,7 +42,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => {
   const { data, loading, error } = useContentful(HomeContentText);
 
   if (loading) {
-    return "Loading";
+    return "";
   }
   if (error) {
     console.log("error", error);

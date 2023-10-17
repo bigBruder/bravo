@@ -1,3 +1,4 @@
+//@ts-nocheck
 import * as Styled from "./Trophies.styles";
 import Description from "../../components/Description/Description";
 // import oneTopImage from "./../../assets/images/1.png";
@@ -9,19 +10,22 @@ import Description from "../../components/Description/Description";
 // import sixTopImage from "./../../assets/images/6.png";
 // import sixBottomImage from "./../../assets/images/6.6.png";
 
-import FirstIconLight from "../../assets/icons/Trophies/FirstLightIcon.png";
-import SecondIconLight from "../../assets/icons/Trophies/SecondLightIcon.png";
-import ThirdIconLight from "../../assets/icons/Trophies/ThirdIconLight.png";
-import FourthIconLight from "../../assets/icons/Trophies/FourthIconLight.png";
-import FirstIconDark from "../../assets/icons/Trophies/FirstDarkIcon.png";
-import SecondIconDark from "../../assets/icons/Trophies/SecondDarkIcon.png";
-import ThirdIconDark from "../../assets/icons/Trophies/ThirdIconDark.png";
-import FourthIconDark from "../../assets/icons/Trophies/FourthIconDark.png";
+// import FirstIconLight from "../../assets/icons/Trophies/FirstLightIcon.png";
+// import SecondIconLight from "../../assets/icons/Trophies/SecondLightIcon.png";
+// import ThirdIconLight from "../../assets/icons/Trophies/ThirdIconLight.png";
+// import FourthIconLight from "../../assets/icons/Trophies/FourthIconLight.png";
+// import FirstIconDark from "../../assets/icons/Trophies/FirstDarkIcon.png";
+// import SecondIconDark from "../../assets/icons/Trophies/SecondDarkIcon.png";
+// import ThirdIconDark from "../../assets/icons/Trophies/ThirdIconDark.png";
+// import FourthIconDark from "../../assets/icons/Trophies/FourthIconDark.png";
+import useContentful from "../../hooks/useContentful";
+import { TrophiesContentId } from "../../constants.ts";
 interface ITrophiesContent {}
 
 const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
   const parentBackgroundColor = "black";
-
+  const { data, error } = useContentful(TrophiesContentId);
+  console.log("data",data)
   return (
     <Styled.ContentWrapper>
       <div
@@ -32,11 +36,10 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
         }}
       >
         <Styled.DescriptionHeader>
-          Our <Styled.WhiteText>Trophies</Styled.WhiteText>
+          {data?.title} <Styled.WhiteText>{data?.titleYellow }</Styled.WhiteText>
         </Styled.DescriptionHeader>
         <Styled.DescriptionText lang="en">
-          Unlocking Speed and Precision: Please note, our turnaround times are
-          based on averages and may vary depending on job complexity.
+        {data?.titleDescription}
         </Styled.DescriptionText>
       </div>
       <Styled.ContentPage>
@@ -52,59 +55,54 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
           </Styled.Number> */}
 
           <Styled.Number>
-            <Styled.OneIconLight src={FirstIconLight}></Styled.OneIconLight>
-            <Styled.OneIconDark src={FirstIconDark}></Styled.OneIconDark>
+            <Styled.OneIconLight src={data?.iconMultiple[0].fields.file.url}></Styled.OneIconLight>
+            <Styled.OneIconDark src={data?.iconMultiple[1].fields.file.url}></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>hours</Styled.Hours>
-          <Styled.Header>Message Response Time</Styled.Header>
+          <Styled.Hours>{data?.hours}</Styled.Hours>
+          <Styled.Header>{data?.titleIcon[0]}</Styled.Header>
           <Styled.Text>
-            RWe offer Rush or date specific service to get your order done at
-            the time you need it.
+            {data?.textIcon[0]}
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.OneIconLight src={SecondIconLight}></Styled.OneIconLight>
-            <Styled.OneIconDark src={SecondIconDark}></Styled.OneIconDark>
+            <Styled.OneIconLight src={data?.iconMultiple[3].fields.file.url}></Styled.OneIconLight>
+            <Styled.OneIconDark src={data?.iconMultiple[2].fields.file.url}></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>hours</Styled.Hours>
+          <Styled.Hours>{data?.hours}</Styled.Hours>
 
-          <Styled.Header>EST Prod. Time</Styled.Header>
+          <Styled.Header>{data?.titleIcon[1]}</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+          {data?.textIcon[0]}
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.OneIconLight src={ThirdIconLight}></Styled.OneIconLight>
-            <Styled.OneIconDark src={ThirdIconDark}></Styled.OneIconDark>
+            <Styled.OneIconLight src={data?.iconMultiple[4].fields.file.url}></Styled.OneIconLight>
+            <Styled.OneIconDark src={data?.iconMultiple[5].fields.file.url}></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>hours</Styled.Hours>
+          <Styled.Hours>{data?.hours}</Styled.Hours>
 
-          <Styled.Header>CAD Prod. Time</Styled.Header>
+          <Styled.Header>{data?.titleIcon[2]}</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+          {data?.textIcon[0]}
           </Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.OneIconLight src={FourthIconLight}></Styled.OneIconLight>
-            <Styled.OneIconDark src={FourthIconDark}></Styled.OneIconDark>
+            <Styled.OneIconLight src={data?.iconMultiple[6].fields.file.url}></Styled.OneIconLight>
+            <Styled.OneIconDark src={data?.iconMultiple[7].fields.file.url}></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>hours</Styled.Hours>
-          <Styled.Header>Prod. Time after approval</Styled.Header>
+          <Styled.Hours>{data?.hours}</Styled.Hours>
+          <Styled.Header>{data?.titleIcon[3]}</Styled.Header>
           <Styled.Text>
-            We offer Rush or date specific service to get your order done at the
-            time you need it.
+          {data?.textIcon[0]}
           </Styled.Text>
         </Styled.ContentDepartment>
       </Styled.ContentPage>
       <Description
         descriptionText={
-          "We offer Rush or date specific service to get \n" +
-          "your order done at the time you need it."
+          data?.quoteText
         }
         parentBackgroundColor={parentBackgroundColor}
       />

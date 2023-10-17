@@ -1,10 +1,12 @@
+//@ts-nocheck
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
 import "swiper/css";
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./Revievs.module.scss";
-
+import useContentful from "../../hooks/useContentful.ts";
+import { ReviewContentId } from "../../constants.ts";
 import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
 import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
 
@@ -66,6 +68,16 @@ const REVIEWS = [
 ]
 
 const ReviewsContent: React.FunctionComponent<IProps> = () => {
+  const { data,  error } = useContentful(ReviewContentId);
+
+ 
+  if (error) {
+    console.log("error", error);
+    return null;
+  }
+  if (data) {
+    console.log("data", data);
+  }
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
@@ -95,10 +107,9 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <p className={styles.container_title}>Reviews</p>
+        <p className={styles.container_title}>{data?.title}</p>
         <p className={styles.container_text}>
-          Celebrate Our Success Stories: Uncover the Insights and Experiences
-          Shared by Our Delighted and Loyal Clients
+        {data?.titleDescription}
         </p>
       </div>
 
@@ -161,13 +172,14 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
 
       <Description
         descriptionText={
-          screenSize.width >= 1600
-            ? "Transparency is our cornerstone. Starting prices offer a clear" +
-            "          beginning for your \n jewelry journey. For precise quotes, submit a" +
-            "          request on our portal."
-            : "Transparency is our cornerstone. Starting prices offer a clear" +
-            "          beginning for your jewelry journey. For precise quotes, submit a" +
-            "          request on our portal."
+          // screenSize.width >= 1600
+          //   ? "Transparency is our cornerstone. Starting prices offer a clear" +
+          //   "          beginning for your \n jewelry journey. For precise quotes, submit a" +
+          //   "          request on our portal."
+          //   : "Transparency is our cornerstone. Starting prices offer a clear" +
+          //   "          beginning for your jewelry journey. For precise quotes, submit a" +
+          //   "          request on our portal."
+          data?.quoteText
         }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"

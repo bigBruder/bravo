@@ -1,13 +1,17 @@
+
+//@ts-nocheck
 import * as Styled from "./Workflow.styles";
 import Description from "../../components/Description/Description";
 import ArrowIcons from "../../assets/icons/workflow-arrow.png";
 import MobileIcon from "../../assets/images/Workflow/MobileWorkflowIcon.png";
 import ArrowIconsLight from "../../assets/icons/workflow-icons-light.png";
-
+import { WorkflowContentId } from "../../constants";
+import useContentful from "../../hooks/useContentful";
 interface IWorkflowContent {}
 
 const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
   const parentBackgroundColor = "black";
+  const { data} = useContentful(WorkflowContentId);
   return (
     <Styled.ContentWrapper>
       <div
@@ -20,12 +24,10 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
       >
         <Styled.DescriptionHeader>
           {" "}
-          <Styled.WhiteText>We Make it</Styled.WhiteText> Extremely Easy
+          <Styled.WhiteText>{data?.title}</Styled.WhiteText> {data?.titleYellow}
         </Styled.DescriptionHeader>
         <Styled.DescriptionText lang="en">
-          With our innovative portal and app, we've redefined the process of
-          submission, tracking, and communication. Join us, and experience the
-          future of seamless jewelry service.
+        {data?.titleDescription}
         </Styled.DescriptionText>
       </div>
       <Styled.ContentPage>
@@ -82,7 +84,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
 
       <Description
         descriptionText={
-          "Stop the constant back-and-forth emails, phone calls, and uncertainty about your\n job's progress. It's time for a change. Join us and experience a streamlined \nprocess that puts you in control of your jewelry orders."
+          data?.titleDescription
         }
         parentBackgroundColor={parentBackgroundColor}
       />

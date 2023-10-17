@@ -1,10 +1,12 @@
+//@ts-nocheck
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper/modules";
-
+import { PricingContentId } from "../../constants.ts";
+import useContentful from "../../hooks/useContentful.ts";
 import "swiper/css";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Pricing.module.scss";
@@ -24,6 +26,7 @@ interface IProps {}
 const SLIDES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 const PricingContent: React.FunctionComponent<IProps> = () => {
+  const { data } = useContentful(PricingContentId);
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
   const [activeSlideIndex, setActiveSlideIndex] = useState(2);
@@ -100,12 +103,8 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <p className={styles.container_title}>Pricing</p>
-        <p className={styles.container_text}>
-          Our transparent pricing reflects a starting point for basic services,
-          ensuring clarity and transparency in meeting your jewelry service
-          needs.
-        </p>
+        <p className={styles.container_title}>{data?.title}</p>
+        <p className={styles.container_text}>{data?.description}</p>
       </div>
 
       <div className={styles.container_wrapper}>
@@ -200,13 +199,14 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
       </div> */}
       <Description
         descriptionText={
-          screenSize.width >= 1500
-            ? "Transparency is our cornerstone. Starting prices offer a clear" +
-              "          beginning for your \n jewelry journey. For precise quotes, submit a" +
-              "          request on our portal."
-            : "Transparency is our cornerstone. Starting prices offer a clear" +
-              "          beginning for your jewelry journey. For precise quotes, submit a" +
-              "          request on our portal."
+          // screenSize.width >= 1500
+          //   ? "Transparency is our cornerstone. Starting prices offer a clear" +
+          //     "          beginning for your \n jewelry journey. For precise quotes, submit a" +
+          //     "          request on our portal."
+          //   : "Transparency is our cornerstone. Starting prices offer a clear" +
+          //     "          beginning for your jewelry journey. For precise quotes, submit a" +
+          //     "          request on our portal."
+          data?.quotes
         }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"

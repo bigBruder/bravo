@@ -74,3 +74,11 @@ export const navArray = [
 
 export const HomeContentText = "18FI7Q4IYCz0LSbpDtMMVv";
 export const ServiceContent = "6XWBmBt6aZmX48fe6wVrmL";
+export const ServiceTitle = "45OCiG28Ya1JjgaiKeIW5P";
+export const PortalContentId = "3jJSaQe2Xt8OIbYc8vWEU7";
+export const TeamContentId = "2Q9tfFMnW7QzTvfr91HqVX";
+export const TrophiesContentId = "UTYIDH6LNIqdLm0HilxSR";
+export const FAQContentId = "1tmOIQL61NAnxZxJoWEsIL";
+export const PricingContentId = "N25R7JR7nHXchBFetHMmi";
+export const WorkflowContentId = "2lFvbCagD0POaHTm45soUy";
+export const ReviewContentId = "6koNkpIjp3pLEWafV5n2gV";

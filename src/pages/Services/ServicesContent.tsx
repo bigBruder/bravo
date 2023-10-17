@@ -1,9 +1,13 @@
+//@ts-nocheck
 import * as Styled from "./Services.styles";
+import useContentful from "../../hooks/useContentful";
+import { ServiceTitle } from "../../constants";
 import Card from "./Card";
 
 interface IServiceContent {}
 
 const ServiceContent: React.FunctionComponent<IServiceContent> = () => {
+  const { data } = useContentful(ServiceTitle);
   return (
     <Styled.ContentWrapper>
       <div
@@ -14,10 +18,11 @@ const ServiceContent: React.FunctionComponent<IServiceContent> = () => {
           gap: 12,
         }}
       >
-        <Styled.DescriptionHeader>Our Services</Styled.DescriptionHeader>
+        <Styled.DescriptionHeader>{data?.title}</Styled.DescriptionHeader>
         <Styled.DescriptionText>
-          Discover the full spectrum of our services at Bravo Creations<br/>
-          and experience the essence of jewelry craftsmanship
+          {data?.descriptionTitle}
+          <br />
+          {data?.descriptionTitleHalf}
         </Styled.DescriptionText>
       </div>
       <Styled.ContentPage>

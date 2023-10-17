@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 
@@ -5,7 +6,7 @@ import "swiper/css";
 import { useEffect, useMemo, useRef, useState } from "react";
 import styles from "./Team.module.scss";
 
-import Title from "./../../assets/icons/TeamTitle.svg";
+// import Title from "./../../assets/icons/TeamTitle.svg";
 import ArrowLeft from "./../../assets/icons/ArrowLeftPricing.svg";
 import ArrowRight from "./../../assets/icons/ArrowRightPricing.svg";
 
@@ -17,11 +18,12 @@ import Name3 from "../../assets/images/HumanCard/Name3.svg";
 import Avatar3 from "../../assets/images/HumanCard/Human3.svg";
 import Name4 from "../../assets/images/HumanCard/Name4.svg";
 import Avatar4 from "../../assets/images/HumanCard/Human3.svg";
-
+import { TeamContentId } from "../../constants.ts";
 // import Quotes from "../../assets/icons/Quotes.svg";
 import Card from "./Card/Card.tsx";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import Description from "../../components/Description/Description.tsx";
+import useContentful from "../../hooks/useContentful";
 
 interface IProps { }
 
@@ -66,6 +68,16 @@ const TEAM = [
 
 const TeamContent: React.FunctionComponent<IProps> = () => {
   // @ts-ignore
+
+  const { data,  error } = useContentful(TeamContentId);
+  
+  if (error) {
+    console.log("error", error);
+    return null;
+  }
+  if (data) {
+    console.log("data", data);
+  }
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
@@ -95,11 +107,9 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
   return (
     <div id={"section-team"} className={styles.container}>
       <div className={styles.container_header}>
-        <img src={Title} className={styles.container_title} />
+        <img src={data?.titleIcon.fields.file.url} className={styles.container_title} />
         <p className={styles.container_text}>
-          Our team is a vibrant tapestry of talent, passion, and creativity.
-          We're not just jewelers; we're visionaries who turn dreams into
-          breathtaking reality.
+          {data?.title}
         </p>
       </div>
 
@@ -161,13 +171,14 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
       </div> */}
       <Description
         descriptionText={
-          screenSize.width >= 1500
-            ? "Distance is no obstacle; we bring the best experience right to your" +
-            "          fingertips, with\n seamless communication as our hallmark. Your" +
-            "          satisfaction knows no bounds"
-            : "Distance is no obstacle; we bring the best experience right to your" +
-            "          fingertips, with seamless communication as our hallmark. Your" +
-            "          satisfaction knows no bounds"
+          // screenSize.width >= 1500
+          //   ? "Distance is no obstacle; we bring the best experience right to your" +
+          //   "          fingertips, with\n seamless communication as our hallmark. Your" +
+          //   "          satisfaction knows no bounds"
+          //   : "Distance is no obstacle; we bring the best experience right to your" +
+          //   "          fingertips, with seamless communication as our hallmark. Your" +
+          //   "          satisfaction knows no bounds"
+          data?.quotesText
         }
         parentBackgroundColor="white"
         backgroundColor="var(--quotes-staticLightBackgroundColor)"
