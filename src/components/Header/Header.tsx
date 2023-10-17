@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <Styled.Wrapper>
-      <div style={{ width: 153 }}>
+      <div style={{ width: 129 }}>
         <Styled.SmallLogo src={logo} />
       </div>
       {/*<Styled.Text src={text}></Styled.Text>*/}
