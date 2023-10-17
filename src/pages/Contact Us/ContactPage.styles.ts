@@ -93,7 +93,7 @@ export const ContentWrapper = styled.div`
   /* gap: 200px; */
   align-items: end;
   gap: 27%;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   margin-left: 70px;
   /* margin-left: */
   @media (max-width: 1600px) {
@@ -113,8 +113,9 @@ export const ContentWrapper = styled.div`
     gap: 7%;
   }
   @media (max-width: 1200px) {
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
     justify-content: center;
+    gap: 40%;
     margin-left: 100px;
   }
   @media (max-width: 768px) {

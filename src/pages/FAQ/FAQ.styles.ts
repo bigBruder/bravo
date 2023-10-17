@@ -53,6 +53,8 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  width: 100%;
+  height: 100%;
   /* padding: 0 6vw; */
   /* padding: 0 0 10px 20px; */
   padding: 0 0 10px 20px;
@@ -72,7 +74,7 @@ export const ContentWrapper = styled.div`
     /* margin-left: -80px; */
     padding: 110px 0 0px 0px;
   }
-  @media (min-width: 1600px) {
+  @media (min-width: 1600px) and (min-height: 800px) {
     margin-left: -80px;
     /* margin-left: -80px; */
     padding: 110px 0 0px 0px;
@@ -163,6 +165,7 @@ export const ContentPage = styled.div`
   /* padding: 2% 5% 2% 5%; */
 
   gap: 10px;
+  height: 100%;
   margin-left: 175px;
   margin-top: 7vh;
   margin-bottom: 100px;
