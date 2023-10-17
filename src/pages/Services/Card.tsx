@@ -11,20 +11,35 @@ import Photography from "./../../assets/images/Services/9.png";
 // import Ask from "./../../assets/icons/Ask.png";
 import AskResponse from "../../assets/icons/AskResponce.png";
 import ImageHoverComponent from "./ImageHoverComponent.tsx";
-
+import useContentful from "../../hooks/useContentful";
+import { ServiceContent } from "../../constants.ts";
 interface IServiceCard {}
 
 const Card: React.FunctionComponent<IServiceCard> = () => {
+  const { data, loading, error } = useContentful(ServiceContent);
+
+  if (loading) {
+    return "Loading";
+  }
+  if (error) {
+    console.log("error", error);
+    return null;
+  }
+  if (data) {
+    console.log("data", data);
+  }
   return (
     <div>
       <Styled.Wrapper>
         <Styled.GroupCardTop>
           <ImageHoverComponent
-            image={DesignCard}
-            title={"Custom design"}
-            text={
-              "Upload your designs via our portal, and our skilled team will bring them to life"
-            }
+            image={data?.cards[0].fields.file.url}
+            title={data?.cards[0].fields.title}
+            text={data?.cards[0].fields.description}
+            // title={"Custom design"}
+            // text={
+            //   "Upload your designs via our portal, and our skilled team will bring them to life"
+            // }
           />
           <ImageHoverComponent
             image={StoneSetting}

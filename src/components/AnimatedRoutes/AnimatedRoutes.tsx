@@ -12,11 +12,11 @@ import Navbar from "../Navbar/Navbar";
 import useScrollBarPositions from "../../hooks/useScrollTop";
 
 import React, { useEffect, useState } from "react";
-import { useRef } from "react";
+// import { useRef } from "react";
 
 import * as Styled from "./AnimatedRoutes.styles";
 import Footer from "../Footer/Footer";
-interface AnimatedRoutesProps { }
+interface AnimatedRoutesProps {}
 
 export interface AnimatedPageProps {
   animationActive?: boolean;
@@ -56,8 +56,8 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
   const [isFooterShown, setIsFooterShown] = useState(true);
 
   useEffect(() => {
-    setWindowHeight(window.innerHeight)
-  }, [window.innerHeight])
+    setWindowHeight(window.innerHeight);
+  }, [window.innerHeight]);
 
   useEffect(() => {
     const step = Number((top / windowHeight).toFixed(0));
@@ -77,34 +77,25 @@ const AnimatedRoutes: React.FunctionComponent<AnimatedRoutesProps> = () => {
       if (timer !== null) {
         clearTimeout(timer);
       }
+      //@ts-ignore
       timer = setTimeout(function () {
         setIsFooterShown(true);
       }, 150);
     };
 
-    window.addEventListener(
-      "scroll",
-      handleScroll,
-      true
-    );
+    window.addEventListener("scroll", handleScroll, true);
     return () => {
-      window.removeEventListener(
-        "scroll",
-        handleScroll,
-        true
-      );
-    }
+      window.removeEventListener("scroll", handleScroll, true);
+    };
   }, [activeItem]);
 
   const lastPage = activeItem === navArray.length - 1;
   const showFooter = !lastPage && isFooterShown;
 
   return (
-
     <>
       {/* @ts-ignore */}
       <Styled.Wrapper ref={ref} activeItem={activeItem}>
-
         <Navbar
           navArray={navArray}
           activeItem={activeItem}

@@ -71,3 +71,6 @@ export const navArray = [
   { text: "FAQ", path: "/faq", id: "section-faq" },
   { text: "Contact Us", path: "/contact-us", id: "section-contact" },
 ];
+
+export const HomeContentText = "18FI7Q4IYCz0LSbpDtMMVv";
+export const ServiceContent = "6XWBmBt6aZmX48fe6wVrmL";
