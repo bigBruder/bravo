@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import BackgroundImage from "./../../assets/images/Contact Us/BackgroundImage.png";
+
 export const Wrapper = styled.div`
   display: flex;
-  background-image: url("${BackgroundImage}");
+  background-image: var(--contact-us-background);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -43,11 +43,7 @@ export const Container = styled.div`
 
   /* padding: 30px 70px; */
   /* padding: 30px 70px 0px 0px; */
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+  background: var(--contact-us-fade);
 `;
 export const MainContent = styled.div`
   /* @media (min-width: 1500px) {
@@ -138,7 +134,8 @@ export const AdressContainer = styled.div`
   border-radius: 15px;
   /* background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12.5px); */
-  background: rgba(40, 40, 40, 1);
+  background: var(--contact-us-content);
+  backdrop-filter: blur(12.5px);
 
   gap: 15px;
 
@@ -203,7 +200,7 @@ export const AdressHeader = styled.div`
   gap: 7px;
   color: #cda870;
   text-align: center;
-  font-family: Gwen-Trial;
+  font-family: Gwen-Trial, sans-serif;
   font-size: 25px;
   font-style: normal;
   font-weight: 650;
@@ -216,7 +213,7 @@ export const AdressHeader = styled.div`
   }
 `;
 export const WhiteText = styled.div`
-  color: #fff;
+  color: var(--contact-us-content-title);
 `;
 
 export const AdressDescription = styled.text`
@@ -241,10 +238,9 @@ export const AdressButton = styled.button`
   gap: 10px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12.5px);
+  background: var(--contact-us-register-button);
   color: #cda870;
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -268,8 +264,8 @@ export const ButtonOctagon = styled.img`
   height: 18px;
 `;
 export const AdressText = styled.div`
-  color: #fff;
-  font-family: Quicksand;
+  color: var(--contact-us-content-text);
+  font-family: Quicksand, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -296,9 +292,9 @@ export const Line = styled.img`
 `;
 
 export const DescriptionHeader = styled.text`
-  color: #fff;
+  color: var(--contact-us-title);
   text-align: center;
-  font-family: Gwen-Trial;
+  font-family: Gwen-Trial, sans-serif;
   font-size: 50px;
   font-style: normal;
   font-weight: 650;

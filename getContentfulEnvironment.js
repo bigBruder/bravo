@@ -16,9 +16,7 @@ export default async function () {
     accessToken: "CFPAT-bFhH9oFdTVtp2RifGyS8NPbNmDjaaOZeJzL3ZPNEe18",
   });
 
-  const { VITE_SPACE_ID } = process.env;
-  
   // Use dynamic import to load the environment
-  const space = await import(`contentful.js?space_id=${VITE_SPACE_ID}`);
+  const space = await import(`contentful.js?space_id=5ergat68efwn`);
   return space.getEnvironment("master");
 }

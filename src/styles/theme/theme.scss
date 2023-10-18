@@ -74,6 +74,20 @@ body.light {
 
   --text-header: rgba(202, 150, 82);
   --text-header-over: rgba(151, 153, 172, 0.07);
+
+  --contact-us-background: url("./../../assets/images/Contact Us/BackgroundImageLight.png");
+  --contact-us-fade: none;
+  --contact-us-title: #164D59;
+  --contact-us-input-background: rgba(205, 168, 112, 0.1);
+  --contact-us-input-border: #FFFFFF;
+  --contact-us-field-background: #FFFFFF;
+  --contact-us-input-title-left: #164D59;
+  --contact-us-input-title-right: #CDA870;
+  --contact-us-content: rgba(205, 168, 112, 0.1);
+  --contact-us-content-title: rgba(22, 77, 89, 1);
+  --contact-us-register-button: rgba(205, 168, 112, 0.15);
+  --contact-us-content-text: rgba(22, 77, 89, 1);
+
 }
 
 body.dark {
@@ -142,4 +156,20 @@ body.dark {
 
   --text-header: rgba(202, 150, 82);
   --text-header-over: rgba(151, 153, 172, 0.05);
+
+  --contact-us-background: url("./../../assets/images/Contact Us/BackgroundImage.png");
+  --contact-us-fade: radial-gradient(
+                  50% 50% at 50% 50%,
+                  rgba(0, 0, 0, 0) 0%,
+                  rgba(0, 0, 0, 0.75) 100%);
+  --contact-us-title: #FFFFFF;
+  --contact-us-input-background: rgba(255, 255, 255, 0.1);
+  --contact-us-input-border: #9799ac;
+  --contact-us-field-background: rgba(251, 253, 252, 0.05);
+  --contact-us-input-title-left: #cda870;
+  --contact-us-input-title-right: #FFFFFF;
+  --contact-us-content: rgba(40, 40, 40, 1);
+  --contact-us-content-title: #FFFFFF;
+  --contact-us-register-button: rgba(255, 255, 255, 0.1);
+  --contact-us-content-text: #FFFFFF;
 }

@@ -9,7 +9,7 @@ export const SForm = styled.form`
   align-items: center;
   gap: 2vh;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--contact-us-input-background);
   backdrop-filter: blur(12.5px);
   @media (max-width: 768px) {
     padding: 15px;
@@ -26,8 +26,8 @@ export const SForm = styled.form`
 `;
 
 export const SFormTitle = styled.text`
-  color: #cda870;
-  font-family: Gwen-Trial;
+  color: var(--contact-us-input-title-left);
+  font-family: Gwen-Trial, sans-serif;
   font-size: 25px;
   font-style: normal;
   font-weight: 650;
@@ -58,9 +58,9 @@ export const SInput = styled.input`
   height: 60px;
   align-items: flex-start;
   gap: 20px;
-  border: 1px solid #9799ac;
+  border: 1px solid var(--contact-us-input-border);
   border-radius: 15px;
-  background: rgba(251, 253, 252, 0.05);
+  background: var(--contact-us-field-background);
   @media (max-width: 1200px) {
     width: 240px;
     height: 50px;
@@ -102,14 +102,14 @@ export const SInputMultiple = styled.input`
   height: 12vh;
   align-items: start;
   gap: 20px;
-  border: 1px solid #9799ac;
+  border: 1px solid var(--contact-us-input-border);
   @media (max-width: 1200px) {
     width: 240px;
     height: 130px;
   }
 
   border-radius: 15px;
-  background: rgba(251, 253, 252, 0.05);
+  background: var(--contact-us-field-background);
 
   &:hover {
     outline: none;
@@ -186,5 +186,5 @@ export const SButton = styled.button`
 `;
 
 export const WhiteText = styled.text`
-  color: #fff;
+  color: var(--contact-us-input-title-right);
 `;
