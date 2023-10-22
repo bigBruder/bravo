@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import BackgroundImage from "./../../assets/images/bc_logo.png";
+// import BackgroundImage from "./../../assets/images/bc_logo.png";
 /**
  * Breakpoints list
  * 1. 1440px
@@ -77,7 +77,7 @@ export const ContentWrapper = styled.div`
     text-align: center;
     margin-left: 0;
   }
-  
+
   @media (min-height: 800px) {
     padding: 30px 30px 0 100px;
   }
@@ -290,27 +290,24 @@ export const SmallLogo = styled.img`
   }
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.div<{ logo: string }>`
   display: flex;
 
   width: 50%;
-  
-  background-image: url("${BackgroundImage}");
+
+  background-image: url(${(props) => props.logo});
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  
+
   @media (min-width: 1101px) {
     height: 80vh;
   }
-  
-  
 `;
 export const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   bottom: 0px;
-  /* left: 50vw; */
   left: 44%;
   align-self: flex-end;
   justify-content: center;
@@ -325,7 +322,7 @@ export const ItemContainer = styled.div`
   @media (max-width: 1100px) {
     display: none;
   }
-  
+
   @media (min-height: 800px) {
     gap: 30px;
   }

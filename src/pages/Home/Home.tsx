@@ -1,15 +1,19 @@
+//@ts-nocheck
 import { useEffect, useState } from "react";
 import * as Styled from "./home.styles";
-import videoBg from "./../../assets/video/home_background.mp4";
+// import videoBg from "./../../assets/video/home_background.mp4";
 import React from "react";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
 import { maxMobileSize } from "../../constants";
 // import Footer from "../../components/Footer/FooterScrollDown";
 
+import { HomeBackground } from "../../constants";
+
 import HomeContent from "./HomeContent";
 import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoutes";
 
 import { HomeMobile } from "../../components/HomeMobile/HomeMobile";
+import useContentful from "../../hooks/useContentful";
 // import Header from "../../components/Header/Header.tsx";
 
 // import "animate.css/animate.min.css";
@@ -24,6 +28,16 @@ const Home: React.FunctionComponent<IHomePageProps> = ({ animationActive }) => {
       setPermanentAnimationState(true);
     }
   }, [animationActive]);
+  const { data, error } = useContentful(HomeBackground);
+
+  useEffect(() => {
+    if (error) {
+      console.log("errordfghjhgfdfghjhg", error);
+    }
+    if (data) {
+      console.log("data", data);
+    }
+  }, [data, error]);
 
   const isMobileHeader = useMobileWidth(maxMobileSize);
   return (
@@ -33,7 +47,12 @@ const Home: React.FunctionComponent<IHomePageProps> = ({ animationActive }) => {
       ) : (
         <>
           <Styled.Wrapper>
-            <video src={videoBg} autoPlay loop muted />
+            <video
+              src={data?.backgroundImages[0].fields.file.url}
+              autoPlay
+              loop
+              muted
+            />
             <Styled.Container>
               {/* <Footer /> */}
               <Styled.MainContent

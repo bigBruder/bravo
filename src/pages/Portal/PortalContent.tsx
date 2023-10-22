@@ -144,7 +144,7 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
         </Styled.MobileButton>
       </Styled.PortalContent>
       <Description
-        descriptionText={descriptionText}
+        descriptionText={data?.quoteText}
         parentBackgroundColor={parentBackgroundColor}
       />
     </Styled.PortalWrapper>

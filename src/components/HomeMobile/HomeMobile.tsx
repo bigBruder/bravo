@@ -1,3 +1,4 @@
+//@ts-nocheck
 import * as Styled from "./HomeMobile.styles";
 import { useEffect, useState } from "react";
 import videoBg from "../../assets/video/home_background.mp4";
@@ -10,8 +11,12 @@ import videoOctagon from "./../../assets/icons/video-octagon.svg";
 import { MenuMobile } from "../MenuMobile/MenuMobile";
 import yellowStars from "../../assets/icons/HomeMobile/yellow-stars.svg";
 import pinkStar from "../../assets/icons/HomeMobile/pink-star.svg";
+import useContentful from "../../hooks/useContentful";
+import { HomeMobileId } from "../../constants";
 
 export const HomeMobile = () => {
+  const { data } = useContentful(HomeMobileId);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuOpen = () => {
@@ -49,20 +54,18 @@ export const HomeMobile = () => {
           </Styled.Header>
           <Styled.WelcomeContainer>
             <Styled.WelcomeTitle>
-              Jewelry Service
+              {data?.title[0]}
               <br />
-              Shop{" "}
+              {data?.title[1]}{" "}
               <Styled.WelcomeTitleColored>
-                Like No Other
+                {data?.title[2]}
               </Styled.WelcomeTitleColored>
             </Styled.WelcomeTitle>
             <Styled.WelcomeText>
-              Experience the difference that sets us apart: We have redefined
-              exceptional customer service by exceeding your expectations.
+              {data?.descriptionText[0]}
               <br />
               <br />
-              Our team of expert jewelers, highly skilled craftsmen and
-              state-of-the-art technology ensure unmatched quality.
+              {data?.descriptionText[1]}
             </Styled.WelcomeText>
           </Styled.WelcomeContainer>
           <Styled.Actions>
@@ -73,14 +76,14 @@ export const HomeMobile = () => {
                 src={userOctagon}
                 alt="Start your journey icon"
               />
-              Start Your Journey
+              {data?.buttonStart}
             </Styled.Button>
             <Styled.ActionsText>It’s Free</Styled.ActionsText>
             <Styled.ButtonModified
               onClick={() => open("https://bravocreations.com")}
             >
               <Styled.ButtonIcon src={videoOctagon} alt="Our exprertise icon" />
-              Find Out More
+              {data?.buttonFind}
             </Styled.ButtonModified>
           </Styled.Actions>
         </>

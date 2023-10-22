@@ -1,23 +1,27 @@
+//@ts-nocheck
 import * as Styled from "./ReviewMobile";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { ReviewContentId } from "../../constants";
+import useContentful from "../../hooks/useContentful";
 import Card from "./Card/Card";
 import Vector from "../../assets/images/TeamMobile/Vector.svg";
-import Avatar1 from "../../assets/images/ReviewMobile/Avatar1.svg";
-import Avatar2 from "../../assets/images/ReviewMobile/Avatar2.svg";
-import Avatar3 from "../../assets/images/ReviewMobile/Avatar3.svg";
+// import Avatar1 from "../../assets/images/ReviewMobile/Avatar1.svg";
+// import Avatar2 from "../../assets/images/ReviewMobile/Avatar2.svg";
+// import Avatar3 from "../../assets/images/ReviewMobile/Avatar3.svg";
 
 import { WelcomeTitle, WelcomeText } from "./ReviewMobile";
 interface IReviewMobile {}
 
 const ReviewMobile: React.FC<IReviewMobile> = () => {
+  const { data } = useContentful(ReviewContentId);
+
   return (
     <Styled.Wrapper>
       <Styled.WelcomeContainer>
-        <WelcomeTitle>Reviews</WelcomeTitle>
-        <WelcomeText>Transparency & Streamline Process</WelcomeText>
+        <WelcomeTitle>{data?.title}</WelcomeTitle>
+        <WelcomeText>{data?.titleDescription}</WelcomeText>
       </Styled.WelcomeContainer>
       <Styled.SwiperContainer>
         <Swiper
@@ -31,7 +35,7 @@ const ReviewMobile: React.FC<IReviewMobile> = () => {
           //   swiperRef.current = swiper;
           // }}
         >
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <Card
               avatar={Avatar1}
               titleImage={"Chloe Anderson"}
@@ -90,7 +94,17 @@ const ReviewMobile: React.FC<IReviewMobile> = () => {
               }
               role={"07 Jan 2023"}
             />
-          </SwiperSlide>
+          </SwiperSlide> */}
+          {data?.card.map((item, index) => (
+            <SwiperSlide>
+              <Card
+                image={item.fields.file.url}
+                title={item.fields.title}
+                description={item.fields.description}
+                date={data?.cardDescription[index]}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </Styled.SwiperContainer>
 
@@ -100,10 +114,7 @@ const ReviewMobile: React.FC<IReviewMobile> = () => {
           <Styled.VectorIcons src={Vector} />
           <Styled.VectorIcons />
         </Styled.VectorRow>
-        <Styled.DescriptionText>
-          Bravo Creations began operations in 1980. The second generation of
-          jewelry artisans will handle your order
-        </Styled.DescriptionText>
+        <Styled.DescriptionText>{data?.quoteText}</Styled.DescriptionText>
       </Styled.DescriptionContainer>
     </Styled.Wrapper>
   );

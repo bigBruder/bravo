@@ -1,19 +1,20 @@
-import { ourServicesArray } from "../../constants";
+//@ts-nocheck
 import { OurServiceMap } from "../mapComponents/OurServiceMap";
 import * as Styled from "./OurServices.styles";
 import betweenLine from "../../assets/icons/between_line.svg";
+import { ServiceMobileId } from "../../constants";
+import useContentful from "../../hooks/useContentful";
 
 export const OurServices = () => {
+  const { data } = useContentful(ServiceMobileId);
+  console.log(data);
   return (
     <Styled.Services>
-      <Styled.Title>Our Services</Styled.Title>
-      <Styled.SectionDiscription>
-        Discover the full spectrum of our services at Bravo Creations and
-        experience the essence of jewelry craftsmanship
-      </Styled.SectionDiscription>
+      <Styled.Title>{data?.title}</Styled.Title>
+      <Styled.SectionDiscription>{data?.description}</Styled.SectionDiscription>
       <Styled.Section>
         <Styled.Article>
-          {ourServicesArray.map((service, index) => (
+          {data?.card.map((service, index) => (
             <OurServiceMap
               service={service}
               index={index}
@@ -25,16 +26,13 @@ export const OurServices = () => {
       <Styled.Section>
         <Styled.ExtraSection>
           <Styled.ExtraTitle>
-            Not Sure? <Styled.ExtraTitleColor>Ask Us!</Styled.ExtraTitleColor>
+            {data?.quotesTitle[0]}{" "}
+            <Styled.ExtraTitleColor>
+              {data?.quotesTitle[1]}
+            </Styled.ExtraTitleColor>
           </Styled.ExtraTitle>
           <Styled.Icon src={betweenLine} />
-          <Styled.ExtraDisc>
-            We offer Rush or date specific
-            <br />
-            service to get your order done at the
-            <br />
-            time you need it.
-          </Styled.ExtraDisc>
+          <Styled.ExtraDisc>{data?.quotesDesc}</Styled.ExtraDisc>
         </Styled.ExtraSection>
       </Styled.Section>
     </Styled.Services>

@@ -25,7 +25,7 @@ import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import Description from "../../components/Description/Description.tsx";
 import useContentful from "../../hooks/useContentful";
 
-interface IProps { }
+interface IProps {}
 
 const TEAM = [
   {
@@ -64,19 +64,19 @@ const TEAM = [
       "at the time you need it.",
     role: "Jewelry Artist",
   },
-]
+];
 
 const TeamContent: React.FunctionComponent<IProps> = () => {
   // @ts-ignore
 
-  const { data,  error } = useContentful(TeamContentId);
-  
+  const { data, error } = useContentful(TeamContentId);
+
   if (error) {
     console.log("error", error);
     return null;
   }
   if (data) {
-    console.log("data", data);
+    console.log("teamdata", data);
   }
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -107,10 +107,11 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
   return (
     <div id={"section-team"} className={styles.container}>
       <div className={styles.container_header}>
-        <img src={data?.titleIcon.fields.file.url} className={styles.container_title} />
-        <p className={styles.container_text}>
+        <p className={styles.container_title}>
           {data?.title}
+          <span className={styles.container_halfTitle}> {data?.titleHalf}</span>
         </p>
+        <p className={styles.container_text}>{data?.titleText}</p>
       </div>
 
       <div className={styles.container_wrapper}>
@@ -126,7 +127,7 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
             loop={true}
             autoplay={{
               delay: 5000,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             spaceBetween={50}
             slidesPerView={getItemsPerPage}
@@ -136,12 +137,19 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
               swiperRef.current = swiper;
             }}
           >
-            {[ // We need to get double amount of items in order to make loop work
+            {/* {[
+              // We need to get double amount of items in order to make loop work
               ...TEAM,
-              ...TEAM
-            ].map(x => (
+              ...TEAM,
+            ].map((x) => (
               <SwiperSlide>
                 <Card {...x} />
+              </SwiperSlide>
+            ))} */}
+
+            {data?.teamCard.map((x, index) => (
+              <SwiperSlide>
+                <Card x={x} y={data?.teamCardRole[index]} />
               </SwiperSlide>
             ))}
           </Swiper>

@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useEffect, useState } from "react";
 // import videoBg from "./../../assets/video/home_background.mp4";
 import WorkflowContent from "./WorkflowContent";
@@ -6,13 +7,15 @@ import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoute
 import { maxMobileSize } from "../../constants";
 import WorkflowMobile from "../../components/WorkflowMobile/WorkflowMobile.tsx";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
+import { BackgroundImageWorkflow } from "../../constants";
+import useContentful from "../../hooks/useContentful.ts";
 export interface WorkflowPageProps extends AnimatedPageProps {}
 
 const Workflow: React.FunctionComponent<WorkflowPageProps> = ({
   animationActive,
 }) => {
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
-
+  const { data } = useContentful(BackgroundImageWorkflow);
   useEffect(() => {
     if (animationActive) {
       setPermanentAnimationState(true);
@@ -24,7 +27,7 @@ const Workflow: React.FunctionComponent<WorkflowPageProps> = ({
       {isMobile ? (
         <WorkflowMobile />
       ) : (
-        <Styled.Wrapper>
+        <Styled.Wrapper backgroundImage={data?.image.fields.file.url}>
           {/* <video src={videoBg} autoPlay loop muted /> */}
           <Styled.Container>
             {/* <Styled.MainContent> */}

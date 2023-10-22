@@ -23,7 +23,7 @@ import Card from "./Card/Card.tsx";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import Description from "../../components/Description/Description.tsx";
 
-interface IProps { }
+interface IProps {}
 
 const REVIEWS = [
   {
@@ -65,12 +65,11 @@ const REVIEWS = [
       "at the time you need it.",
     role: "15 Apr 2023",
   },
-]
+];
 
 const ReviewsContent: React.FunctionComponent<IProps> = () => {
-  const { data,  error } = useContentful(ReviewContentId);
+  const { data, error } = useContentful(ReviewContentId);
 
- 
   if (error) {
     console.log("error", error);
     return null;
@@ -108,9 +107,7 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
     <div className={styles.container}>
       <div className={styles.container_header}>
         <p className={styles.container_title}>{data?.title}</p>
-        <p className={styles.container_text}>
-        {data?.titleDescription}
-        </p>
+        <p className={styles.container_text}>{data?.titleDescription}</p>
       </div>
 
       <div className={styles.container_wrapper}>
@@ -126,7 +123,7 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
             loop
             autoplay={{
               delay: 5000,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             spaceBetween={80}
             style={
@@ -141,14 +138,21 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
               swiperRef.current = swiper;
             }}
           >
-            {[
-              ...REVIEWS,
-              ...REVIEWS,
-            ].map(x => (
+            {data?.card.map((item, index) => (
+              <SwiperSlide>
+                <Card
+                  image={item.fields.file.url}
+                  title={item.fields.title}
+                  description={item.fields.description}
+                  date={data?.cardDescription[index]}
+                />
+              </SwiperSlide>
+            ))}
+            {/* {[...REVIEWS, ...REVIEWS].map((x) => (
               <SwiperSlide>
                 <Card {...x} />
               </SwiperSlide>
-            ))}
+            ))} */}
           </Swiper>
         </div>
 

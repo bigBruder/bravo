@@ -1,6 +1,8 @@
+//@ts-nocheck
 // import React from "react";
 import Button from "../../assets/icons/Contact/button.svg";
-
+import useContentful from "../../hooks/useContentful";
+import { FormId } from "../../constants";
 import {
   SForm,
   SFormTitle,
@@ -10,13 +12,15 @@ import {
   WhiteText,
 } from "./form.styles";
 const Form = () => {
+  const { data } = useContentful(FormId);
   const handleSubmit = (event: any) => {
     event.preventDefault();
   };
   return (
     <SForm onSubmit={handleSubmit}>
       <SFormTitle>
-        Still have <WhiteText> questions</WhiteText>?
+        {data?.title[0]} <WhiteText> {data?.title[1]}</WhiteText>
+        {data?.title[2]}
       </SFormTitle>
 
       <SInput placeholder={"Name"} />
@@ -24,7 +28,7 @@ const Form = () => {
       <SInputMultiple placeholder={"Your Question"} />
       <SButton>
         <img src={Button} />
-        Send Message
+        {data?.button}
       </SButton>
     </SForm>
   );

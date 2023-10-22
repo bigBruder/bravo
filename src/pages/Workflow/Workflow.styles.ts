@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import BackgroundImage from "./../../assets/images/Services.png";
+// import BackgroundImage from "./../../assets/images/Services.png";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ backgroundImage: string }>`
   display: flex;
   background-color: #111;
-  background-image: url("${BackgroundImage}");
+  background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom 0px right 0px;

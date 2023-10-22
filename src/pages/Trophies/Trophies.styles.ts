@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import BackgroundImage from "./../../assets/images/Services.png";
+// import BackgroundImage from "./../../assets/images/Services.png";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ backgroundImage: string }>`
   display: flex;
-  background-image: url("${BackgroundImage}");
+  background-image: url(${(props) => props.backgroundImage});
   background-size: cover;
 
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ export const ContentWrapper = styled.div`
   /* height: 10vh; */
   padding: 30px 70px 30px 80px;
   /* gap: 5%; */
-  @media (min-width: 1500px) and (min-height: 800px){
+  @media (min-width: 1500px) and (min-height: 800px) {
     gap: 5vh;
     padding: 130px 40px 113px 40px;
   }

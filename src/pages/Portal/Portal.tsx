@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { useEffect, useState } from "react";
 import PortalContent from "./PortalContent"; // import videoBg from "./../../assets/video/home_background.mp4";
 import * as Styled from "./portal.styles";
@@ -5,11 +6,15 @@ import { AnimatedPageProps } from "../../components/AnimatedRoutes/AnimatedRoute
 import { maxMobileSize } from "../../constants";
 import { useMobileWidth } from "../../hooks/useMobileWidth";
 import PortalMobile from "../../components/PortalMobile/PortalMobile.tsx";
+import { BackgroundImage } from "../../constants";
+import useContentful from "../../hooks/useContentful.ts";
 export interface PortalPageProps extends AnimatedPageProps {}
 
 const Portal: React.FunctionComponent<PortalPageProps> = ({
   animationActive,
 }) => {
+  const { data } = useContentful(BackgroundImage);
+  console.log(data);
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
 
   useEffect(() => {
@@ -25,7 +30,7 @@ const Portal: React.FunctionComponent<PortalPageProps> = ({
         <PortalMobile />
       ) : (
         <>
-          <Styled.Wrapper>
+          <Styled.Wrapper backgroundImage={data?.image.fields.file.url}>
             <Styled.Container>
               <PortalContent
                 data-animation

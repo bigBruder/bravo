@@ -7,7 +7,9 @@ export const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   // I need transition that will be very fast in the beginning and then slowly moving to the end
-  transition: background-size 2s cubic-bezier(0.4, 0, 0.2, 1) 0s, background-position 2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition:
+    background-size 2s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    background-position 2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   &.set_point {
     background-size: 130%;
 
@@ -444,6 +446,9 @@ export const FooterWrapper = styled.div`
   @media (max-width: 768px) {
     gap: 0;
   }
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -493,21 +498,19 @@ export const FooterDotsWrapper = styled.div`
 `;
 
 export const FooterText = styled.text`
-color: #9799AC;
-font-family: Quicksand;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 18px; /* 150% */
-
+  color: #9799ac;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 150% */
 `;
 
 export const FooterLink = styled.a`
-color: #CDA870;
-font-family: Quicksand;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 18px; /* 150% */
-
+  color: #cda870;
+  font-family: Quicksand;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 150% */
 `;

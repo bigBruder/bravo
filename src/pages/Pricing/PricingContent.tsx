@@ -18,7 +18,7 @@ import styles from "./Pricing.module.scss";
 import { getCurrentDimension } from "../../utils/getScreenDimensions.ts";
 import PricingCard from "../../components/PricingCard/PricingCard.tsx";
 
-import Card1 from "../../assets/images/PricingCard/Card1.png";
+// import Card1 from "../../assets/images/PricingCard/Card1.png";
 import Description from "../../components/Description/Description.tsx";
 
 interface IProps {}
@@ -26,7 +26,8 @@ interface IProps {}
 const SLIDES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 const PricingContent: React.FunctionComponent<IProps> = () => {
-  const { data } = useContentful(PricingContentId);
+  const { data, error } = useContentful(PricingContentId);
+  console.log(data);
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
   const [activeSlideIndex, setActiveSlideIndex] = useState(2);
@@ -153,7 +154,27 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
               swiperRef.current = swiper;
             }}
           >
-            {SLIDES.map((slide) => (
+            {data?.card.map((slide, index) => (
+              <SwiperSlide className={styles.card} key={index}>
+                <PricingCard
+                  isNearby={
+                    Math.abs(
+                      getSwiperSlidesDistance(
+                        index,
+                        activeSlideIndex,
+                        data?.card.length
+                      )
+                    ) < 2
+                  }
+                  isFocused={slide === activeSlideIndex}
+                  image={slide?.fields.file.url}
+                  title={slide?.fields.title}
+                  description={slide?.fields.description}
+                  pricing={data?.cardPricing[index]}
+                />
+              </SwiperSlide>
+            ))}
+            {/* {SLIDES.map((slide) => (
               <SwiperSlide className={styles.card} key={slide}>
                 <PricingCard
                   isNearby={
@@ -169,7 +190,7 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
                   image={Card1}
                 />
               </SwiperSlide>
-            ))}
+            ))} */}
           </Swiper>
         </div>
 

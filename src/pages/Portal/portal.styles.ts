@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import BackgroundImage from "../../assets/images/Portal/Services.png";
-export const Wrapper = styled.div`
+// import BackgroundImage from "../../assets/images/Portal/Services.png";
+export const Wrapper = styled.div<{ backgroundImage: string }>`
   display: flex;
 
   display: flex;
-  background-image: url("${BackgroundImage}");
+  background-image: url(${(props) => props.backgroundImage});
 
   background-size: cover;
 
@@ -29,7 +29,7 @@ export const Container = styled.div`
     height: 100%;
   }
 
-  @media (min-width: 1500px) and (min-height: 800px)  {
+  @media (min-width: 1500px) and (min-height: 800px) {
     padding: 30px 70px 113px;
   }
 `;
@@ -78,7 +78,7 @@ export const PortalContent = styled.div`
     flex-direction: column;
     margin-left: 0%;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     height: 75vh;
   }
   @media (max-width: 768px) {

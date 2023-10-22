@@ -94,7 +94,7 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => {
         </Styled.ButtonContainer>
       </Styled.PageContent>
 
-      <Styled.LogoContainer>
+      <Styled.LogoContainer logo={data?.logo.fields.file.url}>
         {/*<Styled.SmallLogo src={LogoIcon} />*/}
         <Styled.ItemContainer>
           <NavigateIconContainer>

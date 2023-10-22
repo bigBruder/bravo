@@ -1,28 +1,22 @@
+//@ts-nocheck
 import styles from "./Card.module.scss";
 import { FC } from "react";
 
 interface IProps {
-  titleImage: string;
-  role?: string;
-  description?: string;
-  avatar: string;
+  x?: object;
+  y?: object;
 }
 
-const Card: FC<IProps> = ({
-  titleImage,
-  description = "",
-  role = "",
-  avatar,
-}) => {
+const Card: FC<IProps> = ({ x, y }) => {
   return (
     <div className={styles.card}>
-      <img src={avatar} className={styles.card_image} />
+      <img src={x?.fields?.file.url} className={styles.card_image} />
       <div className={styles.card_person}>
-        <p className={styles.card_name}>{titleImage}</p>
+        <p className={styles.card_name}>{x?.fields.title}</p>
 
-        <p className={styles.card_role}>{role}</p>
+        <p className={styles.card_role}>{y}</p>
       </div>
-      <p className={styles.card_description}>{description}</p>
+      <p className={styles.card_description}>{x?.fields.description}</p>
     </div>
   );
 };

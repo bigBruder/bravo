@@ -1,4 +1,3 @@
-
 //@ts-nocheck
 import * as Styled from "./Workflow.styles";
 import Description from "../../components/Description/Description";
@@ -11,7 +10,8 @@ interface IWorkflowContent {}
 
 const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
   const parentBackgroundColor = "black";
-  const { data} = useContentful(WorkflowContentId);
+  const { data } = useContentful(WorkflowContentId);
+  console.log(data);
   return (
     <Styled.ContentWrapper>
       <div
@@ -27,53 +27,44 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
           <Styled.WhiteText>{data?.title}</Styled.WhiteText> {data?.titleYellow}
         </Styled.DescriptionHeader>
         <Styled.DescriptionText lang="en">
-        {data?.titleDescription}
+          {data?.titleDescription}
         </Styled.DescriptionText>
       </div>
       <Styled.ContentPage>
         <Styled.ContentDepartment>
           <Styled.NumberBackground>
-            1<Styled.Number>1</Styled.Number>
+            {data?.numbersBackground[0]}
+            <Styled.Number>{data?.numbers[0]}</Styled.Number>
           </Styled.NumberBackground>
-          <Styled.Header>Request Service</Styled.Header>
-          <Styled.Text>
-            Kickstart your journey by submitting your jewelry service request.
-            Our user-friendly portal ensures a seamless start.
-          </Styled.Text>
+          <Styled.Header>{data?.numbersTitles[0]}</Styled.Header>
+          <Styled.Text>{data?.contentDescription[0]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.Image src={MobileIcon} />
         <Styled.ContentDepartment>
           <Styled.NumberBackground>
-            2<Styled.Number>2</Styled.Number>
+            {data?.numbersBackground[1]}
+            <Styled.Number>{data?.numbers[1]}</Styled.Number>
           </Styled.NumberBackground>
-          <Styled.Header>Estimate and Approval</Styled.Header>
-          <Styled.Text>
-            We'll promptly provide you with an estimate. Once you're satisfied,
-            give the green light to proceed.
-          </Styled.Text>
+          <Styled.Header>{data?.numbersTitles[1]}</Styled.Header>
+          <Styled.Text>{data?.contentDescription[1]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.Image src={MobileIcon} />
         <Styled.ContentDepartment>
           <Styled.NumberBackground>
-            3<Styled.Number>3</Styled.Number>
+            {data?.numbersBackground[2]}
+            <Styled.Number>{data?.numbers[2]}</Styled.Number>
           </Styled.NumberBackground>
-          <Styled.Header>CAD Design and Approval</Styled.Header>
-          <Styled.Text>
-            Receive CAD & Approve it: Visualize your design with our detailed
-            CAD mockup. Approve it, and we'll initiate production
-          </Styled.Text>
+          <Styled.Header>{data?.numbersTitles[2]}</Styled.Header>
+          <Styled.Text>{data?.contentDescription[2]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.Image src={MobileIcon} />
         <Styled.ContentDepartment>
           <Styled.NumberBackground>
-            4<Styled.Number>4</Styled.Number>
+            {data?.numbersBackground[3]}
+            <Styled.Number>{data?.numbers[3]}</Styled.Number>
           </Styled.NumberBackground>
-          <Styled.Header>Receive Your jewelry</Styled.Header>
-          <Styled.Text>
-            Once production is complete, the jewelry piece undergoes meticulous
-            inspection and is then prepared for swift delivery, making its way
-            to your store.
-          </Styled.Text>
+          <Styled.Header>{data?.numbersTitles[3]}</Styled.Header>
+          <Styled.Text>{data?.contentDescription[3]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ArrowIcons src={ArrowIcons} />
         <Styled.LightArrowIcons src={ArrowIconsLight} />
@@ -83,9 +74,7 @@ const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
       {/* <img src={ArrowIcons} style={{ width: "75%", marginBottom: "4%" }} /> */}
 
       <Description
-        descriptionText={
-          data?.titleDescription
-        }
+        descriptionText={data?.titleDescription}
         parentBackgroundColor={parentBackgroundColor}
       />
     </Styled.ContentWrapper>

@@ -1,3 +1,4 @@
+//@ts-nocheck
 import * as Styled from "./WorkflowMobile";
 import {
   Wrapper,
@@ -18,77 +19,66 @@ import videoBg from "../../assets/video/home_background.mp4";
 // import Number72 from "../../assets/images/TrophiesMobile/Number-72.svg";
 import ArrowSvg from "../../assets/images/WorkflowMobile/ArrowDown.svg";
 import VectorIcon from "../../assets/images/PortalMobile/DescriptionVector.svg";
-import Number1 from "../../assets/images/WorkflowMobile/Number1.svg";
-import Number2 from "../../assets/images/WorkflowMobile/Number2.svg";
-import Number3 from "../../assets/images/WorkflowMobile/Number3.svg";
-import Number4 from "../../assets/images/WorkflowMobile/Number4.svg";
+// import Number1 from "../../assets/images/WorkflowMobile/Number1.svg";
+// import Number2 from "../../assets/images/WorkflowMobile/Number2.svg";
+// import Number3 from "../../assets/images/WorkflowMobile/Number3.svg";
+// import Number4 from "../../assets/images/WorkflowMobile/Number4.svg";
+import useContentful from "../../hooks/useContentful";
+import { WorkflowMobileId } from "../../constants";
 interface IWorkflowMobile {}
 
 const WorkflowMobile: React.FC<IWorkflowMobile> = () => {
+  const { data } = useContentful(WorkflowMobileId);
+  console.log(data);
   return (
     <Wrapper>
       <Styled.Video src={videoBg} autoPlay loop muted />
       <Styled.Star src={Star} />
       <Styled.WelcomeContainer>
         <WelcomeTitle>
-          We Make it <br />
-          <WelcomeTitleColored>Extremely Easy</WelcomeTitleColored>
+          {data?.title[0]} <br />
+          <WelcomeTitleColored>{data?.title[1]}</WelcomeTitleColored>
         </WelcomeTitle>
-        <WelcomeText>
-          Please understand this is based on average results. Real time depends
-          on complexity of jobs
-        </WelcomeText>
+        <WelcomeText>{data?.titleText}</WelcomeText>
       </Styled.WelcomeContainer>
       <ContentDepartment>
         <TimeDepartment>
-          <Number src={Number1} />
-          <Hours>Submit Job</Hours>
+          <Number src={data?.card[0].fields.file.url} />
+          <Hours>{data?.card[0].fields.title}</Hours>
         </TimeDepartment>
 
-        <TextContent>
-          We offer Rush or date specific service to get your order done at the
-          time you need it.
-        </TextContent>
+        <TextContent>{data?.card[0].fields.description}</TextContent>
 
         <Styled.ArrowImage>
           <Styled.ArrowContainer src={ArrowSvg} />
         </Styled.ArrowImage>
 
         <TimeDepartment>
-          <Number src={Number2} />
-          <Hours>Receive EST & Approve it</Hours>
+          <Number src={data?.card[1].fields.file.url} />
+          <Hours>{data?.card[1].fields.title}</Hours>
         </TimeDepartment>
 
-        <TextContent>
-          We offer Rush or date specific service to get your order done at the
-          time you need it.
-        </TextContent>
+        <TextContent>{data?.card[1].fields.description}</TextContent>
         <Styled.ArrowImage>
           <Styled.ArrowContainer src={ArrowSvg} />
         </Styled.ArrowImage>
 
         <TimeDepartment>
-          <Number src={Number3} />
-          <Hours>Receive Your Item</Hours>
+          <Number src={data?.card[2].fields.file.url} />
+          <Hours>{data?.card[2].fields.title}</Hours>
         </TimeDepartment>
 
-        <TextContent>
-          We offer Rush or date specific service to get your order done at the
-          time you need it.
-        </TextContent>
+        <TextContent>{data?.card[2].fields.description}</TextContent>
         <Styled.ArrowImage>
           <Styled.ArrowContainer src={ArrowSvg} />
         </Styled.ArrowImage>
 
         <TimeDepartment>
-          <Number src={Number4} />
-          <Hours>hours</Hours>
+          <Number src={data?.card[3].fields.file.url} />
+          <Hours>{data?.card[3].fields.title}</Hours>
         </TimeDepartment>
 
-        <TextContent>
-          We offer Rush or date specific service to get your order done at the
-          time you need it.
-        </TextContent>
+        <TextContent>{data?.card[3].fields.description}</TextContent>
         <Styled.ArrowImage>
           <Styled.ArrowContainer src={ArrowSvg} />
         </Styled.ArrowImage>
@@ -99,11 +89,7 @@ const WorkflowMobile: React.FC<IWorkflowMobile> = () => {
           <Styled.VectorIcons src={VectorIcon} />
           <Styled.VectorIcons />
         </Styled.VectorRow>
-        <Styled.DescriptionText>
-          First, jewelers create sketches and select suitable materials, then
-          jewelry making begins, which includes operations such as casting,
-          machining and polishing, gemstone inlay and final finishing.
-        </Styled.DescriptionText>
+        <Styled.DescriptionText>{data?.quote}</Styled.DescriptionText>
       </Styled.DescriptionContainer>
     </Wrapper>
   );

@@ -1,13 +1,23 @@
 import styles from "./PricingCard.module.scss";
 import { FC } from "react";
 import cn from "classnames";
-
 interface Props {
   image: string;
   isFocused: boolean;
+  isNearby?: boolean;
+  pricing?: string;
+  description?: string;
+  title?: string;
 }
 
-const PricingCardMobile: FC<Props> = ({ image, isFocused }) => {
+const PricingCardMobile: FC<Props> = ({
+  image,
+  isFocused,
+
+  pricing,
+  description,
+  title,
+}) => {
   return (
     <>
       <img src={image} className={styles.card} />
@@ -18,18 +28,15 @@ const PricingCardMobile: FC<Props> = ({ image, isFocused }) => {
       />
       {isFocused ? (
         <div className={styles.card__content}>
-          <p className={styles.card__title}>CAD Design</p>
+          <p className={styles.card__title}>{title}</p>
           <div className={styles.card__center}>
             <SeparatorLine inverseAnim />
-            <p className={styles.card__text}>
-              We offer Rush or date specific service to get your order done at
-              the time you need it.
-            </p>
+            <p className={styles.card__text}>{description}</p>
             <SeparatorLine />
           </div>
           <div className={styles.card__price}>
             <p className={styles["card__price__text"]}>Starting from:</p>
-            <p className={styles["card__price__price"]}>$60</p>
+            <p className={styles["card__price__price"]}>{pricing}</p>
           </div>
         </div>
       ) : null}

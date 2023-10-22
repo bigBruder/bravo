@@ -2,25 +2,29 @@ import styles from "./Card.module.scss";
 import { FC } from "react";
 
 interface IProps {
-  titleImage: string;
-  role?: string;
-  description?: string;
-  avatar: string;
+  image: string;
+  title: string;
+  description: string;
+  date: string;
 }
 
 const Card: FC<IProps> = ({
-  titleImage,
+  // titleImage,
+  // description = "",
+  // role = "",
+  // avatar,
+  image = "",
+  title = "",
   description = "",
-  role = "",
-  avatar,
+  date,
 }) => {
   return (
     <div className={styles.card}>
-      <img src={avatar} className={styles.card_image} />
+      <img src={image} className={styles.card_image} />
       <div className={styles.card_person}>
-        <p className={styles.card_name}>{titleImage}</p>
+        <p className={styles.card_name}>{title}</p>
 
-        <p className={styles.card_role}>{role}</p>
+        <p className={styles.card_role}>{date}</p>
       </div>
       <p className={styles.card_description}>{description}</p>
     </div>
