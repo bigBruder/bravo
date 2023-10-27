@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   &.set_point {
     background-size: 130%;
 
-    background-position: left 70%;
+    background-position: left var(--contact-us-background-position);
     @media (max-aspect-ratio: 1634/1254) {
       background-size: cover;
     }
@@ -70,7 +70,7 @@ export const ScreenHeader = styled.div`
   margin-top: 180px;
   gap: 12px;
   @media (max-width: 1700px) {
-    margin-top: 110px;
+    margin-top: 165px;
   }
   @media (max-width: 1500px) {
     margin-top: 50px;
@@ -86,12 +86,12 @@ export const ScreenHeader = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; 
   /* flex: 1; */
   /* gap: 200px; */
   align-items: end;
   gap: 27%;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
   margin-left: 70px;
   /* margin-left: */
   @media (max-width: 1600px) {
@@ -246,7 +246,7 @@ export const AdressButton = styled.button`
   font-family: Quicksand, sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 28px;
   @media (max-width: 1200px) {
     text-align: center;
@@ -341,7 +341,7 @@ export const ContactIconPhone = styled.img`
     margin-left: 0px;
   }
 `;
-export const ContactText = styled.text`
+export const ContactText = styled.a`
   color: #9799ac;
   font-family: Quicksand;
   font-size: 18px;

@@ -32,10 +32,7 @@ const Home: React.FunctionComponent<IHomePageProps> = ({ animationActive }) => {
 
   useEffect(() => {
     if (error) {
-      console.log("errordfghjhgfdfghjhg", error);
-    }
-    if (data) {
-      console.log("data", data);
+      console.log("error", error);
     }
   }, [data, error]);
 

@@ -203,10 +203,10 @@ export const RegisterButton = styled.button`
   padding: 20px 36px;
   gap: 12px;
   color: #272727;
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
 
   border-radius: 15px;
   /* background: #cda870; */

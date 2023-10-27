@@ -48,10 +48,6 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => {
     console.log("error", error);
     return null;
   }
-  if (data) {
-    console.log("data", data);
-  }
-
   return (
     <Styled.ContentWrapper>
       {/* <Styled.LogoWrapper> */}
@@ -59,7 +55,6 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => {
         <Styled.HomeStar src={RedStar} />
         <Styled.TextHeader>
           <Styled.TopText>
-            {/* {console.log("text", data?.title)} */}
             {/* @ts-ignore */}
             {data?.title}
             <Styled.TextStar src={Stars} />
@@ -121,10 +116,10 @@ const HomeContent: React.FunctionComponent<IHomeContent> = () => {
             </Styled.IconButton>
           </NavigateIconContainer>
           <QualityIconContainer>
-            <BestPrice src={data?.homeIcons[0].fields.file.url} />
-            <GuaranteeIcon src={data?.homeIcons[1].fields.file.url} />
-            <MadeInIcon src={data?.homeIcons[2].fields.file.url} />
-            <GuaranteedIcon2 src={data?.homeIcons[1].fields.file.url} />
+            {data?.homeIcons.map(icon => <BestPrice src={icon.fields.file.url} />)}
+            {/*<GuaranteeIcon src={data?.homeIcons[1].fields.file.url} />*/}
+            {/*<MadeInIcon src={data?.homeIcons[2].fields.file.url} />*/}
+            {/*<GuaranteedIcon2 src={data?.homeIcons[1].fields.file.url} />*/}
           </QualityIconContainer>
         </Styled.ItemContainer>
       </Styled.LogoContainer>

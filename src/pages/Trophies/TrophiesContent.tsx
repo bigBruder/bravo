@@ -25,7 +25,6 @@ interface ITrophiesContent {}
 const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
   const parentBackgroundColor = "black";
   const { data, error } = useContentful(TrophiesContentId);
-  console.log("sdvl", data?.quoteText);
   return (
     <Styled.ContentWrapper>
       <div
@@ -62,7 +61,7 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
               src={data?.iconMultiple[1].fields.file.url}
             ></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>{data?.hours}</Styled.Hours>
+          <Styled.Hours>{data?.hours?.[0]}</Styled.Hours>
           <Styled.Header>{data?.titleIcon[0]}</Styled.Header>
           <Styled.Text>{data?.textIcon[0]}</Styled.Text>
         </Styled.ContentDepartment>
@@ -75,10 +74,10 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
               src={data?.iconMultiple[2].fields.file.url}
             ></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>{data?.hours}</Styled.Hours>
+          <Styled.Hours>{data?.hours?.[1]}</Styled.Hours>
 
           <Styled.Header>{data?.titleIcon[1]}</Styled.Header>
-          <Styled.Text>{data?.textIcon[0]}</Styled.Text>
+          <Styled.Text>{data?.textIcon?.[1]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
@@ -89,10 +88,10 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
               src={data?.iconMultiple[5].fields.file.url}
             ></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>{data?.hours}</Styled.Hours>
+          <Styled.Hours>{data?.hours?.[2]}</Styled.Hours>
 
           <Styled.Header>{data?.titleIcon[2]}</Styled.Header>
-          <Styled.Text>{data?.textIcon[0]}</Styled.Text>
+          <Styled.Text>{data?.textIcon?.[2]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
@@ -103,9 +102,9 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
               src={data?.iconMultiple[7].fields.file.url}
             ></Styled.OneIconDark>
           </Styled.Number>
-          <Styled.Hours>{data?.hours}</Styled.Hours>
+          <Styled.Hours>{data?.hours?.[3]}</Styled.Hours>
           <Styled.Header>{data?.titleIcon[3]}</Styled.Header>
-          <Styled.Text>{data?.textIcon[0]}</Styled.Text>
+          <Styled.Text>{data?.textIcon?.[3]}</Styled.Text>
         </Styled.ContentDepartment>
       </Styled.ContentPage>
       <Description

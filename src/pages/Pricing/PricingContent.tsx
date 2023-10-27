@@ -27,7 +27,6 @@ const SLIDES = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 const PricingContent: React.FunctionComponent<IProps> = () => {
   const { data, error } = useContentful(PricingContentId);
-  console.log(data);
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
   const [activeSlideIndex, setActiveSlideIndex] = useState(2);
@@ -52,7 +51,6 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
   }, [screenSize]);
 
   useEffect(() => {
-    console.log("Screen changed", screenSize.width);
     if (screenSize.width > 1799) {
       setSwiperParams({
         itemsPerPage: 3,
@@ -138,7 +136,6 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             pagination={false}
             spaceBetween={150}
             onSlideChange={(swiper) => {
-              console.log("Swiper active index: ", swiper.realIndex);
               if (!Number.isNaN(swiper.realIndex)) {
                 setActiveSlideIndex(swiper.realIndex);
               }
@@ -146,11 +143,9 @@ const PricingContent: React.FunctionComponent<IProps> = () => {
             modules={[Autoplay, EffectCoverflow, Pagination]}
             className={styles.mySwipes}
             onBeforeInit={(swiper) => {
-              console.log("Swiper initialized!");
               swiperRef.current = swiper;
             }}
             onUpdate={(swiper) => {
-              console.log("Swiper updated!");
               swiperRef.current = swiper;
             }}
           >

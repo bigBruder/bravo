@@ -30,13 +30,19 @@ const PortalMobile: React.FC<IPortalMobile> = () => {
       </Styled.WelcomeContainer>
       <Styled.AdvertContainer>
         <Styled.ButtonContainer>
-          <Styled.GoogleImage src={GoogleIcon} />
+          <Styled.GoogleImage src={GoogleIcon} onClick={() => open(
+            "https://play.google.com/store/apps/details?id=com.bravocrm"
+          )} />
 
-          <Styled.AppImage src={AppleIcon} />
+          <Styled.AppImage src={AppleIcon} onClick={() =>
+            open(
+              "https://apps.apple.com/us/app/bravo-creations/id6450965519"
+            )
+          } />
         </Styled.ButtonContainer>
         <Styled.AdvertImage src={PortalImageAdv} />
       </Styled.AdvertContainer>
-      <Styled.ButtonStart>
+      <Styled.ButtonStart onClick={() => open("https://my.bravocreations.com/registration")}>
         <img src={StartButton} />
         Start Your Journey
       </Styled.ButtonStart>

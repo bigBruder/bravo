@@ -95,19 +95,18 @@ export const SInput = styled.input`
   }
 `;
 
-export const SInputMultiple = styled.input`
-  display: flex;
-  padding: 2vh;
+export const SInputMultiple = styled.textarea`
+  padding: 2vh 2vh 10vh 2vh;
   width: 273px;
-  height: 12vh;
-  align-items: start;
   gap: 20px;
   border: 1px solid var(--contact-us-input-border);
+  resize: none;
+  
   @media (max-width: 1200px) {
     width: 240px;
     height: 130px;
   }
-
+  
   border-radius: 15px;
   background: var(--contact-us-field-background);
 
@@ -125,7 +124,7 @@ export const SInputMultiple = styled.input`
   }
 
   color: #9799ac;
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -153,10 +152,10 @@ export const SButton = styled.button`
   border-radius: 15px;
   background: #cda870;
   color: #272727;
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   width: 100%;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   transition: transform 0.3s;
   &:hover {
@@ -177,7 +176,7 @@ export const SButton = styled.button`
     margin-top: 10px;
     color: #272727;
 
-    font-family: Quicksand;
+    font-family: Quicksand, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -187,4 +186,17 @@ export const SButton = styled.button`
 
 export const WhiteText = styled.text`
   color: var(--contact-us-input-title-right);
+`;
+
+export const ErrorText = styled.p`
+  position: absolute;
+  font-family: Quicksand, sans-serif;
+  font-size: 10px;
+  font-style: normal;
+  color: #f44f70;
+  margin-left: 10px;
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
 `;

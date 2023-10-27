@@ -24,7 +24,8 @@ interface ITrophiesMobile {}
 
 const TrophiesMobile: React.FC<ITrophiesMobile> = () => {
   const { data } = useContentful(TrophiesMobileId);
-  console.log(data, "trophies");
+  console.log(data);
+
   return (
     <Wrapper>
       <Styled.Video src={videoBg} autoPlay loop muted />

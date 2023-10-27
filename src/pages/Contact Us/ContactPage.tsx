@@ -34,7 +34,7 @@ const ContactPage: React.FunctionComponent<ContactPagePageProps> = ({
 }) => {
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
   const { data } = useContentful(ContactUsId);
-  console.log(data, "contactpage");
+
   useEffect(() => {
     if (animationActive) {
       setPermanentAnimationState(true);
@@ -49,13 +49,15 @@ const ContactPage: React.FunctionComponent<ContactPagePageProps> = ({
             <Styled.DescriptionContacts>
               <Styled.Contact>
                 <Styled.ContactIcon src={EmailIcon} />
-                <Styled.ContactText>
+                <Styled.ContactText href={`mailto:${data?.titleDescription}`}>
                   {data?.titleDescription}
                 </Styled.ContactText>
               </Styled.Contact>
               <Styled.Contact>
                 <Styled.ContactIconPhone src={PhoneIcon} />
-                <Styled.ContactText>{data?.phone}</Styled.ContactText>
+                <Styled.ContactText href={`tel:${data?.phone}`}>
+                  {data?.phone}
+                </Styled.ContactText>
               </Styled.Contact>
             </Styled.DescriptionContacts>
           </Styled.ScreenHeader>
@@ -85,12 +87,24 @@ const ContactPage: React.FunctionComponent<ContactPagePageProps> = ({
             </Styled.FooterDotsWrapper>
             <Styled.FooterSeparator />
             <Styled.FooterRightContent>
-              <Styled.FooterLink>Terms & Conditions</Styled.FooterLink>
+              <Styled.FooterLink
+                target="_blank"
+                rel="noopener noreferrer"
+                href={"https://bravocrm.itcarrot.com/terms"}
+              >
+                Terms & Conditions
+              </Styled.FooterLink>
               <Styled.FooterDotsWrapper>
                 <FooterDot />
                 <FooterDot />
               </Styled.FooterDotsWrapper>
-              <Styled.FooterLink>Privacy Notice</Styled.FooterLink>
+              <Styled.FooterLink
+                target="_blank"
+                rel="noopener noreferrer"
+                href={"https://bravocrm.itcarrot.com/privacy"}
+              >
+                Privacy Notice
+              </Styled.FooterLink>
             </Styled.FooterRightContent>
           </Styled.FooterContent>
         </Styled.FooterWrapper>

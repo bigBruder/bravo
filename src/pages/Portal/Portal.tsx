@@ -14,7 +14,6 @@ const Portal: React.FunctionComponent<PortalPageProps> = ({
   animationActive,
 }) => {
   const { data } = useContentful(BackgroundImage);
-  console.log(data);
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
 
   useEffect(() => {

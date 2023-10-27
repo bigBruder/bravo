@@ -1,19 +1,9 @@
 //@ts-nocheck
 import * as Styled from "./Card.style";
-// import DesignCard from "../../assets/images/Services/1.png";
-// import StoneSetting from "./../../assets/images/Services/2.png";
-// import Cad from "../../assets/images/Services/3.png";
-// import Engraving from "./../../assets/images/Services/4.png";
-// import Repair from "./../../assets/images/Services/5.png";
-// import Casting from "./../../assets/images/Services/6.png";
-// import Manufacturing from "./../../assets/images/Services/7.png";
-// import Wax from "./../../assets/images/Services/8.png";
-// import Photography from "./../../assets/images/Services/9.png";
-// import Ask from "./../../assets/icons/Ask.png";
-// import AskResponse from "../../assets/icons/AskResponce.png";
 import ImageHoverComponent from "./ImageHoverComponent.tsx";
 import useContentful from "../../hooks/useContentful";
 import { ServiceContent } from "../../constants.ts";
+
 interface IServiceCard {}
 
 const Card: React.FunctionComponent<IServiceCard> = () => {
@@ -25,9 +15,6 @@ const Card: React.FunctionComponent<IServiceCard> = () => {
   if (error) {
     console.log("error", error);
     return null;
-  }
-  if (data) {
-    console.log("data", data);
   }
   return (
     <div>

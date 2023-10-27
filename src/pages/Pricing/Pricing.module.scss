@@ -14,7 +14,7 @@
     padding: 0 50px 30px 50px;
   }
   @media (min-width: 1500px) and (min-height: 800px) {
-    padding: 100px 50px 113px 22px;
+    padding: 135px 50px 113px 22px;
   }
   @media (min-width: 1601px) {
     display: flex;
@@ -42,7 +42,7 @@
 
   &_text {
     color: #9799ac;
-    font-family: Quicksand;
+    font-family: Quicksand, sans-serif;
     text-align: center;
     font-size: 18px;
     font-style: normal;

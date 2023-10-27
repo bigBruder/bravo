@@ -70,19 +70,19 @@ export const ContentWrapper = styled.div`
     padding: 0 0 30px 70px; */
   }
   @media (min-width: 1500px) and (min-height: 800px) {
-    margin-left: -80px;
+    margin-left: 0;
     /* margin-left: -80px; */
-    padding: 110px 0 0px 0px;
+    padding: 165px 0 0px 0px;
   }
   @media (min-width: 1600px) and (min-height: 800px) {
-    margin-left: -80px;
+    margin-left: -40px;
     /* margin-left: -80px; */
-    padding: 110px 0 0px 0px;
+    padding: 165px 0 0px 0px;
   }
 
   @media (min-width: 1700px) {
-    margin-left: -80px;
-    padding: 180px 0 0px 0px;
+    margin-left: -40px;
+    padding: 165px 0 0px 0px;
     justify-content: space-between;
     /* gap: 15px; */
     /* flex: 1; */
@@ -173,17 +173,22 @@ export const ContentPage = styled.div`
     margin-top: 5vh;
   }
   @media (max-width: 1500px) {
-    margin-left: 0px;
+    margin-left: -10px;
     margin-bottom: 0px;
   }
   @media (min-width: 768px) {
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
   }
   @media (max-width: 480px) {
     width: 100%;
     gap: 40px;
     margin: 0px;
     margin-top: 40px;
+  }
+  @media (min-width: 1500px) {
+    grid-template-columns: 40% 50%;
+    margin-left: 100px;
   }
 `;
 
@@ -295,16 +300,15 @@ export const RegistrationButton = styled.button`
   display: flex;
   padding: 13px 24px;
   align-items: center;
-  min-width: 178px;
   gap: 12px;
   border: none;
   border-radius: 15px;
   background: #cda870;
   color: var(--faq-buttonText);
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 20px;
   min-width: 185px;
   transition: transform 0.3s;

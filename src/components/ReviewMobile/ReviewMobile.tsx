@@ -11,16 +11,21 @@ import Vector from "../../assets/images/TeamMobile/Vector.svg";
 // import Avatar2 from "../../assets/images/ReviewMobile/Avatar2.svg";
 // import Avatar3 from "../../assets/images/ReviewMobile/Avatar3.svg";
 
-import { WelcomeTitle, WelcomeText } from "./ReviewMobile";
+import {WelcomeTitle, WelcomeText, WelcomeTitleYellow, TitleContainer} from "./ReviewMobile";
 interface IReviewMobile {}
 
 const ReviewMobile: React.FC<IReviewMobile> = () => {
   const { data } = useContentful(ReviewContentId);
 
+  console.log(data);
+
   return (
     <Styled.Wrapper>
       <Styled.WelcomeContainer>
-        <WelcomeTitle>{data?.title}</WelcomeTitle>
+        <TitleContainer>
+          <WelcomeTitle>{data?.title}</WelcomeTitle>
+          <WelcomeTitleYellow>{data?.titleYellow}</WelcomeTitleYellow>
+        </TitleContainer>
         <WelcomeText>{data?.titleDescription}</WelcomeText>
       </Styled.WelcomeContainer>
       <Styled.SwiperContainer>

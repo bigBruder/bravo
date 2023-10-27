@@ -181,10 +181,10 @@ export const SignUpButton = styled.button`
 
   background: var(--greetings-signUpBackground);
   color: var(--greetings-signUpText);
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 28px;
   transition: transform 0.3s;
   min-width: 241px;
@@ -226,10 +226,10 @@ export const DemoButton = styled.button`
 
   background: var(--greetings-findOutBackground);
   color: var(--greetings-findOutText);
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 18px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 28px;
   transition: transform 0.3s;
 
@@ -397,7 +397,6 @@ export const AppStoreIconLight = styled.img`
 export const GuaranteeIcon = styled.img`
   width: 15%;
   height: 15%;
-  margin-top: 2%;
 `;
 export const BestPrice = styled.img`
   width: 15%;
@@ -407,12 +406,10 @@ export const BestPrice = styled.img`
 export const MadeInIcon = styled.img`
   width: 15%;
   height: 15%;
-  margin-top: 0.7%;
 `;
 export const GuaranteedIcon2 = styled.img`
   width: 15%;
   height: 15%;
-  margin-top: 1.6%;
 `;
 
 export const NavigateIconContainer = styled.div`

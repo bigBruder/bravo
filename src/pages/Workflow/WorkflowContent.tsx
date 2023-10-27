@@ -11,7 +11,6 @@ interface IWorkflowContent {}
 const WorkflowContent: React.FunctionComponent<IWorkflowContent> = () => {
   const parentBackgroundColor = "black";
   const { data } = useContentful(WorkflowContentId);
-  console.log(data);
   return (
     <Styled.ContentWrapper>
       <div

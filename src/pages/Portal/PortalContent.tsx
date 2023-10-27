@@ -44,9 +44,6 @@ const PortalContent: React.FunctionComponent<IPortalContent> = () => {
     console.log("error", error);
     return null;
   }
-  if (data) {
-    console.log("data", data);
-  }
   const parentBackgroundColor = "black";
   const descriptionText =
     "What sets us apart is our unwavering commitment to excellence, a fusion" +

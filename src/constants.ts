@@ -94,3 +94,4 @@ export const BackgroundImage = "5FdB1z0MAgIWCD6xNNQp5b";
 export const BackgroundImageTrophies = "4HZZVyV69KlEOt7GNocttv";
 export const BackgroundImageWorkflow = "723V9GFvEbdzU8PFDsL6sh";
 export const BackgroundImageFAQ = "11yIL1Ytknm3XdQ6XxuIzY";
+export const HeaderContent = "6oUu6s3nMkHQzd2xymM0C9";

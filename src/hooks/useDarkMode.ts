@@ -24,10 +24,13 @@ export const useDarkMode = () => {
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem(
-      "theme"
-    ) as ThemeModes | null;
-    setMode(localTheme ?? "dark");
+    const localDate = new Date();
+
+    if (localDate.getHours() >= 7 && localDate.getHours() <= 18) {
+      setMode("light");
+    } else {
+      setMode("dark");
+    }
   }, []);
-  return [theme, themeToggler, getTheme];
+  return [theme, themeToggler, getTheme, setTheme];
 };

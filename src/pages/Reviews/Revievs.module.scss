@@ -119,8 +119,8 @@
   }
 
   .container_title {
-    width: 300px;
-    height: 40px;
+    width: fit-content;
+    height: fit-content;
   }
 
   .footer {
@@ -161,8 +161,8 @@
 
 @media (min-width: 1300px) {
   .container_title {
-    width: 400px;
-    height: 40px;
+    width: fit-content;
+    height: fit-content;
   }
 
   .footer {
@@ -172,6 +172,17 @@
 
 @media (min-width: 1500px) and (min-height: 800px){
   .container {
-    padding: 10vh 0 113px 74px;
+    padding: 135px 0 113px 74px;
   }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.yellow {
+  color: #cda870;
 }

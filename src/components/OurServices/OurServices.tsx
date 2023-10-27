@@ -7,7 +7,6 @@ import useContentful from "../../hooks/useContentful";
 
 export const OurServices = () => {
   const { data } = useContentful(ServiceMobileId);
-  console.log(data);
   return (
     <Styled.Services>
       <Styled.Title>{data?.title}</Styled.Title>
