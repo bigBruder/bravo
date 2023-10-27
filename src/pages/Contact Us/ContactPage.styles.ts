@@ -168,6 +168,7 @@ export const AdressInfo = styled.div`
 export const HousePhotoMobile = styled.img`
   width: 210px;
   height: 120px;
+  border-radius: 10px;
   @media (min-width: 1201px) {
     display: none;
   }

@@ -13,6 +13,7 @@ interface IContactContent {
   description: string;
   button: string;
   adress: string;
+  smallScreenImage: string;
 }
 export const ContactContent: React.FC<IContactContent> = ({
   image,
@@ -20,15 +21,24 @@ export const ContactContent: React.FC<IContactContent> = ({
   description,
   button,
   adress,
+  smallScreenImage,
 }) => {
-  console.log(image, title, description, button, adress);
+  console.log(
+    image,
+    title,
+    description,
+    button,
+    adress,
+    smallScreenImage,
+    "contactMobile"
+  );
   return (
     <Styled.ContentWrapper>
       {/* <img src={Pointer} /> */}
       <Styled.AdressContainer>
         <Styled.Adress>
           <Styled.HousePhoto src={image?.fields.file.url} />
-          <Styled.HousePhotoMobile src={MobilePhoto} />
+          <Styled.HousePhotoMobile src={smallScreenImage?.fields.file.url} />
           <Styled.AdressInfo>
             <Styled.AdressHeader>
               {title && title.length > 0 && (

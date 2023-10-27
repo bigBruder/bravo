@@ -34,7 +34,7 @@ const ContactPage: React.FunctionComponent<ContactPagePageProps> = ({
 }) => {
   const [permanentAnimationState, setPermanentAnimationState] = useState(false);
   const { data } = useContentful(ContactUsId);
-  console.log(data);
+  console.log(data, "contactpage");
   useEffect(() => {
     if (animationActive) {
       setPermanentAnimationState(true);
@@ -66,6 +66,7 @@ const ContactPage: React.FunctionComponent<ContactPagePageProps> = ({
             description={data?.registerDescription}
             button={data?.registerButton}
             adress={data?.adress}
+            smallScreenImage={data?.smallScreenImage}
           />
         </Styled.MainContent>
         <Styled.FooterWrapper>

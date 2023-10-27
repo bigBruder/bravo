@@ -22,6 +22,7 @@ interface ITeamMobile {}
 
 const TeamMobile: React.FC<ITeamMobile> = () => {
   const { data } = useContentful(TeamContentId);
+  console.log(data, "teamcontent");
   return (
     <Styled.Wrapper>
       <Styled.WelcomeContainer>

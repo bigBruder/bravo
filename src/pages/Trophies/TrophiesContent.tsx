@@ -25,7 +25,7 @@ interface ITrophiesContent {}
 const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
   const parentBackgroundColor = "black";
   const { data, error } = useContentful(TrophiesContentId);
-  console.log("data",data)
+  console.log("sdvl", data?.quoteText);
   return (
     <Styled.ContentWrapper>
       <div
@@ -36,10 +36,10 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
         }}
       >
         <Styled.DescriptionHeader>
-          {data?.title} <Styled.WhiteText>{data?.titleYellow }</Styled.WhiteText>
+          {data?.title} <Styled.WhiteText>{data?.titleYellow}</Styled.WhiteText>
         </Styled.DescriptionHeader>
         <Styled.DescriptionText lang="en">
-        {data?.titleDescription}
+          {data?.titleDescription}
         </Styled.DescriptionText>
       </div>
       <Styled.ContentPage>
@@ -55,55 +55,61 @@ const TrophiesContent: React.FunctionComponent<ITrophiesContent> = () => {
           </Styled.Number> */}
 
           <Styled.Number>
-            <Styled.OneIconLight src={data?.iconMultiple[0].fields.file.url}></Styled.OneIconLight>
-            <Styled.OneIconDark src={data?.iconMultiple[1].fields.file.url}></Styled.OneIconDark>
+            <Styled.OneIconLight
+              src={data?.iconMultiple[0].fields.file.url}
+            ></Styled.OneIconLight>
+            <Styled.OneIconDark
+              src={data?.iconMultiple[1].fields.file.url}
+            ></Styled.OneIconDark>
           </Styled.Number>
           <Styled.Hours>{data?.hours}</Styled.Hours>
           <Styled.Header>{data?.titleIcon[0]}</Styled.Header>
-          <Styled.Text>
-            {data?.textIcon[0]}
-          </Styled.Text>
+          <Styled.Text>{data?.textIcon[0]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.OneIconLight src={data?.iconMultiple[3].fields.file.url}></Styled.OneIconLight>
-            <Styled.OneIconDark src={data?.iconMultiple[2].fields.file.url}></Styled.OneIconDark>
+            <Styled.OneIconLight
+              src={data?.iconMultiple[3].fields.file.url}
+            ></Styled.OneIconLight>
+            <Styled.OneIconDark
+              src={data?.iconMultiple[2].fields.file.url}
+            ></Styled.OneIconDark>
           </Styled.Number>
           <Styled.Hours>{data?.hours}</Styled.Hours>
 
           <Styled.Header>{data?.titleIcon[1]}</Styled.Header>
-          <Styled.Text>
-          {data?.textIcon[0]}
-          </Styled.Text>
+          <Styled.Text>{data?.textIcon[0]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.OneIconLight src={data?.iconMultiple[4].fields.file.url}></Styled.OneIconLight>
-            <Styled.OneIconDark src={data?.iconMultiple[5].fields.file.url}></Styled.OneIconDark>
+            <Styled.OneIconLight
+              src={data?.iconMultiple[4].fields.file.url}
+            ></Styled.OneIconLight>
+            <Styled.OneIconDark
+              src={data?.iconMultiple[5].fields.file.url}
+            ></Styled.OneIconDark>
           </Styled.Number>
           <Styled.Hours>{data?.hours}</Styled.Hours>
 
           <Styled.Header>{data?.titleIcon[2]}</Styled.Header>
-          <Styled.Text>
-          {data?.textIcon[0]}
-          </Styled.Text>
+          <Styled.Text>{data?.textIcon[0]}</Styled.Text>
         </Styled.ContentDepartment>
         <Styled.ContentDepartment>
           <Styled.Number>
-            <Styled.OneIconLight src={data?.iconMultiple[6].fields.file.url}></Styled.OneIconLight>
-            <Styled.OneIconDark src={data?.iconMultiple[7].fields.file.url}></Styled.OneIconDark>
+            <Styled.OneIconLight
+              src={data?.iconMultiple[6].fields.file.url}
+            ></Styled.OneIconLight>
+            <Styled.OneIconDark
+              src={data?.iconMultiple[7].fields.file.url}
+            ></Styled.OneIconDark>
           </Styled.Number>
           <Styled.Hours>{data?.hours}</Styled.Hours>
           <Styled.Header>{data?.titleIcon[3]}</Styled.Header>
-          <Styled.Text>
-          {data?.textIcon[0]}
-          </Styled.Text>
+          <Styled.Text>{data?.textIcon[0]}</Styled.Text>
         </Styled.ContentDepartment>
       </Styled.ContentPage>
       <Description
-        descriptionText={
-          data?.quoteText
-        }
+        descriptionText={data?.quoteText}
         parentBackgroundColor={parentBackgroundColor}
       />
     </Styled.ContentWrapper>

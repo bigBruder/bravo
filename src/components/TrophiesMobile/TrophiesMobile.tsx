@@ -24,7 +24,7 @@ interface ITrophiesMobile {}
 
 const TrophiesMobile: React.FC<ITrophiesMobile> = () => {
   const { data } = useContentful(TrophiesMobileId);
-  console.log(data);
+  console.log(data, "trophies");
   return (
     <Wrapper>
       <Styled.Video src={videoBg} autoPlay loop muted />
@@ -78,9 +78,7 @@ const TrophiesMobile: React.FC<ITrophiesMobile> = () => {
           <Styled.VectorIcons src={VectorIcon} />
           <Styled.VectorIcons />
         </Styled.VectorRow>
-        <Styled.DescriptionText>
-          {data?.titleDescription}
-        </Styled.DescriptionText>
+        <Styled.DescriptionText>{data?.quote}</Styled.DescriptionText>
       </Styled.DescriptionContainer>
     </Wrapper>
   );
