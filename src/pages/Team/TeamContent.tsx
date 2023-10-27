@@ -69,15 +69,7 @@ const TEAM = [
 const TeamContent: React.FunctionComponent<IProps> = () => {
   // @ts-ignore
 
-  const { data, error } = useContentful(TeamContentId);
-
-  if (error) {
-    console.log("error", error);
-    return null;
-  }
-  if (data) {
-    console.log("teamdata", data);
-  }
+  const { data } = useContentful(TeamContentId);
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
@@ -124,7 +116,6 @@ const TeamContent: React.FunctionComponent<IProps> = () => {
 
         <div className={styles.container_center}>
           <Swiper
-            loop={true}
             autoplay={{
               delay: 5000,
               disableOnInteraction: false,

@@ -58,7 +58,7 @@ export const ContentWrapper = styled.div`
     padding: 20px;
   }
   @media (min-width: 1500px) and (min-height: 800px) {
-    padding: 100px 40px 113px 60px;
+    padding: 165px 40px 113px 60px;
   }
 `;
 

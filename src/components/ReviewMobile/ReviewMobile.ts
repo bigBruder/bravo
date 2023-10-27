@@ -19,6 +19,11 @@ export const WelcomeContainer = styled.div`
   padding: 0px 20px;
 `;
 
+export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const WelcomeTitle = styled.text`
   color: #164d59;
 
@@ -28,6 +33,19 @@ export const WelcomeTitle = styled.text`
   font-style: normal;
   font-weight: 650;
   line-height: 30px;
+`;
+
+export const WelcomeTitleYellow = styled.text`
+  color: #164d59;
+
+  text-align: center;
+  font-family: Gwen-Trial;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 650;
+  line-height: 30px;
+
+  color: #cda870;
 `;
 
 export const WelcomeText = styled.p`

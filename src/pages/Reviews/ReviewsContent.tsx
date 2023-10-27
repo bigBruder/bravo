@@ -74,9 +74,6 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
     console.log("error", error);
     return null;
   }
-  if (data) {
-    console.log("data", data);
-  }
   const swiperRef = useRef<any>();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
@@ -103,10 +100,15 @@ const ReviewsContent: React.FunctionComponent<IProps> = () => {
     }
   }, [screenSize.width]);
 
+  console.log(data);
+
   return (
     <div className={styles.container}>
       <div className={styles.container_header}>
-        <p className={styles.container_title}>{data?.title}</p>
+        <div className={styles.row}>
+          <p className={`${styles.container_title}`}>{data?.title}</p>
+          <p className={`${styles.container_title} ${styles.yellow}`}>{data?.titleYellow}</p>
+        </div>
         <p className={styles.container_text}>{data?.titleDescription}</p>
       </div>
 

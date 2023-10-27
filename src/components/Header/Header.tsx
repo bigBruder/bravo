@@ -1,10 +1,19 @@
 import * as Styled from "./header.styles";
 import logo from "../../assets/icons/logo.svg";
 import UserBrown from "../../assets/icons/UserBrown.svg";
-// import { useDarkMode } from "../../hooks/useDarkMode.ts";
+import useContentful from "../../hooks/useContentful.ts";
+import {HeaderContent} from "../../constants.ts";
 
 const Header = () => {
-  // const [theme, themeToggler, getTheme] = useDarkMode();
+  const { data, loading, error } = useContentful(HeaderContent);
+
+  if (loading) {
+    return "";
+  }
+  if (error) {
+    console.log("error", error);
+    return null;
+  }
 
   return (
     <Styled.Wrapper>
@@ -13,8 +22,10 @@ const Header = () => {
       </div>
       {/*<Styled.Text src={text}></Styled.Text>*/}
       <Styled.TextContainer>
-        <Styled.Text>Where Craftsmanship and Quality Begin</Styled.Text>
-        <Styled.TextOver>Made with Love</Styled.TextOver>
+        {/* @ts-ignore */}
+        <Styled.Text>{data?.backgroundText}</Styled.Text>
+        {/* @ts-ignore */}
+        <Styled.TextOver>{data?.text}</Styled.TextOver>
       </Styled.TextContainer>
       <Styled.Button
         onClick={() => open("https://my.bravocreations.com/login")}

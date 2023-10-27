@@ -11,9 +11,11 @@
     "codegen": "contentful-typescript-codegen --output contentful.d.ts"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@types/styled-components": "^5.1.27",
     "classnames": "^2.3.2",
     "contentful": "^10.6.3",
+    "formik": "^2.4.5",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

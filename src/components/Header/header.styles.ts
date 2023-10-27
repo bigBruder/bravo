@@ -75,8 +75,8 @@ export const Button = styled.button`
   align-items: center;
 
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--header-button-border);
+  background: var(--header-button-border);
   img {
     width: 18px;
     height: 18px;

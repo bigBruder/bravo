@@ -21,7 +21,6 @@ export const ContactContent: React.FC<IContactContent> = ({
   button,
   adress,
 }) => {
-  console.log(image, title, description, button, adress);
   return (
     <Styled.ContentWrapper>
       {/* <img src={Pointer} /> */}

@@ -12,10 +12,6 @@ interface IWorkflowContent {}
 const FaqContent: React.FunctionComponent<IWorkflowContent> = () => {
   const { data } = useContentful(FAQContentId);
 
-  if (data) {
-    console.log("dataFAQ", data);
-  }
-
   return (
     <Styled.ContentWrapper>
       {/* <div

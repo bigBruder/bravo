@@ -76,6 +76,7 @@ body.light {
   --text-header-over: rgba(151, 153, 172, 0.07);
 
   --contact-us-background: url("./../../assets/images/Contact Us/BackgroundImageLight.png");
+  --contact-us-background-position: 100%;
   --contact-us-fade: none;
   --contact-us-title: #164D59;
   --contact-us-input-background: rgba(205, 168, 112, 0.1);
@@ -88,6 +89,7 @@ body.light {
   --contact-us-register-button: rgba(205, 168, 112, 0.15);
   --contact-us-content-text: rgba(22, 77, 89, 1);
 
+  --header-button-border: rgba(205, 168, 112, 0.15);
 }
 
 body.dark {
@@ -158,6 +160,7 @@ body.dark {
   --text-header-over: rgba(151, 153, 172, 0.05);
 
   --contact-us-background: url("./../../assets/images/Contact Us/BackgroundImage.png");
+  --contact-us-background-position: 70%;
   --contact-us-fade: radial-gradient(
                   50% 50% at 50% 50%,
                   rgba(0, 0, 0, 0) 0%,
@@ -172,4 +175,6 @@ body.dark {
   --contact-us-content-title: #FFFFFF;
   --contact-us-register-button: rgba(255, 255, 255, 0.1);
   --contact-us-content-text: #FFFFFF;
+
+  --header-button-border: rgba(205, 168, 112, 0.15);
 }

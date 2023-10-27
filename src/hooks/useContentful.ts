@@ -23,15 +23,13 @@ const useContentful = (id: string) => {
       try {
         setLoading(true);
         const response = await client.getEntry(id);
-        console.log("rez", response);
         //@ts-ignore
-        setData(response.fields);
+        setData(response?.fields || null);
       } catch (err) {
         //@ts-ignore
         setError(err);
       } finally {
         setLoading(false);
-        console.log("nbgfvgbhnjmk,jhg");
       }
     })();
   }, []);

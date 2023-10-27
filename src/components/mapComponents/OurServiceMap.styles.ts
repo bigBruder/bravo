@@ -7,9 +7,17 @@ export const Container = styled.div`
   gap: 6.5vw;
   max-width: 320px;
   margin: 0 auto;
+  
+  align-items: center;
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  display: block;
+  max-width:120px;
+  max-height:120px;
+  width: auto;
+  height: auto;
+`;
 
 export const TextBox = styled.div`
   display: flex;

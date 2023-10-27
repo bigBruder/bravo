@@ -29,7 +29,6 @@ interface IWorkflowMobile {}
 
 const WorkflowMobile: React.FC<IWorkflowMobile> = () => {
   const { data } = useContentful(WorkflowMobileId);
-  console.log(data);
   return (
     <Wrapper>
       <Styled.Video src={videoBg} autoPlay loop muted />
