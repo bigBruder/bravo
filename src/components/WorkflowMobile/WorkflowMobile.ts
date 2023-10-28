@@ -126,12 +126,10 @@ export const TitleContent = styled.text`
   line-height: 24px;
 `;
 export const TextContent = styled.text`
-  overflow: hidden;
   color: #9799ac;
 
   text-align: center;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
   font-family: Quicksand;
   font-size: 14px;
   font-style: normal;
