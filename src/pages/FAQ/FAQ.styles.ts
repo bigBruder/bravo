@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   /* background-color: #111; */
+`;
 
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+export const Image = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const Container = styled.div`
@@ -98,7 +98,7 @@ export const ContentWrapper = styled.div`
 export const DescriptionHeader = styled.text`
   color: var(--trophies-headerText);
   text-align: center;
-  font-family: Gwen-Trial;
+  font-family: Gwen-Trial, sans-serif;
   font-size: 42px;
   font-style: normal;
   font-weight: 650;
@@ -107,10 +107,10 @@ export const DescriptionHeader = styled.text`
     font-size: 31px;
   }
   @media (max-width: 480px) {
-    color: #fff;
+    color: var(--trophies-headerText);
 
     text-align: center;
-    font-family: Gwen-Trial;
+    font-family: Gwen-Trial, sans-serif;
     font-size: 23px;
     font-style: normal;
     font-weight: 650;
@@ -379,7 +379,9 @@ export const RegistrationDescription = styled.text`
 
 export const OctagonIconLight = styled.img`
   display: var(--faq-buttonOctagonLight);
+  z-index: 1;
 `;
 export const OctagonIconDark = styled.img`
   display: var(--faq-buttonOctagonDark);
+  z-index: 1;
 `;

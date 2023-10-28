@@ -148,7 +148,7 @@ export const AdressContainer = styled.div`
   }
   @media (max-width: 480px) {
     padding: 15px;
-    width: 240px;
+    width: 300px;
     margin-bottom: 40px;
   }
   /* img {
@@ -166,8 +166,8 @@ export const AdressInfo = styled.div`
   }
 `;
 export const HousePhotoMobile = styled.img`
-  width: 210px;
-  height: 120px;
+  width: 270px;
+  height: 200px;
   border-radius: 10px;
   @media (min-width: 1201px) {
     display: none;
@@ -188,7 +188,7 @@ export const Adress = styled.div`
   gap: 30px;
   @media (max-width: 1200px) {
     flex-direction: column;
-    width: 230px;
+    width: 250px;
   }
   @media (max-width: 480px) {
     gap: 20px;

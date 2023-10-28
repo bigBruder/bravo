@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { Wrapper } from "./PortalMobile";
 import videoBg from "../../assets/video/home_background.mp4";
 import * as Styled from "./PortalMobile";
@@ -7,25 +8,31 @@ import StartButton from "../../assets/images/PortalMobile/Button.svg";
 import VectorIcon from "../../assets/images/PortalMobile/DescriptionVector.svg";
 import PortalImageAdv from "../../assets/images/PortalMobile/PortalAdvert.svg";
 import { WelcomeTitle, WelcomeText, WelcomeTitleColored } from "./PortalMobile";
+import useContentful from "../../hooks/useContentful.ts";
+import {PortalMobileId} from "../../constants.ts";
 
 interface IPortalMobile {}
 
 const PortalMobile: React.FC<IPortalMobile> = () => {
+  const { data } = useContentful(PortalMobileId);
+
+  console.log('Portal', 'https:' + data?.background?.fields?.file?.url);
+
   return (
     <Wrapper>
-      <Styled.Video src={videoBg} autoPlay loop muted />
+      <Styled.Video src={data?.background?.fields?.file?.url} />
       <Styled.WelcomeContainer>
         <WelcomeTitle>
-          Portal
+          {data?.title?.[0]}
           <WelcomeTitleColored>
             {" "}
-            as
+            {data?.title?.[1]}
             <br />
           </WelcomeTitleColored>{" "}
-          Easy <WelcomeTitleColored>as 1,2,3</WelcomeTitleColored>
+          {data?.title?.[2]} <WelcomeTitleColored>{data?.title?.[3]}</WelcomeTitleColored>
         </WelcomeTitle>
         <WelcomeText>
-          Submit, Track, Ship, Communicate, Mobile Devices All in One Service
+          {data?.titleDescription}
         </WelcomeText>
       </Styled.WelcomeContainer>
       <Styled.AdvertContainer>
@@ -40,11 +47,11 @@ const PortalMobile: React.FC<IPortalMobile> = () => {
             )
           } />
         </Styled.ButtonContainer>
-        <Styled.AdvertImage src={PortalImageAdv} />
+        <Styled.AdvertImage src={data?.icon?.fields?.file?.url} />
       </Styled.AdvertContainer>
       <Styled.ButtonStart onClick={() => open("https://my.bravocreations.com/registration")}>
         <img src={StartButton} />
-        Start Your Journey
+        {data?.button}
       </Styled.ButtonStart>
       <Styled.DescriptionContainer>
         <Styled.VectorRow>
@@ -53,8 +60,7 @@ const PortalMobile: React.FC<IPortalMobile> = () => {
           <Styled.VectorIcons />
         </Styled.VectorRow>
         <Styled.DescriptionText>
-          Our unique approach and attention to detail set us apart from our
-          competitors, ensuring a truly memorable experience for our clients.
+          {data?.quote}
         </Styled.DescriptionText>
       </Styled.DescriptionContainer>
     </Wrapper>

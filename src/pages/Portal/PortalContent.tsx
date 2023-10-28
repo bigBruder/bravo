@@ -10,7 +10,7 @@ import {
   AppStoreIconLight,
   AppStoreIconDark,
 } from "./portal.styles";
-// import UserOctagon from "./../../assets/icons/user-octagon.svg";
+// import UserOctagon from "./../../assets/icons/octagon-black.svg";
 // import SafariContent from "./../../assets/images/Safari • Dark Mode ON 2.png";
 // import QRCode from "./../../assets/images/image 5.png";
 // import NewOrder from "./../../assets/images/NEW ORDERdfgdfg 1.png";

@@ -11,20 +11,21 @@ export const Wrapper = styled.div`
   background-color: #000000d9;
 `;
 
-export const Video = styled.video`
+export const Video = styled.img`
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
 `;
 export const WelcomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  z-index: 1;
 `;
 
 export const WelcomeTitle = styled.text`
@@ -64,6 +65,7 @@ export const DescriptionContainer = styled.div`
 
   backdrop-filter: blur(12.5px);
   margin-top: 20px;
+  z-index: 1;
 `;
 
 export const VectorRow = styled.div`
@@ -92,6 +94,7 @@ export const ContentDepartment = styled.div`
   flex-direction: column;
   gap: 10px;
   padding: 0px 20px;
+  z-index: 1;
 `;
 
 export const TimeDepartment = styled.div`
@@ -148,4 +151,5 @@ export const ArrowImage = styled.div`
 export const Star = styled.img`
   position: absolute;
   left: -4px;
+  z-index: 1;
 `;

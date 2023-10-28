@@ -11,20 +11,20 @@ export const Wrapper = styled.div`
   background-color: #000000d9;
 `;
 
-export const Video = styled.video`
+export const Video = styled.img`
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
-  z-index: -1;
 `;
 export const WelcomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  z-index: 1;
 `;
 
 export const WelcomeTitle = styled.text`
@@ -112,6 +112,9 @@ export const ButtonStart = styled.button`
   font-weight: 600;
   line-height: 24px;
   transition: transform 0.2s;
+  
+  z-index: 1;
+  
   &:hover {
     transform: scale(1);
   }
@@ -131,6 +134,7 @@ export const DescriptionContainer = styled.div`
   background: rgba(255, 255, 255, 0.1);
 
   backdrop-filter: blur(12.5px);
+  z-index: 1;
 `;
 
 export const VectorRow = styled.div`

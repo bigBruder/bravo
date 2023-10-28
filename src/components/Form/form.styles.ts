@@ -136,7 +136,7 @@ export const SInputMultiple = styled.textarea`
     gap: 8px;
     align-self: stretch;
     border-radius: 10px;
-    background: rgba(251, 253, 252, 0.05);
+    background: rgba(251, 253, 252, 1);
     backdrop-filter: blur(12.5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }

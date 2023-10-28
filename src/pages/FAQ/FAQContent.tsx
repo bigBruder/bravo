@@ -2,6 +2,7 @@
 import * as Styled from "./FAQ.styles";
 import OctagonIcon from "./../../assets/icons/FAQ/octagon.svg";
 import OctagonIconLight from "./../../assets/icons/FAQ/octagon-light.svg";
+import OctagonIconBlack from "./../../assets/icons/FAQ/octagon-black.svg";
 import QuestionAnswer from "../../components/QuestionAnswer/QuestionAnswer.tsx";
 import ItsFree from "../../assets/icons/FAQ/It’s_Free.svg";
 import useContentful from "../../hooks/useContentful";
@@ -106,11 +107,15 @@ const FaqContent: React.FunctionComponent<IWorkflowContent> = () => {
             <img src={data?.itsFree.fields.file.url} style={{ height: 18 }} />
           </Styled.RgistrationRightContainer>
         </Styled.RegistrationField>
-        <Styled.RegistrationButtonSmall>
+        <Styled.RegistrationButtonSmall onClick={() => open("https://my.bravocreations.com/registration")}>
           {" "}
           <Styled.OctagonIconDark
-            src={OctagonIcon}
+            src={OctagonIconBlack}
             style={{ color: "black" }}
+          />
+          <Styled.OctagonIconLight
+            src={OctagonIconBlack}
+            style={{ stroke: "black" }}
           />
           Start Your Journey
         </Styled.RegistrationButtonSmall>

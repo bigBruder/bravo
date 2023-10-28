@@ -25,6 +25,7 @@ export const Actions = styled.div`
   gap: 15px;
   justify-content: center;
   flex-direction: column;
+  z-index: 1;
   padding-bottom: 20px;
 `;
 
@@ -45,7 +46,7 @@ export const Button = styled.button`
   gap: 10px;
   background-color: #cda870;
   border: none;
-  font-family: Quicksand;
+  font-family: Quicksand, sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -55,6 +56,7 @@ export const Button = styled.button`
   gap: 10px;
   justify-content: center;
   align-items: center;
+  color: #000000;
 `;
 
 export const ButtonModified = styled(Button)`
@@ -86,10 +88,12 @@ export const WelcomeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  z-index: 1;
 `;
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 `;
 
 export const Image = styled.img`
@@ -109,14 +113,14 @@ export const UserImage = styled.img`
   cursor: pointer;
 `;
 
-export const Video = styled.video`
+export const Video = styled.img`
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   @media screen and (max-width: 480px) {
     height: 100%;
     width: 100%;
@@ -125,13 +129,14 @@ export const Video = styled.video`
 
 export const StarYellowIcon = styled.img`
   position: absolute;
-  z-index: 0;
   left: 88vw;
 
   top: 161px;
+  z-index: 1;
 `;
 export const StarsPinkIcon = styled.img`
   position: absolute;
   left: -1px;
   top: 94px;
+  z-index: 1;
 `;

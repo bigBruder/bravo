@@ -28,7 +28,7 @@ const TrophiesMobile: React.FC<ITrophiesMobile> = () => {
 
   return (
     <Wrapper>
-      <Styled.Video src={videoBg} autoPlay loop muted />
+      <Styled.Video src={data?.background?.fields?.file?.url} />
       <Styled.WelcomeContainer>
         <WelcomeTitle>
           {data?.title[0]}

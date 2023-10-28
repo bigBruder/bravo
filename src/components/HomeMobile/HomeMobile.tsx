@@ -1,7 +1,6 @@
 //@ts-nocheck
 import * as Styled from "./HomeMobile.styles";
 import { useEffect, useState } from "react";
-import videoBg from "../../assets/video/home_background.mp4";
 import burger from "./../../assets/icons/burger.svg";
 import burgerClose from "./../../assets/icons/burger_close.svg";
 import logo from "./../../assets/icons/logo.svg";
@@ -37,7 +36,7 @@ export const HomeMobile = () => {
 
   return (
     <Styled.Wrapper>
-      <Styled.Video src={videoBg} autoPlay loop muted />
+      <Styled.Video src={data?.background?.fields?.file?.url} />
       {isMenuOpen ? (
         <MenuMobile setIsMenuOpen={handleMenuOpen} />
       ) : (

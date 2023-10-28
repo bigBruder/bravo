@@ -16,9 +16,11 @@ const FAQ: React.FunctionComponent<FAQPageProps> = ({ animationActive }) => {
       setPermanentAnimationState(true);
     }
   }, [animationActive]);
+
+
   return (
     <Styled.Wrapper>
-      <video src={data?.image.fields.file.url} autoPlay loop muted />
+      <Styled.Image src={data?.image.fields.file.url} />
       <Styled.Container>
         <Styled.MainContent
           data-animation

@@ -17,6 +17,7 @@ export const Image = styled.img`
   max-height:120px;
   width: auto;
   height: auto;
+  border-radius: 20px;
 `;
 
 export const TextBox = styled.div`
