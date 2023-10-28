@@ -18,7 +18,7 @@ export const SForm = styled.form`
   }
   @media (max-width: 480px) {
     background: none;
-    width: 240px;
+    width: 300px;
     gap: 20px;
     padding: 5px 0px 0px 0px;
     margin-bottom: 0px;
@@ -51,7 +51,7 @@ export const SFormTitle = styled.text`
 
 export const SInput = styled.input`
   outline: 0px;
-
+  width: 100%;
   display: flex;
   padding: 1.3vh 1vw;
   width: 273px;
@@ -87,6 +87,7 @@ export const SInput = styled.input`
   @media (max-width: 480px) {
     display: flex;
     height: 50px;
+    width: 100%;
     padding: 0px 15px;
     align-items: center;
     align-self: stretch;
@@ -131,12 +132,12 @@ export const SInputMultiple = styled.textarea`
   @media (max-width: 480px) {
     display: flex;
     height: 130px;
+    width: 300px;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
     align-self: stretch;
     border-radius: 10px;
-    background: rgba(251, 253, 252, 1);
     backdrop-filter: blur(12.5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -199,4 +200,8 @@ export const ErrorText = styled.p`
 
 export const InputContainer = styled.div`
   position: relative;
+  
+  @media (max-width: 480px) {
+    width: 300px;
+  }
 `;
